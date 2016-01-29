@@ -1,0 +1,23 @@
+
+	    Installer for the xSDK toolkit
+
+    NOTE: THIS IS NOT A GENERAL PURPOSE PACKAGE MANAGER, rather it is a specific tool (using PETSc) to install a variety of HPC software packages.
+    It has very little automatic management of dependencies or version management.
+
+    Usage: sh ./installxSDK --prefix="installation directory" [other configure options]
+
+
+  Examples:
+
+    sh ./installxSDK --prefix=/usr/local/xSDK --with-mpicc=/usr/local/mpich/bin/mpicc --with-mpicxx=/usr/local/mpich/bin/mpicxx --with-mpif90=/usr/local/mpich/bin/mpif90
+
+    sh ./installxSDK --download-mpich
+
+    sh ./installxSDK --with-blaslapack-dir="directory to locate BLAS and LAPACK"   Usually you should not need this
+
+    sh ./installxSDK --disable-debug
+
+    sh ./installxSDK --with-boost-dir="directory where boost is installed"  Boost takes forever to install so this is a good option to use if you have boost installed already	
+
+
+   Except for a couple of minor exceptions this script will NOT rebuild packages that have not changed between calls to the inscript, thus calling it a second time with the same prefix will be much faster.
