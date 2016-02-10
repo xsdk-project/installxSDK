@@ -17,6 +17,8 @@
 
     --with-blaslapack-dir="directory to locate BLAS and LAPACK"   Usually you should not need this
 
+    --with-git=0 Do not use git to download any of the packages
+
     --disable-debug  Build optimized version of libraries (debug is the default)
 
     --with-boost-dir="directory where boost is installed"  Boost takes forever to install so this is a good option to use if you have boost installed already
@@ -25,5 +27,4 @@
 
   Use a different prefix for debug and optimized builds
 
-  Except for a couple of minor exceptions this script will NOT rebuild packages that have not changed between calls to the script,
-     thus calling it a second time with the same prefix will be much faster.
+  Except for a couple of minor exceptions this script will NOT rebuild packages that have not changed between calls to the script, thus calling it a second time with the same prefix will be much faster.

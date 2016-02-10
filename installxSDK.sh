@@ -11,10 +11,12 @@ fi
 # make directory where builds will occur
 if [ ! -d xsdk ]; then
   mkdir xsdk
+  printf "Creating work directory xsdk for all temporary files"  
 fi
 cd xsdk
 
 # This currently requires git, for the release version it will be optional
+# TODO check for --with-git=0 option indicating to obtain PETSc from a tarball and not the git repository
 
 PETSC_BRANCH='barry/downloads'
 # Get PETSc
@@ -32,4 +34,6 @@ export PETSC_DIR=`pwd`
 ./configure --download-xsdk $*
 make
 make install
+
+# the make and make install are not needed and should not be passed if --download-plotran (and hence --download-ideas) is passed
 
