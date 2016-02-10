@@ -1,23 +1,37 @@
 
                     Installer for the xSDK toolkit
+		    ==============================
 
     NOTE: THIS IS NOT A GENERAL PURPOSE PACKAGE MANAGER, rather it is a specific tool (using PETSc) to install a variety of HPC software packages.
-    It has very little automatic management of dependencies or version management.
 
-    Usage: sh ./installxSDK --prefix="installation directory" [other configure options]
+    Obtaining this script:
+    ---------------------
+
+      git clone https://github.com/xsdk-project/installxSDK.git   or
+
+      curl https://raw.githubusercontent.com/xsdk-project/installxSDK/master/installxSDK.sh > installxSDK.sh
+      
+
+    Usage:
+    -----
+    
+      sh ./installxSDK --prefix="installation directory" [other configure options]
 
 
-  Example:
+    Example:
+    -------
 
-    sh ./installxSDK --prefix=/usr/local/xSDK --with-mpicc=/usr/local/mpich/bin/mpicc --with-mpicxx=/usr/local/mpich/bin/mpicxx --with-mpif90=/usr/local/mpich/bin/mpif90
+      sh ./installxSDK --prefix=/usr/local/xSDK --with-mpicc=/usr/local/mpich/bin/mpicc --with-mpicxx=/usr/local/mpich/bin/mpicxx --with-mpif90=/usr/local/mpich/bin/mpif90
 
-  Useful Options:
+
+   Useful Options:
+   --------------
     
     --download-mpich  Useful if you do not have an MPI installed on your machine
 
     --with-blaslapack-dir="directory to locate BLAS and LAPACK"   Usually you should not need this
 
-    --with-git=0 Do not use git to download any of the packages
+    --with-git=0 Do not use git to download any of the packages, use the tarballs instead
 
     --disable-debug  Build optimized version of libraries (debug is the default)
 
@@ -25,6 +39,11 @@
 
     --with-trilinos=0   Intall xSDK except for Trilinos (Boost is also not installed since it is only needed by trilinos)
 
-  Use a different prefix for debug and optimized builds
+   Notes:
+   -----
+  
+    Use a different prefix for debug and optimized builds
 
-  Except for a couple of minor exceptions this script will NOT rebuild packages that have not changed between calls to the script, thus calling it a second time with the same prefix will be much faster.
+    Except for a couple of minor exceptions this script will NOT rebuild packages that have not changed between calls to the script, thus calling it a second time with the same prefix will be much faster.
+
+    This script has very little automatic management of dependencies or version management.
