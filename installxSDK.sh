@@ -1,13 +1,47 @@
 #!/bin/sh
 
-if [ $# = 1 ]; then
-  if [ $1 == "--help" ]; then
-    echo "xSDK Installer help:"
-    echo "--prefix=\"installation directory\" [--download-ideas] [other standard configure options such as mpicc=  etc]"
-    exit
-  fi  
-fi
+PREFIX="notset"
+WITHGIT="git"
+SKIPMAKE="0"
+for i in "$@"
+  do
+  case $i in
+    -h|--help)
+      echo "xSDK Installer help:"
+      echo "--prefix=\"installation directory\" [--download-ideas] [other standard configure options such as mpicc=  etc]"
+      exit
+    ;;
+    --prefix=*)
+      PREFIX="${i#*=}"
+      if [ "${PREFIX}" == "/usr" ]; then
+        echo "Do not use /usr as your --prefix install location"
+        exit
+      fi
+      if [ "${PREFIX}" == "/usr/local" ]; then
+        echo "Do not use /usr/local as your --prefix install location"
+        exit
+      fi
+    ;;
+    --with-git=*)
+	WITHGIT="${i#*=}"
+    ;;
+    --download-pflotran|--download-ideas)
+      SKIPMAKE="1"
+    ;;					 
+    --download-pflotran=*|--download-ideas=*)
+      SKIPMAKE="${i#*=}"
+    ;;
+    *)
+            # unknown option
+    ;;
+  esac
+done
 
+if [ "${PREFIX}" == "notset" ]; then
+  echo "You must provide a --prefix=\"installation directory\" option"
+  exit
+fi
+ 
 # make directory where builds will occur
 if [ ! -d xsdk ]; then
   mkdir xsdk
@@ -21,7 +55,12 @@ cd xsdk
 PETSC_BRANCH='barry/downloads'
 # Get PETSc
 if [ ! -d petsc ]; then
-  git clone https://bitbucket.org/petsc/petsc.git petsc
+  if [ "${WITHGIT}" != "0" ]; then
+    ${WITHGIT} clone https://bitbucket.org/petsc/petsc.git petsc
+  else
+    echo "Add code to obtain PETSc tarball"
+    exit
+  fi
 fi
 cd petsc
 git fetch
@@ -32,8 +71,8 @@ git pull
 # Install the packages
 export PETSC_DIR=`pwd`
 ./configure --download-xsdk $*
-make
-make install
-
-# the make and make install are not needed and should not be passed if --download-plotran (and hence --download-ideas) is passed
+if [ "${SKIPMAKE}" == "0" ]; then
+  make
+  make install
+fi
 
