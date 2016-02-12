@@ -37,7 +37,9 @@
 
     --with-boost-dir="directory where boost is installed"  Boost takes forever to install so this is a good option to use if you have boost installed already
 
-    --with-trilinos=0   Intall xSDK except for Trilinos (Boost is also not installed since it is only needed by trilinos)
+    --with-trilinos=0   Intall xSDK except for Trilinos (Boost is also not installed since it is only needed by Trilinos)
+
+    --download-xxx=/directoryname Add your own package to be automatically downloaded and installed. /directoryname/xxx.py should contain a subclass of config.package.GNUPackage, config.package.CMakePackage, or config.package.Package containing specific information about your package, its download location and dependencies. See, for example, http://www.mcs.anl.gov/petsc/petsc-dev/config/BuildSystem/config/packages/hypre.py, http://www.mcs.anl.gov/petsc/petsc-dev/config/BuildSystem/config/packages/metis.py, or http://www.mcs.anl.gov/petsc/petsc-dev/config/BuildSystem/config/packages/triangle.py This functionality was suggested by Ethan Coon.
 
    Notes:
    -----
