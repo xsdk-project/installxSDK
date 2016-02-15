@@ -70,7 +70,7 @@ git pull
 
 # Install the packages
 export PETSC_DIR=`pwd`
-./configure --download-xsdk "$*"
+./configure --download-xsdk $*
 if [ "${SKIPMAKE}" == "0" ]; then
   make
   make install
