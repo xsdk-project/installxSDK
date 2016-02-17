@@ -17,6 +17,7 @@
     
       sh ./installxSDK --prefix="installation directory" [other configure options]
 
+      [Explain xSDK here.]
 
     Example:
     -------
