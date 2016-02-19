@@ -45,12 +45,21 @@ as well as commonly needed dependent packages,
 
     --with-trilinos=0   Intall xSDK except for Trilinos (Boost is also not installed since it is only needed by Trilinos)
 
-    --download-xxx=/directoryname Add your own package to be automatically downloaded and installed. /directoryname/xxx.py should contain a subclass of config.package.GNUPackage, config.package.CMakePackage, or config.package.Package containing specific information about your package, its download location and dependencies. See, for example, http://www.mcs.anl.gov/petsc/petsc-dev/config/BuildSystem/config/packages/hypre.py, http://www.mcs.anl.gov/petsc/petsc-dev/config/BuildSystem/config/packages/metis.py, or http://www.mcs.anl.gov/petsc/petsc-dev/config/BuildSystem/config/packages/triangle.py This functionality was suggested by Ethan Coon.
+    --download-xxx=/directoryname Add your own package to be automatically downloaded and  
+    installed. /directoryname/xxx.py should contain a subclass of config.package.GNUPackage,  
+    config.package.CMakePackage, or config.package.Package containing specific information  
+    about your package, its download location and dependencies. See, for example,  
+    http://www.mcs.anl.gov/petsc/petsc-dev/config/BuildSystem/config/packages/hypre.py, 
+    http://www.mcs.anl.gov/petsc/petsc-dev/config/BuildSystem/config/packages/metis.py, or 
+    http://www.mcs.anl.gov/petsc/petsc-dev/config/BuildSystem/config/packages/triangle.py. 
+    This functionality was suggested by Ethan Coon.
 
 ##Notes
   
     Use a different prefix for debug and optimized builds
 
-    Except for a couple of minor exceptions this script will NOT rebuild packages that have not changed between calls to the script, thus calling it a second time with the same prefix will be much faster.
+    Except for a couple of minor exceptions this script will NOT rebuild packages that  
+    have not changed between calls to the script, thus calling it a second time with the  
+    same prefix will be much faster.
 
     This script has very little automatic management of dependencies or version management.
