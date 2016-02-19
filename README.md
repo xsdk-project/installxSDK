@@ -1,32 +1,25 @@
 
-                    Installer for the xSDK toolkit
-		    ==============================
+# Installer for the xSDK toolkit
 
-    NOTE: THIS IS NOT A GENERAL PURPOSE PACKAGE MANAGER, rather it is a specific tool (using PETSc) to install a variety of HPC software packages.
+    
+##Obtaining this script
 
-    Obtaining this script:
-    ---------------------
 
       git clone https://github.com/xsdk-project/installxSDK.git   or
 
       curl https://raw.githubusercontent.com/xsdk-project/installxSDK/master/installxSDK.sh > installxSDK.sh
       
-
-    Usage:
-    -----
+##Usage
     
       sh ./installxSDK --prefix="installation directory" [other configure options]
 
       [Explain xSDK here.]
 
-    Example:
-    -------
+##Example
 
       sh ./installxSDK --prefix=/usr/local/xSDK --with-mpicc=/usr/local/mpich/bin/mpicc --with-mpicxx=/usr/local/mpich/bin/mpicxx --with-mpif90=/usr/local/mpich/bin/mpif90
 
-
-   Useful Options:
-   --------------
+##Useful Options
     
     --download-mpich  Useful if you do not have an MPI installed on your machine
 
@@ -42,8 +35,7 @@
 
     --download-xxx=/directoryname Add your own package to be automatically downloaded and installed. /directoryname/xxx.py should contain a subclass of config.package.GNUPackage, config.package.CMakePackage, or config.package.Package containing specific information about your package, its download location and dependencies. See, for example, http://www.mcs.anl.gov/petsc/petsc-dev/config/BuildSystem/config/packages/hypre.py, http://www.mcs.anl.gov/petsc/petsc-dev/config/BuildSystem/config/packages/metis.py, or http://www.mcs.anl.gov/petsc/petsc-dev/config/BuildSystem/config/packages/triangle.py This functionality was suggested by Ethan Coon.
 
-   Notes:
-   -----
+##Notes
   
     Use a different prefix for debug and optimized builds
 
