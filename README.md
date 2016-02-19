@@ -1,6 +1,18 @@
 
 # Installer for the xSDK toolkit
 
+This script will by default download and install
+[hypre](https://computation.llnl.gov/project/linear_solvers/software.php),
+[PETSc](http://www.mcs.anl.gov),
+[SuperLU_dist](http://crd-legacy.lbl.gov/~xiaoye/SuperLU/#superlu_dist),
+[Trilinos](http://trilinos.org),
+as well as commonly needed dependent packages, 
+[boost](https://www.boost.org/),
+[hdf5](https://www.hdfgroup.org/HDF5/),
+[netcdf](http://www.unidata.ucar.edu/software/netcdf/),
+[exodusii](https://github.com/gsjaardema/seacas),
+[metis](http://glaros.dtc.umn.edu/gkhome/metis/metis/overview), and
+[parmetis](http://glaros.dtc.umn.edu/gkhome/metis/parmetis/overview). To prevent downloading a particular package add the argument \-\-download-xxx=0, for example, \-\-download-trilinos=0 
     
 ##Obtaining this script
 
