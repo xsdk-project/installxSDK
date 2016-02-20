@@ -12,7 +12,10 @@ as well as commonly needed dependent packages,
 [netcdf](http://www.unidata.ucar.edu/software/netcdf/),
 [exodusii](https://github.com/gsjaardema/seacas),
 [metis](http://glaros.dtc.umn.edu/gkhome/metis/metis/overview), and
-[parmetis](http://glaros.dtc.umn.edu/gkhome/metis/parmetis/overview). To prevent downloading a particular package add the argument \-\-download-xxx=0, for example, \-\-download-trilinos=0 
+[parmetis](http://glaros.dtc.umn.edu/gkhome/metis/parmetis/overview). 
+
+* To prevent downloading a particular package add the argument \-\-download-xxx=0, for example, \-\-download-trilinos=0 
+* To use an already installed package add the argument \-\-with-xxx-dir=/dir, for example, \-\-with-boost-dir=/usr/local
     
 ##Obtaining the script
 
