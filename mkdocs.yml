@@ -1,3 +1,7 @@
-site_name: My Docs
+#
+#  This file causes readthedocs.org to automatically generate the webpage
+#  http://installxsdk.readthedocs.org/en/latest/README/index.html from the README.md file
+#  
+site_name: Documents for installxSDK
 docs_dir: '.'
 
