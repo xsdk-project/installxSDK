@@ -1,7 +1,8 @@
 
 # Installer for the xSDK toolkit
 
-A goal of the xSDK is to simplify the process of working with various xSDK packages in combination.
+A goal of the [xSDK](https://ideas-productivity.org/resources/xsdk-docs)
+is to simplify the process of working with various xSDK packages in combination.
 Thus, the installation script will, by default, download and install four xSDK numerical libraries:
 [hypre](https://computation.llnl.gov/project/linear_solvers/software.php),
 [PETSc](http://www.mcs.anl.gov/petsc),
