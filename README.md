@@ -1,21 +1,22 @@
 
 # Installer for the xSDK toolkit
 
-This script will, by default, download and install
+A goal of the xSDK is to simplify the process of working with various xSDK packages in combination.
+Thus, the installation script will, by default, download and install four xSDK numerical libraries:
 [hypre](https://computation.llnl.gov/project/linear_solvers/software.php),
-[PETSc](http://www.mcs.anl.gov),
-[SuperLU_dist](http://crd-legacy.lbl.gov/~xiaoye/SuperLU/#superlu_dist),
+[PETSc](http://www.mcs.anl.gov/petsc),
+[SuperLU_dist](http://crd-legacy.lbl.gov/~xiaoye/SuperLU/#superlu_dist), and
 [Trilinos](http://trilinos.org),
-as well as commonly needed dependent packages, 
+as well as the following commonly needed external packages:
 [boost](https://www.boost.org/),
-[hdf5](https://www.hdfgroup.org/HDF5/),
-[netcdf](http://www.unidata.ucar.edu/software/netcdf/),
+[HDF5](https://www.hdfgroup.org/HDF5/),
+[NetCDF](http://www.unidata.ucar.edu/software/netcdf/),
 [exodusii](https://github.com/gsjaardema/seacas),
-[metis](http://glaros.dtc.umn.edu/gkhome/metis/metis/overview), and
-[parmetis](http://glaros.dtc.umn.edu/gkhome/metis/parmetis/overview). 
+[METIS](http://glaros.dtc.umn.edu/gkhome/metis/metis/overview), and
+[ParMETIS](http://glaros.dtc.umn.edu/gkhome/metis/parmetis/overview). 
 
-* To prevent downloading a particular package add the argument \-\-download-xxx=0, for example, \-\-download-trilinos=0 
-* To use an already installed package add the argument \-\-with-xxx-dir=/dir, for example, \-\-with-boost-dir=/usr/local
+* To prevent downloading a particular package, add the argument \-\-download-xxx=0, for example, \-\-download-trilinos=0 
+* To use an already installed package, add the argument \-\-with-xxx-dir=/dir, for example, \-\-with-boost-dir=/usr/local
     
 ##Obtaining the script
 
@@ -36,17 +37,17 @@ as well as commonly needed dependent packages,
 
 ##Useful Options
     
-    --download-mpich  Useful if you do not have an MPI installed on your machine
+    --download-mpich  Useful if you do not have an MPI installed on your machine.
 
-    --with-blaslapack-dir="directory to locate BLAS and LAPACK"   Usually you should not need this
+    --with-blaslapack-dir="directory to locate BLAS and LAPACK"   Usually you should not need this.
 
-    --with-git=0 Do not use git to download any of the packages, use the tarballs instead
+    --with-git=0 Do not use git to download any of the packages, use the tarballs instead.
 
-    --disable-debug  Build optimized version of libraries (debug is the default)
+    --disable-debug  Build optimized version of libraries (debug is the default).
 
-    --with-boost-dir="directory where boost is installed"  Boost takes forever to install so this is a good option to use if you have boost installed already
+    --with-boost-dir="directory where boost is installed"  Boost takes forever to install so this is a good option to use if you have boost installed already.
 
-    --with-trilinos=0   Intall xSDK except for Trilinos (Boost is also not installed since it is only needed by Trilinos)
+    --with-trilinos=0   Intall xSDK except for Trilinos (Boost is also not installed since it is needd only by Trilinos).
 
     --download-xxx=/directoryname Add your own package to be automatically downloaded and  
     installed. /directoryname/xxx.py should contain a subclass of config.package.GNUPackage,  
@@ -59,10 +60,13 @@ as well as commonly needed dependent packages,
 
 ##Notes
   
-    Use a different prefix for debug and optimized builds
+    Use a different prefix for debug and optimized builds.
 
-    Except for a couple of minor exceptions this script will NOT rebuild packages that  
-    have not changed between calls to the script, thus calling it a second time with the  
+    Except for a couple of minor exceptions, this script will NOT rebuild packages that  
+    have not changed between calls to the script. Thus, calling it a second time with the  
     same prefix will be much faster.
 
     This script has very little automatic management of dependencies or version management.
+
+    As an alternative to installing all (or most) of the xSDK packages as indicated above, 
+    the user can choose to install items on a per-package basis, for example:
