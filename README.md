@@ -18,6 +18,7 @@ as well as the following commonly needed external packages:
 
 * To prevent downloading a particular package, add the argument \-\-download-xxx=0, for example, \-\-download-trilinos=0 
 * To use an already installed package, add the argument \-\-with-xxx-dir=/dir, for example, \-\-with-boost-dir=/usr/local
+* To install a single package you must turn off all the package you do not want.
     
 ##Obtaining the script
 
@@ -29,8 +30,6 @@ as well as the following commonly needed external packages:
 ##Usage
     
       sh ./installxSDK --prefix="installation directory" [other configure options]
-
-      [Explain xSDK here.]
 
 ##Example
 
@@ -69,5 +68,3 @@ as well as the following commonly needed external packages:
 
     This script has very little automatic management of dependencies or version management.
 
-    As an alternative to installing all (or most) of the xSDK packages as indicated above, 
-    the user can choose to install items on a per-package basis, for example:
