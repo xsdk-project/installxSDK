@@ -60,17 +60,16 @@ as well as the following commonly needed external packages
 
 #Application-Specific Installs
 
-The script can install the 
-[Alquimia](https://github.com/LBL-EESA/alquimia-dev) xSDK geochemistry package and the
-[PFlotran](http://www.pflotran.org) chemistry engine.
-
-The script can also install external packages needed by the 
+The xSDK includes the
+[Alquimia](https://github.com/LBL-EESA/alquimia-dev) geochemistry package, which in turn uses the
+[PFlotran](http://www.pflotran.org) chemistry engine.  The script can install these application-specific packages, as well as other external packages needed by the 
 [Amanzi](https://software.lanl.gov/ascem/amanzi) application.
 
-## Application-specific installs
+## Options for Application-Specific installs
 
-[examples go here]
-[examples go here]
+  --download-alquimia  --download-pflotran    Install Alquimia and PFlotran chemistry engine.
+
+  --download-ideas   Install external software as needed by the Amanzi application.
 
 
 ##Notes
