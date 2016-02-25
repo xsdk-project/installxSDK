@@ -8,7 +8,7 @@ Thus, the installation script will, by default, download and install four xSDK n
 [PETSc](http://www.mcs.anl.gov/petsc),
 [SuperLU_dist](http://crd-legacy.lbl.gov/~xiaoye/SuperLU/#superlu_dist), and
 [Trilinos](http://trilinos.org))
-as well as the following commonly needed external packages
+as well as some commonly needed external packages
 ([boost](https://www.boost.org/),
 [HDF5](https://www.hdfgroup.org/HDF5/),
 [NetCDF](http://www.unidata.ucar.edu/software/netcdf/),
@@ -16,8 +16,8 @@ as well as the following commonly needed external packages
 [METIS](http://glaros.dtc.umn.edu/gkhome/metis/metis/overview), and
 [ParMETIS](http://glaros.dtc.umn.edu/gkhome/metis/parmetis/overview)). 
 
-* To prevent downloading a particular package, add the argument \-\-download-xxx=0, for example, \-\-download-trilinos=0 
 * To use an already installed package, add the argument \-\-with-xxx-dir=/dir, for example, \-\-with-boost-dir=/usr/local
+* To prevent downloading a particular package, add the argument \-\-download-xxx=0, for example, \-\-download-trilinos=0 
 * To install a subset of packages, you must turn off all packages you do not want.
     
 ##Obtaining the installation script
