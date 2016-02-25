@@ -58,6 +58,21 @@ as well as the following commonly needed external packages
     http://www.mcs.anl.gov/petsc/petsc-dev/config/BuildSystem/config/packages/triangle.py. 
     This functionality was suggested by Ethan Coon.
 
+#Application-Specific Installs
+
+The script can install the 
+[Alquimia](https://github.com/LBL-EESA/alquimia-dev) xSDK geochemistry package and the
+[PFlotran](http://www.pflotran.org) chemistry engine.
+
+The script can also install external packages needed by the 
+[Amanzi](https://software.lanl.gov/ascem/amanzi) application.
+
+## Application-specific installs
+
+[examples go here]
+[examples go here]
+
+
 ##Notes
   
     Use a different prefix for debug and optimized builds.
