@@ -3,24 +3,24 @@
 
 A goal of the [xSDK](https://ideas-productivity.org/resources/xsdk-docs)
 is to simplify the process of working with various xSDK packages in combination.
-Thus, the installation script will, by default, download and install four xSDK numerical libraries:
-[hypre](https://computation.llnl.gov/project/linear_solvers/software.php),
+Thus, the installation script will, by default, download and install four xSDK numerical libraries
+([hypre](https://computation.llnl.gov/project/linear_solvers/software.php),
 [PETSc](http://www.mcs.anl.gov/petsc),
 [SuperLU_dist](http://crd-legacy.lbl.gov/~xiaoye/SuperLU/#superlu_dist), and
-[Trilinos](http://trilinos.org),
-as well as the following commonly needed external packages:
-[boost](https://www.boost.org/),
+[Trilinos](http://trilinos.org))
+as well as the following commonly needed external packages
+([boost](https://www.boost.org/),
 [HDF5](https://www.hdfgroup.org/HDF5/),
 [NetCDF](http://www.unidata.ucar.edu/software/netcdf/),
 [exodusii](https://github.com/gsjaardema/seacas),
 [METIS](http://glaros.dtc.umn.edu/gkhome/metis/metis/overview), and
-[ParMETIS](http://glaros.dtc.umn.edu/gkhome/metis/parmetis/overview). 
+[ParMETIS](http://glaros.dtc.umn.edu/gkhome/metis/parmetis/overview)). 
 
 * To prevent downloading a particular package, add the argument \-\-download-xxx=0, for example, \-\-download-trilinos=0 
 * To use an already installed package, add the argument \-\-with-xxx-dir=/dir, for example, \-\-with-boost-dir=/usr/local
-* To install a single package you must turn off all the package you do not want.
+* To install a subset of packages, you must turn off all packages you do not want.
     
-##Obtaining the script
+##Obtaining the installation script
 
 
       git clone https://github.com/xsdk-project/installxSDK.git   or
@@ -41,13 +41,13 @@ as well as the following commonly needed external packages:
 
     --with-blaslapack-dir="directory to locate BLAS and LAPACK"   Usually you should not need this.
 
-    --with-git=0 Do not use git to download any of the packages, use the tarballs instead.
+    --with-git=0 Do not use git to download any of the packages; use the tarballs instead.
 
     --disable-debug  Build optimized version of libraries (debug is the default).
 
     --with-boost-dir="directory where boost is installed"  Boost takes forever to install so this is a good option to use if you have boost installed already.
 
-    --with-trilinos=0   Intall xSDK except for Trilinos (Boost is also not installed since it is needd only by Trilinos).
+    --with-trilinos=0   Intall xSDK except for Trilinos (Boost is also not installed since it is needed only by Trilinos).
 
     --download-xxx=/directoryname Add your own package to be automatically downloaded and  
     installed. /directoryname/xxx.py should contain a subclass of config.package.GNUPackage,  
