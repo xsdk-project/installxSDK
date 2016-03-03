@@ -52,7 +52,7 @@ cd xsdk
 # This currently requires git, for the release version it will be optional
 # TODO check for --with-git=0 option indicating to obtain PETSc from a tarball and not the git repository
 
-PETSC_BRANCH='barry/downloads'
+#PETSC_BRANCH='barry/downloads'
 # Get PETSc
 if [ ! -d petsc ]; then
   if [ "${WITHGIT}" != "0" ]; then
@@ -64,7 +64,7 @@ if [ ! -d petsc ]; then
 fi
 cd petsc
 git fetch
-git checkout $PETSC_BRANCH
+#git checkout $PETSC_BRANCH
 git pull
 
 
