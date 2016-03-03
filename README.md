@@ -22,21 +22,27 @@ as well as some commonly needed external packages
     
 ##Obtaining the installation script
 
-
+```no-highlight
       git clone https://github.com/xsdk-project/installxSDK.git   or
 
       curl https://raw.githubusercontent.com/xsdk-project/installxSDK/master/installxSDK.sh > installxSDK.sh
-      
+```
+
 ##Usage
     
+```no-highlight
       sh ./installxSDK --prefix="installation directory" [other configure options]
+```
 
 ##Example
 
+```no-highlight
       sh ./installxSDK --prefix=/usr/local/xSDK --with-mpicc=/usr/local/mpich/bin/mpicc --with-mpicxx=/usr/local/mpich/bin/mpicxx --with-mpif90=/usr/local/mpich/bin/mpif90
+```
 
 ##Useful Options
     
+```no-highlight
     --download-mpich  Useful if you do not have an MPI installed on your machine.
 
     --with-blaslapack-dir="directory to locate BLAS and LAPACK"   Usually you should not need this.
@@ -49,14 +55,8 @@ as well as some commonly needed external packages
 
     --with-trilinos=0   Intall xSDK except for Trilinos (Boost is also not installed since it is needed only by Trilinos).
 
-    --download-xxx=/directoryname Add your own package to be automatically downloaded and  
-    installed. /directoryname/xxx.py should contain a subclass of config.package.GNUPackage,  
-    config.package.CMakePackage, or config.package.Package containing specific information  
-    about your package, its download location and dependencies. See, for example,  
-    http://www.mcs.anl.gov/petsc/petsc-dev/config/BuildSystem/config/packages/hypre.py, 
-    http://www.mcs.anl.gov/petsc/petsc-dev/config/BuildSystem/config/packages/metis.py, or 
-    http://www.mcs.anl.gov/petsc/petsc-dev/config/BuildSystem/config/packages/triangle.py. 
-    This functionality was suggested by Ethan Coon.
+    --download-xxx=/directoryname Add your own package to be automatically downloaded and installed. /directoryname/xxx.py should contain a subclass of config.package.GNUPackage, config.package.CMakePackage, or config.package.Package containing specific information about your package, its download location and dependencies. See, for example, http://www.mcs.anl.gov/petsc/petsc-dev/config/BuildSystem/config/packages/hypre.py, http://www.mcs.anl.gov/petsc/petsc-dev/config/BuildSystem/config/packages/metis.py, or http://www.mcs.anl.gov/petsc/petsc-dev/config/BuildSystem/config/packages/triangle.py. This functionality was suggested by Ethan Coon.
+```
 
 ##Application-Specific Installs
 
@@ -71,18 +71,19 @@ external packages that are needed by the
 
 ## Options for Application-Specific Installs
 
+
+```no-highlight
     --download-alquimia  --download-pflotran    Install Alquimia and PFlotran.
 
     --download-ideas   Install xSDK packages and external software needed by Amanzi.
-
+```
 
 ##Notes
   
+```no-highlight
     Use a different prefix for debug and optimized builds.
 
-    Except for a couple of minor exceptions, this script will NOT rebuild packages that  
-    have not changed between calls to the script. Thus, calling it a second time with the  
-    same prefix will be much faster.
+    Except for a couple of minor exceptions, this script will NOT rebuild packages that  have not changed between calls to the script. Thus, calling it a second time with the same prefix will be much faster.
 
     This script has very little automatic management of dependencies or version management.
-
+```
