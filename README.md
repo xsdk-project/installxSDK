@@ -31,13 +31,13 @@ as well as some commonly needed external packages
 ##Usage
     
 ```no-highlight
-      sh ./installxSDK --prefix="installation directory" [other configure options]
+      sh ./installxSDK.sh --prefix="installation directory" [other configure options]
 ```
 
 ##Example
 
 ```no-highlight
-      sh ./installxSDK --prefix=/usr/local/xSDK --with-mpicc=/usr/local/mpich/bin/mpicc --with-mpicxx=/usr/local/mpich/bin/mpicxx --with-mpif90=/usr/local/mpich/bin/mpif90
+      sh ./installxSDK.sh --prefix=/usr/local/xSDK --with-mpicc=/usr/local/mpich/bin/mpicc --with-mpicxx=/usr/local/mpich/bin/mpicxx --with-mpif90=/usr/local/mpich/bin/mpif90
 ```
 
 ##Useful Options
