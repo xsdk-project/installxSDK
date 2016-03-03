@@ -43,6 +43,8 @@ as well as some commonly needed external packages
 ##Useful Options
     
 ```no-highlight
+    --help  List all the possible options (most you will never need)
+    
     --download-mpich  Useful if you do not have an MPI installed on your machine.
 
     --with-blaslapack-dir="directory to locate BLAS and LAPACK"   Usually you should not need this.

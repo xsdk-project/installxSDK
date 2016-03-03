@@ -10,6 +10,7 @@ for i in "$@"
       echo "xSDK Installer help:"
       echo "--prefix=\"installation directory\" [--download-ideas] [other standard configure options such as mpicc=  etc]"
       SKIPMAKE="1"
+      PREFIX="dummy"      
     ;;
     --prefix=*)
       PREFIX="${i#*=}"
