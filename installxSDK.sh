@@ -50,23 +50,26 @@ if [ ! -d xsdk ]; then
 fi
 cd xsdk
 
-# This currently requires git, for the release version it will be optional
-# TODO check for --with-git=0 option indicating to obtain PETSc from a tarball and not the git repository
-
 #PETSC_BRANCH='barry/downloads'
 # Get PETSc
 if [ ! -d petsc ]; then
   if [ "${WITHGIT}" != "0" ]; then
     ${WITHGIT} clone https://bitbucket.org/petsc/petsc.git petsc
   else
-    echo "Add code to obtain PETSc tarball"
-    exit
+    curl https://bitbucket.org/petsc/petsc/get/master.tar.gz > petsc.tar.gz
+    dir=`tar -tzf petsc.tar.gz  | head -1`
+    tar zxf petsc.tar.gz
+    mv -f ${dir} petsc
+    cd petsc
+  fi
+else
+  if [ "${WITHGIT}" != "0" ]; then
+    cd petsc
+    git fetch
+    #git checkout $PETSC_BRANCH
+    git pull
   fi
 fi
-cd petsc
-git fetch
-#git checkout $PETSC_BRANCH
-git pull
 
 
 # Install the packages
