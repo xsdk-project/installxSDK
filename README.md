@@ -44,6 +44,8 @@ as well as some commonly needed external packages
     
 ```no-highlight
     --help  List all the possible options (most you will never need)
+
+   --with-packages-dir=adirectory For use from behind a firewall, will not download needed packages but instead will direct user to download the packages to the given directory and then use those found in the directory
     
     --download-mpich  Useful if you do not have an MPI installed on your machine.
 

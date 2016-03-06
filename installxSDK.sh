@@ -3,6 +3,7 @@
 PREFIX="notset"
 WITHGIT="git"
 SKIPMAKE="0"
+PACKAGEDIR="0"
 for i in "$@"
   do
   case $i in
@@ -26,6 +27,9 @@ for i in "$@"
     --with-git=*)
 	WITHGIT="${i#*=}"
     ;;
+    --with-packages-dir=*)
+	PACKAGEDIR="${i#*=}"
+    ;;    
     --download-pflotran|--download-ideas)
       SKIPMAKE="1"
     ;;					 
@@ -53,7 +57,23 @@ cd xsdk
 #PETSC_BRANCH='barry/downloads'
 # Get PETSc
 if [ ! -d petsc ]; then
-  if [ "${WITHGIT}" != "0" ]; then
+  if [ "${PACKAGEDIR}" != "0" ]; then
+   if [ ! -f ${PACKAGEDIR}/petsc.tar.gz ]; then
+     echo " "
+     echo "Running in firewall mode"
+     echo " "
+     echo "Obtain the tarball https://bitbucket.org/petsc/petsc/get/master.tar.gz"
+     echo "put it in the directory ${PACKAGEDIR}"
+     echo "Do not uncompress or untar it. Then run the script again"
+     echo " "
+     exit
+   else
+     dir=`tar -tzf ${PACKAGEDIR}/petsc.tar.gz  | head -1`
+     tar zxf ${PACKAGEDIR}/petsc.tar.gz
+     mv -f ${dir} petsc
+     cd petsc
+   fi	  
+  elif [ "${WITHGIT}" != "0" ]; then
     ${WITHGIT} clone https://bitbucket.org/petsc/petsc.git petsc
   else
     curl https://bitbucket.org/petsc/petsc/get/master.tar.gz > petsc.tar.gz
@@ -75,8 +95,10 @@ fi
 # Install the packages
 export PETSC_DIR=`pwd`
 ./configure --download-xsdk $*
-if [ "${SKIPMAKE}" == "0" ]; then
-  make
-  make install
+if [ "$?" == "0" ]; then
+  if [ "${SKIPMAKE}" == "0" ]; then
+    make
+    make install
+  fi
 fi
 
