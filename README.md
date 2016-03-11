@@ -82,6 +82,11 @@ external packages that are needed by the
     --download-ideas   Install xSDK packages and external software needed by Amanzi.
 ```
 
+## Humor
+
+http://xkcd.com/1654/
+
+
 ##Notes
   
 ```no-highlight
