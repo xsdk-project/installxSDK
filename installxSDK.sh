@@ -15,11 +15,11 @@ for i in "$@"
     ;;
     --prefix=*)
       PREFIX="${i#*=}"
-      if [ "${PREFIX}" == "/usr" ]; then
+      if [ "${PREFIX}" = "/usr" ]; then
         echo "Do not use /usr as your --prefix install location"
         exit
       fi
-      if [ "${PREFIX}" == "/usr/local" ]; then
+      if [ "${PREFIX}" = "/usr/local" ]; then
         echo "Do not use /usr/local as your --prefix install location"
         exit
       fi
@@ -42,7 +42,7 @@ for i in "$@"
   esac
 done
 
-if [ "${PREFIX}" == "notset" ]; then
+if [ "${PREFIX}" = "notset" ]; then
   echo "You must provide a --prefix=\"installation directory\" option"
   exit
 fi
@@ -96,8 +96,8 @@ fi
 # Install the packages
 export PETSC_DIR=`pwd`
 ./configure --download-xsdk $*
-if [ "$?" == "0" ]; then
-  if [ "${SKIPMAKE}" == "0" ]; then
+if [ "$?" = "0" ]; then
+  if [ "${SKIPMAKE}" = "0" ]; then
     make
     make install
   fi
