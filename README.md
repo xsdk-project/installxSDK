@@ -23,9 +23,15 @@ as well as some commonly needed external packages
 ##Obtaining the installation script
 
 ```no-highlight
-      git clone https://github.com/xsdk-project/installxSDK.git   or
+      git clone https://github.com/xsdk-project/installxSDK.git
+      cd installxSDK
+```
 
-      curl https://raw.githubusercontent.com/xsdk-project/installxSDK/master/installxSDK.sh > installxSDK.sh
+or
+
+
+```no-highlight
+     curl https://raw.githubusercontent.com/xsdk-project/installxSDK/master/installxSDK.sh > installxSDK.sh
 ```
 
 ##Usage
