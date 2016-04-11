@@ -54,8 +54,10 @@ if [ ! -d xsdk ]; then
 fi
 cd xsdk
 
-#PETSC_BRANCH='barry/downloads'
-# Get PETSc
+if [ "${PETSC_BRANCH}x" = "x" ]; then
+  PETSC_BRANCH="master"
+fi
+
 if [ ! -d petsc ]; then
   if [ "${PACKAGEDIR}" != "0" ]; then
    if [ ! -f ${PACKAGEDIR}/petsc.tar.gz ]; then
@@ -87,7 +89,7 @@ else
   if [ "${WITHGIT}" != "0" ]; then
     cd petsc
     git fetch
-    #git checkout $PETSC_BRANCH
+    git checkout $PETSC_BRANCH
     git pull
   fi
 fi
@@ -95,7 +97,8 @@ fi
 
 # Install the packages
 export PETSC_DIR=`pwd`
-./configure --download-xsdk $*
+echo "$@"
+./configure --download-xsdk "$@"
 if [ "$?" = "0" ]; then
   if [ "${SKIPMAKE}" = "0" ]; then
     make
