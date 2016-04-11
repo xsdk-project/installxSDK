@@ -97,7 +97,6 @@ fi
 
 # Install the packages
 export PETSC_DIR=`pwd`
-echo "$@"
 ./configure --download-xsdk "$@"
 if [ "$?" = "0" ]; then
   if [ "${SKIPMAKE}" = "0" ]; then
