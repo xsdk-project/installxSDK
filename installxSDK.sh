@@ -2,7 +2,6 @@
 
 PREFIX="notset"
 WITHGIT="git"
-SKIPMAKE="0"
 PACKAGEDIR="0"
 for i in "$@"
   do
@@ -10,7 +9,6 @@ for i in "$@"
     -h|--help)
       echo "xSDK Installer help:"
       echo "--prefix=\"installation directory\" [--download-ideas] [other standard configure options such as mpicc=  etc]"
-      SKIPMAKE="1"
       PREFIX="dummy"      
     ;;
     --prefix=*)
@@ -29,12 +27,6 @@ for i in "$@"
     ;;
     --with-packages-dir=*)
 	PACKAGEDIR="${i#*=}"
-    ;;    
-    --download-pflotran|--download-ideas)
-      SKIPMAKE="1"
-    ;;					 
-    --download-pflotran=*|--download-ideas=*)
-      SKIPMAKE="${i#*=}"
     ;;
     *)
             # unknown option
@@ -98,10 +90,5 @@ fi
 # Install the packages
 export PETSC_DIR=`pwd`
 ./configure --download-xsdk "$@"
-if [ "$?" = "0" ]; then
-  if [ "${SKIPMAKE}" = "0" ]; then
-    make
-    make install
-  fi
-fi
+
 
