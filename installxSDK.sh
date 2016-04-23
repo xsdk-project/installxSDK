@@ -47,7 +47,7 @@ fi
 cd xsdk
 
 if [ "${PETSC_BRANCH}x" = "x" ]; then
-  PETSC_BRANCH="master"
+  PETSC_BRANCH="maint"
 fi
 
 if [ ! -d petsc ]; then
@@ -71,7 +71,7 @@ if [ ! -d petsc ]; then
     ${WITHGIT} clone https://bitbucket.org/petsc/petsc.git petsc
     cd petsc
   else
-    curl https://bitbucket.org/petsc/petsc/get/master.tar.gz > petsc.tar.gz
+    curl https://bitbucket.org/petsc/petsc/get/maint.tar.gz > petsc.tar.gz
     dir=`tar -tzf petsc.tar.gz  | head -1`
     tar zxf petsc.tar.gz
     mv -f ${dir} petsc
