@@ -3,6 +3,8 @@
 PREFIX="notset"
 WITHGIT="git"
 PACKAGEDIR="0"
+PETSC_COMMIT="v3.7"
+
 for i in "$@"
   do
   case $i in
@@ -46,18 +48,14 @@ if [ ! -d xsdk ]; then
 fi
 cd xsdk
 
-if [ "${PETSC_BRANCH}x" = "x" ]; then
-  PETSC_BRANCH="maint"
-fi
-
 if [ ! -d petsc ]; then
   if [ "${PACKAGEDIR}" != "0" ]; then
    if [ ! -f ${PACKAGEDIR}/petsc.tar.gz ]; then
      echo " "
      echo "Running in firewall mode"
      echo " "
-     echo "Obtain the tarball https://bitbucket.org/petsc/petsc/get/master.tar.gz"
-     echo "put it in the directory ${PACKAGEDIR}"
+     echo "Obtain the tarball https://bitbucket.org/petsc/petsc/get/${PETSC_COMMIT}.tar.gz"
+     echo "put it in the directory ${PACKAGEDIR} with the name petsc.tar.gz"
      echo "Do not uncompress or untar it. Then run the script again"
      echo " "
      exit
@@ -71,7 +69,7 @@ if [ ! -d petsc ]; then
     ${WITHGIT} clone https://bitbucket.org/petsc/petsc.git petsc
     cd petsc
   else
-    curl https://bitbucket.org/petsc/petsc/get/maint.tar.gz > petsc.tar.gz
+    curl https://bitbucket.org/petsc/petsc/get/${PETSC_COMMIT}.tar.gz > petsc.tar.gz
     dir=`tar -tzf petsc.tar.gz  | head -1`
     tar zxf petsc.tar.gz
     mv -f ${dir} petsc
@@ -81,7 +79,7 @@ else
   if [ "${WITHGIT}" != "0" ]; then
     cd petsc
     git fetch
-    git checkout $PETSC_BRANCH
+    git checkout $PETSC_COMMIT
     git pull
   fi
 fi

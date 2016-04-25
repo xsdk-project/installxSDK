@@ -25,13 +25,14 @@ as well as some commonly needed external packages
 ```no-highlight
       git clone https://github.com/xsdk-project/installxSDK.git
       cd installxSDK
+      git checkout v0.1.0
 ```
 
 or
 
 
 ```no-highlight
-     curl https://raw.githubusercontent.com/xsdk-project/installxSDK/master/installxSDK.sh > installxSDK.sh
+     curl https://raw.githubusercontent.com/xsdk-project/installxSDK/v0.1.0/installxSDK.sh > installxSDK.sh
 ```
 
 ##Usage
