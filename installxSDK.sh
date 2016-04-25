@@ -68,6 +68,7 @@ if [ ! -d petsc ]; then
   elif [ "${WITHGIT}" != "0" ]; then
     ${WITHGIT} clone https://bitbucket.org/petsc/petsc.git petsc
     cd petsc
+    git checkout $PETSC_COMMIT
   else
     curl https://bitbucket.org/petsc/petsc/get/${PETSC_COMMIT}.tar.gz > petsc.tar.gz
     dir=`tar -tzf petsc.tar.gz  | head -1`
