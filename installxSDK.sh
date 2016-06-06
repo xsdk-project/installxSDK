@@ -82,8 +82,6 @@ else
     cd petsc
     git fetch
     git checkout $PETSC_COMMIT
-    printf "Using $PETSC_COMMIT version/git commit of PETSc\n"
-    git pull
   fi
 fi
 
