@@ -1,6 +1,9 @@
 
 # Installer for the xSDK toolkit
 
+  See https://xsdk.info/download/ for directions on installing. The material below should be ignored.
+
+
 A goal of the [xSDK](https://ideas-productivity.org/resources/xsdk-docs)
 is to simplify the process of working with various xSDK packages in combination.
 Thus, the installation script will, by default, download and install four xSDK numerical libraries
