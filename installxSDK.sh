@@ -3,7 +3,7 @@
 PREFIX="notset"
 WITHGIT="git"
 PACKAGEDIR="0"
-PETSC_COMMIT="v3.7"
+PETSC_COMMIT="v3.7.2"
 
 for i in "$@"
   do
@@ -44,7 +44,7 @@ fi
 # make directory where builds will occur
 if [ ! -d xsdk ]; then
   mkdir xsdk
-  printf "Creating work directory xsdk for all temporary files"  
+  printf "Creating work directory xsdk for all temporary files\n"  
 fi
 cd xsdk
 
@@ -66,6 +66,7 @@ if [ ! -d petsc ]; then
      cd petsc
    fi	  
   elif [ "${WITHGIT}" != "0" ]; then
+    printf "Using git to obtain the packages\n"
     ${WITHGIT} clone https://bitbucket.org/petsc/petsc.git petsc
     cd petsc
     git checkout $PETSC_COMMIT
@@ -81,6 +82,7 @@ else
     cd petsc
     git fetch
     git checkout $PETSC_COMMIT
+    printf "Using $PETSC_COMMIT version/git commit of PETSc\n"
     git pull
   fi
 fi
