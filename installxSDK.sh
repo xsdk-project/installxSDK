@@ -3,7 +3,7 @@
 PREFIX="notset"
 WITHGIT="git"
 PACKAGEDIR="0"
-PETSC_COMMIT="v3.7.2"
+PETSC_COMMIT="origin/maint"
 
 for i in "$@"
   do
@@ -29,6 +29,9 @@ for i in "$@"
     ;;
     --with-packages-dir=*)
 	PACKAGEDIR="${i#*=}"
+    ;;
+    --with-petsc-commit=*)
+	PETSC_COMMIT="${i#*=}"
     ;;
     *)
             # unknown option
