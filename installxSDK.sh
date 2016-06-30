@@ -4,6 +4,7 @@ PREFIX="notset"
 WITHGIT="git"
 PACKAGEDIR="0"
 PETSC_COMMIT="origin/maint"
+unset PETSC_ARCH
 
 for i in "$@"
   do
@@ -50,6 +51,7 @@ if [ ! -d xsdk ]; then
   printf "Creating work directory xsdk for all temporary files\n"  
 fi
 cd xsdk
+XSDK_DIR=`pwd`
 
 if [ ! -d petsc ]; then
   if [ "${PACKAGEDIR}" != "0" ]; then
@@ -91,6 +93,6 @@ fi
 
 # Install the packages
 export PETSC_DIR=`pwd`
-./configure --download-xsdk "$@"
+./configure --download-xsdk --with-external-packages-dir=${XSDK_DIR} "$@"
 
 
