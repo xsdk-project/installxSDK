@@ -31,7 +31,7 @@ for i in "$@"
     --with-packages-dir=*)
 	PACKAGEDIR="${i#*=}"
     ;;
-    --with-petsc-commit=*)
+    --download-petsc-commit=*)	
 	PETSC_COMMIT="${i#*=}"
     ;;
     *)
