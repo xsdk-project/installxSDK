@@ -9,7 +9,7 @@ the xSDK through Spack for various platforms.
 
 The files are arranged generally as follows:
 
-installxSDK/platformFiles/<platform description>/<files for platfom>
+installxSDK/platformFiles/\<platform description\>/\<files for platfom\>
 
 This repository is to be tagged for each major and minor release of the xSDK.
 
