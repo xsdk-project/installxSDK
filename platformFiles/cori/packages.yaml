@@ -1,0 +1,47 @@
+packages:
+  mpich:
+    modules:
+      mpich@7.6.0%gcc@5.2.0 arch=cray-CNL-haswell: cray-mpich
+      mpich@7.6.0%intel@16.0.3.210 arch=cray-CNL-haswell: cray-mpich
+      mpich@7.6.0%cce@8.6.1 arch=cray-CNL-haswell: cray-mpich
+    buildable: False
+  autoconf:
+    modules:
+      autoconf@2.69%gcc@5.2.0 arch=cray-CNL-haswell: autoconf
+      autoconf@2.69%intel@16.0.3.210 arch=cray-CNL-haswell: autoconf
+      autoconf@2.69%cce@8.6.1 arch=cray-CNL-haswell: autoconf
+    buildable: False
+  automake:
+    modules:
+      automake@1.15%gcc@5.2.0 arch=cray-CNL-haswell: automake
+      automake@1.15%intel@16.0.3.210 arch=cray-CNL-haswell: automake
+      automake@1.15%cce@8.6.1 arch=cray-CNL-haswell: automake
+    buildable: False
+  openssl:
+    modules:
+      openssl@1.0.2h%gcc@5.2.0 arch=cray-CNL-haswell: openssl
+      openssl@1.0.2h%intel@16.0.3.210 arch=cray-CNL-haswell: openssl
+      openssl@1.0.2h%cce@8.6.1 arch=cray-CNL-haswell: openssl
+    buildable: False
+  cmake:
+    modules:
+      cmake@3.8.2%gcc@5.2.0 arch=cray-CNL-haswell: cmake
+      cmake@3.8.2%intel@16.0.3.210 arch=cray-CNL-haswell: cmake
+      cmake@3.8.2%cce@8.6.1 arch=cray-CNL-haswell: cmake
+    buildable: False
+  m4:
+    modules:
+      m4@1.4.17%gcc@5.2.0 arch=cray-CNL-haswell: m4
+      m4@1.4.17%intel@16.0.3.210 arch=cray-CNL-haswell: m4
+      m4@1.4.17%cce@8.6.1 arch=cray-CNL-haswell: m4
+    buildable: False
+  boost:
+    modules:
+      boost@1.65.1%gcc@5.2.0 arch=cray-CNL-haswell: boost
+      boost@1.65.1%intel@16.0.3.210 arch=cray-CNL-haswell: boost
+      boost@1.65.1%cce@8.6.1 arch=cray-CNL-haswell: boost
+    buildable: False
+  all:
+    compiler: [gcc@5.2.0, intel/16.0.3.210, cce/8.6.1]
+    providers:
+      mpi: [mpich]
