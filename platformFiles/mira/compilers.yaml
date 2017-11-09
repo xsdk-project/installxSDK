@@ -1,0 +1,11 @@
+compilers:
+- compiler:
+    modules: []
+    operating_system: cnk
+    paths:
+       cc: /soft/compilers/gcc/4.8.4/bin/powerpc64-bgq-linux-gcc
+       cxx: soft/compilers/gcc/4.8.4/bin/powerpc64-bgq-linux-g++
+       f77: soft/compilers/gcc/4.8.4/bin/powerpc64-bgq-linux-gfortran
+       fc: /soft/compilers/gcc/4.8.4/bin/powerpc64-bgq-linux-gfortran
+    spec: gcc@4.8.4
+
