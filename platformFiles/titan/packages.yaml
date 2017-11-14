@@ -1,0 +1,40 @@
+packages:
+  mpich:
+    modules:
+      mpich@7.5.2%gcc@5.3.0 arch=cray: cray-mpich/7.5.2
+      mpich@7.5.2%gcc@5.3.0 arch=cray-CNL-interlagos: cray-mpich/7.5.2
+    buildable: False
+  cmake:
+    paths:
+      cmake@3.6.1%gcc@5.3.0 arch=cray-CNL-interlagos: /autofs/nccs-svm1_sw/titan/.swci/0-login/opt/spack/20170612/linux-suse_linux11-x86_64/gcc-4.3.4/cmake-3.9.0-owxiriblogovogl5zbrg45ulm3ln34cx/bin/cmake
+    buildable: False
+  hdf5:
+    paths:
+      hdf5@1.10.0%gcc@5.3.0+hl+fortran arch=cray-CNL-interlagos: /opt/cray/hdf5-parallel/1.10.0.1/GNU/5.1
+    buildable: False
+  boost:
+    modules:
+      boost@1.60.0%gcc@5.3.0 arch=cray-CNL-interlagos: boost/1.60.0
+    buildable: False
+  perl:
+    modules:
+      perl@5.20.2%gcc@5.3.0 arch=cray-CNL-interlagos: perl/5.20.2
+    buildable: False
+  python:
+    modules:
+      python@2.7.9%gcc@5.3.0 arch=cray-CNL-interlagos: python/2.7.9
+      python@3.5.1%gcc@5.3.0 arch=cray-CNL-interlagos: python/3.5.1
+    buildable: False
+  mercurial:
+    modules:
+      mercurial@2.6.3%gcc@5.3.0 arch=cray-CNL-interlagos: mercurial/2.6.3
+    buildable: False
+  magma:
+    modules:
+      magma@1.6.2%gcc@5.3.0 arch=cray-CNL-interlagos: magma/1.6.2
+    buildable: False
+  all:
+    providers:
+      mpi: [mpich]
+      compiler: [gcc@5.3.0]
+
