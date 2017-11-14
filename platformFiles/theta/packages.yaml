@@ -1,0 +1,57 @@
+packages:
+  cmake:
+    paths:
+      cmake@3.5.2%intel@18.0.0.128 arch=cray-CNL-mic_knl: /usr
+    buildable: False
+  python:
+    paths:
+      python@2.7.13%intel@18.0.0.128 arch=cray-CNL-mic_knl: /usr
+    buildable: False
+  pkg-config:
+    paths:
+      pkg-config@0.28%intel@18.0.0.128 arch=cray-CNL-mic_knl: /usr
+    buildable: False 
+  autoconf:
+    paths:
+      autoconf@2.69%intel@18.0.0.128 arch=cray-CNL-mic_knl: /usr
+    buildable: False
+  automake:
+    paths:
+      automake@1.13.4%intel@18.0.0.128 arch=cray-CNL-mic_knl: /usr
+    buildable: False
+  libtool:
+    paths:
+      libtool@2.4.2%intel@18.0.0.128 arch=cray-CNL-mic_knl: /usr
+    buildable: False
+  m4:
+    paths:
+      m4@1.4.16%intel@18.0.0.128 arch=cray-CNL-mic_knl: /usr
+    buildable: False
+  intel-mkl:
+    paths:
+      intel-mkl@18.0.0.128%intel@18.0.0.128 arch=cray-CNL-mic_knl: /opt/intel
+    buildable: False
+  mpich:
+    modules:
+      # requires 'module load cce' otherwise gives parsing error
+      mpich@7.6.3%intel@18.0.0.128 arch=cray-CNL-mic_knl: cray-mpich/7.6.3
+    buildable: False
+  #boost:
+  #  modules:
+  #    boost@1.64.0%intel@18.0.0.128 arch=cray-CNL-mic_knl: boost/intel/1.64.0
+  #  buildable: False
+  boost:
+    paths:
+      boost@1.64.0%intel@18.0.0.128 arch=cray-CNL-mic_knl: /soft/libraries/boost/1.64.0/intel
+    buildable: False
+  hdf5:
+    modules:
+      hdf5@1.8.16%intel@18.0.0.128+hl+fortran arch=cray-CNL-mic_knl: cray-hdf5-parallel/1.8.16
+    buildable: False
+  all:
+    providers:
+      mpi: [mpich]
+      blas: [intel-mkl]
+      lapack: [intel-mkl]
+    compiler: [intel@18.0.0.128]
+
