@@ -1,0 +1,183 @@
+compilers:
+- compiler:
+    environment: {}
+    extra_rpaths: []
+    flags: {}
+    modules: []
+    operating_system: ubuntu14
+    paths:
+      cc: /usr/bin/clang
+      cxx: /usr/bin/clang++
+      f77: null
+      fc: null
+    spec: clang@3.4-1ubuntu3
+    target: x86_64
+- compiler:
+    environment: {}
+    extra_rpaths: []
+    flags: {}
+    modules: []
+    operating_system: ubuntu14
+    paths:
+      cc: /nfs2/petsc/soft/linux-Ubuntu_14.04-x86_64/clang-3.8.1/bin/clang
+      cxx: /nfs2/petsc/soft/linux-Ubuntu_14.04-x86_64/clang-3.8.1/bin/clang++
+      f77: null
+      fc: null
+    spec: clang@3.8.1
+    target: x86_64
+- compiler:
+    environment: {}
+    extra_rpaths: []
+    flags: {}
+    modules: []
+    operating_system: ubuntu14
+    paths:
+      cc: /usr/bin/gcc-4.4
+      cxx: /usr/bin/g++-4.4
+      f77: /usr/bin/gfortran-4.4
+      fc: /usr/bin/gfortran-4.4
+    spec: gcc@4.4.7
+    target: x86_64
+- compiler:
+    environment: {}
+    extra_rpaths: []
+    flags: {}
+    modules: []
+    operating_system: ubuntu14
+    paths:
+      cc: /usr/bin/gcc-4.8
+      cxx: /usr/bin/g++-4.8
+      f77: /usr/bin/gfortran-4.8
+      fc: /usr/bin/gfortran-4.8
+    spec: gcc@4.8
+    target: x86_64
+- compiler:
+    environment: {}
+    extra_rpaths: [/soft/com/packages/intel/16/u3/lib/intel64]
+    flags: {}
+    modules: []
+    operating_system: ubuntu14
+    paths:
+      cc: /nfs/software/linux-ubuntu_trusty_amd64/com/packages/intel/16/u3/bin/icc
+      cxx: /nfs/software/linux-ubuntu_trusty_amd64/com/packages/intel/16/u3/bin/icpc
+      f77: /nfs/software/linux-ubuntu_trusty_amd64/com/packages/intel/16/u3/bin/ifort
+      fc: /nfs/software/linux-ubuntu_trusty_amd64/com/packages/intel/16/u3/bin/ifort
+    spec: intel@16.0.3
+    target: x86_64
+- compiler:
+    environment: {}
+    extra_rpaths: []
+    flags: {}
+    modules: []
+    operating_system: ubuntu14
+    paths:
+      cc: null
+      cxx: null
+      f77: /nfs/software/linux-ubuntu_trusty_amd64/com/packages/nag/6.1/bin/nagfor
+      fc: /nfs/software/linux-ubuntu_trusty_amd64/com/packages/nag/6.1/bin/nagfor
+    spec: nag@6.1
+    target: x86_64
+- compiler:
+    environment: {}
+    extra_rpaths: []
+    flags: {}
+    modules: []
+    operating_system: ubuntu14
+    paths:
+      cc: /nfs2/petsc/soft/linux-Ubuntu_14.04-x86_64/pgi/linux86-64/16.10/bin/pgcc
+      cxx: /nfs2/petsc/soft/linux-Ubuntu_14.04-x86_64/pgi/linux86-64/16.10/bin/pgc++
+      f77: /nfs2/petsc/soft/linux-Ubuntu_14.04-x86_64/pgi/linux86-64/16.10/bin/pgfortran
+      fc: /nfs2/petsc/soft/linux-Ubuntu_14.04-x86_64/pgi/linux86-64/16.10/bin/pgfortran
+    spec: pgi@16.10
+    target: x86_64
+- compiler:
+    environment: {}
+    extra_rpaths: []
+    flags: {}
+    modules: []
+    operating_system: ubuntu14.04
+    paths:
+      cc: /usr/bin/clang
+      cxx: /usr/bin/clang++
+      f77: null
+      fc: null
+    spec: clang@3.4-1ubuntu3
+    target: x86_64
+- compiler:
+    environment: {}
+    extra_rpaths: []
+    flags: {}
+    modules: []
+    operating_system: ubuntu14.04
+    paths:
+      cc: /nfs2/petsc/soft/linux-Ubuntu_14.04-x86_64/clang-3.8.1/bin/clang
+      cxx: /nfs2/petsc/soft/linux-Ubuntu_14.04-x86_64/clang-3.8.1/bin/clang++
+      f77: null
+      fc: null
+    spec: clang@3.8.1
+    target: x86_64
+- compiler:
+    environment: {}
+    extra_rpaths: []
+    flags: {}
+    modules: []
+    operating_system: ubuntu14.04
+    paths:
+      cc: /usr/bin/gcc-4.4
+      cxx: /usr/bin/g++-4.4
+      f77: /usr/bin/gfortran-4.4
+      fc: /usr/bin/gfortran-4.4
+    spec: gcc@4.4.7
+    target: x86_64
+- compiler:
+    environment: {}
+    extra_rpaths: []
+    flags: {}
+    modules: []
+    operating_system: ubuntu14.04
+    paths:
+      cc: /usr/bin/gcc-4.8
+      cxx: /usr/bin/g++-4.8
+      f77: /usr/bin/gfortran-4.8
+      fc: /usr/bin/gfortran-4.8
+    spec: gcc@4.8
+    target: x86_64
+- compiler:
+    environment: {}
+    extra_rpaths: []
+    flags: {}
+    modules: []
+    operating_system: ubuntu14.04
+    paths:
+      cc: /nfs/software/linux-ubuntu_trusty_amd64/com/packages/intel/16/u3/bin/icc
+      cxx: /nfs/software/linux-ubuntu_trusty_amd64/com/packages/intel/16/u3/bin/icpc
+      f77: /nfs/software/linux-ubuntu_trusty_amd64/com/packages/intel/16/u3/bin/ifort
+      fc: /nfs/software/linux-ubuntu_trusty_amd64/com/packages/intel/16/u3/bin/ifort
+    spec: intel@16.0.3
+    target: x86_64
+- compiler:
+    environment: {}
+    extra_rpaths: []
+    flags: {}
+    modules: []
+    operating_system: ubuntu14.04
+    paths:
+      cc: null
+      cxx: null
+      f77: /nfs/software/linux-ubuntu_trusty_amd64/com/packages/nag/6.1/bin/nagfor
+      fc: /nfs/software/linux-ubuntu_trusty_amd64/com/packages/nag/6.1/bin/nagfor
+    spec: nag@6.1
+    target: x86_64
+- compiler:
+    environment: {}
+    extra_rpaths: []
+    flags: {}
+    modules: []
+    operating_system: ubuntu14.04
+    paths:
+      cc: /nfs2/petsc/soft/linux-Ubuntu_14.04-x86_64/pgi/linux86-64/16.10/bin/pgcc
+      cxx: /nfs2/petsc/soft/linux-Ubuntu_14.04-x86_64/pgi/linux86-64/16.10/bin/pgc++
+      f77: /nfs2/petsc/soft/linux-Ubuntu_14.04-x86_64/pgi/linux86-64/16.10/bin/pgfortran
+      fc: /nfs2/petsc/soft/linux-Ubuntu_14.04-x86_64/pgi/linux86-64/16.10/bin/pgfortran
+    spec: pgi@16.10
+    target: x86_64
