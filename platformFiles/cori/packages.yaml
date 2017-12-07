@@ -1,10 +1,28 @@
 packages:
+  python:
+    paths:
+      python@2.7.14%gcc@5.2.0 arch=cray-CNL-haswell: /usr
+      python@2.7.14%intel@16.0.3.210 arch=cray-CNL-haswell: /usr
+      python@2.7.14%cce@8.6.1 arch=cray-CNL-haswell: /usr
+    buildable: False
   mpich:
     modules:
       mpich@7.6.0%gcc@5.2.0 arch=cray-CNL-haswell: cray-mpich
       mpich@7.6.0%intel@16.0.3.210 arch=cray-CNL-haswell: cray-mpich
       mpich@7.6.0%cce@8.6.1 arch=cray-CNL-haswell: cray-mpich
     buildable: False
+#  netcdf:
+#    modules:
+#      netcdf@4.4.1.1.3%gcc@5.2.0 arch=cray-CNL-haswell: cray-netcdf
+#      netcdf@4.4.1.1.3%intel@16.0.3.210 arch=cray-CNL-haswell: cray-netcdf
+#      netcdf@4.4.1.1.3%cce@8.6.1 arch=cray-CNL-haswell: cray-netcdf
+#    buildable: False
+#  hdf5:
+#    modules:
+#      hdf5@1.10.0.3%gcc@5.2.0 arch=cray-CNL-haswell: cray-hdf5
+#      hdf5@1.10.0.3%intel@16.0.3.210 arch=cray-CNL-haswell: cray-hdf5
+#      hdf5@1.10.0.3%cce@8.6.1 arch=cray-CNL-haswell: cray-hdf5
+#    buildable: False
   autoconf:
     modules:
       autoconf@2.69%gcc@5.2.0 arch=cray-CNL-haswell: autoconf

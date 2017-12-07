@@ -1,21 +1,39 @@
 packages:
+  python:
+    paths:
+      python@2.7.14%gcc@5.2.0 arch=cray-CNL-ivybridge: /usr
+      python@2.7.14%intel@16.0.3.210 arch=cray-CNL-ivybridge: /usr
+      python@2.7.14%cce@8.6.1 arch=cray-CNL-ivybridge: /usr
+    buildable: False
+  perl:
+    paths:
+      perl@2.7.14%gcc@5.2.0 arch=cray-CNL-ivybridge: /usr
+      perl@2.7.14%intel@16.0.3.210 arch=cray-CNL-ivybridge: /usr
+      perl@2.7.14%cce@8.6.1 arch=cray-CNL-ivybridge: /usr
+    buildable: False
   mpich:
     modules:
-      mpich@7.6.0%gcc@5.2.0 arch=cray-CNL-haswell: cray-mpich
-      mpich@7.6.0%intel@16.0.3.210 arch=cray-CNL-haswell: cray-mpich
-      mpich@7.6.0%cce@8.6.1 arch=cray-CNL-haswell: cray-mpich
+      mpich@7.6.0%gcc@5.2.0 arch=cray-CNL-ivybridge: cray-mpich
+      mpich@7.6.0%intel@16.0.3.210 arch=cray-CNL-ivybridge: cray-mpich
+      mpich@7.6.0%cce@8.6.1 arch=cray-CNL-ivybridge: cray-mpich
+    buildable: False
+  hdf5:
+    modules:
+      hdf5@1.10.0.3%gcc@5.2.0+hl+fortran arch=cray-CNL-ivybridge: cray-hdf5-parallel
+      hdf5@1.10.0.3%intel@16.0.3.210+hl+fortran arch=cray-CNL-ivybridge: cray-hdf5-parallel
+      hdf5@1.10.0.3%cce@8.6.1+hl+fortran arch=cray-CNL-ivybridge: cray-hdf5-parallel
     buildable: False
   cmake:
     modules:
-      cmake@3.8.2%gcc@5.2.0 arch=cray-CNL-haswell: cmake
-      cmake@3.8.2%intel@16.0.3.210 arch=cray-CNL-haswell: cmake
-      cmake@3.8.2%cce@8.6.1 arch=cray-CNL-haswell: cmake
+      cmake@3.8.2%gcc@5.2.0 arch=cray-CNL-ivybridge: cmake
+      cmake@3.8.2%intel@16.0.3.210 arch=cray-CNL-ivybridge: cmake
+      cmake@3.8.2%cce@8.6.1 arch=cray-CNL-ivybridge: cmake
     buildable: False
   boost:
     modules:
-      boost@1.65.1%gcc@5.2.0 arch=cray-CNL-haswell: boost
-      boost@1.65.1%intel@16.0.3.210 arch=cray-CNL-haswell: boost
-      boost@1.65.1%cce@8.6.1 arch=cray-CNL-haswell: boost
+      boost@1.65.1%gcc@5.2.0 arch=cray-CNL-ivybridge: boost
+      boost@1.65.1%intel@16.0.3.210 arch=cray-CNL-ivybridge: boost
+      boost@1.65.1%cce@8.6.1 arch=cray-CNL-ivybridge: boost
     buildable: False
   all:
     compiler: [gcc@5.2.0, intel/16.0.3.210, cce/8.6.1]
