@@ -1,0 +1,54 @@
+# spack install --dirty -j8 xsdk
+
+balay@cori11:~/spack> spack find %intel@18.0.3.222 |cat
+==> 48 installed packages
+-- cray-cnl6-haswell / intel@18.0.3.222 -------------------------
+adol-c@develop
+alquimia@xsdk-0.4.0
+amrex@18.10.1
+arpack-ng@3.6.3
+autoconf@2.69
+automake@1.13.4
+boost@1.69.0
+bzip2@1.0.6
+cmake@3.13.2
+dealii@9.0.1
+diffutils@3.6
+glm@0.9.7.1
+gsl@2.5
+hdf5@1.10.4
+hypre@2.15.1
+intel-mkl@18.0.2.199
+intel-tbb@2019.2
+libtool@2.4.2
+m4@1.4.16
+matio@1.5.13
+metis@5.1.0
+mfem@3.4.0
+mpich@7.6.0
+muparser@2.2.6.1
+nanoflann@1.2.3
+ncurses@5.9
+netcdf@4.6.2
+numactl@2.0.9
+oce@0.18.3
+omega-h@9.19.1
+openssl@1.1.1
+p4est@2.0
+parmetis@4.0.3
+perl@5.18.2
+petsc@3.10.3
+pflotran@xsdk-0.4.0
+phist@1.7.5
+pumi@2.2.0
+python@2.7.13
+slepc@3.10.1
+strumpack@3.1.1
+suite-sparse@5.3.0
+sundials@3.2.1
+superlu-dist@6.1.0
+tasmanian@6.0
+trilinos@12.14.0-rc1
+xsdk@0.4.0
+zlib@1.2.8
+balay@cori11:~/spack> 

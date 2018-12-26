@@ -1,52 +1,63 @@
 packages:
   cmake:
-    paths:
-      cmake@3.5.2%intel@18.0.0.128 arch=cray-CNL-mic_knl: /usr
+    modules:
+      cmake@3.11.5%intel@18.0.0.128 arch=cray-cnl6-mic_knl: cmake/3.11.4
     buildable: False
   python:
     paths:
-      python@2.7.13%intel@18.0.0.128 arch=cray-CNL-mic_knl: /usr
+      python@2.7.13%intel@18.0.0.128 arch=cray-cnl6-mic_knl: /usr
     buildable: False
   pkg-config:
     paths:
-      pkg-config@0.28%intel@18.0.0.128 arch=cray-CNL-mic_knl: /usr
+      pkg-config@0.28%intel@18.0.0.128 arch=cray-cnl6-mic_knl: /usr
+    buildable: False 
+  pkgconf:
+    paths:
+      pkgconf@0.28%intel@18.0.0.128 arch=cray-cnl6-mic_knl: /usr
     buildable: False 
   autoconf:
     paths:
-      autoconf@2.69%intel@18.0.0.128 arch=cray-CNL-mic_knl: /usr
+      autoconf@2.69%intel@18.0.0.128 arch=cray-cnl6-mic_knl: /usr
     buildable: False
   automake:
     paths:
-      automake@1.13.4%intel@18.0.0.128 arch=cray-CNL-mic_knl: /usr
+      automake@1.13.4%intel@18.0.0.128 arch=cray-cnl6-mic_knl: /usr
     buildable: False
   libtool:
     paths:
-      libtool@2.4.2%intel@18.0.0.128 arch=cray-CNL-mic_knl: /usr
+      libtool@2.4.2%intel@18.0.0.128 arch=cray-cnl6-mic_knl: /usr
     buildable: False
   m4:
     paths:
-      m4@1.4.16%intel@18.0.0.128 arch=cray-CNL-mic_knl: /usr
+      m4@1.4.16%intel@18.0.0.128 arch=cray-cnl6-mic_knl: /usr
+  diffutils:
+    paths:
+      diffutils@3.3%intel@18.0.0.128 arch=cray-cnl6-mic_knl: /usr
+    buildable: False
+  bzip2:
+    paths:
+      bzip2@1.0.6%intel@18.0.0.128 arch=cray-cnl6-mic_knl: /usr
     buildable: False
   intel-mkl:
     paths:
-      intel-mkl@18.0.0.128%intel@18.0.0.128 arch=cray-CNL-mic_knl: /opt/intel
+      intel-mkl@18.0.0.128%intel@18.0.0.128 arch=cray-cnl6-mic_knl: /opt/intel
     buildable: False
   mpich:
     modules:
       # requires 'module load cce' otherwise gives parsing error
-      mpich@7.6.3%intel@18.0.0.128 arch=cray-CNL-mic_knl: cray-mpich/7.6.3
+      mpich@7.7.3%intel@18.0.0.128 arch=cray-cnl6-mic_knl: cray-mpich/7.7.3
     buildable: False
   #boost:
   #  modules:
-  #    boost@1.64.0%intel@18.0.0.128 arch=cray-CNL-mic_knl: boost/intel/1.64.0
+  #    boost@1.64.0%intel@18.0.0.128 arch=cray-cnl6-mic_knl: boost/intel/1.64.0
   #  buildable: False
-  boost:
-    paths:
-      boost@1.64.0%intel@18.0.0.128 arch=cray-CNL-mic_knl: /soft/libraries/boost/1.64.0/intel
-    buildable: False
+  #boost:
+  #  paths:
+  #    boost@1.64.0%intel@18.0.0.128 arch=cray-cnl6-mic_knl: /soft/libraries/boost/1.64.0/intel
+  #  buildable: False
   hdf5:
     modules:
-      hdf5@1.8.16%intel@18.0.0.128+hl+fortran arch=cray-CNL-mic_knl: cray-hdf5-parallel/1.8.16
+      hdf5@1.8.16%intel@18.0.0.128+hl+fortran arch=cray-cnl6-mic_knl: cray-hdf5-parallel/1.8.16
     buildable: False
   all:
     providers:
@@ -54,4 +65,3 @@ packages:
       blas: [intel-mkl]
       lapack: [intel-mkl]
     compiler: [intel@18.0.0.128]
-

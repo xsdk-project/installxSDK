@@ -5,158 +5,8 @@ compilers:
     flags: {}
     modules:
     - PrgEnv-cray
-    - cce/8.4.6
-    operating_system: CNL
-    paths:
-      cc: cc
-      cxx: CC
-      f77: ftn
-      fc: ftn
-    spec: cce@8.4.6
-    target: any
-- compiler:
-    environment: {}
-    extra_rpaths: []
-    flags: {}
-    modules:
-    - PrgEnv-cray
-    - cce/8.5.2
-    operating_system: CNL
-    paths:
-      cc: cc
-      cxx: CC
-      f77: ftn
-      fc: ftn
-    spec: cce@8.5.2
-    target: any
-- compiler:
-    environment: {}
-    extra_rpaths: []
-    flags: {}
-    modules:
-    - PrgEnv-cray
-    - cce/8.5.7
-    operating_system: CNL
-    paths:
-      cc: cc
-      cxx: CC
-      f77: ftn
-      fc: ftn
-    spec: cce@8.5.7
-    target: any
-- compiler:
-    environment: {}
-    extra_rpaths: []
-    flags: {}
-    modules:
-    - PrgEnv-cray
-    - cce/8.6.1
-    operating_system: CNL
-    paths:
-      cc: cc
-      cxx: CC
-      f77: ftn
-      fc: ftn
-    spec: cce@8.6.1
-    target: any
-- compiler:
-    environment: {}
-    extra_rpaths: []
-    flags: {}
-    modules:
-    - PrgEnv-cray
-    - cce/8.5.0
-    operating_system: CNL
-    paths:
-      cc: cc
-      cxx: CC
-      f77: ftn
-      fc: ftn
-    spec: cce@8.5.0
-    target: any
-- compiler:
-    environment: {}
-    extra_rpaths: []
-    flags: {}
-    modules:
-    - PrgEnv-cray
-    - cce/8.5.4
-    operating_system: CNL
-    paths:
-      cc: cc
-      cxx: CC
-      f77: ftn
-      fc: ftn
-    spec: cce@8.5.4
-    target: any
-- compiler:
-    environment: {}
-    extra_rpaths: []
-    flags: {}
-    modules:
-    - PrgEnv-cray
-    - cce/8.5.8
-    operating_system: CNL
-    paths:
-      cc: cc
-      cxx: CC
-      f77: ftn
-      fc: ftn
-    spec: cce@8.5.8
-    target: any
-- compiler:
-    environment: {}
-    extra_rpaths: []
-    flags: {}
-    modules:
-    - PrgEnv-cray
-    - cce/8.6.2
-    operating_system: CNL
-    paths:
-      cc: cc
-      cxx: CC
-      f77: ftn
-      fc: ftn
-    spec: cce@8.6.2
-    target: any
-- compiler:
-    environment: {}
-    extra_rpaths: []
-    flags: {}
-    modules:
-    - PrgEnv-cray
-    - cce/8.5.1
-    operating_system: CNL
-    paths:
-      cc: cc
-      cxx: CC
-      f77: ftn
-      fc: ftn
-    spec: cce@8.5.1
-    target: any
-- compiler:
-    environment: {}
-    extra_rpaths: []
-    flags: {}
-    modules:
-    - PrgEnv-cray
-    - cce/8.5.5
-    operating_system: CNL
-    paths:
-      cc: cc
-      cxx: CC
-      f77: ftn
-      fc: ftn
-    spec: cce@8.5.5
-    target: any
-- compiler:
-    environment: {}
-    extra_rpaths: []
-    flags: {}
-    modules:
-    - PrgEnv-cray
     - cce/8.6.0
-    operating_system: CNL
+    operating_system: cnl6
     paths:
       cc: cc
       cxx: CC
@@ -170,14 +20,29 @@ compilers:
     flags: {}
     modules:
     - PrgEnv-cray
-    - cce/8.6.3
-    operating_system: CNL
+    - cce/8.6.2
+    operating_system: cnl6
     paths:
       cc: cc
       cxx: CC
       f77: ftn
       fc: ftn
-    spec: cce@8.6.3
+    spec: cce@8.6.2
+    target: any
+- compiler:
+    environment: {}
+    extra_rpaths: []
+    flags: {}
+    modules:
+    - PrgEnv-cray
+    - cce/8.6.5
+    operating_system: cnl6
+    paths:
+      cc: cc
+      cxx: CC
+      f77: ftn
+      fc: ftn
+    spec: cce@8.6.5
     target: any
 - compiler:
     environment: {}
@@ -186,7 +51,7 @@ compilers:
     modules:
     - PrgEnv-gnu
     - gcc/4.9.3
-    operating_system: CNL
+    operating_system: cnl6
     paths:
       cc: cc
       cxx: CC
@@ -201,7 +66,7 @@ compilers:
     modules:
     - PrgEnv-gnu
     - gcc/6.1.0
-    operating_system: CNL
+    operating_system: cnl6
     paths:
       cc: cc
       cxx: CC
@@ -215,8 +80,53 @@ compilers:
     flags: {}
     modules:
     - PrgEnv-gnu
+    - gcc/7.1.0
+    operating_system: cnl6
+    paths:
+      cc: cc
+      cxx: CC
+      f77: ftn
+      fc: ftn
+    spec: gcc@7.1.0
+    target: any
+- compiler:
+    environment: {}
+    extra_rpaths: []
+    flags: {}
+    modules:
+    - PrgEnv-gnu
+    - gcc/7.3.0
+    operating_system: cnl6
+    paths:
+      cc: cc
+      cxx: CC
+      f77: ftn
+      fc: ftn
+    spec: gcc@7.3.0
+    target: any
+- compiler:
+    environment: {}
+    extra_rpaths: []
+    flags: {}
+    modules:
+    - PrgEnv-gnu
+    - gcc/5.3.0
+    operating_system: cnl6
+    paths:
+      cc: cc
+      cxx: CC
+      f77: ftn
+      fc: ftn
+    spec: gcc@5.3.0
+    target: any
+- compiler:
+    environment: {}
+    extra_rpaths: []
+    flags: {}
+    modules:
+    - PrgEnv-gnu
     - gcc/6.3.0
-    operating_system: CNL
+    operating_system: cnl6
     paths:
       cc: cc
       cxx: CC
@@ -231,7 +141,7 @@ compilers:
     modules:
     - PrgEnv-gnu
     - gcc/7.2.0
-    operating_system: CNL
+    operating_system: cnl6
     paths:
       cc: cc
       cxx: CC
@@ -244,69 +154,9 @@ compilers:
     extra_rpaths: []
     flags: {}
     modules:
-    - PrgEnv-gnu
-    - gcc/5.3.0
-    operating_system: CNL
-    paths:
-      cc: cc
-      cxx: CC
-      f77: ftn
-      fc: ftn
-    spec: gcc@5.3.0
-    target: any
-- compiler:
-    environment: {}
-    extra_rpaths: []
-    flags: {}
-    modules:
-    - PrgEnv-gnu
-    - gcc/6.2.0
-    operating_system: CNL
-    paths:
-      cc: cc
-      cxx: CC
-      f77: ftn
-      fc: ftn
-    spec: gcc@6.2.0
-    target: any
-- compiler:
-    environment: {}
-    extra_rpaths: []
-    flags: {}
-    modules:
-    - PrgEnv-gnu
-    - gcc/7.1.0
-    operating_system: CNL
-    paths:
-      cc: cc
-      cxx: CC
-      f77: ftn
-      fc: ftn
-    spec: gcc@7.1.0
-    target: any
-- compiler:
-    environment: {}
-    extra_rpaths: []
-    flags: {}
-    modules:
-    - PrgEnv-intel
-    - intel/16.0.3.210
-    operating_system: CNL
-    paths:
-      cc: cc
-      cxx: CC
-      f77: ftn
-      fc: ftn
-    spec: intel@16.0.3.210
-    target: any
-- compiler:
-    environment: {}
-    extra_rpaths: []
-    flags: {}
-    modules:
     - PrgEnv-intel
     - intel/17.0.2.174
-    operating_system: CNL
+    operating_system: cnl6
     paths:
       cc: cc
       cxx: CC
@@ -320,14 +170,14 @@ compilers:
     flags: {}
     modules:
     - PrgEnv-intel
-    - intel/17.0.0.098
-    operating_system: CNL
+    - intel/18.0.1.163
+    operating_system: cnl6
     paths:
       cc: cc
       cxx: CC
       f77: ftn
       fc: ftn
-    spec: intel@17.0.0.098
+    spec: intel@18.0.1.163
     target: any
 - compiler:
     environment: {}
@@ -335,14 +185,44 @@ compilers:
     flags: {}
     modules:
     - PrgEnv-intel
-    - intel/17.0.4.196
-    operating_system: CNL
+    - intel/18.0.2.199
+    operating_system: cnl6
     paths:
       cc: cc
       cxx: CC
       f77: ftn
       fc: ftn
-    spec: intel@17.0.4.196
+    spec: intel@18.0.2.199
+    target: any
+- compiler:
+    environment: {}
+    extra_rpaths: []
+    flags: {}
+    modules:
+    - PrgEnv-intel
+    - intel/16.0.3.210
+    operating_system: cnl6
+    paths:
+      cc: cc
+      cxx: CC
+      f77: ftn
+      fc: ftn
+    spec: intel@16.0.3.210
+    target: any
+- compiler:
+    environment: {}
+    extra_rpaths: []
+    flags: {}
+    modules:
+    - PrgEnv-intel
+    - intel/17.0.3.191
+    operating_system: cnl6
+    paths:
+      cc: cc
+      cxx: CC
+      f77: ftn
+      fc: ftn
+    spec: intel@17.0.3.191
     target: any
 - compiler:
     environment: {}
@@ -351,7 +231,7 @@ compilers:
     modules:
     - PrgEnv-intel
     - intel/17.0.1.132
-    operating_system: CNL
+    operating_system: cnl6
     paths:
       cc: cc
       cxx: CC
@@ -366,13 +246,28 @@ compilers:
     modules:
     - PrgEnv-intel
     - intel/18.0.0.128
-    operating_system: CNL
+    operating_system: cnl6
     paths:
       cc: cc
       cxx: CC
       f77: ftn
       fc: ftn
     spec: intel@18.0.0.128
+    target: any
+- compiler:
+    environment: {}
+    extra_rpaths: []
+    flags: {}
+    modules:
+    - PrgEnv-pgi
+    - pgi/2017
+    operating_system: cnl6
+    paths:
+      cc: cc
+      cxx: CC
+      f77: ftn
+      fc: ftn
+    spec: pgi@2017
     target: any
 - compiler:
     environment: {}
@@ -387,3 +282,78 @@ compilers:
       fc: null
     spec: gcc@4.8
     target: x86_64
+- compiler:
+    environment: {}
+    extra_rpaths: []
+    flags: {}
+    modules:
+    - PrgEnv-cray
+    - cce/8.7.1
+    operating_system: cnl6
+    paths:
+      cc: cc
+      cxx: CC
+      f77: ftn
+      fc: ftn
+    spec: cce@8.7.1
+    target: any
+- compiler:
+    environment: {}
+    extra_rpaths: []
+    flags: {}
+    modules:
+    - PrgEnv-cray
+    - cce/8.7.4
+    operating_system: cnl6
+    paths:
+      cc: cc
+      cxx: CC
+      f77: ftn
+      fc: ftn
+    spec: cce@8.7.4
+    target: any
+- compiler:
+    environment: {}
+    extra_rpaths: []
+    flags: {}
+    modules:
+    - PrgEnv-intel
+    - intel/18.0.3.222
+    operating_system: cnl6
+    paths:
+      cc: cc
+      cxx: CC
+      f77: ftn
+      fc: ftn
+    spec: intel@18.0.3.222
+    target: any
+- compiler:
+    environment: {}
+    extra_rpaths: []
+    flags: {}
+    modules:
+    - PrgEnv-intel
+    - intel/19.0.0.117
+    operating_system: cnl6
+    paths:
+      cc: cc
+      cxx: CC
+      f77: ftn
+      fc: ftn
+    spec: intel@19.0.0.117
+    target: any
+- compiler:
+    environment: {}
+    extra_rpaths: []
+    flags: {}
+    modules:
+    - PrgEnv-pgi
+    - pgi/2018
+    operating_system: cnl6
+    paths:
+      cc: cc
+      cxx: CC
+      f77: ftn
+      fc: ftn
+    spec: pgi@2018
+    target: any

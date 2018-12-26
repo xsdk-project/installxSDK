@@ -1,0 +1,60 @@
+# module load cce
+# spack fetch --dependencies xsdk ^adol-c@develop~examples
+# spack stage adol-c
+
+balay@thetalogin5: cat spack-theta-build.sh
+#!/bin/bash -x
+module load cce
+aprun -cc none -n 1 python /home/balay/spack/bin/spack install --dont-restage -j 16 xsdk ^adol-c@develop~examples
+
+# qsub -A CSC250STMS05 -n 1 -q debug-flat-quad -t 1:00:00 /home/balay/spack-jobs/spack-theta-build.sh
+# qsub -A CSC250STMS05 -n 128 -q default -t 3:00:00 /home/balay/spack-jobs/spack-theta-build.sh
+# qsub -A CSC250STMS05 -n 256 -q default -t 6:00:00 /home/balay/spack-jobs/spack-theta-build.sh
+
+balay@thetalogin5: spack find |cat
+==> 43 installed packages
+-- cray-cnl6-mic_knl / intel@18.0.0.128 -------------------------
+adol-c@develop
+alquimia@xsdk-0.4.0
+amrex@18.10.1
+arpack-ng@3.6.3
+autoconf@2.69
+automake@1.13.4
+boost@1.68.0
+bzip2@1.0.6
+cmake@3.11.5
+dealii@9.0.1
+glm@0.9.7.1
+gsl@2.5
+hdf5@1.8.16
+hypre@2.15.1
+intel-mkl@18.0.0.128
+intel-tbb@2019.2
+libtool@2.4.2
+m4@1.4.16
+matio@1.5.13
+metis@5.1.0
+mfem@3.4.0
+mpich@7.7.3
+muparser@2.2.6.1
+nanoflann@1.2.3
+netcdf@4.6.2
+oce@0.18.3
+omega-h@9.19.1
+p4est@2.0
+parmetis@4.0.3
+petsc@3.10.2
+pflotran@xsdk-0.4.0
+phist@1.7.4
+pumi@2.2.0
+python@2.7.13
+slepc@3.10.1
+strumpack@3.1.1
+suite-sparse@5.3.0
+sundials@3.2.1
+superlu-dist@6.1.0
+tasmanian@6.0
+trilinos@12.14.0-rc1
+xsdk@0.4.0
+zlib@1.2.11
+balay@thetalogin5:  
