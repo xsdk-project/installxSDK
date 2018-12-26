@@ -4,24 +4,24 @@ compilers:
     extra_rpaths: []
     flags: {}
     modules: []
-    operating_system: fedora27
+    operating_system: fedora29
     paths:
-      cc: /usr/lib64/ccache/clang
-      cxx: /usr/lib64/ccache/clang++
+      cc: /usr/bin/clang-7
+      cxx: /usr/bin/clang++-7
       f77: /usr/bin/gfortran
       fc: /usr/bin/gfortran
-    spec: clang@4.0.1
+    spec: clang@7.0.0
     target: x86_64
 - compiler:
     environment: {}
     extra_rpaths: []
     flags: {}
     modules: []
-    operating_system: fedora27
+    operating_system: fedora29
     paths:
       cc: /usr/lib64/ccache/gcc
       cxx: /usr/lib64/ccache/g++
       f77: /usr/bin/gfortran
       fc: /usr/bin/gfortran
-    spec: gcc@7.2.1
+    spec: gcc@8.2.1
     target: x86_64

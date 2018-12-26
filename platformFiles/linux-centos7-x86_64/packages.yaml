@@ -15,10 +15,15 @@ packages:
     paths:
       m4@1.4.18: /usr
     buildable: False
+  # amrex requires cmake@3.5:
   cmake:
     paths:
-      cmake@3.9.3: /usr
+      cmake@3.12.2: /home/balay/soft/cmake-3.12.2
     buildable: False
+  #cmake:
+  #  paths:
+  #    cmake@2.8.12: /usr
+  #  buildable: False
   python:
     paths:
       python@2.7.13: /usr
@@ -34,15 +39,15 @@ packages:
 
   intel-mpi:
     paths:
-      intel-mpi@17.0.4: /homes/intel/17u4
+      intel-mpi@18.0.2: /homes/intel/18u2
     buildable: False
   intel-mkl:
     paths:
-      intel-mkl@17.0.4: /homes/intel/17u4
+      intel-mkl@18.0.2: /homes/intel/18u2
     buildable: False
   all:
     providers:
       mpi: [intel-mpi]
       blas: [intel-mkl]
       lapack: [intel-mkl]
-    compiler: [intel@17.0.4]
+    compiler: [intel@18.0.2]

@@ -4,6 +4,10 @@ packages:
       cuda@9.0.176: /usr/local/cuda-9.0
       cuda@8.0.61: /usr/local/cuda-8.0
     buildable: False
+  mpich:
+    paths:
+      mpich@3.2: /usr
+    buildable: False
   autoconf:
     paths:
       autoconf@2.69: /usr
@@ -23,9 +27,15 @@ packages:
   cmake:
     paths:
       cmake@3.5.1: /usr
-    buildable: False
+    #buildable: False
   python:
     paths:
       python@2.7.11: /usr
     buildable: False
-
+  perl:
+    paths:
+      perl@5.21.1: /usr
+    buildable: False
+#  all:
+#    providers:
+#      mpi: [mpich]

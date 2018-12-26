@@ -1,0 +1,85 @@
+# spack install -j8 xsdk~omega-h
+# spack install -j8 xsdk%clang@7.0.0
+
+[balay@pj01 spack]$ spack find |cat
+==> 76 installed packages
+-- linux-fedora29-x86_64 / clang@7.0.0 --------------------------
+adol-c@develop
+alquimia@xsdk-0.4.0
+arpack-ng@3.6.3
+autoconf@2.69
+automake@1.16.1
+boost@1.69.0
+bzip2@1.0.6
+cmake@3.12.1
+glm@0.9.7.1
+gsl@2.5
+hdf5@1.10.4
+hypre@2.15.1
+intel-tbb@2019.2
+libtool@2.4.6
+m4@1.4.18
+matio@1.5.13
+metis@5.1.0
+mpich@3.3b2
+muparser@2.2.6.1
+nanoflann@1.2.3
+netcdf@4.6.2
+netlib-scalapack@2.0.2
+numactl@2.0.12
+openblas@0.3.4
+parmetis@4.0.3
+petsc@3.10.3
+pflotran@xsdk-0.4.0
+python@2.7.15
+superlu-dist@6.1.0
+trilinos@12.14.0-rc1
+zlib@1.2.11
+
+-- linux-fedora29-x86_64 / gcc@8.2.1 ----------------------------
+adol-c@develop
+alquimia@xsdk-0.4.0
+amrex@18.10.1
+arpack-ng@3.6.3
+autoconf@2.69
+automake@1.16.1
+boost@1.69.0
+bzip2@1.0.6
+cmake@3.12.1
+dealii@9.0.1
+glm@0.9.7.1
+gsl@2.5
+hdf5@1.10.4
+hypre@2.15.1
+intel-tbb@2019.2
+libtool@2.4.6
+m4@1.4.18
+matio@1.5.13
+metis@5.1.0
+mfem@3.4.0
+mpich@3.3b2
+muparser@2.2.6.1
+nanoflann@1.2.3
+netcdf@4.6.2
+netlib-scalapack@2.0.2
+numactl@2.0.12
+oce@0.18.3
+openblas@0.3.4
+p4est@2.0
+parmetis@4.0.3
+petsc@3.10.3
+pflotran@xsdk-0.4.0
+phist@1.7.5
+plasma@18.11.1
+pumi@2.2.0
+python@2.7.15
+slepc@3.10.1
+strumpack@3.1.1
+suite-sparse@5.3.0
+sundials@3.2.1
+superlu-dist@6.1.0
+tasmanian@6.0
+trilinos@12.14.0-rc1
+xsdk@0.4.0
+zlib@1.2.11
+[balay@pj01 spack]$ 
