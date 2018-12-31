@@ -1,0 +1,16 @@
+compilers:
+- compiler:
+    environment: {}
+    extra_rpaths: []
+    flags: {}
+    modules:
+    - PrgEnv-gnu
+    - gcc/7.2.0
+    operating_system: cnl5
+    paths:
+      cc: /opt/gcc/7.2.0/bin/gcc
+      cxx: /opt/gcc/7.2.0/bin/g++
+      f77: /opt/gcc/7.2.0/bin/gfortran
+      fc: /opt/gcc/7.2.0/bin/gfortran
+    spec: gcc@7.2.0
+    target: any

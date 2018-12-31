@@ -1,0 +1,16 @@
+compilers:
+- compiler:
+    environment: {}
+    extra_rpaths: []
+    flags: {}
+    modules:
+    - PrgEnv-gnu
+    - gcc/7.2.0
+    operating_system: cnl5
+    paths:
+      cc: /opt/cray/craype/2.5.13/bin/cc
+      cxx: /opt/cray/craype/2.5.13/bin/CC
+      f77: /opt/cray/craype/2.5.13/bin/ftn
+      fc: /opt/cray/craype/2.5.13/bin/ftn
+    spec: gcc@7.2.0
+    target: any
