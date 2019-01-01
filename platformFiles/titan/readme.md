@@ -3,9 +3,8 @@ OLCF Titan
 ----------
 
 OLCF Titan is a Cray XK6 system. login/service nodes run SUSE Linux on AMD
-Interlagos CPUs. Compute nodes run Cray's Compute Node Linux (see CNL in
-architecture specification) on AMD Istanbul CPUs with NVIDIA Kepler K20 GPUs.
-
+Istanbul CPUs. Compute nodes run Cray's Compute Node Linux (see CNL in
+architecture specification) on AMD Interlagos CPUs with NVIDIA Kepler K20 GPUs.
 
 Cray and System Modules
 -----------------------
