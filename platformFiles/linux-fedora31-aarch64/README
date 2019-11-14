@@ -1,66 +1,71 @@
-# module remove altd darshan
-# spack install -j8 xsdk
 
-balay@cori11:~> ./spack/bin/spack find |cat
-==> 58 installed packages
--- cray-cnl7-haswell / intel@19.0.3.199 -------------------------
+# spack install -j2 xsdk
+
+[balay@si ~]$ ./spack/bin/spack find |cat
+==> 64 installed packages
+-- linux-fedora31-aarch64 / gcc@9.2.1 ---------------------------
 adol-c@develop
 alquimia@xsdk-0.5.0
 amrex@19.08
 arpack-ng@3.7.0
 autoconf@2.69
-automake@1.13.4
+automake@1.16.1
 boost@1.70.0
 butterflypack@1.1.0
 bzip2@1.0.8
-cmake@3.14.4
+cmake@3.14.5
 dealii@9.1.1
-diffutils@3.7
 eigen@3.3.7
+findutils@4.6.0
 ginkgo@1.1.0
 glm@0.9.7.1
 gsl@2.5
 hdf5@1.10.5
 hypre@2.18.2
-intel-mkl@19.0.3.199
 intel-tbb@2019.4
 libiconv@1.16
-libtool@2.4.2
+libpciaccess@0.13.5
+libtool@2.4.6
 libxml2@2.9.9
-m4@1.4.16
+m4@1.4.18
 matio@1.5.13
 metis@5.1.0
 mfem@4.0.1-xsdk
-mpich@7.7.6
+mpich@3.3.1
 muparser@2.2.6.1
 nanoflann@1.2.3
 netcdf-c@4.7.2
-numactl@2.0.12
+netlib-scalapack@2.0.2
+numactl@2.0.13
 oce@0.18.3
 omega-h@9.29.0
+openblas@0.3.7
 p4est@2.2
 parmetis@4.0.3
+perl@5.30.0
 petsc@3.12.1
 pflotran@xsdk-0.5.0
 phist@1.8.0
-pkgconf@1.6.3
+pkg-config@1.6.3
+plasma@19.8.1
 precice@1.6.1
 pumi@2.2.1
 py-libensemble@0.5.2
 py-mpi4py@3.0.3
-py-numpy@1.15.1
+py-numpy@1.17.3
 py-petsc4py@3.12.0
-py-setuptools@39.0.1
-python@3.6.5.7
+py-setuptools@41.2.0
+python@3.7.4
 slepc@3.12.0
 strumpack@3.3.0
 suite-sparse@5.3.0
 sundials@5.0.0
 superlu-dist@6.1.1
 tasmanian@7.0
+texinfo@6.5
 trilinos@12.18.1
+util-macros@1.19.1
 xsdk@0.5.0
-xz@5.0.5
+xz@5.2.6
 zlib@1.2.11
-balay@cori11:~> 
-
+[balay@si ~]$ 

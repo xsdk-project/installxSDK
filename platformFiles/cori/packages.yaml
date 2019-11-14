@@ -1,11 +1,11 @@
 packages:
   mpich:
     modules:
-      mpich@7.6.0: cray-mpich
+      mpich@7.7.6%intel@19.0.3.199: cray-mpich/7.7.6
     buildable: False
   intel-mkl:
-    paths:
-      intel-mkl@18.0.2.199: /opt/intel
+    modules:
+      intel-mkl@19.0.3.199%intel@19.0.3.199: intel/19.0.3.199
     buildable: False
   autoconf:
     paths:
@@ -23,41 +23,25 @@ packages:
     paths:
       m4@1.4.16: /usr
     buildable: False
-  #cmake:
-  #  paths:
-  #    cmake@3.5.2: /usr
-  #  buildable: False
+  cmake:
+    paths:
+      cmake@3.14.4: /global/common/sw/cray/cnl7/haswell/cmake/3.14.4/gcc/8.2.0/2hef55n
+    buildable: False
   python:
-    paths:
-      python@2.7.13: /usr
+    modules:
+      python@3.6.5.7%intel@19.0.3.199: cray-python/3.6.5.7
     buildable: False
-  zlib:
-    paths:
-      zlib@1.2.8: /usr
+  py-numpy:
+    modules:
+      py-numpy@1.15.1%intel@19.0.3.199: cray-python/3.6.5.7
     buildable: False
-  numactl:
-    paths:
-      numactl@2.0.9: /usr
+  py-setuptools:
+    modules:
+      py-setuptools@39.0.1%intel@19.0.3.199: cray-python/3.6.5.7
     buildable: False
   perl:
     paths:
       perl@5.18.2: /usr
-    buildable: False
-  #boost:
-  #  paths:
-  #    boost@1.63: /usr/common/software/boost/1.63/intel/haswell
-  #  buildable: False
-  #hdf5:
-  #  modules:
-  #    hdf5@1.10.1.1+hl+fortran: cray-hdf5-parallel/1.10.1.1
-  #  buildable: False
-  readline:
-    paths:
-      readline@6.3: /usr
-    buildable: False
-  ncurses:
-    paths:
-      ncurses@5.9: /usr
     buildable: False
   bison:
     paths:
@@ -72,7 +56,5 @@ packages:
       mpi: [mpich]
       blas: [intel-mkl]
       lapack: [intel-mkl]
-    #compiler: [intel@18.0.2.199]
-    #compiler: [intel@19.0.0.117]
-    compiler: [intel@18.0.3.222]
+    compiler: [intel@19.0.3.199]
 

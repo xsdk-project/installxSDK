@@ -1,0 +1,27 @@
+compilers:
+- compiler:
+    spec: clang@9.0.0
+    paths:
+      cc: /usr/bin/clang-9
+      cxx: /usr/bin/clang++-9
+      f77: /usr/bin/gfortran
+      fc: /usr/bin/gfortran
+    flags: {}
+    operating_system: fedora31
+    target: aarch64
+    modules: []
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: gcc@9.2.1
+    paths:
+      cc: /usr/bin/gcc
+      cxx: /usr/bin/g++
+      f77: /usr/bin/gfortran
+      fc: /usr/bin/gfortran
+    flags: {}
+    operating_system: fedora31
+    target: aarch64
+    modules: []
+    environment: {}
+    extra_rpaths: []

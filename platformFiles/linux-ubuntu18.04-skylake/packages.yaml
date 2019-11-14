@@ -1,0 +1,50 @@
+packages:
+  mpich:
+    paths:
+      mpich@3.3b1%clang@6.0.0-1ubuntu2: /home/balay/soft/mpich-3.3b1-clang
+      mpich@3.3b1%gcc@7.3.0: /home/petsc/soft/mpich-3.3b1
+    buildable: False
+  autoconf:
+    paths:
+      autoconf@2.69: /usr
+    buildable: False
+  automake:
+    paths:
+      automake@1.15.1: /usr
+    buildable: False
+  libtool:
+    paths:
+      libtool@2.4.6: /usr
+    buildable: False
+  m4:
+    paths:
+      m4@1.4.18: /usr
+    buildable: False
+  cmake:
+    paths:
+      cmake@3.10.2: /usr
+    #buildable: False
+  python:
+    paths:
+      python@2.7.15rc1%gcc@7.3.0: /usr
+      python@3.6.7%gcc@7.3.0: /usr
+      #  buildable: False
+  perl:
+    paths:
+      perl@5.26.1: /usr
+    buildable: False
+  zlib:
+    paths:
+      zlib@1.2.11: /usr
+    buildable: False
+  pkg-config:
+    paths:
+      pkg-config@0.28: /usr
+    buildable: False
+  bzip2:
+    paths:
+      bzip2@1.0.6: /usr
+    buildable: False
+  all:
+    providers:
+      mpi: [mpich]

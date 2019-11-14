@@ -1,0 +1,40 @@
+compilers:
+- compiler:
+    environment: {}
+    extra_rpaths: []
+    flags: {}
+    modules: []
+    operating_system: fedora31
+    paths:
+      cc: /usr/local/gcc-8.3.0/bin/gcc
+      cxx: /usr/local/gcc-8.3.0/bin/g++
+      f77: /usr/local/gcc-8.3.0/bin/gfortran
+      fc: /usr/local/gcc-8.3.0/bin/gfortran
+    spec: gcc@8.3.0
+    target: x86_64
+- compiler:
+    environment: {}
+    extra_rpaths: []
+    flags: {}
+    modules: []
+    operating_system: fedora31
+    paths:
+      cc: /usr/bin/clang-9
+      cxx: /usr/bin/clang++-9
+      f77: /usr/bin/gfortran
+      fc: /usr/bin/gfortran
+    spec: clang@9.0.0
+    target: x86_64
+- compiler:
+    environment: {}
+    extra_rpaths: []
+    flags: {}
+    modules: []
+    operating_system: fedora31
+    paths:
+      cc: /usr/bin/gcc
+      cxx: /usr/bin/g++
+      f77: /usr/bin/gfortran
+      fc: /usr/bin/gfortran
+    spec: gcc@9.2.1
+    target: x86_64

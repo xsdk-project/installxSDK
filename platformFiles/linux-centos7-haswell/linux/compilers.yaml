@@ -1,0 +1,58 @@
+compilers:
+- compiler:
+    environment: {}
+    extra_rpaths: []
+    flags: {}
+    modules: []
+    operating_system: centos7
+    paths:
+      cc: /usr/bin/gcc
+      cxx: /usr/bin/g++
+      f77: /usr/bin/gfortran
+      fc: /usr/bin/gfortran
+    spec: gcc@4.8.5
+    target: x86_64
+- compiler:
+    environment: {}
+    extra_rpaths: []
+    flags: {}
+    implicit_rpaths:
+    - /nfs/apps/spack/opt/spack/linux-centos7-x86_64/gcc-4.8.5/gcc-7.4.0-4kdemuwlzds2ofpkkz7yytgi7kyojuvz/lib64
+    - /nfs/apps/spack/opt/spack/linux-centos7-x86_64/gcc-4.8.5/gcc-7.4.0-4kdemuwlzds2ofpkkz7yytgi7kyojuvz/lib/gcc/x86_64-pc-linux-gnu/7.4.0
+    - /nfs/apps/spack/opt/spack/linux-centos7-x86_64/gcc-4.8.5/gcc-7.4.0-4kdemuwlzds2ofpkkz7yytgi7kyojuvz/lib
+    - /nfs/apps/intel/2018.1/compilers_and_libraries_2018.1.163/linux/ipp/lib/intel64
+    - /nfs/apps/intel/2018.1/compilers_and_libraries_2018.1.163/linux/compiler/lib/intel64_lin
+    - /nfs/apps/intel/2018.1/compilers_and_libraries_2018.1.163/linux/mkl/lib/intel64_lin
+    - /nfs/apps/intel/2018.1/compilers_and_libraries_2018.1.163/linux/tbb/lib/intel64/gcc4.7
+    - /nfs/apps/intel/2018.1/compilers_and_libraries_2018.1.163/linux/daal/lib/intel64_lin
+    modules: []
+    operating_system: centos7
+    paths:
+      cc: /nfs/apps/spack/opt/spack/linux-centos7-x86_64/gcc-4.8.5/gcc-7.4.0-4kdemuwlzds2ofpkkz7yytgi7kyojuvz/bin/gcc
+      cxx: /nfs/apps/spack/opt/spack/linux-centos7-x86_64/gcc-4.8.5/gcc-7.4.0-4kdemuwlzds2ofpkkz7yytgi7kyojuvz/bin/g++
+      f77: /nfs/apps/spack/opt/spack/linux-centos7-x86_64/gcc-4.8.5/gcc-7.4.0-4kdemuwlzds2ofpkkz7yytgi7kyojuvz/bin/gfortran
+      fc: /nfs/apps/spack/opt/spack/linux-centos7-x86_64/gcc-4.8.5/gcc-7.4.0-4kdemuwlzds2ofpkkz7yytgi7kyojuvz/bin/gfortran
+    spec: gcc@7.4.0
+    target: x86_64
+- compiler:
+    environment: {}
+    extra_rpaths: []
+    flags: {}
+    implicit_rpaths:
+    - /nfs/apps/spack/opt/spack/linux-centos7-x86_64/gcc-4.8.5/gcc-7.4.0-4kdemuwlzds2ofpkkz7yytgi7kyojuvz/lib64
+    - /nfs/apps/spack/opt/spack/linux-centos7-x86_64/gcc-4.8.5/gcc-7.4.0-4kdemuwlzds2ofpkkz7yytgi7kyojuvz/lib
+    - /nfs/apps/intel/2018.1/compilers_and_libraries_2018.1.163/linux/ipp/lib/intel64
+    - /nfs/apps/intel/2018.1/compilers_and_libraries_2018.1.163/linux/compiler/lib/intel64_lin
+    - /nfs/apps/intel/2018.1/compilers_and_libraries_2018.1.163/linux/mkl/lib/intel64_lin
+    - /nfs/apps/intel/2018.1/compilers_and_libraries_2018.1.163/linux/tbb/lib/intel64/gcc4.7
+    - /nfs/apps/intel/2018.1/compilers_and_libraries_2018.1.163/linux/daal/lib/intel64_lin
+    - /nfs/apps/spack/opt/spack/linux-centos7-x86_64/gcc-4.8.5/gcc-7.4.0-4kdemuwlzds2ofpkkz7yytgi7kyojuvz/lib/gcc/x86_64-pc-linux-gnu/7.4.0
+    modules: []
+    operating_system: centos7
+    paths:
+      cc: /nfs/apps/intel/2018.1/compilers_and_libraries_2018.1.163/linux/bin/intel64/icc
+      cxx: /nfs/apps/intel/2018.1/compilers_and_libraries_2018.1.163/linux/bin/intel64/icpc
+      f77: /nfs/apps/intel/2018.1/compilers_and_libraries_2018.1.163/linux/bin/intel64/ifort
+      fc: /nfs/apps/intel/2018.1/compilers_and_libraries_2018.1.163/linux/bin/intel64/ifort
+    spec: intel@18.0.1
+    target: x86_64

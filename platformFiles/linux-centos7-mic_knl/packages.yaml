@@ -1,0 +1,53 @@
+packages:
+  autoconf:
+    paths:
+      autoconf@2.69: /usr
+    buildable: False
+  automake:
+    paths:
+      automake@1.15.1: /usr
+    buildable: False
+  m4:
+    paths:
+      m4@1.4.18: /usr
+    buildable: False
+  # amrex requires cmake@3.5:
+  cmake:
+    paths:
+      cmake@3.14.1: /home/balay/soft/cmake-3.14.1
+      cmake@3.12.2: /home/balay/soft/cmake-3.12.2
+    #buildable: False
+  python:
+    paths:
+      python@3.6.6: /usr
+    buildable: False
+  py-numpy:
+   paths:
+    py-numpy@1.12.1: /usr
+    buildable: False
+  py-setuptools:
+   paths:
+    py-setuptools@39.2.0: /usr
+    buildable: False
+  zlib:
+    paths:
+      zlib@1.2.11: /usr
+    buildable: False
+  pkg-config:
+    paths:
+      pkg-config@1.3.9: /usr
+    buildable: False
+  intel-mpi:
+    paths:
+      intel-mpi@18.0.2: /homes/intel/18u2
+    buildable: False
+  intel-mkl:
+    paths:
+      intel-mkl@18.0.2: /homes/intel/18u2
+    buildable: False
+  all:
+    providers:
+      mpi: [intel-mpi]
+      blas: [intel-mkl]
+      lapack: [intel-mkl]
+    compiler: [intel@18.0.2]

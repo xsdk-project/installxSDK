@@ -1,60 +1,81 @@
-# module load cce
-# spack fetch --dependencies xsdk ^adol-c@develop~examples
-# spack stage adol-c
+balay@thetalogin5:~> cat spack-build-mon.sh
+#!/bin/sh -x
 
-balay@thetalogin5: cat spack-theta-build.sh
-#!/bin/bash -x
+date
+module remove darshan
+module remove xalt
 module load cce
-aprun -cc none -n 1 python /home/balay/spack/bin/spack install --dont-restage -j 16 xsdk ^adol-c@develop~examples
+module load intel/19.0.5.281
+module load gcc/7.3.0
 
-# qsub -A CSC250STMS05 -n 1 -q debug-flat-quad -t 1:00:00 /home/balay/spack-jobs/spack-theta-build.sh
-# qsub -A CSC250STMS05 -n 128 -q default -t 3:00:00 /home/balay/spack-jobs/spack-theta-build.sh
-# qsub -A CSC250STMS05 -n 256 -q default -t 6:00:00 /home/balay/spack-jobs/spack-theta-build.sh
+export HTTPS_PROXY=theta-proxy.tmi.alcf.anl.gov:3128
+export https_proxy=theta-proxy.tmi.alcf.anl.gov:3128
+export HTTP_PROXY=theta-proxy.tmi.alcf.anl.gov:3128
+export http_proxy=theta-proxy.tmi.alcf.anl.gov:3128
 
-balay@thetalogin5: spack find |cat
-==> 43 installed packages
--- cray-cnl6-mic_knl / intel@18.0.0.128 -------------------------
-adol-c@develop
-alquimia@xsdk-0.4.0
-amrex@18.10.1
-arpack-ng@3.6.3
+aprun -cc none -n 1 python /home/balay/spack/bin/spack install -j16 xsdk ^dealii~adol-c~p4est
+date
+
+#qsub -A CSC250STMS05 -n 1 -q build -t 24:00:00 -I
+
+
+balay@thetalogin5:~> ./spack/bin/spack find |cat
+==> 55 installed packages
+-- cray-cnl6-mic_knl / intel@19.0.5.281 -------------------------
+alquimia@xsdk-0.5.0
+amrex@19.08
+arpack-ng@3.7.0
 autoconf@2.69
 automake@1.13.4
-boost@1.68.0
+boost@1.70.0
+butterflypack@1.1.0
 bzip2@1.0.6
-cmake@3.11.5
-dealii@9.0.1
+cmake@3.14.5
+dealii@9.1.1
+eigen@3.3.7
+ginkgo@1.1.0
 glm@0.9.7.1
 gsl@2.5
-hdf5@1.8.16
-hypre@2.15.1
-intel-mkl@18.0.0.128
-intel-tbb@2019.2
+hdf5@1.10.5
+hypre@2.18.2
+intel-mkl@19.0.5.281
+intel-tbb@2019.4
+libiconv@1.16
 libtool@2.4.2
+libxml2@2.9.9
 m4@1.4.16
 matio@1.5.13
 metis@5.1.0
-mfem@3.4.0
-mpich@7.7.3
+mfem@4.0.1-xsdk
+mpich@7.7.10
 muparser@2.2.6.1
 nanoflann@1.2.3
-netcdf@4.6.2
+netcdf-c@4.7.2
+numactl@2.0.12
 oce@0.18.3
-omega-h@9.19.1
-p4est@2.0
+omega-h@9.29.0
 parmetis@4.0.3
-petsc@3.10.2
-pflotran@xsdk-0.4.0
-phist@1.7.4
-pumi@2.2.0
-python@2.7.13
-slepc@3.10.1
-strumpack@3.1.1
+petsc@3.12.1
+pflotran@xsdk-0.5.0
+phist@1.8.0
+pkgconf@0.28
+precice@1.6.1
+pumi@2.2.1
+py-libensemble@0.5.2
+py-mpi4py@3.0.3
+py-numpy@1.16.1
+py-petsc4py@3.12.0
+py-setuptools@39.0.1
+python@3.6
+slepc@3.12.0
+strumpack@3.3.0
 suite-sparse@5.3.0
-sundials@3.2.1
-superlu-dist@6.1.0
-tasmanian@6.0
-trilinos@12.14.0-rc1
-xsdk@0.4.0
+sundials@5.0.0
+superlu-dist@6.1.1
+tasmanian@7.0
+trilinos@12.18.1
+xsdk@0.5.0
+xz@5.0.5
 zlib@1.2.11
-balay@thetalogin5:  
+balay@thetalogin5:~> 
+
