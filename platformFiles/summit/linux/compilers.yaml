@@ -1,0 +1,42 @@
+compilers:
+- compiler:
+    paths:
+      cc: /sw/summit/xl/16.1.1-3/xlC/16.1.1/bin/xlc_r
+      cxx: /sw/summit/xl/16.1.1-3/xlC/16.1.1/bin/xlc++_r
+      f77: /sw/summit/xl/16.1.1-3/xlf/16.1.1/bin/xlf_r
+      fc: /sw/summit/xl/16.1.1-3/xlf/16.1.1/bin/xlf95_r
+    operating_system: rhel7
+    target: ppc64le
+    modules: []
+    environment: {}
+    extra_rpaths: []
+    flags:
+      fflags: -qzerosize
+    spec: xl_r@16.1
+- compiler:
+    paths:
+      cc: /usr/bin/gcc
+      cxx: /usr/bin/g++
+      f77: /usr/bin/gfortran
+      fc: /usr/bin/gfortran
+    operating_system: rhel7
+    target: ppc64le
+    modules: []
+    environment: {}
+    extra_rpaths: []
+    flags: {}
+    spec: gcc@4.8.5
+- compiler:
+    paths:
+      cc: /sw/summit/xl/16.1.1-3/xlC/16.1.1/bin/xlc
+      cxx: /sw/summit/xl/16.1.1-3/xlC/16.1.1/bin/xlc++
+      f77: /sw/summit/xl/16.1.1-3/xlf/16.1.1/bin/xlf
+      fc: /sw/summit/xl/16.1.1-3/xlf/16.1.1/bin/xlf95
+    operating_system: rhel7
+    target: ppc64le
+    modules: []
+    environment: {}
+    extra_rpaths: []
+    flags:
+      fflags: -qzerosize
+    spec: xl@16.1
