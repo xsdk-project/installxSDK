@@ -1,0 +1,71 @@
+compilers:
+- compiler:
+    environment: {}
+    extra_rpaths: []
+    flags: {}
+    modules: []
+    operating_system: centos7
+    paths:
+      cc: /opt/clang-5.0.0/bin/clang
+      cxx: /opt/clang-5.0.0/bin/clang++
+      f77: null
+      fc: null
+    spec: clang@5.0.0
+    target: x86_64
+- compiler:
+    environment: {}
+    extra_rpaths: []
+    flags: {}
+    modules: []
+    operating_system: centos7
+    paths:
+      cc: /opt/gcc-8.1.0/bin/gcc
+      cxx: /opt/gcc-8.1.0/bin/g++
+      f77: /opt/gcc-8.1.0/bin/gfortran
+      fc: /opt/gcc-8.1.0/bin/gfortran
+    spec: gcc@8.1.0
+    target: x86_64
+- compiler:
+    environment: {}
+    extra_rpaths: []
+    flags: {}
+    modules: []
+    operating_system: centos7
+    paths:
+      cc: /usr/bin/gcc
+      cxx: /usr/bin/g++
+      f77: /usr/bin/gfortran
+      fc: /usr/bin/gfortran
+    spec: gcc@4.8.5
+    target: x86_64
+- compiler:
+    environment:
+      set:
+        LD_LIBRARY_PATH: /homes/intel/18u2/compilers_and_libraries_2018.2.199/linux/mpi/intel64/lib:/homes/intel/18u2/compilers_and_libraries_2018.2.199/linux/mpi/mic/lib:/homes/intel/18u2/compilers_and_libraries_2018.2.199/linux/ipp/lib/intel64:/homes/intel/18u2/compilers_and_libraries_2018.2.199/linux/compiler/lib/intel64_lin:/homes/intel/18u2/compilers_and_libraries_2018.2.199/linux/mkl/lib/intel64_lin:/homes/intel/18u2/compilers_and_libraries_2018.2.199/linux/tbb/lib/intel64/gcc4.7:/homes/intel/18u2/debugger_2017/iga/lib:/homes/intel/18u2/debugger_2017/libipt/intel64/lib:/homes/intel/18u2/compilers_and_libraries_2018.2.199/linux/daal/lib/intel64_lin:/homes/intel/18u2/compilers_and_libraries_2018.2.199/linux/daal/../tbb/lib/intel64_lin/gcc4.4
+    extra_rpaths: []
+    flags:
+      cflags: -O3 -fp-model fast -xMIC-AVX512
+      fflags: -O3 -fp-model fast -xMIC-AVX512
+      cxxflags: -O3 -fp-model fast -xMIC-AVX512
+    modules: []
+    operating_system: centos7
+    paths:
+      cc: /home/intel/18u2/compilers_and_libraries_2018.2.199/linux/bin/intel64/icc
+      cxx: /home/intel/18u2/compilers_and_libraries_2018.2.199/linux/bin/intel64/icpc
+      f77: /home/intel/18u2/compilers_and_libraries_2018.2.199/linux/bin/intel64/ifort
+      fc: /home/intel/18u2/compilers_and_libraries_2018.2.199/linux/bin/intel64/ifort
+    spec: intel@18.0.2
+    target: x86_64
+- compiler:
+    environment: {}
+    extra_rpaths: []
+    flags: {}
+    modules: []
+    operating_system: centos7
+    paths:
+      cc: /home/intel/19u3/compilers_and_libraries_2019.3.199/linux/bin/intel64/icc
+      cxx: /home/intel/19u3/compilers_and_libraries_2019.3.199/linux/bin/intel64/icpc
+      f77: /home/intel/19u3/compilers_and_libraries_2019.3.199/linux/bin/intel64/ifort
+      fc: /home/intel/19u3/compilers_and_libraries_2019.3.199/linux/bin/intel64/ifort
+    spec: intel@19.0.3.199
+    target: x86_64
