@@ -1,0 +1,7 @@
+packages:
+  all:
+    providers:
+      mpi: [openmpi]
+    compiler: [apple-clang@12.0.0]
+
+
