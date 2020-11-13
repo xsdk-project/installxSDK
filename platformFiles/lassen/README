@@ -1,0 +1,16 @@
+# LLNL Lassen
+
+`spack arch`: linux-rhel7-power9le
+
+## Without CUDA
+
+```
+spack install -j40 xsdk~dealii%gcc@7.3.1 ^spectrum-mpi ^openblas@0.3.5
+```
+
+## With CUDA
+
+```
+spack install -j40 xsdk+cuda~dealii %gcc@7.3.1 ^spectrum-mpi@10.3.0.01rtm3  ^openblas@0.3.5 ^magma cuda_arch=70 ^cmake@3.18.2
+```
+
