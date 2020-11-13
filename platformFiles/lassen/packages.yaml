@@ -2,17 +2,6 @@ packages:
   all:
     providers:
       mpi: [spectrum-mpi]
-  # cmake:
-  #   externals:
-  #   - spec: cmake@3.14.5
-  #     prefix: /usr/tcetmp
-  #     modules:
-  #     - cmake/3.14.5
-  #   - spec: cmake@3.18.0
-  #     prefix: /usr/tce/packages/cmake/cmake-3.18.0 
-  #     modules:
-  #     - cmake/3.18.0
-  #   buildable: true
   cuda:
     externals:
     - spec: cuda@10.1.243
