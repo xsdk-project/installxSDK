@@ -1,0 +1,27 @@
+#!/bin/bash
+#BSUB -P ABC123
+#BSUB -W 2:00
+#BSUB -nnodes 1
+#BSUB -alloc_flags smt4
+#BSUB -J xsdk
+#BSUB -o xsdk06o.%J
+#BSUB -e xsdk06e.%J
+
+## ### #BSUB -alloc_flags gpumps
+
+projroot=/ccs/proj/abc123/luszczek
+
+SPACK_ROOT=${projroot}/spack
+export SPACK_ROOT
+PATH=${PATH}:${SPACK_ROOT}/bin
+export PATH
+
+module unload darshan-runtime
+module unload spectrum-mpi
+module unload xalt
+module unload xl
+module load gcc/7.4.0
+module load spectrum-mpi/10.3.1.2-20200121
+
+cd $SPACK_ROOT
+spack -C ${HOME}/.spack/summit install xsdk~precice
