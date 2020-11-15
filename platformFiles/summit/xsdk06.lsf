@@ -1,5 +1,5 @@
 #!/bin/bash
-#BSUB -P ABC123
+#BSUB -P abc123
 #BSUB -W 2:00
 #BSUB -nnodes 1
 #BSUB -alloc_flags smt4
@@ -9,7 +9,7 @@
 
 ## ### #BSUB -alloc_flags gpumps
 
-projroot=/ccs/proj/abc123/luszczek
+projroot=/ccs/proj/abc123/$USER
 
 SPACK_ROOT=${projroot}/spack
 export SPACK_ROOT
