@@ -1,0 +1,9 @@
+Spack environment for OLCF Spock.
+
+To create an environment from this spack.yaml file, run:
+
+```
+spack env create xsdk-spock spack.yaml
+```
+
+This environment is a WIP. Do not expect the full xsdk to install without further edits.
