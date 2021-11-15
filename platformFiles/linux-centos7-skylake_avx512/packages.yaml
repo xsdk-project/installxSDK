@@ -1,0 +1,81 @@
+packages:
+  autoconf:
+    externals:
+    - spec: autoconf@2.69
+      prefix: /nfs/apps/spacks/2021-02-09/opt/spack/linux-centos7-x86_64/gcc-7.3.0/autoconf-2.69-jhp5s7pfgmp2deyhwc32hoerf535zgou
+    buildable: False
+  automake:
+    externals:
+    - spec: automake@1.16.3
+      prefix: /nfs/apps/spacks/2021-02-09/opt/spack/linux-centos7-x86_64/gcc-7.3.0/automake-1.16.3-6p6xpxsxgjvyluiheeegdxmqjthts64y
+    buildable: False
+  libtool:
+    externals:
+    - spec: libtool@2.4.6
+      prefix: /nfs/apps/spacks/2021-02-09/opt/spack/linux-centos7-x86_64/gcc-7.3.0/libtool-2.4.6-z7osdpc5jrpjdoyrr5gkmo345sknbijn
+    buildable: False
+  m4:
+    externals:
+    - spec: m4@1.4.18
+      prefix: /nfs/apps/spacks/2021-02-09/opt/spack/linux-centos7-x86_64/gcc-7.3.0/m4-1.4.18-2nqunxwflfltzq7eihk6pybcqhhsx7rq
+    buildable: False
+  diffutils:
+    externals:
+    - spec: diffutils@3.3.5
+      prefix: /usr
+    buildable: False
+  zlib:
+    externals:
+    - spec: zlib@1.2.7%gcc@9.2.0
+      prefix: /usr
+    buildable: False
+  pkg-config:
+    externals:
+    - spec: pkg-config@0.27.1
+      prefix: /usr
+    buildable: False
+  bzip2:
+    externals:
+    - spec: bzip2@1.0.6
+      prefix: /usr
+    buildable: False
+  perl:
+    externals:
+    - spec: perl@5.16.3
+      prefix: /usr
+    buildable: False
+  bison:
+    externals:
+    - spec: bison@3.0.4
+      prefix: /usr
+    buildable: False
+  xz:
+    externals:
+    - spec: xz@5.2.2
+      prefix: /usr
+    buildable: False
+  tar:
+    externals:
+    - spec: tar@1.16
+      prefix: /usr
+    buildable: False
+  cuda:
+    externals:
+    - spec: cuda@11.2.0
+      prefix: /nfs/apps/spacks/2021-02-09/opt/spack/linux-centos7-x86_64/gcc-7.3.0/cuda-11.2.0-ikruu5mo6dtt3avvmwsejouqhxu4btdm
+    buildable: False
+#  cuda:
+#    externals:
+#    - spec: cuda@10.1.243
+#      prefix: /nfs/apps/spacks/2021-02-09/opt/spack/linux-centos7-x86_64/gcc-7.3.0/cuda-10.1.243-kh3kzn4uiajmhy5oiofd6rmo7ube3q3p
+#    buildable: False
+  cmake:
+    externals:
+    - spec: cmake@3.19.4
+      prefix: /nfs/apps/spacks/2021-02-09/opt/spack/linux-centos7-x86_64/gcc-7.3.0/cmake-3.19.4-bdukecolult2waijgj3rbbuskfm53fgs
+    buildable: False
+  python:
+    externals:
+    - spec: python@3.8.7%gcc@9.2.0
+      prefix: /nfs/apps/spacks/2021-02-09/opt/spack/linux-centos7-x86_64/gcc-7.3.0/python-3.8.7-ya4clnvntxjr7s57znwvb4adjnqmaa7z/
+    buildable: False

@@ -1,0 +1,128 @@
+packages:
+  autoconf:
+    externals:
+    - spec: autoconf@2.69
+      prefix: /usr
+    buildable: False
+  automake:
+    externals:
+    - spec: automake@1.16.1
+      prefix: /usr
+    buildable: False
+  libtool:
+    externals:
+    - spec: libtool@2.4.6
+      prefix: /usr
+    buildable: False
+  m4:
+    externals:
+    - spec: m4@1.4.18
+      prefix: /usr
+    buildable: False
+  cmake:
+    externals:
+    - spec: cmake@3.19.7
+      prefix: /usr
+    buildable: False
+  python:
+    externals:
+    - spec: python@3.9.5
+      prefix: /usr
+    buildable: False
+  py-numpy:
+    externals:
+    - spec: py-numpy@1.20.1
+      prefix: /usr
+    buildable: False
+  py-setuptools:
+    externals:
+    - spec: py-setuptools@53.0.0
+      prefix: /usr
+    buildable: False
+  py-psutil:
+    externals:
+    - spec: py-psutil@5.8.0
+      prefix: /usr
+    buildable: False
+  py-cython:
+    externals:
+    - spec: py-cython@0.29.21
+      prefix: /usr
+    buildable: False
+#  boost:
+#    externals:
+#    - spec: boost@1.74.0
+#      prefix: /usr
+#    buildable: False
+  diffutils:
+    externals:
+    - spec: diffutils@3.7
+      prefix: /usr
+    buildable: False
+  zlib:
+    externals:
+    - spec: zlib@1.2.11
+      prefix: /usr
+    buildable: False
+  pkg-config:
+    externals:
+    - spec: pkg-config@1.7.3
+      prefix: /usr
+    buildable: False
+  bzip2:
+    externals:
+    - spec: bzip2@1.0.8
+      prefix: /usr
+    buildable: False
+  numactl:
+    externals:
+    - spec: numactl@2.0.14
+      prefix: /usr
+    buildable: False
+  openssl:
+    externals:
+    - spec: openssl@1.1.1
+      prefix: /usr
+    buildable: False
+  texinfo:
+    externals:
+    - spec: texinfo@6.7-10
+      prefix: /usr
+    buildable: False
+  perl:
+    externals:
+    - spec: perl@5.32.1
+      prefix: /usr
+    buildable: False
+  readline:
+    externals:
+    - spec: readline@8.1
+      prefix: /usr
+    buildable: False
+  ncurses:
+    externals:
+    - spec: ncurses@6.2
+      prefix: /usr
+    buildable: False
+  bison:
+    externals:
+    - spec: bison@3.7.4
+      prefix: /usr
+    buildable: False
+  xz:
+    externals:
+    - spec: xz@5.2.5
+      prefix: /usr
+    buildable: False
+  tar:
+    externals:
+    - spec: tar@1.34
+      prefix: /usr
+    buildable: False
+  all:
+    providers:
+      mpi: [mpich]
+      blas: [netlib-lapack]
+      lapack: [netlib-lapack]
+    compiler: [gcc@11.1.1]
+

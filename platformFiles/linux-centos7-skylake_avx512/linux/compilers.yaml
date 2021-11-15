@@ -1,0 +1,30 @@
+compilers:
+- compiler:
+    spec: gcc@9.2.0
+    paths:
+      cc: /nfs/apps/spacks/2021-02-09/opt/spack/linux-centos7-x86_64/gcc-7.3.0/gcc-9.2.0-pmtekjqefl4mqogly4j3fqac5agm2e55/bin/gcc
+      cxx: /nfs/apps/spacks/2021-02-09/opt/spack/linux-centos7-x86_64/gcc-7.3.0/gcc-9.2.0-pmtekjqefl4mqogly4j3fqac5agm2e55/bin/g++
+      f77: /nfs/apps/spacks/2021-02-09/opt/spack/linux-centos7-x86_64/gcc-7.3.0/gcc-9.2.0-pmtekjqefl4mqogly4j3fqac5agm2e55/bin/gfortran
+      fc: /nfs/apps/spacks/2021-02-09/opt/spack/linux-centos7-x86_64/gcc-7.3.0/gcc-9.2.0-pmtekjqefl4mqogly4j3fqac5agm2e55/bin/gfortran
+    flags: {}
+    operating_system: centos7
+    target: x86_64
+    modules:
+    - gcc/9.2.0/gcc-7.3.0-pmte
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: intel@19.1.1.217
+    paths:
+      cc: /nfs/apps/spacks/2021-02-09/opt/spack/linux-centos7-x86_64/gcc-7.3.0/intel-parallel-studio-cluster.2020.1-o7gyq2kws55ycvelysduh7a3i4nv7lug/compilers_and_libraries_2020.1.217/linux/bin/intel64/icc
+      cxx: /nfs/apps/spacks/2021-02-09/opt/spack/linux-centos7-x86_64/gcc-7.3.0/intel-parallel-studio-cluster.2020.1-o7gyq2kws55ycvelysduh7a3i4nv7lug/compilers_and_libraries_2020.1.217/linux/bin/intel64/icpc
+      f77: /nfs/apps/spacks/2021-02-09/opt/spack/linux-centos7-x86_64/gcc-7.3.0/intel-parallel-studio-cluster.2020.1-o7gyq2kws55ycvelysduh7a3i4nv7lug/compilers_and_libraries_2020.1.217/linux/bin/intel64/ifort
+      fc: /nfs/apps/spacks/2021-02-09/opt/spack/linux-centos7-x86_64/gcc-7.3.0/intel-parallel-studio-cluster.2020.1-o7gyq2kws55ycvelysduh7a3i4nv7lug/compilers_and_libraries_2020.1.217/linux/bin/intel64/ifort
+    flags: {}
+    operating_system: centos7
+    target: x86_64
+    modules:
+    - intel-parallel-studio/cluster.2020.1/gcc-7.3.0-o7gy
+    - gcc/9.2.0/gcc-7.3.0-pmte
+    environment: {}
+    extra_rpaths: []
