@@ -1,0 +1,29 @@
+#!/bin/bash
+#BSUB -P <project_code>
+#BSUB -W 40
+#BSUB -nnodes 1
+#BSUB -alloc_flags smt4
+#BSUB -J xsdk07
+#BSUB -o xsdk07o.%J
+#BSUB -e xsdk07e.%J
+
+projroot=/ccs/proj/<project_code>/$USER
+
+SPACK_ROOT=${projroot}/spack-xsdk-07
+export SPACK_ROOT
+PATH=${PATH}:${SPACK_ROOT}/bin
+export PATH
+
+module unload darshan-runtime
+module unload spectrum-mpi
+module unload xalt
+module unload fftw
+module unload xl
+module load spectrum-mpi/10.4.0.3-20210112
+# using system-provided GCC 8.3.1-5
+
+cd $SPACK_ROOT
+
+spack install xsdk~dealii
+
+spack install xsdk~dealii+cuda cuda_arch=70 ^spectrum-mpi@10.4.0.3
