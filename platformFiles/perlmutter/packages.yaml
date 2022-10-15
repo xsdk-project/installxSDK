@@ -7,7 +7,7 @@ packages:
       lapack: [cray-libsci]
       mpi: [cray-mpich]
     target: [zen3]
-    variants: +mpi
+    # variants: +mpi
 
   libfabric:
     buildable: false
@@ -32,23 +32,23 @@ packages:
       - cray-libsci/21.08.1.2
 
   python:
-    buildable: False
     externals:
     - spec: cray-python@3.9.12.1
       modules:
       - cray-python/3.9.12.1
+      buildable: False
   py-numpy:
-    buildable: False
     externals:
     - spec: py-numpy@3.9.12.1
       modules:
       - cray-python/3.9.12.1
+      buildable: False
   py-setuptools:
-    buildable: False
     externals:
     - spec: py-setuptools@3.9.12.1
       modules:
       - cray-python/3.9.12.1
+      buildable: False
 
   cmake:
     externals:
