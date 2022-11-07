@@ -15,7 +15,8 @@ spack env activate -p env_xsdk_080_t1
 # For gcc build
 module load PrgEnv-gnu
 
-Spec (in spack.yaml): sdk@0.8.0 +cuda cuda_arch=80
+# Place spack.yaml file in $SPACK_ENV dir (in this case $SPACK_ROOT/var/spack/environments/env_xsdk_080_t1)
+# Spec (in spack.yaml) is: sdk@0.8.0 +cuda cuda_arch=80
 
 # Install
 spack install
