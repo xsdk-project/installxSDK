@@ -1,19 +1,19 @@
 {
   "_meta": {
     "file-type": "spack-lockfile",
-    "lockfile-version": 3,
-    "specfile-version": 2
+    "lockfile-version": 4,
+    "specfile-version": 3
   },
   "roots": [
     {
-      "hash": "5exf4lb44q4ov3okr5mon6vyfocot5w2",
-      "spec": "xsdk%gcc@7.3.1+cuda~dealii+slate cuda_arch=70 ^precice%gcc@8.3.1"
+      "hash": "hw5mbdafezj2ypchxkd2kkhp463nxa57",
+      "spec": "xsdk@0.8.0%gcc@8.3.1+cuda~dealii cuda_arch=70 ^cuda@11.7.0 ^python@3.9.10"
     }
   ],
   "concrete_specs": {
-    "5exf4lb44q4ov3okr5mon6vyfocot5w2": {
+    "hw5mbdafezj2ypchxkd2kkhp463nxa57": {
       "name": "xsdk",
-      "version": "0.7.0",
+      "version": "0.8.0",
       "arch": {
         "platform": "linux",
         "platform_os": "rhel7",
@@ -29,15 +29,13 @@
       },
       "compiler": {
         "name": "gcc",
-        "version": "7.3.1"
+        "version": "8.3.1"
       },
       "namespace": "builtin",
       "parameters": {
         "alquimia": true,
-        "amdgpu_target": [
-          "none"
-        ],
         "arborx": true,
+        "build_system": "bundle",
         "butterflypack": true,
         "cuda": true,
         "cuda_arch": [
@@ -45,8 +43,10 @@
         ],
         "datatransferkit": true,
         "dealii": false,
+        "exago": false,
         "ginkgo": true,
         "heffte": true,
+        "hiop": true,
         "libensemble": true,
         "omega-h": true,
         "phist": true,
@@ -62,10 +62,11 @@
         "ldflags": [],
         "ldlibs": []
       },
+      "package_hash": "5hqcd4to33pfxczh7mof5bogktvinvyjpo2vri6qjjoqlaazzp6a====",
       "dependencies": [
         {
           "name": "alquimia",
-          "build_hash": "jqsmaez25ctomgigzukqvcvv7643rvhj",
+          "hash": "drh3jv74zjipx2u24waejz2ol7tqd7e5",
           "type": [
             "build",
             "link"
@@ -73,7 +74,7 @@
         },
         {
           "name": "amrex",
-          "build_hash": "mx3qkolmfxrz2zuma7qmxu2kfyghqub2",
+          "hash": "4poiy3v5glgalg7lczkokkdhvtdahvcb",
           "type": [
             "build",
             "link"
@@ -81,7 +82,7 @@
         },
         {
           "name": "arborx",
-          "build_hash": "b7turhqw6b6dyht3qyquawbopglokvdc",
+          "hash": "bpabfpuzpmydbwaa4l2y33be7j4yjveg",
           "type": [
             "build",
             "link"
@@ -89,7 +90,7 @@
         },
         {
           "name": "butterflypack",
-          "build_hash": "ovofe5mils3jb4kef2umamz67eym53ux",
+          "hash": "g5wtvht7ahsw7lgmenfwewdd76sherbm",
           "type": [
             "build",
             "link"
@@ -97,7 +98,7 @@
         },
         {
           "name": "cuda",
-          "build_hash": "nsbamhir2znhugvmlx7xlmomvj2gqyj6",
+          "hash": "nnh3nukp2nbnvkazeg7tdecep3rctgdp",
           "type": [
             "build",
             "link"
@@ -105,7 +106,7 @@
         },
         {
           "name": "datatransferkit",
-          "build_hash": "jclrwgqgww6ir542rvvzbkaayeecf2jf",
+          "hash": "wo5blbpq2vjyonpblgmgfkp3ur4eqzyy",
           "type": [
             "build",
             "link"
@@ -113,7 +114,7 @@
         },
         {
           "name": "ginkgo",
-          "build_hash": "j7eyvx2yqt7g5gcr22cbf6gr2sysxo2x",
+          "hash": "khjj2h5tjgqa75uujv7v3po5pvu5cfs5",
           "type": [
             "build",
             "link"
@@ -121,7 +122,15 @@
         },
         {
           "name": "heffte",
-          "build_hash": "5pt647z2e2djjwpxz3koyiukk54e2awl",
+          "hash": "t6qpj67iww46m3jdjwvkstgfxtpl3hpv",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "hiop",
+          "hash": "7o622e4yxtyxk23rzxlo45x2l3q6anvi",
           "type": [
             "build",
             "link"
@@ -129,7 +138,7 @@
         },
         {
           "name": "hypre",
-          "build_hash": "2ernrm2pwcw3qt7hqrvgwocz5oiwv5km",
+          "hash": "dvxnb3jbaz64h72eopd7vb5ak3ifi5y7",
           "type": [
             "build",
             "link"
@@ -137,7 +146,7 @@
         },
         {
           "name": "magma",
-          "build_hash": "wne6zkha5sjcvjgbsvob2wmd27ofa2zp",
+          "hash": "tmulfouhbkvquq2q6ev6mnd7eadzogx2",
           "type": [
             "build",
             "link"
@@ -145,7 +154,7 @@
         },
         {
           "name": "mfem",
-          "build_hash": "oabigl35nvndtinvxninigefqkznkcff",
+          "hash": "wxcjirwoibchwyaynvthpxojyvhmr6ut",
           "type": [
             "build",
             "link"
@@ -153,7 +162,7 @@
         },
         {
           "name": "omega-h",
-          "build_hash": "owj6b6wxkoc3qzi45u6hdjtdk2ygtqms",
+          "hash": "2ibmg7nas4h347hbod73dcdewcsas3xp",
           "type": [
             "build",
             "link"
@@ -161,7 +170,7 @@
         },
         {
           "name": "petsc",
-          "build_hash": "st6j4dmrqqnjetlqrlskeebi7kdgrluz",
+          "hash": "gr6uucu5vswdfxer27gvimztn24574gx",
           "type": [
             "build",
             "link"
@@ -169,7 +178,7 @@
         },
         {
           "name": "pflotran",
-          "build_hash": "ow436rynu7rp25qybchgsm6cts6vgb3y",
+          "hash": "xrk56i3yikskuwuzfvhmnj4yxoti2fox",
           "type": [
             "build",
             "link"
@@ -177,7 +186,7 @@
         },
         {
           "name": "phist",
-          "build_hash": "lsw67gztok2e7wquz2gzyxmskv3yqtrr",
+          "hash": "b6ii2mp7x6yejhlfpuz23vjd75sv76bj",
           "type": [
             "build",
             "link"
@@ -185,7 +194,7 @@
         },
         {
           "name": "plasma",
-          "build_hash": "uwdbwptblj5cosn6sf2jtu2yx73lvauw",
+          "hash": "li2ltcqajq42gbjnrfliqkp6semoa4xw",
           "type": [
             "build",
             "link"
@@ -193,7 +202,7 @@
         },
         {
           "name": "precice",
-          "build_hash": "pmm3b5ebwv5b6c6vbwkgx66cylslczaa",
+          "hash": "foze2hups4lz3jt3y4icccgfvmw545kb",
           "type": [
             "build",
             "link"
@@ -201,7 +210,7 @@
         },
         {
           "name": "pumi",
-          "build_hash": "4nqbiq6jrmgqzooo4ygqd5cl55ki7fke",
+          "hash": "wulfc2pjhryxaw7duwd427ltohyq3ytt",
           "type": [
             "build",
             "link"
@@ -209,7 +218,7 @@
         },
         {
           "name": "py-libensemble",
-          "build_hash": "cnexoy4g62u7j5ythi6lqkkbe5yh7h6f",
+          "hash": "g73uhmztds5rvyve3roj6utz3yxrass3",
           "type": [
             "build",
             "link"
@@ -217,7 +226,7 @@
         },
         {
           "name": "py-petsc4py",
-          "build_hash": "gz5c7lyoetangg23npiglzxhr4a6levr",
+          "hash": "jbechpsoyrfytff4ob5dmj56p7zldza2",
           "type": [
             "build",
             "link"
@@ -225,7 +234,7 @@
         },
         {
           "name": "slate",
-          "build_hash": "xwumabip2soxhhlhaaps4xph3z7r5fa3",
+          "hash": "6soiq37khfl6otcds2q3dezav52yqgfj",
           "type": [
             "build",
             "link"
@@ -233,7 +242,7 @@
         },
         {
           "name": "slepc",
-          "build_hash": "5yrq5775kxtxqeamf25drmmgvwyrsint",
+          "hash": "z6wimnsbvhxs4uirftqbr4sxfb7oqxpm",
           "type": [
             "build",
             "link"
@@ -241,7 +250,7 @@
         },
         {
           "name": "strumpack",
-          "build_hash": "camouwnknnvd62yln73jvlw6tdloy6re",
+          "hash": "27o25vrjeuqapdq44dwmtrzfkuohisjb",
           "type": [
             "build",
             "link"
@@ -249,7 +258,7 @@
         },
         {
           "name": "sundials",
-          "build_hash": "jsyi342jmrwv6lezlea4ljdrxdjv7fus",
+          "hash": "5fqgcmjcmlxlgloq37h546rmvraga4pr",
           "type": [
             "build",
             "link"
@@ -257,7 +266,7 @@
         },
         {
           "name": "superlu-dist",
-          "build_hash": "ogi242ximlepydxrq6evkjvdvry4bs4o",
+          "hash": "x5eb2w35ijvj7qrzsz3jc367ptqwfc7f",
           "type": [
             "build",
             "link"
@@ -265,7 +274,7 @@
         },
         {
           "name": "tasmanian",
-          "build_hash": "pqazg7stclcfzq4ibujfubusm5ljduos",
+          "hash": "63bm3kxbvkyqq6eu4iuvd6ardts3imje",
           "type": [
             "build",
             "link"
@@ -273,18 +282,18 @@
         },
         {
           "name": "trilinos",
-          "build_hash": "mxkbfvl7zajzgasl2hf4t3kksgxluwqm",
+          "hash": "hzkc3wuc2xsvh5vevgej2vxvjuukwhvz",
           "type": [
             "build",
             "link"
           ]
         }
       ],
-      "hash": "tecgcvx7qv334uy3wj44o63kkvkhsc2a"
+      "hash": "hw5mbdafezj2ypchxkd2kkhp463nxa57"
     },
-    "jqsmaez25ctomgigzukqvcvv7643rvhj": {
+    "drh3jv74zjipx2u24waejz2ol7tqd7e5": {
       "name": "alquimia",
-      "version": "1.0.9",
+      "version": "1.0.10",
       "arch": {
         "platform": "linux",
         "platform_os": "rhel7",
@@ -300,10 +309,11 @@
       },
       "compiler": {
         "name": "gcc",
-        "version": "7.3.1"
+        "version": "8.3.1"
       },
       "namespace": "builtin",
       "parameters": {
+        "build_system": "cmake",
         "build_type": "RelWithDebInfo",
         "ipo": false,
         "shared": true,
@@ -314,17 +324,18 @@
         "ldflags": [],
         "ldlibs": []
       },
+      "package_hash": "t63j5o5jucfvbx3zwb2zwk77h7tou3ckbf3tzg5d7wh5fpqceqpq====",
       "dependencies": [
         {
           "name": "cmake",
-          "build_hash": "psrodwzsowo4aqt7yp7uon5t3lav4767",
+          "hash": "mmeaau2dw4pch3tf44uvh3iiwcit7j5m",
           "type": [
             "build"
           ]
         },
         {
           "name": "hdf5",
-          "build_hash": "ksoql7n6lnrrpf5gd4poa5m5umju4e6e",
+          "hash": "qat54dlaqp4b7xx75q7onb6zvifzf7hp",
           "type": [
             "build",
             "link"
@@ -332,7 +343,7 @@
         },
         {
           "name": "pflotran",
-          "build_hash": "ow436rynu7rp25qybchgsm6cts6vgb3y",
+          "hash": "xrk56i3yikskuwuzfvhmnj4yxoti2fox",
           "type": [
             "build",
             "link"
@@ -340,18 +351,18 @@
         },
         {
           "name": "spectrum-mpi",
-          "build_hash": "tvrmqg5d5hzwgk747qzj6xtzugzv3fyn",
+          "hash": "aowt4oks6ctgkgfklbpppp3glslziybk",
           "type": [
             "build",
             "link"
           ]
         }
       ],
-      "hash": "rmpduo624rnmwto7fj3qefpshuo2x7np"
+      "hash": "drh3jv74zjipx2u24waejz2ol7tqd7e5"
     },
-    "psrodwzsowo4aqt7yp7uon5t3lav4767": {
+    "mmeaau2dw4pch3tf44uvh3iiwcit7j5m": {
       "name": "cmake",
-      "version": "3.21.4",
+      "version": "3.21.1",
       "arch": {
         "platform": "linux",
         "platform_os": "rhel7",
@@ -367,14 +378,14 @@
       },
       "compiler": {
         "name": "gcc",
-        "version": "7.3.1"
+        "version": "8.3.1"
       },
       "namespace": "builtin",
       "parameters": {
+        "build_system": "generic",
         "build_type": "Release",
         "doc": false,
         "ncurses": true,
-        "openssl": true,
         "ownlibs": true,
         "qt": false,
         "cflags": [],
@@ -384,582 +395,17 @@
         "ldflags": [],
         "ldlibs": []
       },
-      "dependencies": [
-        {
-          "name": "ncurses",
-          "build_hash": "6nez5laiouk654xdvvonbgoxmecpftu5",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "openssl",
-          "build_hash": "q5ljidpe7t7wqs2fkagk7qbkoigxwpja",
-          "type": [
-            "build",
-            "link"
-          ]
-        }
-      ],
-      "hash": "alal4rzyb3ezd3nyerfymsbnrj5np3cd"
+      "external": {
+        "path": "/usr/tce/packages/cmake/cmake-3.21.1",
+        "module": null,
+        "extra_attributes": {}
+      },
+      "package_hash": "3p7xcughvoccamu24fbvuekf2iwzcnhslu7sy47c44ztglulsdta====",
+      "hash": "mmeaau2dw4pch3tf44uvh3iiwcit7j5m"
     },
-    "6nez5laiouk654xdvvonbgoxmecpftu5": {
-      "name": "ncurses",
-      "version": "6.2",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "rhel7",
-        "target": {
-          "name": "power9le",
-          "vendor": "IBM",
-          "features": [],
-          "generation": 9,
-          "parents": [
-            "power8le"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "7.3.1"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "abi": "none",
-        "symlinks": false,
-        "termlib": true,
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "dependencies": [
-        {
-          "name": "gnuconfig",
-          "build_hash": "5lkknzeh3qw2akhhhfww3il35xdyksdi",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "pkgconf",
-          "build_hash": "yfssj3vccyx273h3ftjujz2dc3s2voqr",
-          "type": [
-            "build"
-          ]
-        }
-      ],
-      "hash": "nzfhdzkhkct2j6fowllr4grdpihhvgh6"
-    },
-    "5lkknzeh3qw2akhhhfww3il35xdyksdi": {
-      "name": "gnuconfig",
-      "version": "2021-08-14",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "rhel7",
-        "target": {
-          "name": "power9le",
-          "vendor": "IBM",
-          "features": [],
-          "generation": 9,
-          "parents": [
-            "power8le"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "7.3.1"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "hash": "5lkknzeh3qw2akhhhfww3il35xdyksdi"
-    },
-    "yfssj3vccyx273h3ftjujz2dc3s2voqr": {
-      "name": "pkgconf",
-      "version": "1.8.0",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "rhel7",
-        "target": {
-          "name": "power9le",
-          "vendor": "IBM",
-          "features": [],
-          "generation": 9,
-          "parents": [
-            "power8le"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "7.3.1"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "dependencies": [
-        {
-          "name": "gnuconfig",
-          "build_hash": "5lkknzeh3qw2akhhhfww3il35xdyksdi",
-          "type": [
-            "build"
-          ]
-        }
-      ],
-      "hash": "w6kl5inoqpree5uyggpknid6dzyzybae"
-    },
-    "q5ljidpe7t7wqs2fkagk7qbkoigxwpja": {
-      "name": "openssl",
-      "version": "1.1.1l",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "rhel7",
-        "target": {
-          "name": "power9le",
-          "vendor": "IBM",
-          "features": [],
-          "generation": 9,
-          "parents": [
-            "power8le"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "7.3.1"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "certs": "system",
-        "docs": false,
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "dependencies": [
-        {
-          "name": "perl",
-          "build_hash": "ymzeayppxa6sztvoj57frmtbbypv2d5n",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "zlib",
-          "build_hash": "injpmg45ihuhup7lyk2pxlymkkhf5bvj",
-          "type": [
-            "build",
-            "link"
-          ]
-        }
-      ],
-      "hash": "dsp3r6v7eucvvhufqhwpbwxlrauagrm5"
-    },
-    "ymzeayppxa6sztvoj57frmtbbypv2d5n": {
-      "name": "perl",
-      "version": "5.34.0",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "rhel7",
-        "target": {
-          "name": "power9le",
-          "vendor": "IBM",
-          "features": [],
-          "generation": 9,
-          "parents": [
-            "power8le"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "7.3.1"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "cpanm": true,
-        "shared": true,
-        "threads": true,
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "dependencies": [
-        {
-          "name": "berkeley-db",
-          "build_hash": "43e52xusp2bohsnhkvjd5hti2k7hmb63",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "bzip2",
-          "build_hash": "ldq5uzoamqzqerbkaviqf623n2h2l5cm",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "gdbm",
-          "build_hash": "iz7k3agup75ew5ajtggip2i2n3zah5yg",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "zlib",
-          "build_hash": "injpmg45ihuhup7lyk2pxlymkkhf5bvj",
-          "type": [
-            "build",
-            "link"
-          ]
-        }
-      ],
-      "hash": "rg2piorzhvbrfx6clftturetgj42xgjk"
-    },
-    "43e52xusp2bohsnhkvjd5hti2k7hmb63": {
-      "name": "berkeley-db",
-      "version": "18.1.40",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "rhel7",
-        "target": {
-          "name": "power9le",
-          "vendor": "IBM",
-          "features": [],
-          "generation": 9,
-          "parents": [
-            "power8le"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "7.3.1"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "cxx": true,
-        "docs": false,
-        "patches": [
-          "b231fcc4d5cff05e5c3a4814f6a5af0e9a966428dc2176540d2c05aff41de522"
-        ],
-        "stl": true,
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "patches": [
-        "b231fcc4d5cff05e5c3a4814f6a5af0e9a966428dc2176540d2c05aff41de522"
-      ],
-      "dependencies": [
-        {
-          "name": "gnuconfig",
-          "build_hash": "5lkknzeh3qw2akhhhfww3il35xdyksdi",
-          "type": [
-            "build"
-          ]
-        }
-      ],
-      "hash": "wosh3acwzomcd2qqffpz667dlitjcecj"
-    },
-    "ldq5uzoamqzqerbkaviqf623n2h2l5cm": {
-      "name": "bzip2",
-      "version": "1.0.8",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "rhel7",
-        "target": {
-          "name": "power9le",
-          "vendor": "IBM",
-          "features": [],
-          "generation": 9,
-          "parents": [
-            "power8le"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "7.3.1"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "debug": false,
-        "pic": false,
-        "shared": true,
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "dependencies": [
-        {
-          "name": "diffutils",
-          "build_hash": "vqnfbpmc7ogukao4xyt6wl2delar7c7c",
-          "type": [
-            "build"
-          ]
-        }
-      ],
-      "hash": "cjg62s6l4phtgwfymk2pn56mkvuz5v7f"
-    },
-    "vqnfbpmc7ogukao4xyt6wl2delar7c7c": {
-      "name": "diffutils",
-      "version": "3.8",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "rhel7",
-        "target": {
-          "name": "power9le",
-          "vendor": "IBM",
-          "features": [],
-          "generation": 9,
-          "parents": [
-            "power8le"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "7.3.1"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "dependencies": [
-        {
-          "name": "gnuconfig",
-          "build_hash": "5lkknzeh3qw2akhhhfww3il35xdyksdi",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "libiconv",
-          "build_hash": "imaoq7lzfwj6ly45ck3z33mrna4fxi5z",
-          "type": [
-            "build",
-            "link"
-          ]
-        }
-      ],
-      "hash": "y6vgh5aoljvlx7zn6cwkj77zaalwdaxj"
-    },
-    "imaoq7lzfwj6ly45ck3z33mrna4fxi5z": {
-      "name": "libiconv",
-      "version": "1.16",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "rhel7",
-        "target": {
-          "name": "power9le",
-          "vendor": "IBM",
-          "features": [],
-          "generation": 9,
-          "parents": [
-            "power8le"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "7.3.1"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "libs": [
-          "shared",
-          "static"
-        ],
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "dependencies": [
-        {
-          "name": "gnuconfig",
-          "build_hash": "5lkknzeh3qw2akhhhfww3il35xdyksdi",
-          "type": [
-            "build"
-          ]
-        }
-      ],
-      "hash": "r5agzqcogd5ibff7logmy5yavtqm6mvc"
-    },
-    "iz7k3agup75ew5ajtggip2i2n3zah5yg": {
-      "name": "gdbm",
-      "version": "1.19",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "rhel7",
-        "target": {
-          "name": "power9le",
-          "vendor": "IBM",
-          "features": [],
-          "generation": 9,
-          "parents": [
-            "power8le"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "7.3.1"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "dependencies": [
-        {
-          "name": "gnuconfig",
-          "build_hash": "5lkknzeh3qw2akhhhfww3il35xdyksdi",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "readline",
-          "build_hash": "gkcwuyodkhxkh3whnbwepg5r7tknzr2e",
-          "type": [
-            "build",
-            "link"
-          ]
-        }
-      ],
-      "hash": "afwskvsymmddzfkgtpc7iblyqtdvktzf"
-    },
-    "gkcwuyodkhxkh3whnbwepg5r7tknzr2e": {
-      "name": "readline",
-      "version": "8.1",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "rhel7",
-        "target": {
-          "name": "power9le",
-          "vendor": "IBM",
-          "features": [],
-          "generation": 9,
-          "parents": [
-            "power8le"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "7.3.1"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "dependencies": [
-        {
-          "name": "gnuconfig",
-          "build_hash": "5lkknzeh3qw2akhhhfww3il35xdyksdi",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "ncurses",
-          "build_hash": "6nez5laiouk654xdvvonbgoxmecpftu5",
-          "type": [
-            "build",
-            "link"
-          ]
-        }
-      ],
-      "hash": "u5xk6vgxyw6rfmmzfdpbsglzdbgf7hdc"
-    },
-    "injpmg45ihuhup7lyk2pxlymkkhf5bvj": {
-      "name": "zlib",
-      "version": "1.2.11",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "rhel7",
-        "target": {
-          "name": "power9le",
-          "vendor": "IBM",
-          "features": [],
-          "generation": 9,
-          "parents": [
-            "power8le"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "7.3.1"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "optimize": true,
-        "pic": true,
-        "shared": true,
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "hash": "injpmg45ihuhup7lyk2pxlymkkhf5bvj"
-    },
-    "ksoql7n6lnrrpf5gd4poa5m5umju4e6e": {
+    "qat54dlaqp4b7xx75q7onb6zvifzf7hp": {
       "name": "hdf5",
-      "version": "1.10.7",
+      "version": "1.12.2",
       "arch": {
         "platform": "linux",
         "platform_os": "rhel7",
@@ -975,11 +421,12 @@
       },
       "compiler": {
         "name": "gcc",
-        "version": "7.3.1"
+        "version": "8.3.1"
       },
       "namespace": "builtin",
       "parameters": {
         "api": "default",
+        "build_system": "cmake",
         "build_type": "RelWithDebInfo",
         "cxx": false,
         "fortran": true,
@@ -998,32 +445,25 @@
         "ldflags": [],
         "ldlibs": []
       },
+      "package_hash": "4mb56zekgwonzamfj5xizouoe42xsvtuahst6z26hya2r7xmpnka====",
       "dependencies": [
         {
           "name": "cmake",
-          "build_hash": "psrodwzsowo4aqt7yp7uon5t3lav4767",
+          "hash": "mmeaau2dw4pch3tf44uvh3iiwcit7j5m",
           "type": [
             "build"
           ]
         },
         {
-          "name": "numactl",
-          "build_hash": "4b265v5bo6fef365aldlhfuknuznnjvx",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
           "name": "pkgconf",
-          "build_hash": "yfssj3vccyx273h3ftjujz2dc3s2voqr",
+          "hash": "vbajcm5norjv4wtxv7lzozsg62na54bp",
           "type": [
             "run"
           ]
         },
         {
           "name": "spectrum-mpi",
-          "build_hash": "tvrmqg5d5hzwgk747qzj6xtzugzv3fyn",
+          "hash": "aowt4oks6ctgkgfklbpppp3glslziybk",
           "type": [
             "build",
             "link"
@@ -1031,18 +471,18 @@
         },
         {
           "name": "zlib",
-          "build_hash": "injpmg45ihuhup7lyk2pxlymkkhf5bvj",
+          "hash": "47rpkhn4wuv6bikfrz36bah6n5rx5vr6",
           "type": [
             "build",
             "link"
           ]
         }
       ],
-      "hash": "cadr6n4hxwz3arx2isah73iixho7vmxi"
+      "hash": "qat54dlaqp4b7xx75q7onb6zvifzf7hp"
     },
-    "4b265v5bo6fef365aldlhfuknuznnjvx": {
-      "name": "numactl",
-      "version": "2.0.14",
+    "vbajcm5norjv4wtxv7lzozsg62na54bp": {
+      "name": "pkgconf",
+      "version": "1.8.0",
       "arch": {
         "platform": "linux",
         "platform_os": "rhel7",
@@ -1058,15 +498,11 @@
       },
       "compiler": {
         "name": "gcc",
-        "version": "7.3.1"
+        "version": "8.3.1"
       },
       "namespace": "builtin",
       "parameters": {
-        "patches": [
-          "4e1d78cbbb85de625bad28705e748856033eaafab92a66dffd383a3d7e00cc94",
-          "62fc8a8bf7665a60e8f4c93ebbd535647cebf74198f7afafec4c085a8825c006",
-          "ff37630df599cfabf0740518b91ec8daaf18e8f288b19adaae5364dc1f6b2296"
-        ],
+        "build_system": "autotools",
         "cflags": [],
         "cppflags": [],
         "cxxflags": [],
@@ -1074,53 +510,21 @@
         "ldflags": [],
         "ldlibs": []
       },
-      "patches": [
-        "4e1d78cbbb85de625bad28705e748856033eaafab92a66dffd383a3d7e00cc94",
-        "62fc8a8bf7665a60e8f4c93ebbd535647cebf74198f7afafec4c085a8825c006",
-        "ff37630df599cfabf0740518b91ec8daaf18e8f288b19adaae5364dc1f6b2296"
-      ],
+      "package_hash": "olr5zscvqru56pgiiqlnzc4ud5e7iuyntj6fsplcrjh3jngqjpja====",
       "dependencies": [
         {
-          "name": "autoconf",
-          "build_hash": "gju43yp7aavhe7ohqpmsu364ggftxbfl",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "automake",
-          "build_hash": "ix5vmhq7tvpw4atz4ft5r53xpedqnfqx",
-          "type": [
-            "build"
-          ]
-        },
-        {
           "name": "gnuconfig",
-          "build_hash": "5lkknzeh3qw2akhhhfww3il35xdyksdi",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "libtool",
-          "build_hash": "4ororybomx6rvgf7xxwoituvpiuj5zit",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "m4",
-          "build_hash": "k5euv2v67hbroronbkgaf6fvie7tajyp",
+          "hash": "x7svgkfedji6bmdtamg3frwrv7dzocr6",
           "type": [
             "build"
           ]
         }
       ],
-      "hash": "eszpoozelinfj44zmagsmcz2q6xgvimg"
+      "hash": "vbajcm5norjv4wtxv7lzozsg62na54bp"
     },
-    "gju43yp7aavhe7ohqpmsu364ggftxbfl": {
-      "name": "autoconf",
-      "version": "2.69",
+    "x7svgkfedji6bmdtamg3frwrv7dzocr6": {
+      "name": "gnuconfig",
+      "version": "2021-08-14",
       "arch": {
         "platform": "linux",
         "platform_os": "rhel7",
@@ -1136,15 +540,11 @@
       },
       "compiler": {
         "name": "gcc",
-        "version": "7.3.1"
+        "version": "8.3.1"
       },
       "namespace": "builtin",
       "parameters": {
-        "patches": [
-          "35c449281546376449766f92d49fc121ca50e330e60fefcfc9be2af3253082c2",
-          "7793209b33013dc0f81208718c68440c5aae80e7a1c4b8d336e382525af791a7",
-          "a49dd5bac3b62daa0ff688ab4d508d71dbd2f4f8d7e2a02321926346161bf3ee"
-        ],
+        "build_system": "generic",
         "cflags": [],
         "cppflags": [],
         "cxxflags": [],
@@ -1152,238 +552,10 @@
         "ldflags": [],
         "ldlibs": []
       },
-      "patches": [
-        "7793209b33013dc0f81208718c68440c5aae80e7a1c4b8d336e382525af791a7",
-        "35c449281546376449766f92d49fc121ca50e330e60fefcfc9be2af3253082c2",
-        "a49dd5bac3b62daa0ff688ab4d508d71dbd2f4f8d7e2a02321926346161bf3ee"
-      ],
-      "dependencies": [
-        {
-          "name": "gnuconfig",
-          "build_hash": "5lkknzeh3qw2akhhhfww3il35xdyksdi",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "m4",
-          "build_hash": "k5euv2v67hbroronbkgaf6fvie7tajyp",
-          "type": [
-            "build",
-            "run"
-          ]
-        },
-        {
-          "name": "perl",
-          "build_hash": "ymzeayppxa6sztvoj57frmtbbypv2d5n",
-          "type": [
-            "build",
-            "run"
-          ]
-        }
-      ],
-      "hash": "zglzzmmyixn2k45yo3ddsbmfmwqs6qeu"
+      "package_hash": "7qakwrcwsb3n4vna7ixvloiiiah6geinixa3tmzhuiphanrp7cqa====",
+      "hash": "x7svgkfedji6bmdtamg3frwrv7dzocr6"
     },
-    "k5euv2v67hbroronbkgaf6fvie7tajyp": {
-      "name": "m4",
-      "version": "1.4.19",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "rhel7",
-        "target": {
-          "name": "power9le",
-          "vendor": "IBM",
-          "features": [],
-          "generation": 9,
-          "parents": [
-            "power8le"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "7.3.1"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "patches": [
-          "9dc5fbd0d5cb1037ab1e6d0ecc74a30df218d0a94bdd5a02759a97f62daca573",
-          "bfdffa7c2eb01021d5849b36972c069693654ad826c1a20b53534009a4ec7a89"
-        ],
-        "sigsegv": true,
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "patches": [
-        "bfdffa7c2eb01021d5849b36972c069693654ad826c1a20b53534009a4ec7a89",
-        "9dc5fbd0d5cb1037ab1e6d0ecc74a30df218d0a94bdd5a02759a97f62daca573"
-      ],
-      "dependencies": [
-        {
-          "name": "gnuconfig",
-          "build_hash": "5lkknzeh3qw2akhhhfww3il35xdyksdi",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "libsigsegv",
-          "build_hash": "35zruner4kusgdrkwr7czl5zzrb2nck2",
-          "type": [
-            "build",
-            "link"
-          ]
-        }
-      ],
-      "hash": "cr7cqj7jvnoz3qgsgnuhvo4ytsoizwff"
-    },
-    "35zruner4kusgdrkwr7czl5zzrb2nck2": {
-      "name": "libsigsegv",
-      "version": "2.13",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "rhel7",
-        "target": {
-          "name": "power9le",
-          "vendor": "IBM",
-          "features": [],
-          "generation": 9,
-          "parents": [
-            "power8le"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "7.3.1"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "dependencies": [
-        {
-          "name": "gnuconfig",
-          "build_hash": "5lkknzeh3qw2akhhhfww3il35xdyksdi",
-          "type": [
-            "build"
-          ]
-        }
-      ],
-      "hash": "gqkeyh4p7pvz3iohnr267fnisjqbg2tt"
-    },
-    "ix5vmhq7tvpw4atz4ft5r53xpedqnfqx": {
-      "name": "automake",
-      "version": "1.16.3",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "rhel7",
-        "target": {
-          "name": "power9le",
-          "vendor": "IBM",
-          "features": [],
-          "generation": 9,
-          "parents": [
-            "power8le"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "7.3.1"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "dependencies": [
-        {
-          "name": "autoconf",
-          "build_hash": "gju43yp7aavhe7ohqpmsu364ggftxbfl",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "gnuconfig",
-          "build_hash": "5lkknzeh3qw2akhhhfww3il35xdyksdi",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "perl",
-          "build_hash": "ymzeayppxa6sztvoj57frmtbbypv2d5n",
-          "type": [
-            "build",
-            "run"
-          ]
-        }
-      ],
-      "hash": "yg6gb4bi5hphtybahrwqmqz7ubfx7mpi"
-    },
-    "4ororybomx6rvgf7xxwoituvpiuj5zit": {
-      "name": "libtool",
-      "version": "2.4.6",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "rhel7",
-        "target": {
-          "name": "power9le",
-          "vendor": "IBM",
-          "features": [],
-          "generation": 9,
-          "parents": [
-            "power8le"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "7.3.1"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "dependencies": [
-        {
-          "name": "gnuconfig",
-          "build_hash": "5lkknzeh3qw2akhhhfww3il35xdyksdi",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "m4",
-          "build_hash": "k5euv2v67hbroronbkgaf6fvie7tajyp",
-          "type": [
-            "build"
-          ]
-        }
-      ],
-      "hash": "emay5qm7xsk2hsl2k2hikub7q4snjrld"
-    },
-    "tvrmqg5d5hzwgk747qzj6xtzugzv3fyn": {
+    "aowt4oks6ctgkgfklbpppp3glslziybk": {
       "name": "spectrum-mpi",
       "version": "10.3.1.03rtm0",
       "arch": {
@@ -1401,10 +573,11 @@
       },
       "compiler": {
         "name": "gcc",
-        "version": "7.3.1"
+        "version": "8.3.1"
       },
       "namespace": "builtin",
       "parameters": {
+        "build_system": "bundle",
         "cflags": [],
         "cppflags": [],
         "cxxflags": [],
@@ -1413,15 +586,16 @@
         "ldlibs": []
       },
       "external": {
-        "path": "/usr/tce/packages/spectrum-mpi/spectrum-mpi-rolling-release-gcc-7.3.1",
+        "path": "/usr/tce/packages/spectrum-mpi/spectrum-mpi-rolling-release-gcc-8.3.1",
         "module": null,
         "extra_attributes": {}
       },
-      "hash": "tvrmqg5d5hzwgk747qzj6xtzugzv3fyn"
+      "package_hash": "qz4jihn73dodnofdzmurm3wgl6vn6tjjjwmn6j3v2dt6cuzg4vvq====",
+      "hash": "aowt4oks6ctgkgfklbpppp3glslziybk"
     },
-    "ow436rynu7rp25qybchgsm6cts6vgb3y": {
-      "name": "pflotran",
-      "version": "3.0.2",
+    "47rpkhn4wuv6bikfrz36bah6n5rx5vr6": {
+      "name": "zlib",
+      "version": "1.2.13",
       "arch": {
         "platform": "linux",
         "platform_os": "rhel7",
@@ -1437,10 +611,14 @@
       },
       "compiler": {
         "name": "gcc",
-        "version": "7.3.1"
+        "version": "8.3.1"
       },
       "namespace": "builtin",
       "parameters": {
+        "build_system": "makefile",
+        "optimize": true,
+        "pic": true,
+        "shared": true,
         "cflags": [],
         "cppflags": [],
         "cxxflags": [],
@@ -1448,44 +626,12 @@
         "ldflags": [],
         "ldlibs": []
       },
-      "dependencies": [
-        {
-          "name": "gnuconfig",
-          "build_hash": "5lkknzeh3qw2akhhhfww3il35xdyksdi",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "hdf5",
-          "build_hash": "ksoql7n6lnrrpf5gd4poa5m5umju4e6e",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "petsc",
-          "build_hash": "st6j4dmrqqnjetlqrlskeebi7kdgrluz",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "spectrum-mpi",
-          "build_hash": "tvrmqg5d5hzwgk747qzj6xtzugzv3fyn",
-          "type": [
-            "build",
-            "link"
-          ]
-        }
-      ],
-      "hash": "bz3uqignkq5zpmeszcfj7y766ilbxygo"
+      "package_hash": "ghj4qyx3sv3so5vpvnodld6r372mc6oqefofmoer3xbpq5tcwvca====",
+      "hash": "47rpkhn4wuv6bikfrz36bah6n5rx5vr6"
     },
-    "st6j4dmrqqnjetlqrlskeebi7kdgrluz": {
-      "name": "petsc",
-      "version": "3.16.1",
+    "xrk56i3yikskuwuzfvhmnj4yxoti2fox": {
+      "name": "pflotran",
+      "version": "4.0.1",
       "arch": {
         "platform": "linux",
         "platform_os": "rhel7",
@@ -1501,15 +647,79 @@
       },
       "compiler": {
         "name": "gcc",
-        "version": "7.3.1"
+        "version": "8.3.1"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "autotools",
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "ztzrbmbstarpzyc2jdtvmy5ni3vtolo5z4hkqavyay7pomkpfxha====",
+      "dependencies": [
+        {
+          "name": "gnuconfig",
+          "hash": "x7svgkfedji6bmdtamg3frwrv7dzocr6",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "hdf5",
+          "hash": "qat54dlaqp4b7xx75q7onb6zvifzf7hp",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "petsc",
+          "hash": "gr6uucu5vswdfxer27gvimztn24574gx",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "spectrum-mpi",
+          "hash": "aowt4oks6ctgkgfklbpppp3glslziybk",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "xrk56i3yikskuwuzfvhmnj4yxoti2fox"
+    },
+    "gr6uucu5vswdfxer27gvimztn24574gx": {
+      "name": "petsc",
+      "version": "3.18.1",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "rhel7",
+        "target": {
+          "name": "power9le",
+          "vendor": "IBM",
+          "features": [],
+          "generation": 9,
+          "parents": [
+            "power8le"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "8.3.1"
       },
       "namespace": "builtin",
       "parameters": {
         "X": false,
-        "amdgpu_target": [
-          "none"
-        ],
         "batch": false,
+        "build_system": "generic",
         "cgns": false,
         "clanguage": "C",
         "complex": false,
@@ -1521,6 +731,7 @@
         "double": true,
         "exodusii": false,
         "fftw": false,
+        "fortran": true,
         "giflib": false,
         "hdf5": true,
         "hpddm": false,
@@ -1529,6 +740,7 @@
         "int64": false,
         "jpeg": false,
         "knl": false,
+        "kokkos": false,
         "libpng": false,
         "libyaml": false,
         "memkind": false,
@@ -1561,10 +773,11 @@
         "ldflags": [],
         "ldlibs": []
       },
+      "package_hash": "yasj4hesromvcbnkmxxmganxeg6sxa766c6siukuxn7igmozbsga====",
       "dependencies": [
         {
           "name": "cuda",
-          "build_hash": "nsbamhir2znhugvmlx7xlmomvj2gqyj6",
+          "hash": "nnh3nukp2nbnvkazeg7tdecep3rctgdp",
           "type": [
             "build",
             "link"
@@ -1572,14 +785,14 @@
         },
         {
           "name": "diffutils",
-          "build_hash": "vqnfbpmc7ogukao4xyt6wl2delar7c7c",
+          "hash": "odvmlxqipiluvxo3fzkwyg2qxs7asqum",
           "type": [
             "build"
           ]
         },
         {
           "name": "hdf5",
-          "build_hash": "ksoql7n6lnrrpf5gd4poa5m5umju4e6e",
+          "hash": "qat54dlaqp4b7xx75q7onb6zvifzf7hp",
           "type": [
             "build",
             "link"
@@ -1587,7 +800,7 @@
         },
         {
           "name": "hypre",
-          "build_hash": "2ernrm2pwcw3qt7hqrvgwocz5oiwv5km",
+          "hash": "dvxnb3jbaz64h72eopd7vb5ak3ifi5y7",
           "type": [
             "build",
             "link"
@@ -1595,7 +808,7 @@
         },
         {
           "name": "metis",
-          "build_hash": "ahcezx6tcswwhv4ivnr6ymz34lcs2ezl",
+          "hash": "53mdjnz4gwc6w2srnu2ren2vnzdoy7dj",
           "type": [
             "build",
             "link"
@@ -1603,7 +816,7 @@
         },
         {
           "name": "openblas",
-          "build_hash": "6uqvrcuz7l4g4egaiggyzk7t5hcsf74b",
+          "hash": "ibdwbptusvvs34czdxpxazptj6wosm3s",
           "type": [
             "build",
             "link"
@@ -1611,7 +824,7 @@
         },
         {
           "name": "parmetis",
-          "build_hash": "wz5vltg5fbzc5mcd6drkjfiddvwbwtuu",
+          "hash": "s7g5j4w7jzliioth3wiwpsnigze6h43j",
           "type": [
             "build",
             "link"
@@ -1619,14 +832,14 @@
         },
         {
           "name": "python",
-          "build_hash": "dpderlk3ynfqb42j52vbtyefchzukz4j",
+          "hash": "twhk7zxis5hp4hr2bh6pk4onfokb4v6u",
           "type": [
             "build"
           ]
         },
         {
           "name": "spectrum-mpi",
-          "build_hash": "tvrmqg5d5hzwgk747qzj6xtzugzv3fyn",
+          "hash": "aowt4oks6ctgkgfklbpppp3glslziybk",
           "type": [
             "build",
             "link"
@@ -1634,7 +847,7 @@
         },
         {
           "name": "superlu-dist",
-          "build_hash": "ogi242ximlepydxrq6evkjvdvry4bs4o",
+          "hash": "x5eb2w35ijvj7qrzsz3jc367ptqwfc7f",
           "type": [
             "build",
             "link"
@@ -1642,18 +855,18 @@
         },
         {
           "name": "zlib",
-          "build_hash": "injpmg45ihuhup7lyk2pxlymkkhf5bvj",
+          "hash": "47rpkhn4wuv6bikfrz36bah6n5rx5vr6",
           "type": [
             "build",
             "link"
           ]
         }
       ],
-      "hash": "amsyybew757labkhmdxwac3lro6bi6h4"
+      "hash": "gr6uucu5vswdfxer27gvimztn24574gx"
     },
-    "nsbamhir2znhugvmlx7xlmomvj2gqyj6": {
+    "nnh3nukp2nbnvkazeg7tdecep3rctgdp": {
       "name": "cuda",
-      "version": "10.1.243",
+      "version": "11.7.0",
       "arch": {
         "platform": "linux",
         "platform_os": "rhel7",
@@ -1669,10 +882,12 @@
       },
       "compiler": {
         "name": "gcc",
-        "version": "7.3.1"
+        "version": "8.3.1"
       },
       "namespace": "builtin",
       "parameters": {
+        "allow-unsupported-compilers": false,
+        "build_system": "generic",
         "dev": false,
         "cflags": [],
         "cppflags": [],
@@ -1682,17 +897,18 @@
         "ldlibs": []
       },
       "external": {
-        "path": "/usr/tce/packages/cuda/cuda-10.1.243",
+        "path": "/usr/tce/packages/cuda/cuda-11.7.0",
         "module": [
-          "cuda/10.1.243"
+          "cuda/11.7.0"
         ],
         "extra_attributes": {}
       },
-      "hash": "nsbamhir2znhugvmlx7xlmomvj2gqyj6"
+      "package_hash": "oa6m53wii6kwaodmp4t45lpqvln5t434xmp7hvxjx7ezalhaqgpq====",
+      "hash": "nnh3nukp2nbnvkazeg7tdecep3rctgdp"
     },
-    "2ernrm2pwcw3qt7hqrvgwocz5oiwv5km": {
-      "name": "hypre",
-      "version": "2.23.0",
+    "odvmlxqipiluvxo3fzkwyg2qxs7asqum": {
+      "name": "diffutils",
+      "version": "3.8",
       "arch": {
         "platform": "linux",
         "platform_os": "rhel7",
@@ -1708,10 +924,107 @@
       },
       "compiler": {
         "name": "gcc",
-        "version": "7.3.1"
+        "version": "8.3.1"
       },
       "namespace": "builtin",
       "parameters": {
+        "build_system": "autotools",
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "jv4gzc4vymljleyxlrnpauwx6pzt7kwz3ppu2cmw2ndcbxmupocq====",
+      "dependencies": [
+        {
+          "name": "gnuconfig",
+          "hash": "x7svgkfedji6bmdtamg3frwrv7dzocr6",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "libiconv",
+          "hash": "7y3cjsqnxo4cqfqgq4wpt3cee2xdkq3m",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "odvmlxqipiluvxo3fzkwyg2qxs7asqum"
+    },
+    "7y3cjsqnxo4cqfqgq4wpt3cee2xdkq3m": {
+      "name": "libiconv",
+      "version": "1.16",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "rhel7",
+        "target": {
+          "name": "power9le",
+          "vendor": "IBM",
+          "features": [],
+          "generation": 9,
+          "parents": [
+            "power8le"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "8.3.1"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "autotools",
+        "libs": [
+          "shared",
+          "static"
+        ],
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "iwav2dx3w6bi363i3gqu3ndd2rajsle7ebgznblzarzb46iraw4q====",
+      "dependencies": [
+        {
+          "name": "gnuconfig",
+          "hash": "x7svgkfedji6bmdtamg3frwrv7dzocr6",
+          "type": [
+            "build"
+          ]
+        }
+      ],
+      "hash": "7y3cjsqnxo4cqfqgq4wpt3cee2xdkq3m"
+    },
+    "dvxnb3jbaz64h72eopd7vb5ak3ifi5y7": {
+      "name": "hypre",
+      "version": "2.26.0",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "rhel7",
+        "target": {
+          "name": "power9le",
+          "vendor": "IBM",
+          "features": [],
+          "generation": 9,
+          "parents": [
+            "power8le"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "8.3.1"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "autotools",
         "complex": false,
         "cuda": true,
         "cuda_arch": [
@@ -1719,13 +1032,16 @@
         ],
         "debug": false,
         "fortran": true,
+        "gptune": false,
         "int64": false,
         "internal-superlu": false,
         "mixedint": false,
         "mpi": true,
         "openmp": false,
+        "rocm": false,
         "shared": true,
         "superlu-dist": true,
+        "umpire": false,
         "unified-memory": false,
         "cflags": [],
         "cppflags": [],
@@ -1734,10 +1050,11 @@
         "ldflags": [],
         "ldlibs": []
       },
+      "package_hash": "2zzl3y5saqn63lv6yhnpv4452bov3wkxszax5y3inc4oxoy2ubha====",
       "dependencies": [
         {
           "name": "cuda",
-          "build_hash": "nsbamhir2znhugvmlx7xlmomvj2gqyj6",
+          "hash": "nnh3nukp2nbnvkazeg7tdecep3rctgdp",
           "type": [
             "build",
             "link"
@@ -1745,14 +1062,14 @@
         },
         {
           "name": "gnuconfig",
-          "build_hash": "5lkknzeh3qw2akhhhfww3il35xdyksdi",
+          "hash": "x7svgkfedji6bmdtamg3frwrv7dzocr6",
           "type": [
             "build"
           ]
         },
         {
           "name": "openblas",
-          "build_hash": "6uqvrcuz7l4g4egaiggyzk7t5hcsf74b",
+          "hash": "ibdwbptusvvs34czdxpxazptj6wosm3s",
           "type": [
             "build",
             "link"
@@ -1760,7 +1077,7 @@
         },
         {
           "name": "spectrum-mpi",
-          "build_hash": "tvrmqg5d5hzwgk747qzj6xtzugzv3fyn",
+          "hash": "aowt4oks6ctgkgfklbpppp3glslziybk",
           "type": [
             "build",
             "link"
@@ -1768,18 +1085,18 @@
         },
         {
           "name": "superlu-dist",
-          "build_hash": "ogi242ximlepydxrq6evkjvdvry4bs4o",
+          "hash": "x5eb2w35ijvj7qrzsz3jc367ptqwfc7f",
           "type": [
             "build",
             "link"
           ]
         }
       ],
-      "hash": "cpew4qaen4v62bbrclkyc3wr3rorfxjo"
+      "hash": "dvxnb3jbaz64h72eopd7vb5ak3ifi5y7"
     },
-    "6uqvrcuz7l4g4egaiggyzk7t5hcsf74b": {
+    "ibdwbptusvvs34czdxpxazptj6wosm3s": {
       "name": "openblas",
-      "version": "0.3.10",
+      "version": "0.3.21",
       "arch": {
         "platform": "linux",
         "platform_os": "rhel7",
@@ -1795,19 +1112,22 @@
       },
       "compiler": {
         "name": "gcc",
-        "version": "7.3.1"
+        "version": "8.3.1"
       },
       "namespace": "builtin",
       "parameters": {
         "bignuma": false,
+        "build_system": "makefile",
         "consistent_fpcsr": false,
+        "fortran": true,
         "ilp64": false,
         "locking": true,
         "patches": [
-          "865703b4f405543bbd583413fdeff2226dfda908be33639276c06e5aa7ae2cae"
+          "d3d9b15fa39e18cdf972e1e5c78b320e36a24a481abd44e440eaf81bad227edd"
         ],
         "pic": true,
         "shared": true,
+        "symbol_suffix": "none",
         "threads": "openmp",
         "cflags": [],
         "cppflags": [],
@@ -1817,22 +1137,23 @@
         "ldlibs": []
       },
       "patches": [
-        "865703b4f405543bbd583413fdeff2226dfda908be33639276c06e5aa7ae2cae"
+        "d3d9b15fa39e18cdf972e1e5c78b320e36a24a481abd44e440eaf81bad227edd"
       ],
+      "package_hash": "q5bxqpzdi3beovimbb477rd5vhsr2fxmahvdyxxblvkqqcodl4ya====",
       "dependencies": [
         {
           "name": "perl",
-          "build_hash": "ymzeayppxa6sztvoj57frmtbbypv2d5n",
+          "hash": "lgy25lbodgk6fczldssoplvdtgg7ti46",
           "type": [
             "build"
           ]
         }
       ],
-      "hash": "nqpeqs3qkfvdshm4cjd5vot2tsxv75ca"
+      "hash": "ibdwbptusvvs34czdxpxazptj6wosm3s"
     },
-    "ogi242ximlepydxrq6evkjvdvry4bs4o": {
-      "name": "superlu-dist",
-      "version": "7.1.1",
+    "lgy25lbodgk6fczldssoplvdtgg7ti46": {
+      "name": "perl",
+      "version": "5.34.1",
       "arch": {
         "platform": "linux",
         "platform_os": "rhel7",
@@ -1848,18 +1169,136 @@
       },
       "compiler": {
         "name": "gcc",
-        "version": "7.3.1"
+        "version": "8.3.1"
       },
       "namespace": "builtin",
       "parameters": {
-        "build_type": "RelWithDebInfo",
-        "cuda": false,
-        "cuda_arch": [
-          "none"
+        "build_system": "generic",
+        "cpanm": true,
+        "shared": true,
+        "threads": true,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "253cxsmtz66kdovxua7a5pbu3qqkp556xttq5qrgr7rahup6fbea====",
+      "dependencies": [
+        {
+          "name": "berkeley-db",
+          "hash": "7njjb2pxoammxuwiwhplcpbqcpbbbb2s",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "bzip2",
+          "hash": "w6qb7ewm4lbsnro6jb2ougvpfhuv3zqs",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "gdbm",
+          "hash": "67avcx66zk7kdw5tfvi7uuqka3y3t67r",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "zlib",
+          "hash": "47rpkhn4wuv6bikfrz36bah6n5rx5vr6",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "lgy25lbodgk6fczldssoplvdtgg7ti46"
+    },
+    "7njjb2pxoammxuwiwhplcpbqcpbbbb2s": {
+      "name": "berkeley-db",
+      "version": "18.1.40",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "rhel7",
+        "target": {
+          "name": "power9le",
+          "vendor": "IBM",
+          "features": [],
+          "generation": 9,
+          "parents": [
+            "power8le"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "8.3.1"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "autotools",
+        "cxx": true,
+        "docs": false,
+        "patches": [
+          "26090f418891757af46ac3b89a9f43d6eb5989f7a3dce3d1cfc99fba547203b3",
+          "b231fcc4d5cff05e5c3a4814f6a5af0e9a966428dc2176540d2c05aff41de522"
         ],
-        "int64": false,
-        "ipo": false,
-        "openmp": false,
+        "stl": true,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "patches": [
+        "b231fcc4d5cff05e5c3a4814f6a5af0e9a966428dc2176540d2c05aff41de522",
+        "26090f418891757af46ac3b89a9f43d6eb5989f7a3dce3d1cfc99fba547203b3"
+      ],
+      "package_hash": "vpd5eetcurni5woqzl6jrukuo4a6fr5yoluxz32gxezgx5ftpxza====",
+      "dependencies": [
+        {
+          "name": "gnuconfig",
+          "hash": "x7svgkfedji6bmdtamg3frwrv7dzocr6",
+          "type": [
+            "build"
+          ]
+        }
+      ],
+      "hash": "7njjb2pxoammxuwiwhplcpbqcpbbbb2s"
+    },
+    "w6qb7ewm4lbsnro6jb2ougvpfhuv3zqs": {
+      "name": "bzip2",
+      "version": "1.0.8",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "rhel7",
+        "target": {
+          "name": "power9le",
+          "vendor": "IBM",
+          "features": [],
+          "generation": 9,
+          "parents": [
+            "power8le"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "8.3.1"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "generic",
+        "debug": false,
+        "pic": false,
         "shared": true,
         "cflags": [],
         "cppflags": [],
@@ -1868,17 +1307,219 @@
         "ldflags": [],
         "ldlibs": []
       },
+      "package_hash": "hwzzje524zinhoim5aj25ucowy2n57b6zm7gtzaimfjft2onrvuq====",
+      "dependencies": [
+        {
+          "name": "diffutils",
+          "hash": "odvmlxqipiluvxo3fzkwyg2qxs7asqum",
+          "type": [
+            "build"
+          ]
+        }
+      ],
+      "hash": "w6qb7ewm4lbsnro6jb2ougvpfhuv3zqs"
+    },
+    "67avcx66zk7kdw5tfvi7uuqka3y3t67r": {
+      "name": "gdbm",
+      "version": "1.19",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "rhel7",
+        "target": {
+          "name": "power9le",
+          "vendor": "IBM",
+          "features": [],
+          "generation": 9,
+          "parents": [
+            "power8le"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "8.3.1"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "autotools",
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "gvha7657bne2aoksscez5obusidw4wwc4g6ju4a6nzqc77drwziq====",
+      "dependencies": [
+        {
+          "name": "gnuconfig",
+          "hash": "x7svgkfedji6bmdtamg3frwrv7dzocr6",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "readline",
+          "hash": "px3aytdt72xzi4qphxbskpgvgpl7nyaz",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "67avcx66zk7kdw5tfvi7uuqka3y3t67r"
+    },
+    "px3aytdt72xzi4qphxbskpgvgpl7nyaz": {
+      "name": "readline",
+      "version": "8.1.2",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "rhel7",
+        "target": {
+          "name": "power9le",
+          "vendor": "IBM",
+          "features": [],
+          "generation": 9,
+          "parents": [
+            "power8le"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "8.3.1"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "autotools",
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "ouxxalld7kxximyke7ekitja6kuz3h7tlt7lm2szo3hg7amf6ana====",
+      "dependencies": [
+        {
+          "name": "gnuconfig",
+          "hash": "x7svgkfedji6bmdtamg3frwrv7dzocr6",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "ncurses",
+          "hash": "uh6unzwqcumdcnnyzilbf4owtheie344",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "px3aytdt72xzi4qphxbskpgvgpl7nyaz"
+    },
+    "uh6unzwqcumdcnnyzilbf4owtheie344": {
+      "name": "ncurses",
+      "version": "6.3",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "rhel7",
+        "target": {
+          "name": "power9le",
+          "vendor": "IBM",
+          "features": [],
+          "generation": 9,
+          "parents": [
+            "power8le"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "8.3.1"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "abi": "none",
+        "build_system": "autotools",
+        "symlinks": false,
+        "termlib": true,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "xt4gmttjogkqm2ol74rux4rjqnilsdqxyjjgjrfgkwroyr5eignq====",
+      "dependencies": [
+        {
+          "name": "gnuconfig",
+          "hash": "x7svgkfedji6bmdtamg3frwrv7dzocr6",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "pkgconf",
+          "hash": "vbajcm5norjv4wtxv7lzozsg62na54bp",
+          "type": [
+            "build"
+          ]
+        }
+      ],
+      "hash": "uh6unzwqcumdcnnyzilbf4owtheie344"
+    },
+    "x5eb2w35ijvj7qrzsz3jc367ptqwfc7f": {
+      "name": "superlu-dist",
+      "version": "8.1.2",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "rhel7",
+        "target": {
+          "name": "power9le",
+          "vendor": "IBM",
+          "features": [],
+          "generation": 9,
+          "parents": [
+            "power8le"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "8.3.1"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "cmake",
+        "build_type": "RelWithDebInfo",
+        "cuda": false,
+        "int64": false,
+        "ipo": false,
+        "openmp": false,
+        "rocm": false,
+        "shared": true,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "42ofkkijzx4i74o2gu2wr4rua424f5s66ihnzpta34d3xtenbd3q====",
       "dependencies": [
         {
           "name": "cmake",
-          "build_hash": "psrodwzsowo4aqt7yp7uon5t3lav4767",
+          "hash": "mmeaau2dw4pch3tf44uvh3iiwcit7j5m",
           "type": [
             "build"
           ]
         },
         {
           "name": "metis",
-          "build_hash": "ahcezx6tcswwhv4ivnr6ymz34lcs2ezl",
+          "hash": "53mdjnz4gwc6w2srnu2ren2vnzdoy7dj",
           "type": [
             "build",
             "link"
@@ -1886,7 +1527,7 @@
         },
         {
           "name": "openblas",
-          "build_hash": "6uqvrcuz7l4g4egaiggyzk7t5hcsf74b",
+          "hash": "ibdwbptusvvs34czdxpxazptj6wosm3s",
           "type": [
             "build",
             "link"
@@ -1894,7 +1535,7 @@
         },
         {
           "name": "parmetis",
-          "build_hash": "wz5vltg5fbzc5mcd6drkjfiddvwbwtuu",
+          "hash": "s7g5j4w7jzliioth3wiwpsnigze6h43j",
           "type": [
             "build",
             "link"
@@ -1902,16 +1543,16 @@
         },
         {
           "name": "spectrum-mpi",
-          "build_hash": "tvrmqg5d5hzwgk747qzj6xtzugzv3fyn",
+          "hash": "aowt4oks6ctgkgfklbpppp3glslziybk",
           "type": [
             "build",
             "link"
           ]
         }
       ],
-      "hash": "2m3bkhwchoxy76u2mmq4o7cafmd7pvid"
+      "hash": "x5eb2w35ijvj7qrzsz3jc367ptqwfc7f"
     },
-    "ahcezx6tcswwhv4ivnr6ymz34lcs2ezl": {
+    "53mdjnz4gwc6w2srnu2ren2vnzdoy7dj": {
       "name": "metis",
       "version": "5.1.0",
       "arch": {
@@ -1929,15 +1570,18 @@
       },
       "compiler": {
         "name": "gcc",
-        "version": "7.3.1"
+        "version": "8.3.1"
       },
       "namespace": "builtin",
       "parameters": {
-        "build_type": "Release",
+        "build_system": "cmake",
+        "build_type": "RelWithDebInfo",
         "gdb": false,
         "int64": false,
+        "ipo": false,
         "patches": [
           "4991da938c1d3a1d3dea78e49bbebecba00273f98df2a656e38b83d55b281da1",
+          "93a7903accc57e69f5672bdfcb543c866fbc4a75f0cce2ddb44b1c2645f9b27a",
           "b1225da886605ea558db7ac08dd8054742ea5afe5ed61ad4d0fe7a495b1270d2"
         ],
         "real64": false,
@@ -1950,21 +1594,23 @@
         "ldlibs": []
       },
       "patches": [
+        "93a7903accc57e69f5672bdfcb543c866fbc4a75f0cce2ddb44b1c2645f9b27a",
         "4991da938c1d3a1d3dea78e49bbebecba00273f98df2a656e38b83d55b281da1",
         "b1225da886605ea558db7ac08dd8054742ea5afe5ed61ad4d0fe7a495b1270d2"
       ],
+      "package_hash": "dr2yilx2xfaufxinpoklgegnp3krrhts5fx75kwxesemdqwnca2a====",
       "dependencies": [
         {
           "name": "cmake",
-          "build_hash": "psrodwzsowo4aqt7yp7uon5t3lav4767",
+          "hash": "mmeaau2dw4pch3tf44uvh3iiwcit7j5m",
           "type": [
             "build"
           ]
         }
       ],
-      "hash": "lked4pa5faypggzieallatakxp7ty7es"
+      "hash": "53mdjnz4gwc6w2srnu2ren2vnzdoy7dj"
     },
-    "wz5vltg5fbzc5mcd6drkjfiddvwbwtuu": {
+    "s7g5j4w7jzliioth3wiwpsnigze6h43j": {
       "name": "parmetis",
       "version": "4.0.3",
       "arch": {
@@ -1982,10 +1628,11 @@
       },
       "compiler": {
         "name": "gcc",
-        "version": "7.3.1"
+        "version": "8.3.1"
       },
       "namespace": "builtin",
       "parameters": {
+        "build_system": "cmake",
         "build_type": "RelWithDebInfo",
         "gdb": false,
         "int64": false,
@@ -2008,17 +1655,18 @@
         "4f892531eb0a807eb1b82e683a416d3e35154a455274cf9b162fb02054d11a5b",
         "704b84f7c7444d4372cb59cca6e1209df4ef3b033bc4ee3cf50f369bce972a9d"
       ],
+      "package_hash": "5j4pfdaepekg6xbntqm3wpm22ivc5bsj5pmbifgbonmmm2krovea====",
       "dependencies": [
         {
           "name": "cmake",
-          "build_hash": "psrodwzsowo4aqt7yp7uon5t3lav4767",
+          "hash": "mmeaau2dw4pch3tf44uvh3iiwcit7j5m",
           "type": [
             "build"
           ]
         },
         {
           "name": "metis",
-          "build_hash": "ahcezx6tcswwhv4ivnr6ymz34lcs2ezl",
+          "hash": "53mdjnz4gwc6w2srnu2ren2vnzdoy7dj",
           "type": [
             "build",
             "link"
@@ -2026,18 +1674,18 @@
         },
         {
           "name": "spectrum-mpi",
-          "build_hash": "tvrmqg5d5hzwgk747qzj6xtzugzv3fyn",
+          "hash": "aowt4oks6ctgkgfklbpppp3glslziybk",
           "type": [
             "build",
             "link"
           ]
         }
       ],
-      "hash": "ierqcolp2qh5dr2in7a6gqkw42ss7h2d"
+      "hash": "s7g5j4w7jzliioth3wiwpsnigze6h43j"
     },
-    "dpderlk3ynfqb42j52vbtyefchzukz4j": {
+    "twhk7zxis5hp4hr2bh6pk4onfokb4v6u": {
       "name": "python",
-      "version": "3.8.12",
+      "version": "3.9.10",
       "arch": {
         "platform": "linux",
         "platform_os": "rhel7",
@@ -2053,10 +1701,11 @@
       },
       "compiler": {
         "name": "gcc",
-        "version": "7.3.1"
+        "version": "8.3.1"
       },
       "namespace": "builtin",
       "parameters": {
+        "build_system": "generic",
         "bz2": true,
         "ctypes": true,
         "dbm": true,
@@ -2094,10 +1743,11 @@
         "f2fd060afc4b4618fe8104c4c5d771f36dc55b1db5a4623785a4ea707ec72fb4",
         "4c2457325f2b608b1b6a2c63087df8c26e07db3e3d493caf36a56f0ecf6fb768"
       ],
+      "package_hash": "qifw6ubwwdz23hxeggaj6tqgzw6mcnzaawwp7dno4w5teva4ouxa====",
       "dependencies": [
         {
           "name": "bzip2",
-          "build_hash": "ldq5uzoamqzqerbkaviqf623n2h2l5cm",
+          "hash": "w6qb7ewm4lbsnro6jb2ougvpfhuv3zqs",
           "type": [
             "build",
             "link"
@@ -2105,7 +1755,7 @@
         },
         {
           "name": "expat",
-          "build_hash": "mgiyd4v7ke6gjijlb52hf75xm26yxjsb",
+          "hash": "zfuiov7xbo4ikgnjatqhdk2kinnbmr2q",
           "type": [
             "build",
             "link"
@@ -2113,7 +1763,7 @@
         },
         {
           "name": "gdbm",
-          "build_hash": "iz7k3agup75ew5ajtggip2i2n3zah5yg",
+          "hash": "67avcx66zk7kdw5tfvi7uuqka3y3t67r",
           "type": [
             "build",
             "link"
@@ -2121,22 +1771,15 @@
         },
         {
           "name": "gettext",
-          "build_hash": "gvk6ceqzgdxiacqtaflh7tbcsbigydxe",
+          "hash": "b5k3ho2kzzaac5dxwhx2dtbw5vzjzfvn",
           "type": [
             "build",
             "link"
           ]
         },
         {
-          "name": "gnuconfig",
-          "build_hash": "5lkknzeh3qw2akhhhfww3il35xdyksdi",
-          "type": [
-            "build"
-          ]
-        },
-        {
           "name": "libffi",
-          "build_hash": "iq6k57jvqdu2cpohcvbs3zk3two2s4xl",
+          "hash": "d5j5ufpsshexhstdzhox67aoy6xolzma",
           "type": [
             "build",
             "link"
@@ -2144,7 +1787,7 @@
         },
         {
           "name": "ncurses",
-          "build_hash": "6nez5laiouk654xdvvonbgoxmecpftu5",
+          "hash": "uh6unzwqcumdcnnyzilbf4owtheie344",
           "type": [
             "build",
             "link"
@@ -2152,7 +1795,7 @@
         },
         {
           "name": "openssl",
-          "build_hash": "q5ljidpe7t7wqs2fkagk7qbkoigxwpja",
+          "hash": "bw2s6w5di7a77nn52bo5l5g6gy3p7ijp",
           "type": [
             "build",
             "link"
@@ -2160,14 +1803,14 @@
         },
         {
           "name": "pkgconf",
-          "build_hash": "yfssj3vccyx273h3ftjujz2dc3s2voqr",
+          "hash": "vbajcm5norjv4wtxv7lzozsg62na54bp",
           "type": [
             "build"
           ]
         },
         {
           "name": "readline",
-          "build_hash": "gkcwuyodkhxkh3whnbwepg5r7tknzr2e",
+          "hash": "px3aytdt72xzi4qphxbskpgvgpl7nyaz",
           "type": [
             "build",
             "link"
@@ -2175,7 +1818,7 @@
         },
         {
           "name": "sqlite",
-          "build_hash": "o5qylmmys25t7ievv2nrdjukfz55gpxl",
+          "hash": "uaavtmlvsxavvai4w3lecl32vsvr2mys",
           "type": [
             "build",
             "link"
@@ -2183,7 +1826,7 @@
         },
         {
           "name": "util-linux-uuid",
-          "build_hash": "ukc2vjnzdghgerph5jucprab3wgcjz4k",
+          "hash": "yxoxth25yudy3xocvzmpgdv6czlonew5",
           "type": [
             "build",
             "link"
@@ -2191,7 +1834,7 @@
         },
         {
           "name": "xz",
-          "build_hash": "ivqrbyhi7tvirjt7ux5xkfdlog5tuiwz",
+          "hash": "44xp7ia3exgiea24jqyt4rk23miomt65",
           "type": [
             "build",
             "link"
@@ -2199,18 +1842,18 @@
         },
         {
           "name": "zlib",
-          "build_hash": "injpmg45ihuhup7lyk2pxlymkkhf5bvj",
+          "hash": "47rpkhn4wuv6bikfrz36bah6n5rx5vr6",
           "type": [
             "build",
             "link"
           ]
         }
       ],
-      "hash": "fpb2iyqifzzd4bundx2ndqqhpj3dmmvd"
+      "hash": "twhk7zxis5hp4hr2bh6pk4onfokb4v6u"
     },
-    "mgiyd4v7ke6gjijlb52hf75xm26yxjsb": {
+    "zfuiov7xbo4ikgnjatqhdk2kinnbmr2q": {
       "name": "expat",
-      "version": "2.4.1",
+      "version": "2.4.8",
       "arch": {
         "platform": "linux",
         "platform_os": "rhel7",
@@ -2226,10 +1869,11 @@
       },
       "compiler": {
         "name": "gcc",
-        "version": "7.3.1"
+        "version": "8.3.1"
       },
       "namespace": "builtin",
       "parameters": {
+        "build_system": "autotools",
         "libbsd": true,
         "cflags": [],
         "cppflags": [],
@@ -2238,28 +1882,29 @@
         "ldflags": [],
         "ldlibs": []
       },
+      "package_hash": "cyr63m7lwwlyhb4u3t6i5hc35v4dhnl5d6eudsgpplunm6eadqqq====",
       "dependencies": [
         {
           "name": "gnuconfig",
-          "build_hash": "5lkknzeh3qw2akhhhfww3il35xdyksdi",
+          "hash": "x7svgkfedji6bmdtamg3frwrv7dzocr6",
           "type": [
             "build"
           ]
         },
         {
           "name": "libbsd",
-          "build_hash": "6ny7sjkwmjcdi3ghqbxtye2jelj27bv2",
+          "hash": "ouiw3xsndbqhzovsze62cfh3bacqkl5w",
           "type": [
             "build",
             "link"
           ]
         }
       ],
-      "hash": "mhl4k3tfef6lrib25wzx2xokbmhttgl5"
+      "hash": "zfuiov7xbo4ikgnjatqhdk2kinnbmr2q"
     },
-    "6ny7sjkwmjcdi3ghqbxtye2jelj27bv2": {
+    "ouiw3xsndbqhzovsze62cfh3bacqkl5w": {
       "name": "libbsd",
-      "version": "0.11.3",
+      "version": "0.11.5",
       "arch": {
         "platform": "linux",
         "platform_os": "rhel7",
@@ -2275,10 +1920,11 @@
       },
       "compiler": {
         "name": "gcc",
-        "version": "7.3.1"
+        "version": "8.3.1"
       },
       "namespace": "builtin",
       "parameters": {
+        "build_system": "autotools",
         "cflags": [],
         "cppflags": [],
         "cxxflags": [],
@@ -2286,28 +1932,29 @@
         "ldflags": [],
         "ldlibs": []
       },
+      "package_hash": "msd4bmra3f6ttxrjbsuvsykq5ews6b3scmelzux3bteauxp2w7iq====",
       "dependencies": [
         {
           "name": "gnuconfig",
-          "build_hash": "5lkknzeh3qw2akhhhfww3il35xdyksdi",
+          "hash": "x7svgkfedji6bmdtamg3frwrv7dzocr6",
           "type": [
             "build"
           ]
         },
         {
           "name": "libmd",
-          "build_hash": "z7aerssnzt54eme7ig4xx4fohsqba7qj",
+          "hash": "y6e6seqtzfxpak73e6iwximsvce7ft6i",
           "type": [
             "build",
             "link"
           ]
         }
       ],
-      "hash": "roc5wpknuyxrw2qrotaajowzludw6gqb"
+      "hash": "ouiw3xsndbqhzovsze62cfh3bacqkl5w"
     },
-    "z7aerssnzt54eme7ig4xx4fohsqba7qj": {
+    "y6e6seqtzfxpak73e6iwximsvce7ft6i": {
       "name": "libmd",
-      "version": "1.0.3",
+      "version": "1.0.4",
       "arch": {
         "platform": "linux",
         "platform_os": "rhel7",
@@ -2323,10 +1970,11 @@
       },
       "compiler": {
         "name": "gcc",
-        "version": "7.3.1"
+        "version": "8.3.1"
       },
       "namespace": "builtin",
       "parameters": {
+        "build_system": "autotools",
         "cflags": [],
         "cppflags": [],
         "cxxflags": [],
@@ -2334,20 +1982,21 @@
         "ldflags": [],
         "ldlibs": []
       },
+      "package_hash": "zs2e7fqr4dzthpj5fascqvfn7xcahf7dtc5bzdwfv6vqkzi7oncq====",
       "dependencies": [
         {
           "name": "gnuconfig",
-          "build_hash": "5lkknzeh3qw2akhhhfww3il35xdyksdi",
+          "hash": "x7svgkfedji6bmdtamg3frwrv7dzocr6",
           "type": [
             "build"
           ]
         }
       ],
-      "hash": "devfcqk2gw7trgnjeymin2z7tpx7d2a6"
+      "hash": "y6e6seqtzfxpak73e6iwximsvce7ft6i"
     },
-    "gvk6ceqzgdxiacqtaflh7tbcsbigydxe": {
+    "b5k3ho2kzzaac5dxwhx2dtbw5vzjzfvn": {
       "name": "gettext",
-      "version": "0.21",
+      "version": "0.21.1",
       "arch": {
         "platform": "linux",
         "platform_os": "rhel7",
@@ -2363,10 +2012,11 @@
       },
       "compiler": {
         "name": "gcc",
-        "version": "7.3.1"
+        "version": "8.3.1"
       },
       "namespace": "builtin",
       "parameters": {
+        "build_system": "autotools",
         "bzip2": true,
         "curses": true,
         "git": true,
@@ -2381,10 +2031,11 @@
         "ldflags": [],
         "ldlibs": []
       },
+      "package_hash": "xu3qgc4x5mjlvzywiyh3aifltzurwmvjzqfq3gurzkffveeawp3q====",
       "dependencies": [
         {
           "name": "bzip2",
-          "build_hash": "ldq5uzoamqzqerbkaviqf623n2h2l5cm",
+          "hash": "w6qb7ewm4lbsnro6jb2ougvpfhuv3zqs",
           "type": [
             "build",
             "link"
@@ -2392,14 +2043,14 @@
         },
         {
           "name": "gnuconfig",
-          "build_hash": "5lkknzeh3qw2akhhhfww3il35xdyksdi",
+          "hash": "x7svgkfedji6bmdtamg3frwrv7dzocr6",
           "type": [
             "build"
           ]
         },
         {
           "name": "libiconv",
-          "build_hash": "imaoq7lzfwj6ly45ck3z33mrna4fxi5z",
+          "hash": "7y3cjsqnxo4cqfqgq4wpt3cee2xdkq3m",
           "type": [
             "build",
             "link"
@@ -2407,7 +2058,7 @@
         },
         {
           "name": "libxml2",
-          "build_hash": "njnykhwbn2znuxs7ubrdps3365lop5ly",
+          "hash": "fl3otux4lkskemr3qqhoe5dtkqbxgh4k",
           "type": [
             "build",
             "link"
@@ -2415,7 +2066,7 @@
         },
         {
           "name": "ncurses",
-          "build_hash": "6nez5laiouk654xdvvonbgoxmecpftu5",
+          "hash": "uh6unzwqcumdcnnyzilbf4owtheie344",
           "type": [
             "build",
             "link"
@@ -2423,7 +2074,7 @@
         },
         {
           "name": "tar",
-          "build_hash": "2xdjjmaurekgwxjwruapeztxfvkkpchp",
+          "hash": "lx52yyjf72zvkoxus3imfdgvr3dwaigs",
           "type": [
             "build",
             "link"
@@ -2431,7 +2082,7 @@
         },
         {
           "name": "xz",
-          "build_hash": "ivqrbyhi7tvirjt7ux5xkfdlog5tuiwz",
+          "hash": "44xp7ia3exgiea24jqyt4rk23miomt65",
           "type": [
             "build",
             "link",
@@ -2439,11 +2090,11 @@
           ]
         }
       ],
-      "hash": "j7h5wumjz2tikwky42mdyqypmqty6sx2"
+      "hash": "b5k3ho2kzzaac5dxwhx2dtbw5vzjzfvn"
     },
-    "njnykhwbn2znuxs7ubrdps3365lop5ly": {
+    "fl3otux4lkskemr3qqhoe5dtkqbxgh4k": {
       "name": "libxml2",
-      "version": "2.9.12",
+      "version": "2.10.1",
       "arch": {
         "platform": "linux",
         "platform_os": "rhel7",
@@ -2459,10 +2110,11 @@
       },
       "compiler": {
         "name": "gcc",
-        "version": "7.3.1"
+        "version": "8.3.1"
       },
       "namespace": "builtin",
       "parameters": {
+        "build_system": "autotools",
         "python": false,
         "cflags": [],
         "cppflags": [],
@@ -2471,17 +2123,18 @@
         "ldflags": [],
         "ldlibs": []
       },
+      "package_hash": "rpnxdiauwbyj6roy3rm5mt3c7yytq4vmm7zy3uejstgplgbrvsgq====",
       "dependencies": [
         {
           "name": "gnuconfig",
-          "build_hash": "5lkknzeh3qw2akhhhfww3il35xdyksdi",
+          "hash": "x7svgkfedji6bmdtamg3frwrv7dzocr6",
           "type": [
             "build"
           ]
         },
         {
           "name": "libiconv",
-          "build_hash": "imaoq7lzfwj6ly45ck3z33mrna4fxi5z",
+          "hash": "7y3cjsqnxo4cqfqgq4wpt3cee2xdkq3m",
           "type": [
             "build",
             "link"
@@ -2489,14 +2142,14 @@
         },
         {
           "name": "pkgconf",
-          "build_hash": "yfssj3vccyx273h3ftjujz2dc3s2voqr",
+          "hash": "vbajcm5norjv4wtxv7lzozsg62na54bp",
           "type": [
             "build"
           ]
         },
         {
           "name": "xz",
-          "build_hash": "ivqrbyhi7tvirjt7ux5xkfdlog5tuiwz",
+          "hash": "44xp7ia3exgiea24jqyt4rk23miomt65",
           "type": [
             "build",
             "link"
@@ -2504,16 +2157,16 @@
         },
         {
           "name": "zlib",
-          "build_hash": "injpmg45ihuhup7lyk2pxlymkkhf5bvj",
+          "hash": "47rpkhn4wuv6bikfrz36bah6n5rx5vr6",
           "type": [
             "build",
             "link"
           ]
         }
       ],
-      "hash": "hmipqvfqa347357i3htse3cnti5fatro"
+      "hash": "fl3otux4lkskemr3qqhoe5dtkqbxgh4k"
     },
-    "ivqrbyhi7tvirjt7ux5xkfdlog5tuiwz": {
+    "44xp7ia3exgiea24jqyt4rk23miomt65": {
       "name": "xz",
       "version": "5.2.5",
       "arch": {
@@ -2531,10 +2184,11 @@
       },
       "compiler": {
         "name": "gcc",
-        "version": "7.3.1"
+        "version": "8.3.1"
       },
       "namespace": "builtin",
       "parameters": {
+        "build_system": "autotools",
         "libs": [
           "shared",
           "static"
@@ -2547,18 +2201,19 @@
         "ldflags": [],
         "ldlibs": []
       },
+      "package_hash": "4hfd47525vdxda6dpwhpwrxvllokotb5w53mis6twgg7sour7e4q====",
       "dependencies": [
         {
           "name": "gnuconfig",
-          "build_hash": "5lkknzeh3qw2akhhhfww3il35xdyksdi",
+          "hash": "x7svgkfedji6bmdtamg3frwrv7dzocr6",
           "type": [
             "build"
           ]
         }
       ],
-      "hash": "d3iaapi5t3sohwymtlnsjjwlcqwjtxhq"
+      "hash": "44xp7ia3exgiea24jqyt4rk23miomt65"
     },
-    "2xdjjmaurekgwxjwruapeztxfvkkpchp": {
+    "lx52yyjf72zvkoxus3imfdgvr3dwaigs": {
       "name": "tar",
       "version": "1.34",
       "arch": {
@@ -2576,10 +2231,12 @@
       },
       "compiler": {
         "name": "gcc",
-        "version": "7.3.1"
+        "version": "8.3.1"
       },
       "namespace": "builtin",
       "parameters": {
+        "build_system": "autotools",
+        "zip": "pigz",
         "cflags": [],
         "cppflags": [],
         "cxxflags": [],
@@ -2587,28 +2244,57 @@
         "ldflags": [],
         "ldlibs": []
       },
+      "package_hash": "uroxlrgy5nrgbemzhcechjroxo7ycyniyi2geepv66v2hi2mn53q====",
       "dependencies": [
         {
+          "name": "bzip2",
+          "hash": "w6qb7ewm4lbsnro6jb2ougvpfhuv3zqs",
+          "type": [
+            "run"
+          ]
+        },
+        {
           "name": "gnuconfig",
-          "build_hash": "5lkknzeh3qw2akhhhfww3il35xdyksdi",
+          "hash": "x7svgkfedji6bmdtamg3frwrv7dzocr6",
           "type": [
             "build"
           ]
         },
         {
           "name": "libiconv",
-          "build_hash": "imaoq7lzfwj6ly45ck3z33mrna4fxi5z",
+          "hash": "7y3cjsqnxo4cqfqgq4wpt3cee2xdkq3m",
           "type": [
             "build",
             "link"
           ]
+        },
+        {
+          "name": "pigz",
+          "hash": "f2dbf7ga6m6prvm3mu3ftgbi7t3mxqrd",
+          "type": [
+            "run"
+          ]
+        },
+        {
+          "name": "xz",
+          "hash": "44xp7ia3exgiea24jqyt4rk23miomt65",
+          "type": [
+            "run"
+          ]
+        },
+        {
+          "name": "zstd",
+          "hash": "z2hlqgt3hy4ak7fuodrg4jn5mxs2lder",
+          "type": [
+            "run"
+          ]
         }
       ],
-      "hash": "e2ks5jct4eovhktuyvsldw3mefazr7ow"
+      "hash": "lx52yyjf72zvkoxus3imfdgvr3dwaigs"
     },
-    "iq6k57jvqdu2cpohcvbs3zk3two2s4xl": {
-      "name": "libffi",
-      "version": "3.3",
+    "f2dbf7ga6m6prvm3mu3ftgbi7t3mxqrd": {
+      "name": "pigz",
+      "version": "2.7",
       "arch": {
         "platform": "linux",
         "platform_os": "rhel7",
@@ -2624,13 +2310,143 @@
       },
       "compiler": {
         "name": "gcc",
-        "version": "7.3.1"
+        "version": "8.3.1"
       },
       "namespace": "builtin",
       "parameters": {
-        "patches": [
-          "26f26c6f29a7ce9bf370ad3ab2610f99365b4bdd7b82e7c31df41a3370d685c0"
+        "build_system": "makefile",
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "qsaexggeegq3vvlfb52f627syjifgkn6cl5a7krpc7gokavzjtiq====",
+      "dependencies": [
+        {
+          "name": "zlib",
+          "hash": "47rpkhn4wuv6bikfrz36bah6n5rx5vr6",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "f2dbf7ga6m6prvm3mu3ftgbi7t3mxqrd"
+    },
+    "z2hlqgt3hy4ak7fuodrg4jn5mxs2lder": {
+      "name": "zstd",
+      "version": "1.5.2",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "rhel7",
+        "target": {
+          "name": "power9le",
+          "vendor": "IBM",
+          "features": [],
+          "generation": 9,
+          "parents": [
+            "power8le"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "8.3.1"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "makefile",
+        "compression": [
+          "none"
         ],
+        "libs": [
+          "shared",
+          "static"
+        ],
+        "programs": true,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "qepkpvgnidycnst4gail65ea3nxozmfvtoqqg4yogcb7rhmbyluq====",
+      "hash": "z2hlqgt3hy4ak7fuodrg4jn5mxs2lder"
+    },
+    "d5j5ufpsshexhstdzhox67aoy6xolzma": {
+      "name": "libffi",
+      "version": "3.4.2",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "rhel7",
+        "target": {
+          "name": "power9le",
+          "vendor": "IBM",
+          "features": [],
+          "generation": 9,
+          "parents": [
+            "power8le"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "8.3.1"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "autotools",
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "jyaxy6b6uaavi4hhp435lz6uwxjhg2w6vrvnk76o7wymwrbzetfq====",
+      "dependencies": [
+        {
+          "name": "gnuconfig",
+          "hash": "x7svgkfedji6bmdtamg3frwrv7dzocr6",
+          "type": [
+            "build"
+          ]
+        }
+      ],
+      "hash": "d5j5ufpsshexhstdzhox67aoy6xolzma"
+    },
+    "bw2s6w5di7a77nn52bo5l5g6gy3p7ijp": {
+      "name": "openssl",
+      "version": "1.1.1q",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "rhel7",
+        "target": {
+          "name": "power9le",
+          "vendor": "IBM",
+          "features": [],
+          "generation": 9,
+          "parents": [
+            "power8le"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "8.3.1"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "generic",
+        "certs": "mozilla",
+        "docs": false,
+        "patches": [
+          "3fdcf2d1e47c34f3a012f23306322c5a35cad55b180c9b6fb34537b55884645c"
+        ],
+        "shared": false,
         "cflags": [],
         "cppflags": [],
         "cxxflags": [],
@@ -2639,22 +2455,38 @@
         "ldlibs": []
       },
       "patches": [
-        "26f26c6f29a7ce9bf370ad3ab2610f99365b4bdd7b82e7c31df41a3370d685c0"
+        "3fdcf2d1e47c34f3a012f23306322c5a35cad55b180c9b6fb34537b55884645c"
       ],
+      "package_hash": "ibstwbsz2no5mxkaxs5xyxgugcxaqpkgmzht5tvxx4o5enomdnkq====",
       "dependencies": [
         {
-          "name": "gnuconfig",
-          "build_hash": "5lkknzeh3qw2akhhhfww3il35xdyksdi",
+          "name": "ca-certificates-mozilla",
+          "hash": "zqpnouhasw7inu5niuepityt5gb7y7og",
           "type": [
             "build"
           ]
+        },
+        {
+          "name": "perl",
+          "hash": "lgy25lbodgk6fczldssoplvdtgg7ti46",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "zlib",
+          "hash": "47rpkhn4wuv6bikfrz36bah6n5rx5vr6",
+          "type": [
+            "build",
+            "link"
+          ]
         }
       ],
-      "hash": "agvbxan7g6aodw3dqk2vfdzshov2vw5c"
+      "hash": "bw2s6w5di7a77nn52bo5l5g6gy3p7ijp"
     },
-    "o5qylmmys25t7ievv2nrdjukfz55gpxl": {
-      "name": "sqlite",
-      "version": "3.36.0",
+    "zqpnouhasw7inu5niuepityt5gb7y7og": {
+      "name": "ca-certificates-mozilla",
+      "version": "2022-10-11",
       "arch": {
         "platform": "linux",
         "platform_os": "rhel7",
@@ -2670,14 +2502,11 @@
       },
       "compiler": {
         "name": "gcc",
-        "version": "7.3.1"
+        "version": "8.3.1"
       },
       "namespace": "builtin",
       "parameters": {
-        "column_metadata": true,
-        "fts": true,
-        "functions": false,
-        "rtree": false,
+        "build_system": "generic",
         "cflags": [],
         "cppflags": [],
         "cxxflags": [],
@@ -2685,17 +2514,56 @@
         "ldflags": [],
         "ldlibs": []
       },
+      "package_hash": "534ljqvtxlihbb7evesr4emhe74e6juaardt6dkra4fpa7pcolxa====",
+      "hash": "zqpnouhasw7inu5niuepityt5gb7y7og"
+    },
+    "uaavtmlvsxavvai4w3lecl32vsvr2mys": {
+      "name": "sqlite",
+      "version": "3.39.4",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "rhel7",
+        "target": {
+          "name": "power9le",
+          "vendor": "IBM",
+          "features": [],
+          "generation": 9,
+          "parents": [
+            "power8le"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "8.3.1"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "autotools",
+        "column_metadata": true,
+        "dynamic_extensions": true,
+        "fts": true,
+        "functions": false,
+        "rtree": true,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "ndgl4v2lrs3bmk46b2knfzpmeziqrxblw5qdrvbmg3dcxe2ppsva====",
       "dependencies": [
         {
           "name": "gnuconfig",
-          "build_hash": "5lkknzeh3qw2akhhhfww3il35xdyksdi",
+          "hash": "x7svgkfedji6bmdtamg3frwrv7dzocr6",
           "type": [
             "build"
           ]
         },
         {
           "name": "readline",
-          "build_hash": "gkcwuyodkhxkh3whnbwepg5r7tknzr2e",
+          "hash": "px3aytdt72xzi4qphxbskpgvgpl7nyaz",
           "type": [
             "build",
             "link"
@@ -2703,18 +2571,18 @@
         },
         {
           "name": "zlib",
-          "build_hash": "injpmg45ihuhup7lyk2pxlymkkhf5bvj",
+          "hash": "47rpkhn4wuv6bikfrz36bah6n5rx5vr6",
           "type": [
             "build",
             "link"
           ]
         }
       ],
-      "hash": "asuomaeexb5tiurdlvymxt6cmpqfeltc"
+      "hash": "uaavtmlvsxavvai4w3lecl32vsvr2mys"
     },
-    "ukc2vjnzdghgerph5jucprab3wgcjz4k": {
+    "yxoxth25yudy3xocvzmpgdv6czlonew5": {
       "name": "util-linux-uuid",
-      "version": "2.36.2",
+      "version": "2.38.1",
       "arch": {
         "platform": "linux",
         "platform_os": "rhel7",
@@ -2730,10 +2598,11 @@
       },
       "compiler": {
         "name": "gcc",
-        "version": "7.3.1"
+        "version": "8.3.1"
       },
       "namespace": "builtin",
       "parameters": {
+        "build_system": "autotools",
         "cflags": [],
         "cppflags": [],
         "cxxflags": [],
@@ -2741,27 +2610,28 @@
         "ldflags": [],
         "ldlibs": []
       },
+      "package_hash": "4jp7kdd57mds63hemompvj5ffay2ry5xvuol2b6vs3ldnduwyona====",
       "dependencies": [
         {
           "name": "gnuconfig",
-          "build_hash": "5lkknzeh3qw2akhhhfww3il35xdyksdi",
+          "hash": "x7svgkfedji6bmdtamg3frwrv7dzocr6",
           "type": [
             "build"
           ]
         },
         {
           "name": "pkgconf",
-          "build_hash": "yfssj3vccyx273h3ftjujz2dc3s2voqr",
+          "hash": "vbajcm5norjv4wtxv7lzozsg62na54bp",
           "type": [
             "build"
           ]
         }
       ],
-      "hash": "zuyjngguaxm6jgpie7o2kjz6vb6hgzvf"
+      "hash": "yxoxth25yudy3xocvzmpgdv6czlonew5"
     },
-    "mx3qkolmfxrz2zuma7qmxu2kfyghqub2": {
+    "4poiy3v5glgalg7lczkokkdhvtdahvcb": {
       "name": "amrex",
-      "version": "21.10",
+      "version": "22.09",
       "arch": {
         "platform": "linux",
         "platform_os": "rhel7",
@@ -2777,14 +2647,12 @@
       },
       "compiler": {
         "name": "gcc",
-        "version": "7.3.1"
+        "version": "8.3.1"
       },
       "namespace": "builtin",
       "parameters": {
-        "amdgpu_target": [
-          "none"
-        ],
         "amrdata": false,
+        "build_system": "cmake",
         "build_type": "RelWithDebInfo",
         "cuda": true,
         "cuda_arch": [
@@ -2807,6 +2675,8 @@
         "rocm": false,
         "shared": false,
         "sundials": true,
+        "sycl": false,
+        "tiny_profile": false,
         "cflags": [],
         "cppflags": [],
         "cxxflags": [],
@@ -2814,17 +2684,18 @@
         "ldflags": [],
         "ldlibs": []
       },
+      "package_hash": "kj2hpzksm3hdivciefqokeu3afwwnrgwto2tgjradsdrzr7nntfa====",
       "dependencies": [
         {
           "name": "cmake",
-          "build_hash": "psrodwzsowo4aqt7yp7uon5t3lav4767",
+          "hash": "mmeaau2dw4pch3tf44uvh3iiwcit7j5m",
           "type": [
             "build"
           ]
         },
         {
           "name": "cuda",
-          "build_hash": "nsbamhir2znhugvmlx7xlmomvj2gqyj6",
+          "hash": "nnh3nukp2nbnvkazeg7tdecep3rctgdp",
           "type": [
             "build",
             "link"
@@ -2832,7 +2703,7 @@
         },
         {
           "name": "spectrum-mpi",
-          "build_hash": "tvrmqg5d5hzwgk747qzj6xtzugzv3fyn",
+          "hash": "aowt4oks6ctgkgfklbpppp3glslziybk",
           "type": [
             "build",
             "link"
@@ -2840,18 +2711,18 @@
         },
         {
           "name": "sundials",
-          "build_hash": "jsyi342jmrwv6lezlea4ljdrxdjv7fus",
+          "hash": "5fqgcmjcmlxlgloq37h546rmvraga4pr",
           "type": [
             "build",
             "link"
           ]
         }
       ],
-      "hash": "wsp4b32tq2wegcervmapn4kq7lejpmha"
+      "hash": "4poiy3v5glgalg7lczkokkdhvtdahvcb"
     },
-    "jsyi342jmrwv6lezlea4ljdrxdjv7fus": {
+    "5fqgcmjcmlxlgloq37h546rmvraga4pr": {
       "name": "sundials",
-      "version": "5.8.0",
+      "version": "6.4.1",
       "arch": {
         "platform": "linux",
         "platform_os": "rhel7",
@@ -2867,7 +2738,7 @@
       },
       "compiler": {
         "name": "gcc",
-        "version": "7.3.1"
+        "version": "8.3.1"
       },
       "namespace": "builtin",
       "parameters": {
@@ -2877,29 +2748,36 @@
         "IDA": true,
         "IDAS": true,
         "KINSOL": true,
-        "amdgpu_target": [
-          "none"
-        ],
+        "build_system": "cmake",
         "build_type": "RelWithDebInfo",
+        "cstd": "99",
         "cuda": true,
         "cuda_arch": [
           "70"
         ],
+        "cxxstd": "14",
         "examples": true,
         "examples-install": true,
         "f2003": false,
         "fcmix": false,
         "generic-math": true,
+        "ginkgo": true,
         "hypre": true,
         "int64": false,
         "ipo": false,
         "klu": false,
+        "kokkos": false,
+        "kokkos-kernels": false,
         "lapack": false,
+        "logging-level": "0",
+        "logging-mpi": "OFF",
+        "magma": false,
         "monitoring": false,
         "mpi": true,
         "openmp": false,
         "petsc": true,
         "precision": "double",
+        "profiling": false,
         "pthread": false,
         "raja": false,
         "rocm": false,
@@ -2916,17 +2794,26 @@
         "ldflags": [],
         "ldlibs": []
       },
+      "package_hash": "gyszshym2tcjqj7u6xfh3ffwywu5xvhbinyp3bxyzsq55r5x5fja====",
       "dependencies": [
         {
           "name": "cmake",
-          "build_hash": "psrodwzsowo4aqt7yp7uon5t3lav4767",
+          "hash": "mmeaau2dw4pch3tf44uvh3iiwcit7j5m",
           "type": [
             "build"
           ]
         },
         {
           "name": "cuda",
-          "build_hash": "nsbamhir2znhugvmlx7xlmomvj2gqyj6",
+          "hash": "nnh3nukp2nbnvkazeg7tdecep3rctgdp",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "ginkgo",
+          "hash": "khjj2h5tjgqa75uujv7v3po5pvu5cfs5",
           "type": [
             "build",
             "link"
@@ -2934,7 +2821,7 @@
         },
         {
           "name": "hypre",
-          "build_hash": "2ernrm2pwcw3qt7hqrvgwocz5oiwv5km",
+          "hash": "dvxnb3jbaz64h72eopd7vb5ak3ifi5y7",
           "type": [
             "build",
             "link"
@@ -2942,7 +2829,7 @@
         },
         {
           "name": "petsc",
-          "build_hash": "st6j4dmrqqnjetlqrlskeebi7kdgrluz",
+          "hash": "gr6uucu5vswdfxer27gvimztn24574gx",
           "type": [
             "build",
             "link"
@@ -2950,7 +2837,7 @@
         },
         {
           "name": "spectrum-mpi",
-          "build_hash": "tvrmqg5d5hzwgk747qzj6xtzugzv3fyn",
+          "hash": "aowt4oks6ctgkgfklbpppp3glslziybk",
           "type": [
             "build",
             "link"
@@ -2958,7 +2845,7 @@
         },
         {
           "name": "superlu-dist",
-          "build_hash": "ogi242ximlepydxrq6evkjvdvry4bs4o",
+          "hash": "x5eb2w35ijvj7qrzsz3jc367ptqwfc7f",
           "type": [
             "build",
             "link"
@@ -2966,18 +2853,18 @@
         },
         {
           "name": "trilinos",
-          "build_hash": "mxkbfvl7zajzgasl2hf4t3kksgxluwqm",
+          "hash": "hzkc3wuc2xsvh5vevgej2vxvjuukwhvz",
           "type": [
             "build",
             "link"
           ]
         }
       ],
-      "hash": "2knhivjjpkuq2qrpx5zhkdspn6leb2nm"
+      "hash": "5fqgcmjcmlxlgloq37h546rmvraga4pr"
     },
-    "mxkbfvl7zajzgasl2hf4t3kksgxluwqm": {
-      "name": "trilinos",
-      "version": "13.2.0",
+    "khjj2h5tjgqa75uujv7v3po5pvu5cfs5": {
+      "name": "ginkgo",
+      "version": "1.5.0",
       "arch": {
         "platform": "linux",
         "platform_os": "rhel7",
@@ -2993,10 +2880,83 @@
       },
       "compiler": {
         "name": "gcc",
-        "version": "7.3.1"
+        "version": "8.3.1"
       },
       "namespace": "builtin",
       "parameters": {
+        "build_system": "cmake",
+        "build_type": "Release",
+        "cuda": true,
+        "cuda_arch": [
+          "70"
+        ],
+        "develtools": false,
+        "full_optimizations": false,
+        "hwloc": false,
+        "ipo": false,
+        "mpi": true,
+        "oneapi": false,
+        "openmp": false,
+        "rocm": false,
+        "shared": true,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "aotyfsplwtquvvgm3lzuyftjvnw4rl6z2oommdy6lckr4gnp633q====",
+      "dependencies": [
+        {
+          "name": "cmake",
+          "hash": "mmeaau2dw4pch3tf44uvh3iiwcit7j5m",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "cuda",
+          "hash": "nnh3nukp2nbnvkazeg7tdecep3rctgdp",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "spectrum-mpi",
+          "hash": "aowt4oks6ctgkgfklbpppp3glslziybk",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "khjj2h5tjgqa75uujv7v3po5pvu5cfs5"
+    },
+    "hzkc3wuc2xsvh5vevgej2vxvjuukwhvz": {
+      "name": "trilinos",
+      "version": "13.4.0",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "rhel7",
+        "target": {
+          "name": "power9le",
+          "vendor": "IBM",
+          "features": [],
+          "generation": 9,
+          "parents": [
+            "power8le"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "8.3.1"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "adelus": false,
         "adios2": false,
         "amesos": true,
         "amesos2": true,
@@ -3005,13 +2965,11 @@
         "basker": false,
         "belos": true,
         "boost": true,
+        "build_system": "cmake",
         "build_type": "RelWithDebInfo",
         "chaco": false,
         "complex": false,
         "cuda": false,
-        "cuda_arch": [
-          "none"
-        ],
         "cuda_rdc": false,
         "cxxstd": "14",
         "debug": false,
@@ -3044,9 +3002,15 @@
         "mumps": false,
         "nox": true,
         "openmp": false,
+        "panzer": false,
+        "patches": [
+          "6d1bb2eb8963ef438ac4b548fb11b5dc1248cb99c3a6a59cd18a0fa966789ec2"
+        ],
         "phalanx": false,
         "piro": false,
         "python": false,
+        "rocm": false,
+        "rocm_rdc": false,
         "rol": false,
         "rythmos": false,
         "sacado": true,
@@ -3063,6 +3027,7 @@
         "superlu-dist": true,
         "teko": false,
         "tempus": false,
+        "thyra": true,
         "tpetra": true,
         "trilinoscouplings": false,
         "wrapper": false,
@@ -3076,10 +3041,14 @@
         "ldflags": [],
         "ldlibs": []
       },
+      "patches": [
+        "6d1bb2eb8963ef438ac4b548fb11b5dc1248cb99c3a6a59cd18a0fa966789ec2"
+      ],
+      "package_hash": "bp4wvxcloperlqvthmvoer4dtb42j7e3fx5op2ccswxh47u2l4zq====",
       "dependencies": [
         {
           "name": "boost",
-          "build_hash": "hdrwafijqwgkfkrvgozxe7mqymdoz6gw",
+          "hash": "vig7rwbsa2w3ccuf6edpghdftggq3aqs",
           "type": [
             "build",
             "link"
@@ -3087,14 +3056,14 @@
         },
         {
           "name": "cmake",
-          "build_hash": "psrodwzsowo4aqt7yp7uon5t3lav4767",
+          "hash": "mmeaau2dw4pch3tf44uvh3iiwcit7j5m",
           "type": [
             "build"
           ]
         },
         {
           "name": "hdf5",
-          "build_hash": "ksoql7n6lnrrpf5gd4poa5m5umju4e6e",
+          "hash": "qat54dlaqp4b7xx75q7onb6zvifzf7hp",
           "type": [
             "build",
             "link"
@@ -3102,7 +3071,7 @@
         },
         {
           "name": "hwloc",
-          "build_hash": "sr7a2toxvz3jotpedv2pp5ahka3wky26",
+          "hash": "6563ygmx5s7bletpajpzseyjpaqhhcyc",
           "type": [
             "build",
             "link"
@@ -3110,7 +3079,7 @@
         },
         {
           "name": "hypre",
-          "build_hash": "2ernrm2pwcw3qt7hqrvgwocz5oiwv5km",
+          "hash": "dvxnb3jbaz64h72eopd7vb5ak3ifi5y7",
           "type": [
             "build",
             "link"
@@ -3118,7 +3087,7 @@
         },
         {
           "name": "metis",
-          "build_hash": "ahcezx6tcswwhv4ivnr6ymz34lcs2ezl",
+          "hash": "53mdjnz4gwc6w2srnu2ren2vnzdoy7dj",
           "type": [
             "build",
             "link"
@@ -3126,7 +3095,7 @@
         },
         {
           "name": "openblas",
-          "build_hash": "6uqvrcuz7l4g4egaiggyzk7t5hcsf74b",
+          "hash": "ibdwbptusvvs34czdxpxazptj6wosm3s",
           "type": [
             "build",
             "link"
@@ -3134,7 +3103,7 @@
         },
         {
           "name": "parmetis",
-          "build_hash": "wz5vltg5fbzc5mcd6drkjfiddvwbwtuu",
+          "hash": "s7g5j4w7jzliioth3wiwpsnigze6h43j",
           "type": [
             "build",
             "link"
@@ -3142,14 +3111,14 @@
         },
         {
           "name": "python",
-          "build_hash": "dpderlk3ynfqb42j52vbtyefchzukz4j",
+          "hash": "twhk7zxis5hp4hr2bh6pk4onfokb4v6u",
           "type": [
             "build"
           ]
         },
         {
           "name": "spectrum-mpi",
-          "build_hash": "tvrmqg5d5hzwgk747qzj6xtzugzv3fyn",
+          "hash": "aowt4oks6ctgkgfklbpppp3glslziybk",
           "type": [
             "build",
             "link"
@@ -3157,7 +3126,7 @@
         },
         {
           "name": "superlu-dist",
-          "build_hash": "ogi242ximlepydxrq6evkjvdvry4bs4o",
+          "hash": "x5eb2w35ijvj7qrzsz3jc367ptqwfc7f",
           "type": [
             "build",
             "link"
@@ -3165,18 +3134,18 @@
         },
         {
           "name": "zlib",
-          "build_hash": "injpmg45ihuhup7lyk2pxlymkkhf5bvj",
+          "hash": "47rpkhn4wuv6bikfrz36bah6n5rx5vr6",
           "type": [
             "build",
             "link"
           ]
         }
       ],
-      "hash": "lpbac7dz3exgwsmcgepqiss4tcjxvzls"
+      "hash": "hzkc3wuc2xsvh5vevgej2vxvjuukwhvz"
     },
-    "hdrwafijqwgkfkrvgozxe7mqymdoz6gw": {
+    "vig7rwbsa2w3ccuf6edpghdftggq3aqs": {
       "name": "boost",
-      "version": "1.77.0",
+      "version": "1.80.0",
       "arch": {
         "platform": "linux",
         "platform_os": "rhel7",
@@ -3192,51 +3161,58 @@
       },
       "compiler": {
         "name": "gcc",
-        "version": "7.3.1"
+        "version": "8.3.1"
       },
       "namespace": "builtin",
       "parameters": {
-        "atomic": true,
-        "chrono": true,
+        "atomic": false,
+        "build_system": "generic",
+        "chrono": false,
         "clanglibcpp": false,
         "container": false,
         "context": false,
+        "contract": false,
         "coroutine": false,
         "cxxstd": "98",
-        "date_time": true,
+        "date_time": false,
         "debug": false,
         "exception": true,
         "fiber": false,
         "filesystem": true,
         "graph": true,
+        "graph_parallel": false,
         "icu": false,
-        "iostreams": true,
-        "locale": true,
+        "iostreams": false,
+        "json": false,
+        "locale": false,
         "log": true,
         "math": true,
         "mpi": false,
         "multithreaded": true,
+        "nowide": false,
         "numpy": false,
         "patches": [
-          "93f4aad8f88d1437e50d95a2d066390ef3753b99ef5de24f7a46bc083bd6df06"
+          "a440f9696d3bbb77e7eab1516c004730f622e59c71d39960b472026ef92f88e8"
         ],
         "pic": false,
         "program_options": true,
         "python": false,
-        "random": true,
-        "regex": true,
-        "serialization": true,
+        "random": false,
+        "regex": false,
+        "serialization": false,
         "shared": true,
-        "signals": true,
+        "signals": false,
         "singlethreaded": false,
+        "stacktrace": true,
         "system": true,
         "taggedlayout": false,
         "test": true,
         "thread": true,
-        "timer": true,
+        "timer": false,
+        "type_erasure": false,
         "versionedlayout": false,
         "visibility": "hidden",
-        "wave": true,
+        "wave": false,
         "cflags": [],
         "cppflags": [],
         "cxxflags": [],
@@ -3245,31 +3221,14 @@
         "ldlibs": []
       },
       "patches": [
-        "93f4aad8f88d1437e50d95a2d066390ef3753b99ef5de24f7a46bc083bd6df06"
+        "a440f9696d3bbb77e7eab1516c004730f622e59c71d39960b472026ef92f88e8"
       ],
-      "dependencies": [
-        {
-          "name": "bzip2",
-          "build_hash": "ldq5uzoamqzqerbkaviqf623n2h2l5cm",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "zlib",
-          "build_hash": "injpmg45ihuhup7lyk2pxlymkkhf5bvj",
-          "type": [
-            "build",
-            "link"
-          ]
-        }
-      ],
-      "hash": "cbvlaia6yxueprvagh324zqcmydpchlr"
+      "package_hash": "e2x6kljj54rj6mli5kfi3wjqw4j5o7kz723of75t63wxhjc7z7iq====",
+      "hash": "vig7rwbsa2w3ccuf6edpghdftggq3aqs"
     },
-    "sr7a2toxvz3jotpedv2pp5ahka3wky26": {
+    "6563ygmx5s7bletpajpzseyjpaqhhcyc": {
       "name": "hwloc",
-      "version": "2.6.0",
+      "version": "2.8.0",
       "arch": {
         "platform": "linux",
         "platform_os": "rhel7",
@@ -3285,21 +3244,26 @@
       },
       "compiler": {
         "name": "gcc",
-        "version": "7.3.1"
+        "version": "8.3.1"
       },
       "namespace": "builtin",
       "parameters": {
+        "build_system": "autotools",
         "cairo": false,
         "cuda": false,
         "gl": false,
+        "libs": [
+          "shared",
+          "static"
+        ],
         "libudev": false,
         "libxml2": true,
         "netloc": false,
         "nvml": false,
+        "oneapi-level-zero": false,
         "opencl": false,
         "pci": true,
         "rocm": false,
-        "shared": true,
         "cflags": [],
         "cppflags": [],
         "cxxflags": [],
@@ -3307,17 +3271,18 @@
         "ldflags": [],
         "ldlibs": []
       },
+      "package_hash": "jm6jat3j6n52xeyfphg6zct6gduwpavztn5tjfabaazzltxd6r5q====",
       "dependencies": [
         {
           "name": "gnuconfig",
-          "build_hash": "5lkknzeh3qw2akhhhfww3il35xdyksdi",
+          "hash": "x7svgkfedji6bmdtamg3frwrv7dzocr6",
           "type": [
             "build"
           ]
         },
         {
           "name": "libpciaccess",
-          "build_hash": "clkib4f43qognrnybj7odjf7yo2ccnxn",
+          "hash": "wfzwbjhwjiqrtjzvqltqquvvmox56h6x",
           "type": [
             "build",
             "link"
@@ -3325,7 +3290,7 @@
         },
         {
           "name": "libxml2",
-          "build_hash": "njnykhwbn2znuxs7ubrdps3365lop5ly",
+          "hash": "fl3otux4lkskemr3qqhoe5dtkqbxgh4k",
           "type": [
             "build",
             "link"
@@ -3333,7 +3298,7 @@
         },
         {
           "name": "ncurses",
-          "build_hash": "6nez5laiouk654xdvvonbgoxmecpftu5",
+          "hash": "uh6unzwqcumdcnnyzilbf4owtheie344",
           "type": [
             "build",
             "link"
@@ -3341,15 +3306,15 @@
         },
         {
           "name": "pkgconf",
-          "build_hash": "yfssj3vccyx273h3ftjujz2dc3s2voqr",
+          "hash": "vbajcm5norjv4wtxv7lzozsg62na54bp",
           "type": [
             "build"
           ]
         }
       ],
-      "hash": "nl27o2cwiqt6hbrzjiawgx572huxssos"
+      "hash": "6563ygmx5s7bletpajpzseyjpaqhhcyc"
     },
-    "clkib4f43qognrnybj7odjf7yo2ccnxn": {
+    "wfzwbjhwjiqrtjzvqltqquvvmox56h6x": {
       "name": "libpciaccess",
       "version": "0.16",
       "arch": {
@@ -3367,10 +3332,11 @@
       },
       "compiler": {
         "name": "gcc",
-        "version": "7.3.1"
+        "version": "8.3.1"
       },
       "namespace": "builtin",
       "parameters": {
+        "build_system": "autotools",
         "cflags": [],
         "cppflags": [],
         "cxxflags": [],
@@ -3378,39 +3344,197 @@
         "ldflags": [],
         "ldlibs": []
       },
+      "package_hash": "h5aaq3rarnnlmpbv3464p73xppknzxucrj73dt277pmozyk4alva====",
       "dependencies": [
         {
           "name": "gnuconfig",
-          "build_hash": "5lkknzeh3qw2akhhhfww3il35xdyksdi",
+          "hash": "x7svgkfedji6bmdtamg3frwrv7dzocr6",
           "type": [
             "build"
           ]
         },
         {
           "name": "libtool",
-          "build_hash": "4ororybomx6rvgf7xxwoituvpiuj5zit",
+          "hash": "4jnszgohxt5byb7bdp2oct2c2y3lxnmf",
           "type": [
             "build"
           ]
         },
         {
           "name": "pkgconf",
-          "build_hash": "yfssj3vccyx273h3ftjujz2dc3s2voqr",
+          "hash": "vbajcm5norjv4wtxv7lzozsg62na54bp",
           "type": [
             "build"
           ]
         },
         {
           "name": "util-macros",
-          "build_hash": "7nh5kos66e5zhs5tyyqikjclaiqeowse",
+          "hash": "bxa5jig4myd5fkvqrsgi3toyfm4svi56",
           "type": [
             "build"
           ]
         }
       ],
-      "hash": "tl72vxvuvnt4jzom3hbfdty2yzx23kig"
+      "hash": "wfzwbjhwjiqrtjzvqltqquvvmox56h6x"
     },
-    "7nh5kos66e5zhs5tyyqikjclaiqeowse": {
+    "4jnszgohxt5byb7bdp2oct2c2y3lxnmf": {
+      "name": "libtool",
+      "version": "2.4.7",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "rhel7",
+        "target": {
+          "name": "power9le",
+          "vendor": "IBM",
+          "features": [],
+          "generation": 9,
+          "parents": [
+            "power8le"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "8.3.1"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "autotools",
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "7lyavyiwpnrhw7tfv5vgri32at345gdegbixiskk63ext2f5rzza====",
+      "dependencies": [
+        {
+          "name": "gnuconfig",
+          "hash": "x7svgkfedji6bmdtamg3frwrv7dzocr6",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "m4",
+          "hash": "hpvblxlpchfncasu4rmbfxqthmsk5gev",
+          "type": [
+            "build"
+          ]
+        }
+      ],
+      "hash": "4jnszgohxt5byb7bdp2oct2c2y3lxnmf"
+    },
+    "hpvblxlpchfncasu4rmbfxqthmsk5gev": {
+      "name": "m4",
+      "version": "1.4.19",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "rhel7",
+        "target": {
+          "name": "power9le",
+          "vendor": "IBM",
+          "features": [],
+          "generation": 9,
+          "parents": [
+            "power8le"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "8.3.1"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "autotools",
+        "patches": [
+          "9dc5fbd0d5cb1037ab1e6d0ecc74a30df218d0a94bdd5a02759a97f62daca573",
+          "bfdffa7c2eb01021d5849b36972c069693654ad826c1a20b53534009a4ec7a89"
+        ],
+        "sigsegv": true,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "patches": [
+        "bfdffa7c2eb01021d5849b36972c069693654ad826c1a20b53534009a4ec7a89",
+        "9dc5fbd0d5cb1037ab1e6d0ecc74a30df218d0a94bdd5a02759a97f62daca573"
+      ],
+      "package_hash": "sqgbfqha5alfkehw2p7okvlj6zwtfvnp7i6k2wpqjcm3iexzchfq====",
+      "dependencies": [
+        {
+          "name": "diffutils",
+          "hash": "odvmlxqipiluvxo3fzkwyg2qxs7asqum",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "gnuconfig",
+          "hash": "x7svgkfedji6bmdtamg3frwrv7dzocr6",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "libsigsegv",
+          "hash": "7nci2zzj2tpvwfveycnari63hgd6jd2h",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "hpvblxlpchfncasu4rmbfxqthmsk5gev"
+    },
+    "7nci2zzj2tpvwfveycnari63hgd6jd2h": {
+      "name": "libsigsegv",
+      "version": "2.13",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "rhel7",
+        "target": {
+          "name": "power9le",
+          "vendor": "IBM",
+          "features": [],
+          "generation": 9,
+          "parents": [
+            "power8le"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "8.3.1"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "autotools",
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "nmoykqybj2ahbtvuts4ajbnyyzzdezs5s7cozp2o54gmtsvc6wiq====",
+      "dependencies": [
+        {
+          "name": "gnuconfig",
+          "hash": "x7svgkfedji6bmdtamg3frwrv7dzocr6",
+          "type": [
+            "build"
+          ]
+        }
+      ],
+      "hash": "7nci2zzj2tpvwfveycnari63hgd6jd2h"
+    },
+    "bxa5jig4myd5fkvqrsgi3toyfm4svi56": {
       "name": "util-macros",
       "version": "1.19.3",
       "arch": {
@@ -3428,10 +3552,11 @@
       },
       "compiler": {
         "name": "gcc",
-        "version": "7.3.1"
+        "version": "8.3.1"
       },
       "namespace": "builtin",
       "parameters": {
+        "build_system": "autotools",
         "cflags": [],
         "cppflags": [],
         "cxxflags": [],
@@ -3439,20 +3564,21 @@
         "ldflags": [],
         "ldlibs": []
       },
+      "package_hash": "5atggv5uirdl2trmzmewkonyvzmzg6sg46zpvurdk43wi2gpr7pa====",
       "dependencies": [
         {
           "name": "gnuconfig",
-          "build_hash": "5lkknzeh3qw2akhhhfww3il35xdyksdi",
+          "hash": "x7svgkfedji6bmdtamg3frwrv7dzocr6",
           "type": [
             "build"
           ]
         }
       ],
-      "hash": "2omwolpobd6wnz5zpmoxkdqzpdmbci5s"
+      "hash": "bxa5jig4myd5fkvqrsgi3toyfm4svi56"
     },
-    "b7turhqw6b6dyht3qyquawbopglokvdc": {
+    "bpabfpuzpmydbwaa4l2y33be7j4yjveg": {
       "name": "arborx",
-      "version": "1.1",
+      "version": "1.2",
       "arch": {
         "platform": "linux",
         "platform_os": "rhel7",
@@ -3468,12 +3594,14 @@
       },
       "compiler": {
         "name": "gcc",
-        "version": "7.3.1"
+        "version": "8.3.1"
       },
       "namespace": "builtin",
       "parameters": {
+        "build_system": "cmake",
         "build_type": "RelWithDebInfo",
         "cuda": false,
+        "cxxstd": "17",
         "ipo": false,
         "mpi": true,
         "openmp": false,
@@ -3488,17 +3616,18 @@
         "ldflags": [],
         "ldlibs": []
       },
+      "package_hash": "jmq4ebc22jjiwioapllziprf2lf7zvbx4jyeye6kwd5fedc57xca====",
       "dependencies": [
         {
           "name": "cmake",
-          "build_hash": "psrodwzsowo4aqt7yp7uon5t3lav4767",
+          "hash": "mmeaau2dw4pch3tf44uvh3iiwcit7j5m",
           "type": [
             "build"
           ]
         },
         {
           "name": "kokkos",
-          "build_hash": "7d4bnckerg3iz32fwhh6woaccepvrn5p",
+          "hash": "vr7lm7l3arf6estovsow26oszqtb74cz",
           "type": [
             "build",
             "link"
@@ -3506,18 +3635,18 @@
         },
         {
           "name": "spectrum-mpi",
-          "build_hash": "tvrmqg5d5hzwgk747qzj6xtzugzv3fyn",
+          "hash": "aowt4oks6ctgkgfklbpppp3glslziybk",
           "type": [
             "build",
             "link"
           ]
         }
       ],
-      "hash": "agym4flm47zkxvqfjor44flx6si64uye"
+      "hash": "bpabfpuzpmydbwaa4l2y33be7j4yjveg"
     },
-    "7d4bnckerg3iz32fwhh6woaccepvrn5p": {
+    "vr7lm7l3arf6estovsow26oszqtb74cz": {
       "name": "kokkos",
-      "version": "3.4.01",
+      "version": "3.7.00",
       "arch": {
         "platform": "linux",
         "platform_os": "rhel7",
@@ -3533,20 +3662,15 @@
       },
       "compiler": {
         "name": "gcc",
-        "version": "7.3.1"
+        "version": "8.3.1"
       },
       "namespace": "builtin",
       "parameters": {
         "aggressive_vectorization": false,
-        "amdgpu_target": [
-          "none"
-        ],
+        "build_system": "cmake",
         "build_type": "RelWithDebInfo",
         "compiler_warnings": false,
         "cuda": false,
-        "cuda_arch": [
-          "none"
-        ],
         "cuda_constexpr": false,
         "cuda_lambda": false,
         "cuda_ldg_intrinsic": false,
@@ -3561,10 +3685,12 @@
         "hpx": false,
         "hpx_async_dispatch": false,
         "hwloc": false,
+        "intel_gpu_arch": "none",
         "ipo": false,
         "memkind": false,
         "numactl": false,
         "openmp": false,
+        "openmptarget": false,
         "pic": false,
         "profiling": true,
         "profiling_load_print": false,
@@ -3585,20 +3711,21 @@
         "ldflags": [],
         "ldlibs": []
       },
+      "package_hash": "jw2bu3ngsdhsuvy2il4nefi2fvxpypbaerm5h2baibhxmk5tbrhq====",
       "dependencies": [
         {
           "name": "cmake",
-          "build_hash": "psrodwzsowo4aqt7yp7uon5t3lav4767",
+          "hash": "mmeaau2dw4pch3tf44uvh3iiwcit7j5m",
           "type": [
             "build"
           ]
         }
       ],
-      "hash": "hjlupxo2zqa457d2bc7obbwwxwguqu2l"
+      "hash": "vr7lm7l3arf6estovsow26oszqtb74cz"
     },
-    "ovofe5mils3jb4kef2umamz67eym53ux": {
+    "g5wtvht7ahsw7lgmenfwewdd76sherbm": {
       "name": "butterflypack",
-      "version": "2.0.0",
+      "version": "2.2.2",
       "arch": {
         "platform": "linux",
         "platform_os": "rhel7",
@@ -3614,12 +3741,14 @@
       },
       "compiler": {
         "name": "gcc",
-        "version": "7.3.1"
+        "version": "8.3.1"
       },
       "namespace": "builtin",
       "parameters": {
+        "build_system": "cmake",
         "build_type": "RelWithDebInfo",
         "ipo": false,
+        "openmp": true,
         "shared": true,
         "cflags": [],
         "cppflags": [],
@@ -3628,10 +3757,11 @@
         "ldflags": [],
         "ldlibs": []
       },
+      "package_hash": "hjimlfct6b4qdiskzlvy522jfvydoupkb7yelop2jajkv5knjuha====",
       "dependencies": [
         {
           "name": "arpack-ng",
-          "build_hash": "eg73ozfslox5yh26fc2yrwza66rtswhm",
+          "hash": "unpca6rns7etsn3p4wttxantu3sfzhcz",
           "type": [
             "build",
             "link"
@@ -3639,14 +3769,14 @@
         },
         {
           "name": "cmake",
-          "build_hash": "psrodwzsowo4aqt7yp7uon5t3lav4767",
+          "hash": "mmeaau2dw4pch3tf44uvh3iiwcit7j5m",
           "type": [
             "build"
           ]
         },
         {
           "name": "netlib-scalapack",
-          "build_hash": "5fktcxgzw56v6g6e4oqr7gt6yd7hjvsd",
+          "hash": "4ih46zey4cvjphukjr4hffx2rw6r6v4j",
           "type": [
             "build",
             "link"
@@ -3654,24 +3784,31 @@
         },
         {
           "name": "openblas",
-          "build_hash": "6uqvrcuz7l4g4egaiggyzk7t5hcsf74b",
+          "hash": "ibdwbptusvvs34czdxpxazptj6wosm3s",
           "type": [
             "build",
             "link"
           ]
         },
         {
+          "name": "sed",
+          "hash": "wohmdbgikjhwsyxbexg7ol5xmhyqtl3w",
+          "type": [
+            "build"
+          ]
+        },
+        {
           "name": "spectrum-mpi",
-          "build_hash": "tvrmqg5d5hzwgk747qzj6xtzugzv3fyn",
+          "hash": "aowt4oks6ctgkgfklbpppp3glslziybk",
           "type": [
             "build",
             "link"
           ]
         }
       ],
-      "hash": "mhtvu2tyj5craoyuq6y7qkrqpgaa5ym2"
+      "hash": "g5wtvht7ahsw7lgmenfwewdd76sherbm"
     },
-    "eg73ozfslox5yh26fc2yrwza66rtswhm": {
+    "unpca6rns7etsn3p4wttxantu3sfzhcz": {
       "name": "arpack-ng",
       "version": "3.8.0",
       "arch": {
@@ -3689,10 +3826,13 @@
       },
       "compiler": {
         "name": "gcc",
-        "version": "7.3.1"
+        "version": "8.3.1"
       },
       "namespace": "builtin",
       "parameters": {
+        "build_system": "cmake",
+        "build_type": "RelWithDebInfo",
+        "ipo": false,
         "mpi": true,
         "shared": true,
         "cflags": [],
@@ -3702,17 +3842,18 @@
         "ldflags": [],
         "ldlibs": []
       },
+      "package_hash": "yv335ap3xhg35igteluzplki4eeyscleg2danw3sskmkh7t4pp5a====",
       "dependencies": [
         {
           "name": "cmake",
-          "build_hash": "psrodwzsowo4aqt7yp7uon5t3lav4767",
+          "hash": "mmeaau2dw4pch3tf44uvh3iiwcit7j5m",
           "type": [
             "build"
           ]
         },
         {
           "name": "openblas",
-          "build_hash": "6uqvrcuz7l4g4egaiggyzk7t5hcsf74b",
+          "hash": "ibdwbptusvvs34czdxpxazptj6wosm3s",
           "type": [
             "build",
             "link"
@@ -3720,18 +3861,18 @@
         },
         {
           "name": "spectrum-mpi",
-          "build_hash": "tvrmqg5d5hzwgk747qzj6xtzugzv3fyn",
+          "hash": "aowt4oks6ctgkgfklbpppp3glslziybk",
           "type": [
             "build",
             "link"
           ]
         }
       ],
-      "hash": "ud75q5ynrp6mawjtygd5vfmhjvwrzhwl"
+      "hash": "unpca6rns7etsn3p4wttxantu3sfzhcz"
     },
-    "5fktcxgzw56v6g6e4oqr7gt6yd7hjvsd": {
+    "4ih46zey4cvjphukjr4hffx2rw6r6v4j": {
       "name": "netlib-scalapack",
-      "version": "2.1.0",
+      "version": "2.2.0",
       "arch": {
         "platform": "linux",
         "platform_os": "rhel7",
@@ -3747,15 +3888,16 @@
       },
       "compiler": {
         "name": "gcc",
-        "version": "7.3.1"
+        "version": "8.3.1"
       },
       "namespace": "builtin",
       "parameters": {
+        "build_system": "cmake",
         "build_type": "Release",
         "ipo": false,
         "patches": [
-          "1c9ce5fee1451a08c2de3cc87f446aeda0b818ebbce4ad0d980ddf2f2a0b2dc4",
-          "f2baedde688ffe4c20943c334f580eb298e04d6f35c86b90a1f4e8cb7ae344a2"
+          "072b006e485f0ca4cba56096912a986e4d3da73aae51c2205928aa5eb842cefd",
+          "1c9ce5fee1451a08c2de3cc87f446aeda0b818ebbce4ad0d980ddf2f2a0b2dc4"
         ],
         "pic": false,
         "shared": true,
@@ -3767,20 +3909,21 @@
         "ldlibs": []
       },
       "patches": [
-        "f2baedde688ffe4c20943c334f580eb298e04d6f35c86b90a1f4e8cb7ae344a2",
-        "1c9ce5fee1451a08c2de3cc87f446aeda0b818ebbce4ad0d980ddf2f2a0b2dc4"
+        "1c9ce5fee1451a08c2de3cc87f446aeda0b818ebbce4ad0d980ddf2f2a0b2dc4",
+        "072b006e485f0ca4cba56096912a986e4d3da73aae51c2205928aa5eb842cefd"
       ],
+      "package_hash": "teivt2mtpkrauwmi4lhmbock22xcle6tlqz4fymijehrjwe7iiyq====",
       "dependencies": [
         {
           "name": "cmake",
-          "build_hash": "psrodwzsowo4aqt7yp7uon5t3lav4767",
+          "hash": "mmeaau2dw4pch3tf44uvh3iiwcit7j5m",
           "type": [
             "build"
           ]
         },
         {
           "name": "openblas",
-          "build_hash": "6uqvrcuz7l4g4egaiggyzk7t5hcsf74b",
+          "hash": "ibdwbptusvvs34czdxpxazptj6wosm3s",
           "type": [
             "build",
             "link"
@@ -3788,16 +3931,58 @@
         },
         {
           "name": "spectrum-mpi",
-          "build_hash": "tvrmqg5d5hzwgk747qzj6xtzugzv3fyn",
+          "hash": "aowt4oks6ctgkgfklbpppp3glslziybk",
           "type": [
             "build",
             "link"
           ]
         }
       ],
-      "hash": "hf344tekytp5wwy5xpysjwgexznv5nof"
+      "hash": "4ih46zey4cvjphukjr4hffx2rw6r6v4j"
     },
-    "jclrwgqgww6ir542rvvzbkaayeecf2jf": {
+    "wohmdbgikjhwsyxbexg7ol5xmhyqtl3w": {
+      "name": "sed",
+      "version": "4.8",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "rhel7",
+        "target": {
+          "name": "power9le",
+          "vendor": "IBM",
+          "features": [],
+          "generation": 9,
+          "parents": [
+            "power8le"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "8.3.1"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "autotools",
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "bq6gzaaeehoz3nfsheuhf6c4x2wlwzquef4bvlkizam7pt5dj22a====",
+      "dependencies": [
+        {
+          "name": "gnuconfig",
+          "hash": "x7svgkfedji6bmdtamg3frwrv7dzocr6",
+          "type": [
+            "build"
+          ]
+        }
+      ],
+      "hash": "wohmdbgikjhwsyxbexg7ol5xmhyqtl3w"
+    },
+    "wo5blbpq2vjyonpblgmgfkp3ur4eqzyy": {
       "name": "datatransferkit",
       "version": "3.1-rc3",
       "arch": {
@@ -3815,10 +4000,11 @@
       },
       "compiler": {
         "name": "gcc",
-        "version": "7.3.1"
+        "version": "8.3.1"
       },
       "namespace": "builtin",
       "parameters": {
+        "build_system": "cmake",
         "build_type": "RelWithDebInfo",
         "external-arborx": false,
         "ipo": false,
@@ -3832,10 +4018,11 @@
         "ldflags": [],
         "ldlibs": []
       },
+      "package_hash": "sgfadhc4qd5uhej5nzt2ns2tnyagmtgtfo7ivdpgffihh5ny2jzq====",
       "dependencies": [
         {
           "name": "boost",
-          "build_hash": "hdrwafijqwgkfkrvgozxe7mqymdoz6gw",
+          "hash": "vig7rwbsa2w3ccuf6edpghdftggq3aqs",
           "type": [
             "build",
             "link"
@@ -3843,653 +4030,24 @@
         },
         {
           "name": "cmake",
-          "build_hash": "psrodwzsowo4aqt7yp7uon5t3lav4767",
+          "hash": "mmeaau2dw4pch3tf44uvh3iiwcit7j5m",
           "type": [
             "build"
           ]
         },
         {
           "name": "trilinos",
-          "build_hash": "mxkbfvl7zajzgasl2hf4t3kksgxluwqm",
+          "hash": "hzkc3wuc2xsvh5vevgej2vxvjuukwhvz",
           "type": [
             "build",
             "link"
           ]
         }
       ],
-      "hash": "4fqmhzvqkhh6gqjhguelxpnjdxmvzpoa"
+      "hash": "wo5blbpq2vjyonpblgmgfkp3ur4eqzyy"
     },
-    "j7eyvx2yqt7g5gcr22cbf6gr2sysxo2x": {
-      "name": "ginkgo",
-      "version": "1.4.0",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "rhel7",
-        "target": {
-          "name": "power9le",
-          "vendor": "IBM",
-          "features": [],
-          "generation": 9,
-          "parents": [
-            "power8le"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "7.3.1"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "amdgpu_target": [
-          "none"
-        ],
-        "build_type": "Release",
-        "cuda": true,
-        "cuda_arch": [
-          "70"
-        ],
-        "develtools": false,
-        "full_optimizations": false,
-        "hwloc": false,
-        "ipo": false,
-        "openmp": false,
-        "patches": [
-          "43e571a49ea774793d89d145571c95ae7cdf991f5220d8fe84db217a3c613a32"
-        ],
-        "rocm": false,
-        "shared": true,
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "patches": [
-        "43e571a49ea774793d89d145571c95ae7cdf991f5220d8fe84db217a3c613a32"
-      ],
-      "dependencies": [
-        {
-          "name": "cmake",
-          "build_hash": "psrodwzsowo4aqt7yp7uon5t3lav4767",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "cuda",
-          "build_hash": "nsbamhir2znhugvmlx7xlmomvj2gqyj6",
-          "type": [
-            "build",
-            "link"
-          ]
-        }
-      ],
-      "hash": "guliqd7wcadkamjfsbqikbfh3m46qjgu"
-    },
-    "5pt647z2e2djjwpxz3koyiukk54e2awl": {
+    "t6qpj67iww46m3jdjwvkstgfxtpl3hpv": {
       "name": "heffte",
-      "version": "2.2.0",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "rhel7",
-        "target": {
-          "name": "power9le",
-          "vendor": "IBM",
-          "features": [],
-          "generation": 9,
-          "parents": [
-            "power8le"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "7.3.1"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "amdgpu_target": [
-          "none"
-        ],
-        "build_type": "RelWithDebInfo",
-        "cuda": true,
-        "cuda_arch": [
-          "70"
-        ],
-        "fftw": true,
-        "fortran": false,
-        "ipo": false,
-        "magma": true,
-        "mkl": false,
-        "python": false,
-        "rocm": false,
-        "shared": true,
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "dependencies": [
-        {
-          "name": "cmake",
-          "build_hash": "psrodwzsowo4aqt7yp7uon5t3lav4767",
-          "type": [
-            "build",
-            "run"
-          ]
-        },
-        {
-          "name": "cuda",
-          "build_hash": "nsbamhir2znhugvmlx7xlmomvj2gqyj6",
-          "type": [
-            "build",
-            "link",
-            "run"
-          ]
-        },
-        {
-          "name": "fftw",
-          "build_hash": "opammkeu6ynghunkzxrpf7rsc4y3ix4d",
-          "type": [
-            "build",
-            "run"
-          ]
-        },
-        {
-          "name": "magma",
-          "build_hash": "wne6zkha5sjcvjgbsvob2wmd27ofa2zp",
-          "type": [
-            "build",
-            "run"
-          ]
-        },
-        {
-          "name": "spectrum-mpi",
-          "build_hash": "tvrmqg5d5hzwgk747qzj6xtzugzv3fyn",
-          "type": [
-            "build",
-            "run"
-          ]
-        }
-      ],
-      "hash": "txebf3ri2y3mu4wzll3kawj7372otowx"
-    },
-    "opammkeu6ynghunkzxrpf7rsc4y3ix4d": {
-      "name": "fftw",
-      "version": "3.3.10",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "rhel7",
-        "target": {
-          "name": "power9le",
-          "vendor": "IBM",
-          "features": [],
-          "generation": 9,
-          "parents": [
-            "power8le"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "7.3.1"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "mpi": true,
-        "openmp": false,
-        "pfft_patches": false,
-        "precision": [
-          "double",
-          "float"
-        ],
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "dependencies": [
-        {
-          "name": "gnuconfig",
-          "build_hash": "5lkknzeh3qw2akhhhfww3il35xdyksdi",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "spectrum-mpi",
-          "build_hash": "tvrmqg5d5hzwgk747qzj6xtzugzv3fyn",
-          "type": [
-            "build",
-            "link"
-          ]
-        }
-      ],
-      "hash": "dxo6krbpxfssktmvyi57syicpnd4fe34"
-    },
-    "wne6zkha5sjcvjgbsvob2wmd27ofa2zp": {
-      "name": "magma",
-      "version": "2.6.1",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "rhel7",
-        "target": {
-          "name": "power9le",
-          "vendor": "IBM",
-          "features": [],
-          "generation": 9,
-          "parents": [
-            "power8le"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "7.3.1"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "amdgpu_target": [
-          "none"
-        ],
-        "build_type": "RelWithDebInfo",
-        "cuda": true,
-        "cuda_arch": [
-          "70"
-        ],
-        "fortran": true,
-        "ipo": false,
-        "rocm": false,
-        "shared": true,
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "dependencies": [
-        {
-          "name": "cmake",
-          "build_hash": "psrodwzsowo4aqt7yp7uon5t3lav4767",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "cuda",
-          "build_hash": "nsbamhir2znhugvmlx7xlmomvj2gqyj6",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "openblas",
-          "build_hash": "6uqvrcuz7l4g4egaiggyzk7t5hcsf74b",
-          "type": [
-            "build",
-            "link"
-          ]
-        }
-      ],
-      "hash": "pzaawhrjmj2xd6kjuecnxt42u53i6fxu"
-    },
-    "oabigl35nvndtinvxninigefqkznkcff": {
-      "name": "mfem",
-      "version": "4.3.0",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "rhel7",
-        "target": {
-          "name": "power9le",
-          "vendor": "IBM",
-          "features": [],
-          "generation": 9,
-          "parents": [
-            "power8le"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "7.3.1"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "amdgpu_target": [
-          "none"
-        ],
-        "amgx": false,
-        "conduit": false,
-        "cuda": true,
-        "cuda_arch": [
-          "70"
-        ],
-        "debug": false,
-        "examples": true,
-        "gnutls": false,
-        "gslib": false,
-        "lapack": false,
-        "libceed": false,
-        "libunwind": false,
-        "metis": true,
-        "miniapps": true,
-        "mpfr": false,
-        "mpi": true,
-        "netcdf": false,
-        "occa": false,
-        "openmp": false,
-        "patches": [
-          "5d0451e9ad09fdfc6a8114604a1a9eeef78fe5d8b12b139514a1fe7c2b07f3d1",
-          "ccc98d6d874a760218c9f6e4bcf3a97ea79746b0f28997f4312fcf02a0beae6e"
-        ],
-        "petsc": true,
-        "pumi": false,
-        "raja": false,
-        "rocm": false,
-        "shared": false,
-        "slepc": false,
-        "static": true,
-        "strumpack": false,
-        "suite-sparse": false,
-        "sundials": true,
-        "superlu-dist": true,
-        "threadsafe": false,
-        "timer": "auto",
-        "umpire": false,
-        "zlib": true,
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "patches": [
-        "ccc98d6d874a760218c9f6e4bcf3a97ea79746b0f28997f4312fcf02a0beae6e",
-        "5d0451e9ad09fdfc6a8114604a1a9eeef78fe5d8b12b139514a1fe7c2b07f3d1"
-      ],
-      "dependencies": [
-        {
-          "name": "cuda",
-          "build_hash": "nsbamhir2znhugvmlx7xlmomvj2gqyj6",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "hypre",
-          "build_hash": "2ernrm2pwcw3qt7hqrvgwocz5oiwv5km",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "metis",
-          "build_hash": "ahcezx6tcswwhv4ivnr6ymz34lcs2ezl",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "petsc",
-          "build_hash": "st6j4dmrqqnjetlqrlskeebi7kdgrluz",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "spectrum-mpi",
-          "build_hash": "tvrmqg5d5hzwgk747qzj6xtzugzv3fyn",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "sundials",
-          "build_hash": "jsyi342jmrwv6lezlea4ljdrxdjv7fus",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "superlu-dist",
-          "build_hash": "ogi242ximlepydxrq6evkjvdvry4bs4o",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "zlib",
-          "build_hash": "injpmg45ihuhup7lyk2pxlymkkhf5bvj",
-          "type": [
-            "build",
-            "link"
-          ]
-        }
-      ],
-      "hash": "frinhvuny7f5hfr2sa3dqb2appjm23om"
-    },
-    "owj6b6wxkoc3qzi45u6hdjtdk2ygtqms": {
-      "name": "omega-h",
-      "version": "9.34.1",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "rhel7",
-        "target": {
-          "name": "power9le",
-          "vendor": "IBM",
-          "features": [],
-          "generation": 9,
-          "parents": [
-            "power8le"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "7.3.1"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "build_type": "RelWithDebInfo",
-        "examples": false,
-        "ipo": false,
-        "mpi": true,
-        "optimize": true,
-        "shared": true,
-        "symbols": true,
-        "throw": false,
-        "trilinos": true,
-        "warnings": false,
-        "zlib": true,
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "dependencies": [
-        {
-          "name": "cmake",
-          "build_hash": "psrodwzsowo4aqt7yp7uon5t3lav4767",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "spectrum-mpi",
-          "build_hash": "tvrmqg5d5hzwgk747qzj6xtzugzv3fyn",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "trilinos",
-          "build_hash": "mxkbfvl7zajzgasl2hf4t3kksgxluwqm",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "zlib",
-          "build_hash": "injpmg45ihuhup7lyk2pxlymkkhf5bvj",
-          "type": [
-            "build",
-            "link"
-          ]
-        }
-      ],
-      "hash": "uknkzsw2jc67boe5ker35i3mdpkhlyr2"
-    },
-    "lsw67gztok2e7wquz2gzyxmskv3yqtrr": {
-      "name": "phist",
-      "version": "1.9.5",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "rhel7",
-        "target": {
-          "name": "power9le",
-          "vendor": "IBM",
-          "features": [],
-          "generation": 9,
-          "parents": [
-            "power8le"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "7.3.1"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "build_type": "RelWithDebInfo",
-        "fortran": false,
-        "host": false,
-        "int64": false,
-        "ipo": false,
-        "kernel_lib": "tpetra",
-        "mpi": true,
-        "openmp": false,
-        "outlev": "2",
-        "parmetis": false,
-        "scamac": false,
-        "shared": true,
-        "trilinos": false,
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "dependencies": [
-        {
-          "name": "cmake",
-          "build_hash": "psrodwzsowo4aqt7yp7uon5t3lav4767",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "openblas",
-          "build_hash": "6uqvrcuz7l4g4egaiggyzk7t5hcsf74b",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "spectrum-mpi",
-          "build_hash": "tvrmqg5d5hzwgk747qzj6xtzugzv3fyn",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "trilinos",
-          "build_hash": "mxkbfvl7zajzgasl2hf4t3kksgxluwqm",
-          "type": [
-            "build",
-            "link"
-          ]
-        }
-      ],
-      "hash": "boqn47i637pwuwdst4rksluoo4e6ycw2"
-    },
-    "uwdbwptblj5cosn6sf2jtu2yx73lvauw": {
-      "name": "plasma",
-      "version": "21.8.29",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "rhel7",
-        "target": {
-          "name": "power9le",
-          "vendor": "IBM",
-          "features": [],
-          "generation": 9,
-          "parents": [
-            "power8le"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "7.3.1"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "build_type": "RelWithDebInfo",
-        "ipo": false,
-        "lua": false,
-        "shared": true,
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "dependencies": [
-        {
-          "name": "cmake",
-          "build_hash": "psrodwzsowo4aqt7yp7uon5t3lav4767",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "openblas",
-          "build_hash": "6uqvrcuz7l4g4egaiggyzk7t5hcsf74b",
-          "type": [
-            "build",
-            "link"
-          ]
-        }
-      ],
-      "hash": "2hs4nwkrdk7bmgsihgt6yqh4rth2awt5"
-    },
-    "pmm3b5ebwv5b6c6vbwkgx66cylslczaa": {
-      "name": "precice",
       "version": "2.3.0",
       "arch": {
         "platform": "linux",
@@ -4510,6 +4068,640 @@
       },
       "namespace": "builtin",
       "parameters": {
+        "build_system": "cmake",
+        "build_type": "RelWithDebInfo",
+        "cuda": true,
+        "cuda_arch": [
+          "70"
+        ],
+        "fftw": true,
+        "fortran": false,
+        "ipo": false,
+        "magma": true,
+        "mkl": false,
+        "python": false,
+        "rocm": false,
+        "shared": true,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "u6fhmklwb3g6n3grtga5t2es3w6k3xeuq2y4fwynxl5sfxaix33q====",
+      "dependencies": [
+        {
+          "name": "cmake",
+          "hash": "mmeaau2dw4pch3tf44uvh3iiwcit7j5m",
+          "type": [
+            "build",
+            "run"
+          ]
+        },
+        {
+          "name": "cuda",
+          "hash": "nnh3nukp2nbnvkazeg7tdecep3rctgdp",
+          "type": [
+            "build",
+            "link",
+            "run"
+          ]
+        },
+        {
+          "name": "fftw",
+          "hash": "by3bclnvndukhz2q7ys25fbt7pt4xbz4",
+          "type": [
+            "build",
+            "run"
+          ]
+        },
+        {
+          "name": "magma",
+          "hash": "tmulfouhbkvquq2q6ev6mnd7eadzogx2",
+          "type": [
+            "build",
+            "run"
+          ]
+        },
+        {
+          "name": "spectrum-mpi",
+          "hash": "aowt4oks6ctgkgfklbpppp3glslziybk",
+          "type": [
+            "build",
+            "run"
+          ]
+        }
+      ],
+      "hash": "t6qpj67iww46m3jdjwvkstgfxtpl3hpv"
+    },
+    "by3bclnvndukhz2q7ys25fbt7pt4xbz4": {
+      "name": "fftw",
+      "version": "3.3.10",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "rhel7",
+        "target": {
+          "name": "power9le",
+          "vendor": "IBM",
+          "features": [],
+          "generation": 9,
+          "parents": [
+            "power8le"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "8.3.1"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "autotools",
+        "mpi": true,
+        "openmp": false,
+        "pfft_patches": false,
+        "precision": [
+          "double",
+          "float"
+        ],
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "b5bkvwfcfqyx7ankdqcm4v7cqwyxavvafi2js6ztj7myfnsf2qzq====",
+      "dependencies": [
+        {
+          "name": "gnuconfig",
+          "hash": "x7svgkfedji6bmdtamg3frwrv7dzocr6",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "spectrum-mpi",
+          "hash": "aowt4oks6ctgkgfklbpppp3glslziybk",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "by3bclnvndukhz2q7ys25fbt7pt4xbz4"
+    },
+    "tmulfouhbkvquq2q6ev6mnd7eadzogx2": {
+      "name": "magma",
+      "version": "2.6.2",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "rhel7",
+        "target": {
+          "name": "power9le",
+          "vendor": "IBM",
+          "features": [],
+          "generation": 9,
+          "parents": [
+            "power8le"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "8.3.1"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "cmake",
+        "build_type": "RelWithDebInfo",
+        "cuda": true,
+        "cuda_arch": [
+          "70"
+        ],
+        "fortran": true,
+        "ipo": false,
+        "rocm": false,
+        "shared": true,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "didcxmubnmtftdqm3djwkyxjjillhhodti4eoxy6a3e6pjfydz3a====",
+      "dependencies": [
+        {
+          "name": "cmake",
+          "hash": "mmeaau2dw4pch3tf44uvh3iiwcit7j5m",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "cuda",
+          "hash": "nnh3nukp2nbnvkazeg7tdecep3rctgdp",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "openblas",
+          "hash": "ibdwbptusvvs34czdxpxazptj6wosm3s",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "tmulfouhbkvquq2q6ev6mnd7eadzogx2"
+    },
+    "7o622e4yxtyxk23rzxlo45x2l3q6anvi": {
+      "name": "hiop",
+      "version": "0.7.1",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "rhel7",
+        "target": {
+          "name": "power9le",
+          "vendor": "IBM",
+          "features": [],
+          "generation": 9,
+          "parents": [
+            "power8le"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "8.3.1"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "cmake",
+        "build_type": "RelWithDebInfo",
+        "cuda": false,
+        "cusolver": false,
+        "deepchecking": true,
+        "ginkgo": false,
+        "ipo": false,
+        "jsrun": false,
+        "kron": false,
+        "mpi": true,
+        "raja": false,
+        "rocm": false,
+        "shared": false,
+        "sparse": false,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "f43pist4kxrfdrew7oytmo6t2xl7vluqihptic7j53kit32nd67q====",
+      "dependencies": [
+        {
+          "name": "cmake",
+          "hash": "mmeaau2dw4pch3tf44uvh3iiwcit7j5m",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "openblas",
+          "hash": "ibdwbptusvvs34czdxpxazptj6wosm3s",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "spectrum-mpi",
+          "hash": "aowt4oks6ctgkgfklbpppp3glslziybk",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "7o622e4yxtyxk23rzxlo45x2l3q6anvi"
+    },
+    "wxcjirwoibchwyaynvthpxojyvhmr6ut": {
+      "name": "mfem",
+      "version": "4.5.0",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "rhel7",
+        "target": {
+          "name": "power9le",
+          "vendor": "IBM",
+          "features": [],
+          "generation": 9,
+          "parents": [
+            "power8le"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "8.3.1"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "amgx": false,
+        "build_system": "generic",
+        "conduit": false,
+        "cuda": true,
+        "cuda_arch": [
+          "70"
+        ],
+        "debug": false,
+        "examples": true,
+        "exceptions": false,
+        "fms": false,
+        "ginkgo": false,
+        "gnutls": false,
+        "gslib": false,
+        "hiop": false,
+        "lapack": false,
+        "libceed": false,
+        "libunwind": false,
+        "metis": true,
+        "miniapps": true,
+        "mpfr": false,
+        "mpi": true,
+        "netcdf": false,
+        "occa": false,
+        "openmp": false,
+        "petsc": true,
+        "pumi": false,
+        "raja": false,
+        "rocm": false,
+        "shared": true,
+        "slepc": false,
+        "static": true,
+        "strumpack": false,
+        "suite-sparse": false,
+        "sundials": true,
+        "superlu-dist": true,
+        "threadsafe": false,
+        "timer": "auto",
+        "umpire": false,
+        "zlib": true,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "lppbidgngrhdb6w5epuhj6rga5q7ilquacphm6i2ap342but6i7a====",
+      "dependencies": [
+        {
+          "name": "cuda",
+          "hash": "nnh3nukp2nbnvkazeg7tdecep3rctgdp",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "hypre",
+          "hash": "dvxnb3jbaz64h72eopd7vb5ak3ifi5y7",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "metis",
+          "hash": "53mdjnz4gwc6w2srnu2ren2vnzdoy7dj",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "petsc",
+          "hash": "gr6uucu5vswdfxer27gvimztn24574gx",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "spectrum-mpi",
+          "hash": "aowt4oks6ctgkgfklbpppp3glslziybk",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "sundials",
+          "hash": "5fqgcmjcmlxlgloq37h546rmvraga4pr",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "superlu-dist",
+          "hash": "x5eb2w35ijvj7qrzsz3jc367ptqwfc7f",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "zlib",
+          "hash": "47rpkhn4wuv6bikfrz36bah6n5rx5vr6",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "wxcjirwoibchwyaynvthpxojyvhmr6ut"
+    },
+    "2ibmg7nas4h347hbod73dcdewcsas3xp": {
+      "name": "omega-h",
+      "version": "9.34.13",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "rhel7",
+        "target": {
+          "name": "power9le",
+          "vendor": "IBM",
+          "features": [],
+          "generation": 9,
+          "parents": [
+            "power8le"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "8.3.1"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "cmake",
+        "build_type": "RelWithDebInfo",
+        "cuda": false,
+        "examples": false,
+        "ipo": false,
+        "mpi": true,
+        "optimize": true,
+        "shared": true,
+        "symbols": true,
+        "throw": false,
+        "trilinos": true,
+        "warnings": false,
+        "zlib": true,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "lfc4nz345skouhm7nitd7hppwca3fshgqan75q3ivffo2tltbtdq====",
+      "dependencies": [
+        {
+          "name": "cmake",
+          "hash": "mmeaau2dw4pch3tf44uvh3iiwcit7j5m",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "spectrum-mpi",
+          "hash": "aowt4oks6ctgkgfklbpppp3glslziybk",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "trilinos",
+          "hash": "hzkc3wuc2xsvh5vevgej2vxvjuukwhvz",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "zlib",
+          "hash": "47rpkhn4wuv6bikfrz36bah6n5rx5vr6",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "2ibmg7nas4h347hbod73dcdewcsas3xp"
+    },
+    "b6ii2mp7x6yejhlfpuz23vjd75sv76bj": {
+      "name": "phist",
+      "version": "1.11.2",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "rhel7",
+        "target": {
+          "name": "power9le",
+          "vendor": "IBM",
+          "features": [],
+          "generation": 9,
+          "parents": [
+            "power8le"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "8.3.1"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "cmake",
+        "build_type": "RelWithDebInfo",
+        "fortran": false,
+        "host": false,
+        "int64": false,
+        "ipo": false,
+        "kernel_lib": "tpetra",
+        "mpi": true,
+        "openmp": false,
+        "outlev": "2",
+        "parmetis": false,
+        "scamac": false,
+        "shared": true,
+        "trilinos": false,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "4hlktf75ldes6l4p5l3thpjuerorvyc7balqgdxyxmeommbzx35a====",
+      "dependencies": [
+        {
+          "name": "cmake",
+          "hash": "mmeaau2dw4pch3tf44uvh3iiwcit7j5m",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "openblas",
+          "hash": "ibdwbptusvvs34czdxpxazptj6wosm3s",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "spectrum-mpi",
+          "hash": "aowt4oks6ctgkgfklbpppp3glslziybk",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "trilinos",
+          "hash": "hzkc3wuc2xsvh5vevgej2vxvjuukwhvz",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "b6ii2mp7x6yejhlfpuz23vjd75sv76bj"
+    },
+    "li2ltcqajq42gbjnrfliqkp6semoa4xw": {
+      "name": "plasma",
+      "version": "22.9.29",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "rhel7",
+        "target": {
+          "name": "power9le",
+          "vendor": "IBM",
+          "features": [],
+          "generation": 9,
+          "parents": [
+            "power8le"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "8.3.1"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "cmake",
+        "build_type": "RelWithDebInfo",
+        "ipo": false,
+        "lua": false,
+        "shared": true,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "4dvpnn6ihmrqxxnz6wafzl2qgdy3jcfmrccttlsyzn3o7tbafwba====",
+      "dependencies": [
+        {
+          "name": "cmake",
+          "hash": "mmeaau2dw4pch3tf44uvh3iiwcit7j5m",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "openblas",
+          "hash": "ibdwbptusvvs34czdxpxazptj6wosm3s",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "li2ltcqajq42gbjnrfliqkp6semoa4xw"
+    },
+    "foze2hups4lz3jt3y4icccgfvmw545kb": {
+      "name": "precice",
+      "version": "2.5.0",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "rhel7",
+        "target": {
+          "name": "power9le",
+          "vendor": "IBM",
+          "features": [],
+          "generation": 9,
+          "parents": [
+            "power8le"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "8.3.1"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "cmake",
         "build_type": "RelWithDebInfo",
         "ipo": false,
         "mpi": true,
@@ -4523,10 +4715,11 @@
         "ldflags": [],
         "ldlibs": []
       },
+      "package_hash": "t7fh4l7i2xwrljiwcbnfbh7etbguc4kd4okbxgbka73cv65ucxma====",
       "dependencies": [
         {
           "name": "boost",
-          "build_hash": "hdrwafijqwgkfkrvgozxe7mqymdoz6gw",
+          "hash": "vig7rwbsa2w3ccuf6edpghdftggq3aqs",
           "type": [
             "build",
             "link"
@@ -4534,14 +4727,14 @@
         },
         {
           "name": "cmake",
-          "build_hash": "psrodwzsowo4aqt7yp7uon5t3lav4767",
+          "hash": "mmeaau2dw4pch3tf44uvh3iiwcit7j5m",
           "type": [
             "build"
           ]
         },
         {
           "name": "eigen",
-          "build_hash": "2mscrh5rw7ekvlgucdaecjp3qkclhwjk",
+          "hash": "dsv2gdwmkmtpwrkiukp4jsli5kyvkseo",
           "type": [
             "build",
             "link"
@@ -4549,7 +4742,7 @@
         },
         {
           "name": "libxml2",
-          "build_hash": "njnykhwbn2znuxs7ubrdps3365lop5ly",
+          "hash": "fl3otux4lkskemr3qqhoe5dtkqbxgh4k",
           "type": [
             "build",
             "link"
@@ -4557,7 +4750,7 @@
         },
         {
           "name": "petsc",
-          "build_hash": "st6j4dmrqqnjetlqrlskeebi7kdgrluz",
+          "hash": "gr6uucu5vswdfxer27gvimztn24574gx",
           "type": [
             "build",
             "link"
@@ -4565,23 +4758,23 @@
         },
         {
           "name": "pkgconf",
-          "build_hash": "yfssj3vccyx273h3ftjujz2dc3s2voqr",
+          "hash": "vbajcm5norjv4wtxv7lzozsg62na54bp",
           "type": [
             "build"
           ]
         },
         {
           "name": "spectrum-mpi",
-          "build_hash": "tvrmqg5d5hzwgk747qzj6xtzugzv3fyn",
+          "hash": "aowt4oks6ctgkgfklbpppp3glslziybk",
           "type": [
             "build",
             "link"
           ]
         }
       ],
-      "hash": "p5jcsuiixrfugy6dzqitkvxjunhdmjik"
+      "hash": "foze2hups4lz3jt3y4icccgfvmw545kb"
     },
-    "2mscrh5rw7ekvlgucdaecjp3qkclhwjk": {
+    "dsv2gdwmkmtpwrkiukp4jsli5kyvkseo": {
       "name": "eigen",
       "version": "3.4.0",
       "arch": {
@@ -4603,6 +4796,7 @@
       },
       "namespace": "builtin",
       "parameters": {
+        "build_system": "cmake",
         "build_type": "RelWithDebInfo",
         "ipo": false,
         "cflags": [],
@@ -4612,20 +4806,21 @@
         "ldflags": [],
         "ldlibs": []
       },
+      "package_hash": "x7c26o5jod64wgledbchzq5prsehv7fay5musbmpnicilectcctq====",
       "dependencies": [
         {
           "name": "cmake",
-          "build_hash": "psrodwzsowo4aqt7yp7uon5t3lav4767",
+          "hash": "mmeaau2dw4pch3tf44uvh3iiwcit7j5m",
           "type": [
             "build"
           ]
         }
       ],
-      "hash": "e5bo4uzbdso2csa5j7xl426kt2rzuxfm"
+      "hash": "dsv2gdwmkmtpwrkiukp4jsli5kyvkseo"
     },
-    "4nqbiq6jrmgqzooo4ygqd5cl55ki7fke": {
+    "wulfc2pjhryxaw7duwd427ltohyq3ytt": {
       "name": "pumi",
-      "version": "2.2.6",
+      "version": "2.2.7",
       "arch": {
         "platform": "linux",
         "platform_os": "rhel7",
@@ -4641,15 +4836,16 @@
       },
       "compiler": {
         "name": "gcc",
-        "version": "7.3.1"
+        "version": "8.3.1"
       },
       "namespace": "builtin",
       "parameters": {
+        "build_system": "cmake",
         "build_type": "RelWithDebInfo",
         "fortran": false,
         "int64": false,
         "ipo": false,
-        "shared": false,
+        "shared": true,
         "simmodsuite": "none",
         "simmodsuite_version_check": true,
         "testing": false,
@@ -4661,28 +4857,29 @@
         "ldflags": [],
         "ldlibs": []
       },
+      "package_hash": "5opj7f2dqrraqhr5apjt5z6fua4otwud4m2mczbzyh7seihld6sq====",
       "dependencies": [
         {
           "name": "cmake",
-          "build_hash": "psrodwzsowo4aqt7yp7uon5t3lav4767",
+          "hash": "mmeaau2dw4pch3tf44uvh3iiwcit7j5m",
           "type": [
             "build"
           ]
         },
         {
           "name": "spectrum-mpi",
-          "build_hash": "tvrmqg5d5hzwgk747qzj6xtzugzv3fyn",
+          "hash": "aowt4oks6ctgkgfklbpppp3glslziybk",
           "type": [
             "build",
             "link"
           ]
         }
       ],
-      "hash": "iapb3fgjekf2qx7coyfo2ce3lg6q2ppa"
+      "hash": "wulfc2pjhryxaw7duwd427ltohyq3ytt"
     },
-    "cnexoy4g62u7j5ythi6lqkkbe5yh7h6f": {
+    "g73uhmztds5rvyve3roj6utz3yxrass3": {
       "name": "py-libensemble",
-      "version": "0.8.0",
+      "version": "0.9.3",
       "arch": {
         "platform": "linux",
         "platform_os": "rhel7",
@@ -4698,10 +4895,11 @@
       },
       "compiler": {
         "name": "gcc",
-        "version": "7.3.1"
+        "version": "8.3.1"
       },
       "namespace": "builtin",
       "parameters": {
+        "build_system": "python_pip",
         "deap": false,
         "mpi": false,
         "mpmath": false,
@@ -4717,10 +4915,11 @@
         "ldflags": [],
         "ldlibs": []
       },
+      "package_hash": "aro4pmxwztjvkl2x6eujkg42etz327mszf6nwjc5t364amgdlx7q====",
       "dependencies": [
         {
           "name": "py-numpy",
-          "build_hash": "3m2d7s7wjpg2umubbt5j6jcuavyfxg6r",
+          "hash": "djshsmegodnnm7jjghrkvlpfnvvoityx",
           "type": [
             "build",
             "run"
@@ -4728,15 +4927,22 @@
         },
         {
           "name": "py-petsc4py",
-          "build_hash": "gz5c7lyoetangg23npiglzxhr4a6levr",
+          "hash": "jbechpsoyrfytff4ob5dmj56p7zldza2",
           "type": [
             "build",
             "run"
           ]
         },
         {
+          "name": "py-pip",
+          "hash": "qp2qdnwwi66svqskuvlxrbz5qy6tancq",
+          "type": [
+            "build"
+          ]
+        },
+        {
           "name": "py-psutil",
-          "build_hash": "4wwcj772q2gshgmhcrfagxoiptevshqw",
+          "hash": "xipb4mov4ue3h2cfvbenkzau5czp3hln",
           "type": [
             "build",
             "run"
@@ -4744,23 +4950,30 @@
         },
         {
           "name": "py-setuptools",
-          "build_hash": "e3mq42ehgfqmyj5qu75pquctlgtsdvke",
+          "hash": "nifivpy5m4sdmxoqd652oewwzmpphjr4",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "py-wheel",
+          "hash": "fmazqwn6wc4ogrojhgpcl3m4qi5m4m6v",
           "type": [
             "build"
           ]
         },
         {
           "name": "python",
-          "build_hash": "dpderlk3ynfqb42j52vbtyefchzukz4j",
+          "hash": "twhk7zxis5hp4hr2bh6pk4onfokb4v6u",
           "type": [
             "build",
             "run"
           ]
         }
       ],
-      "hash": "npfcunutxqhmptopv6lbitb5giqwp6cs"
+      "hash": "g73uhmztds5rvyve3roj6utz3yxrass3"
     },
-    "3m2d7s7wjpg2umubbt5j6jcuavyfxg6r": {
+    "djshsmegodnnm7jjghrkvlpfnvvoityx": {
       "name": "py-numpy",
       "version": "1.19.5",
       "arch": {
@@ -4778,11 +4991,12 @@
       },
       "compiler": {
         "name": "gcc",
-        "version": "7.3.1"
+        "version": "8.3.1"
       },
       "namespace": "builtin",
       "parameters": {
         "blas": true,
+        "build_system": "python_pip",
         "lapack": true,
         "patches": [
           "8a9d5d1b3f145c043b8b04869e7d46c6ff95c3f486d84f69693017c7e6190c7d"
@@ -4797,10 +5011,11 @@
       "patches": [
         "8a9d5d1b3f145c043b8b04869e7d46c6ff95c3f486d84f69693017c7e6190c7d"
       ],
+      "package_hash": "m4amyuo6i2ji4xvuv7nu2ps6oskbp5hjosi46rpxzg7abx32rgtq====",
       "dependencies": [
         {
           "name": "openblas",
-          "build_hash": "6uqvrcuz7l4g4egaiggyzk7t5hcsf74b",
+          "hash": "ibdwbptusvvs34czdxpxazptj6wosm3s",
           "type": [
             "build",
             "link"
@@ -4808,22 +5023,36 @@
         },
         {
           "name": "py-cython",
-          "build_hash": "ywne5e6gt4qb3cbsr2lvxaxyasb45uka",
+          "hash": "pguibo2ahdtcqp6sredodo75dt3sgle5",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "py-pip",
+          "hash": "qp2qdnwwi66svqskuvlxrbz5qy6tancq",
           "type": [
             "build"
           ]
         },
         {
           "name": "py-setuptools",
-          "build_hash": "e3mq42ehgfqmyj5qu75pquctlgtsdvke",
+          "hash": "nifivpy5m4sdmxoqd652oewwzmpphjr4",
           "type": [
             "build",
             "run"
           ]
         },
         {
+          "name": "py-wheel",
+          "hash": "fmazqwn6wc4ogrojhgpcl3m4qi5m4m6v",
+          "type": [
+            "build"
+          ]
+        },
+        {
           "name": "python",
-          "build_hash": "dpderlk3ynfqb42j52vbtyefchzukz4j",
+          "hash": "twhk7zxis5hp4hr2bh6pk4onfokb4v6u",
           "type": [
             "build",
             "link",
@@ -4831,11 +5060,11 @@
           ]
         }
       ],
-      "hash": "wfyb7gjttfeeernx4qxrzij4na5fzm5f"
+      "hash": "djshsmegodnnm7jjghrkvlpfnvvoityx"
     },
-    "ywne5e6gt4qb3cbsr2lvxaxyasb45uka": {
+    "pguibo2ahdtcqp6sredodo75dt3sgle5": {
       "name": "py-cython",
-      "version": "0.29.24",
+      "version": "0.29.32",
       "arch": {
         "platform": "linux",
         "platform_os": "rhel7",
@@ -4851,10 +5080,11 @@
       },
       "compiler": {
         "name": "gcc",
-        "version": "7.3.1"
+        "version": "8.3.1"
       },
       "namespace": "builtin",
       "parameters": {
+        "build_system": "python_pip",
         "cflags": [],
         "cppflags": [],
         "cxxflags": [],
@@ -4862,18 +5092,33 @@
         "ldflags": [],
         "ldlibs": []
       },
+      "package_hash": "elqjkhhg7are3j5mmauzyjjm6zzn7rgnqrtqo7z34yqeym2x6xga====",
       "dependencies": [
+        {
+          "name": "py-pip",
+          "hash": "qp2qdnwwi66svqskuvlxrbz5qy6tancq",
+          "type": [
+            "build"
+          ]
+        },
         {
           "name": "py-setuptools",
-          "build_hash": "e3mq42ehgfqmyj5qu75pquctlgtsdvke",
+          "hash": "nifivpy5m4sdmxoqd652oewwzmpphjr4",
           "type": [
             "build",
             "run"
           ]
         },
         {
+          "name": "py-wheel",
+          "hash": "fmazqwn6wc4ogrojhgpcl3m4qi5m4m6v",
+          "type": [
+            "build"
+          ]
+        },
+        {
           "name": "python",
-          "build_hash": "dpderlk3ynfqb42j52vbtyefchzukz4j",
+          "hash": "twhk7zxis5hp4hr2bh6pk4onfokb4v6u",
           "type": [
             "build",
             "link",
@@ -4881,11 +5126,11 @@
           ]
         }
       ],
-      "hash": "pstocrno3kjhtwdmnhi5tlwgmhfbocsd"
+      "hash": "pguibo2ahdtcqp6sredodo75dt3sgle5"
     },
-    "e3mq42ehgfqmyj5qu75pquctlgtsdvke": {
-      "name": "py-setuptools",
-      "version": "58.2.0",
+    "qp2qdnwwi66svqskuvlxrbz5qy6tancq": {
+      "name": "py-pip",
+      "version": "22.2.2",
       "arch": {
         "platform": "linux",
         "platform_os": "rhel7",
@@ -4901,10 +5146,11 @@
       },
       "compiler": {
         "name": "gcc",
-        "version": "7.3.1"
+        "version": "8.3.1"
       },
       "namespace": "builtin",
       "parameters": {
+        "build_system": "generic",
         "cflags": [],
         "cppflags": [],
         "cxxflags": [],
@@ -4912,21 +5158,22 @@
         "ldflags": [],
         "ldlibs": []
       },
+      "package_hash": "2elrmqyirk4gxdqmshjjtzvvucnqpejng4rtiy4cjzpq7e4iik4a====",
       "dependencies": [
         {
           "name": "python",
-          "build_hash": "dpderlk3ynfqb42j52vbtyefchzukz4j",
+          "hash": "twhk7zxis5hp4hr2bh6pk4onfokb4v6u",
           "type": [
             "build",
             "run"
           ]
         }
       ],
-      "hash": "lnpeinz4mqgtxkmlxq6om4rzpre3h3r4"
+      "hash": "qp2qdnwwi66svqskuvlxrbz5qy6tancq"
     },
-    "gz5c7lyoetangg23npiglzxhr4a6levr": {
-      "name": "py-petsc4py",
-      "version": "3.16.1",
+    "nifivpy5m4sdmxoqd652oewwzmpphjr4": {
+      "name": "py-setuptools",
+      "version": "59.4.0",
       "arch": {
         "platform": "linux",
         "platform_os": "rhel7",
@@ -4942,10 +5189,111 @@
       },
       "compiler": {
         "name": "gcc",
-        "version": "7.3.1"
+        "version": "8.3.1"
       },
       "namespace": "builtin",
       "parameters": {
+        "build_system": "generic",
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "72cm6cjkdrpaqioa2gez62357bnq4nurobn4scz5m5hwbv7s5fqa====",
+      "dependencies": [
+        {
+          "name": "py-pip",
+          "hash": "qp2qdnwwi66svqskuvlxrbz5qy6tancq",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "python",
+          "hash": "twhk7zxis5hp4hr2bh6pk4onfokb4v6u",
+          "type": [
+            "build",
+            "run"
+          ]
+        }
+      ],
+      "hash": "nifivpy5m4sdmxoqd652oewwzmpphjr4"
+    },
+    "fmazqwn6wc4ogrojhgpcl3m4qi5m4m6v": {
+      "name": "py-wheel",
+      "version": "0.37.1",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "rhel7",
+        "target": {
+          "name": "power9le",
+          "vendor": "IBM",
+          "features": [],
+          "generation": 9,
+          "parents": [
+            "power8le"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "8.3.1"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "generic",
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "42yxdwjn56uiq4oxtykdpej774rxu3ad6dppvxretiamva7exjfq====",
+      "dependencies": [
+        {
+          "name": "py-pip",
+          "hash": "qp2qdnwwi66svqskuvlxrbz5qy6tancq",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "python",
+          "hash": "twhk7zxis5hp4hr2bh6pk4onfokb4v6u",
+          "type": [
+            "build",
+            "run"
+          ]
+        }
+      ],
+      "hash": "fmazqwn6wc4ogrojhgpcl3m4qi5m4m6v"
+    },
+    "jbechpsoyrfytff4ob5dmj56p7zldza2": {
+      "name": "py-petsc4py",
+      "version": "3.18.1",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "rhel7",
+        "target": {
+          "name": "power9le",
+          "vendor": "IBM",
+          "features": [],
+          "generation": 9,
+          "parents": [
+            "power8le"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "8.3.1"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "python_pip",
         "mpi": true,
         "patches": [
           "d344e0e8b4c5ebb96961e1905bdd749162c52b151538238609f4dec77e2a6360"
@@ -4960,10 +5308,11 @@
       "patches": [
         "d344e0e8b4c5ebb96961e1905bdd749162c52b151538238609f4dec77e2a6360"
       ],
+      "package_hash": "iotrwgvmtaz4prnsvo622xlz5r6hnc74yzcb7g2237olfd57dtfa====",
       "dependencies": [
         {
           "name": "petsc",
-          "build_hash": "st6j4dmrqqnjetlqrlskeebi7kdgrluz",
+          "hash": "gr6uucu5vswdfxer27gvimztn24574gx",
           "type": [
             "build",
             "link"
@@ -4971,7 +5320,7 @@
         },
         {
           "name": "py-mpi4py",
-          "build_hash": "o3v47mzcmotxunc2syqtxe7scofqjwkc",
+          "hash": "7vc7h6m6yrsv4upawqgwvqg2hmf477ux",
           "type": [
             "build",
             "run"
@@ -4979,33 +5328,47 @@
         },
         {
           "name": "py-numpy",
-          "build_hash": "3m2d7s7wjpg2umubbt5j6jcuavyfxg6r",
+          "hash": "djshsmegodnnm7jjghrkvlpfnvvoityx",
           "type": [
             "build",
             "run"
           ]
         },
         {
+          "name": "py-pip",
+          "hash": "qp2qdnwwi66svqskuvlxrbz5qy6tancq",
+          "type": [
+            "build"
+          ]
+        },
+        {
           "name": "py-setuptools",
-          "build_hash": "e3mq42ehgfqmyj5qu75pquctlgtsdvke",
+          "hash": "nifivpy5m4sdmxoqd652oewwzmpphjr4",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "py-wheel",
+          "hash": "fmazqwn6wc4ogrojhgpcl3m4qi5m4m6v",
           "type": [
             "build"
           ]
         },
         {
           "name": "python",
-          "build_hash": "dpderlk3ynfqb42j52vbtyefchzukz4j",
+          "hash": "twhk7zxis5hp4hr2bh6pk4onfokb4v6u",
           "type": [
             "build",
             "run"
           ]
         }
       ],
-      "hash": "hqxspw4u56t77uedh27hs2te6joe7x6j"
+      "hash": "jbechpsoyrfytff4ob5dmj56p7zldza2"
     },
-    "o3v47mzcmotxunc2syqtxe7scofqjwkc": {
+    "7vc7h6m6yrsv4upawqgwvqg2hmf477ux": {
       "name": "py-mpi4py",
-      "version": "3.1.2",
+      "version": "3.1.3",
       "arch": {
         "platform": "linux",
         "platform_os": "rhel7",
@@ -5021,10 +5384,11 @@
       },
       "compiler": {
         "name": "gcc",
-        "version": "7.3.1"
+        "version": "8.3.1"
       },
       "namespace": "builtin",
       "parameters": {
+        "build_system": "python_pip",
         "cflags": [],
         "cppflags": [],
         "cxxflags": [],
@@ -5032,17 +5396,32 @@
         "ldflags": [],
         "ldlibs": []
       },
+      "package_hash": "w437dc355qpa5btbdhg3upozv3oxhi5nom6k5d4fj7a6zbjqbnia====",
       "dependencies": [
         {
+          "name": "py-pip",
+          "hash": "qp2qdnwwi66svqskuvlxrbz5qy6tancq",
+          "type": [
+            "build"
+          ]
+        },
+        {
           "name": "py-setuptools",
-          "build_hash": "e3mq42ehgfqmyj5qu75pquctlgtsdvke",
+          "hash": "nifivpy5m4sdmxoqd652oewwzmpphjr4",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "py-wheel",
+          "hash": "fmazqwn6wc4ogrojhgpcl3m4qi5m4m6v",
           "type": [
             "build"
           ]
         },
         {
           "name": "python",
-          "build_hash": "dpderlk3ynfqb42j52vbtyefchzukz4j",
+          "hash": "twhk7zxis5hp4hr2bh6pk4onfokb4v6u",
           "type": [
             "build",
             "link",
@@ -5051,18 +5430,18 @@
         },
         {
           "name": "spectrum-mpi",
-          "build_hash": "tvrmqg5d5hzwgk747qzj6xtzugzv3fyn",
+          "hash": "aowt4oks6ctgkgfklbpppp3glslziybk",
           "type": [
             "build",
             "link"
           ]
         }
       ],
-      "hash": "yyy34clzf6yrk64pz2nvh7ewmxu7bi3z"
+      "hash": "7vc7h6m6yrsv4upawqgwvqg2hmf477ux"
     },
-    "4wwcj772q2gshgmhcrfagxoiptevshqw": {
+    "xipb4mov4ue3h2cfvbenkzau5czp3hln": {
       "name": "py-psutil",
-      "version": "5.8.0",
+      "version": "5.9.2",
       "arch": {
         "platform": "linux",
         "platform_os": "rhel7",
@@ -5078,10 +5457,11 @@
       },
       "compiler": {
         "name": "gcc",
-        "version": "7.3.1"
+        "version": "8.3.1"
       },
       "namespace": "builtin",
       "parameters": {
+        "build_system": "python_pip",
         "cflags": [],
         "cppflags": [],
         "cxxflags": [],
@@ -5089,28 +5469,43 @@
         "ldflags": [],
         "ldlibs": []
       },
+      "package_hash": "j2ejbawwkma64gjhjv53isfv7cit3zz7n2dl74vjlglghqdvob7a====",
       "dependencies": [
         {
+          "name": "py-pip",
+          "hash": "qp2qdnwwi66svqskuvlxrbz5qy6tancq",
+          "type": [
+            "build"
+          ]
+        },
+        {
           "name": "py-setuptools",
-          "build_hash": "e3mq42ehgfqmyj5qu75pquctlgtsdvke",
+          "hash": "nifivpy5m4sdmxoqd652oewwzmpphjr4",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "py-wheel",
+          "hash": "fmazqwn6wc4ogrojhgpcl3m4qi5m4m6v",
           "type": [
             "build"
           ]
         },
         {
           "name": "python",
-          "build_hash": "dpderlk3ynfqb42j52vbtyefchzukz4j",
+          "hash": "twhk7zxis5hp4hr2bh6pk4onfokb4v6u",
           "type": [
             "build",
             "run"
           ]
         }
       ],
-      "hash": "ypesqveojejbjyn37luhy6cle45e4tci"
+      "hash": "xipb4mov4ue3h2cfvbenkzau5czp3hln"
     },
-    "xwumabip2soxhhlhaaps4xph3z7r5fa3": {
+    "6soiq37khfl6otcds2q3dezav52yqgfj": {
       "name": "slate",
-      "version": "2021.05.02",
+      "version": "2022.07.00",
       "arch": {
         "platform": "linux",
         "platform_os": "rhel7",
@@ -5126,13 +5521,11 @@
       },
       "compiler": {
         "name": "gcc",
-        "version": "7.3.1"
+        "version": "8.3.1"
       },
       "namespace": "builtin",
       "parameters": {
-        "amdgpu_target": [
-          "none"
-        ],
+        "build_system": "cmake",
         "build_type": "RelWithDebInfo",
         "cuda": true,
         "cuda_arch": [
@@ -5150,10 +5543,11 @@
         "ldflags": [],
         "ldlibs": []
       },
+      "package_hash": "acgontm7jhssrymubqhnxxb4vamq6shpbezashp6zaqedepbw2da====",
       "dependencies": [
         {
           "name": "blaspp",
-          "build_hash": "xkfhroqnrremjwwvcrvcymm6vhf6pdy7",
+          "hash": "y7pwslttpg7ryk35bfdb75sl7n6qoiie",
           "type": [
             "build",
             "link"
@@ -5161,14 +5555,15 @@
         },
         {
           "name": "cmake",
-          "build_hash": "psrodwzsowo4aqt7yp7uon5t3lav4767",
+          "hash": "mmeaau2dw4pch3tf44uvh3iiwcit7j5m",
           "type": [
-            "build"
+            "build",
+            "run"
           ]
         },
         {
           "name": "cuda",
-          "build_hash": "nsbamhir2znhugvmlx7xlmomvj2gqyj6",
+          "hash": "nnh3nukp2nbnvkazeg7tdecep3rctgdp",
           "type": [
             "build",
             "link"
@@ -5176,15 +5571,7 @@
         },
         {
           "name": "lapackpp",
-          "build_hash": "fzxanu6csxeuvnvmyon3p7y25jfjxupj",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "netlib-scalapack",
-          "build_hash": "5fktcxgzw56v6g6e4oqr7gt6yd7hjvsd",
+          "hash": "5fdc7afu5juricab5gyibg6iys2eoc6j",
           "type": [
             "build",
             "link"
@@ -5192,7 +5579,7 @@
         },
         {
           "name": "openblas",
-          "build_hash": "6uqvrcuz7l4g4egaiggyzk7t5hcsf74b",
+          "hash": "ibdwbptusvvs34czdxpxazptj6wosm3s",
           "type": [
             "build",
             "link"
@@ -5200,18 +5587,18 @@
         },
         {
           "name": "spectrum-mpi",
-          "build_hash": "tvrmqg5d5hzwgk747qzj6xtzugzv3fyn",
+          "hash": "aowt4oks6ctgkgfklbpppp3glslziybk",
           "type": [
             "build",
             "link"
           ]
         }
       ],
-      "hash": "qhoi6jo22e6gqb6ushoqy4uhzb7lp74f"
+      "hash": "6soiq37khfl6otcds2q3dezav52yqgfj"
     },
-    "xkfhroqnrremjwwvcrvcymm6vhf6pdy7": {
+    "y7pwslttpg7ryk35bfdb75sl7n6qoiie": {
       "name": "blaspp",
-      "version": "2021.04.01",
+      "version": "2022.07.00",
       "arch": {
         "platform": "linux",
         "platform_os": "rhel7",
@@ -5227,17 +5614,15 @@
       },
       "compiler": {
         "name": "gcc",
-        "version": "7.3.1"
+        "version": "8.3.1"
       },
       "namespace": "builtin",
       "parameters": {
-        "amdgpu_target": [
-          "none"
-        ],
+        "build_system": "cmake",
         "build_type": "RelWithDebInfo",
         "cuda": true,
         "cuda_arch": [
-          "none"
+          "70"
         ],
         "ipo": false,
         "openmp": true,
@@ -5250,17 +5635,18 @@
         "ldflags": [],
         "ldlibs": []
       },
+      "package_hash": "blsxoyv7xkkvgclyujnrmj43ry7exxtplzbtb44hzo4t76l2lzhq====",
       "dependencies": [
         {
           "name": "cmake",
-          "build_hash": "psrodwzsowo4aqt7yp7uon5t3lav4767",
+          "hash": "mmeaau2dw4pch3tf44uvh3iiwcit7j5m",
           "type": [
             "build"
           ]
         },
         {
           "name": "cuda",
-          "build_hash": "nsbamhir2znhugvmlx7xlmomvj2gqyj6",
+          "hash": "nnh3nukp2nbnvkazeg7tdecep3rctgdp",
           "type": [
             "build",
             "link"
@@ -5268,18 +5654,18 @@
         },
         {
           "name": "openblas",
-          "build_hash": "6uqvrcuz7l4g4egaiggyzk7t5hcsf74b",
+          "hash": "ibdwbptusvvs34czdxpxazptj6wosm3s",
           "type": [
             "build",
             "link"
           ]
         }
       ],
-      "hash": "uzfy2aks5ch4lraowv23hmhqdhfcrulj"
+      "hash": "y7pwslttpg7ryk35bfdb75sl7n6qoiie"
     },
-    "fzxanu6csxeuvnvmyon3p7y25jfjxupj": {
+    "5fdc7afu5juricab5gyibg6iys2eoc6j": {
       "name": "lapackpp",
-      "version": "2021.04.00",
+      "version": "2022.07.00",
       "arch": {
         "platform": "linux",
         "platform_os": "rhel7",
@@ -5295,12 +5681,18 @@
       },
       "compiler": {
         "name": "gcc",
-        "version": "7.3.1"
+        "version": "8.3.1"
       },
       "namespace": "builtin",
       "parameters": {
+        "build_system": "cmake",
         "build_type": "RelWithDebInfo",
+        "cuda": true,
+        "cuda_arch": [
+          "70"
+        ],
         "ipo": false,
+        "rocm": false,
         "shared": true,
         "cflags": [],
         "cppflags": [],
@@ -5309,10 +5701,11 @@
         "ldflags": [],
         "ldlibs": []
       },
+      "package_hash": "hinqmxlg6iqwullfu3do3ljgx4egnbugrgjyzvftzp5gcdzvheca====",
       "dependencies": [
         {
           "name": "blaspp",
-          "build_hash": "xkfhroqnrremjwwvcrvcymm6vhf6pdy7",
+          "hash": "y7pwslttpg7ryk35bfdb75sl7n6qoiie",
           "type": [
             "build",
             "link"
@@ -5320,25 +5713,33 @@
         },
         {
           "name": "cmake",
-          "build_hash": "psrodwzsowo4aqt7yp7uon5t3lav4767",
+          "hash": "mmeaau2dw4pch3tf44uvh3iiwcit7j5m",
           "type": [
             "build"
           ]
         },
         {
+          "name": "cuda",
+          "hash": "nnh3nukp2nbnvkazeg7tdecep3rctgdp",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
           "name": "openblas",
-          "build_hash": "6uqvrcuz7l4g4egaiggyzk7t5hcsf74b",
+          "hash": "ibdwbptusvvs34czdxpxazptj6wosm3s",
           "type": [
             "build",
             "link"
           ]
         }
       ],
-      "hash": "n6hmjxw5rknjg4lronprbzxtt63aidtm"
+      "hash": "5fdc7afu5juricab5gyibg6iys2eoc6j"
     },
-    "5yrq5775kxtxqeamf25drmmgvwyrsint": {
+    "z6wimnsbvhxs4uirftqbr4sxfb7oqxpm": {
       "name": "slepc",
-      "version": "3.16.0",
+      "version": "3.18.1",
       "arch": {
         "platform": "linux",
         "platform_os": "rhel7",
@@ -5354,18 +5755,16 @@
       },
       "compiler": {
         "name": "gcc",
-        "version": "7.3.1"
+        "version": "8.3.1"
       },
       "namespace": "builtin",
       "parameters": {
-        "amdgpu_target": [
-          "none"
-        ],
         "arpack": true,
         "blopex": false,
-        "cuda": false,
+        "build_system": "generic",
+        "cuda": true,
         "cuda_arch": [
-          "none"
+          "70"
         ],
         "rocm": false,
         "cflags": [],
@@ -5375,10 +5774,19 @@
         "ldflags": [],
         "ldlibs": []
       },
+      "package_hash": "7nq6wmtgi22fb64iba3mhozhxpqouf6c3yystmxxbg3ygs6ejrxq====",
       "dependencies": [
         {
           "name": "arpack-ng",
-          "build_hash": "eg73ozfslox5yh26fc2yrwza66rtswhm",
+          "hash": "unpca6rns7etsn3p4wttxantu3sfzhcz",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "cuda",
+          "hash": "nnh3nukp2nbnvkazeg7tdecep3rctgdp",
           "type": [
             "build",
             "link"
@@ -5386,7 +5794,7 @@
         },
         {
           "name": "petsc",
-          "build_hash": "st6j4dmrqqnjetlqrlskeebi7kdgrluz",
+          "hash": "gr6uucu5vswdfxer27gvimztn24574gx",
           "type": [
             "build",
             "link"
@@ -5394,17 +5802,17 @@
         },
         {
           "name": "python",
-          "build_hash": "dpderlk3ynfqb42j52vbtyefchzukz4j",
+          "hash": "twhk7zxis5hp4hr2bh6pk4onfokb4v6u",
           "type": [
             "build"
           ]
         }
       ],
-      "hash": "qme75qt3hnc55e2qkz4co6jvu2tcheyl"
+      "hash": "z6wimnsbvhxs4uirftqbr4sxfb7oqxpm"
     },
-    "camouwnknnvd62yln73jvlw6tdloy6re": {
+    "27o25vrjeuqapdq44dwmtrzfkuohisjb": {
       "name": "strumpack",
-      "version": "6.1.0",
+      "version": "7.0.1",
       "arch": {
         "platform": "linux",
         "platform_os": "rhel7",
@@ -5420,29 +5828,27 @@
       },
       "compiler": {
         "name": "gcc",
-        "version": "7.3.1"
+        "version": "8.3.1"
       },
       "namespace": "builtin",
       "parameters": {
-        "amdgpu_target": [
-          "none"
-        ],
+        "build_system": "cmake",
         "build_type": "RelWithDebInfo",
         "butterflypack": true,
         "c_interface": true,
         "count_flops": false,
-        "cuda": false,
+        "cuda": true,
         "cuda_arch": [
-          "none"
+          "70"
         ],
         "ipo": false,
         "mpi": true,
-        "openmp": false,
+        "openmp": true,
         "parmetis": true,
         "rocm": false,
         "scotch": false,
         "shared": true,
-        "slate": false,
+        "slate": true,
         "task_timers": false,
         "zfp": true,
         "cflags": [],
@@ -5452,10 +5858,11 @@
         "ldflags": [],
         "ldlibs": []
       },
+      "package_hash": "6annw2sywhss76xpo4f6eov2jexrqifixowswz5bvknupwqee6ia====",
       "dependencies": [
         {
           "name": "butterflypack",
-          "build_hash": "ovofe5mils3jb4kef2umamz67eym53ux",
+          "hash": "g5wtvht7ahsw7lgmenfwewdd76sherbm",
           "type": [
             "build",
             "link"
@@ -5463,14 +5870,22 @@
         },
         {
           "name": "cmake",
-          "build_hash": "psrodwzsowo4aqt7yp7uon5t3lav4767",
+          "hash": "mmeaau2dw4pch3tf44uvh3iiwcit7j5m",
           "type": [
             "build"
           ]
         },
         {
+          "name": "cuda",
+          "hash": "nnh3nukp2nbnvkazeg7tdecep3rctgdp",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
           "name": "metis",
-          "build_hash": "ahcezx6tcswwhv4ivnr6ymz34lcs2ezl",
+          "hash": "53mdjnz4gwc6w2srnu2ren2vnzdoy7dj",
           "type": [
             "build",
             "link"
@@ -5478,7 +5893,7 @@
         },
         {
           "name": "netlib-scalapack",
-          "build_hash": "5fktcxgzw56v6g6e4oqr7gt6yd7hjvsd",
+          "hash": "4ih46zey4cvjphukjr4hffx2rw6r6v4j",
           "type": [
             "build",
             "link"
@@ -5486,7 +5901,7 @@
         },
         {
           "name": "openblas",
-          "build_hash": "6uqvrcuz7l4g4egaiggyzk7t5hcsf74b",
+          "hash": "ibdwbptusvvs34czdxpxazptj6wosm3s",
           "type": [
             "build",
             "link"
@@ -5494,7 +5909,15 @@
         },
         {
           "name": "parmetis",
-          "build_hash": "wz5vltg5fbzc5mcd6drkjfiddvwbwtuu",
+          "hash": "s7g5j4w7jzliioth3wiwpsnigze6h43j",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "slate",
+          "hash": "6soiq37khfl6otcds2q3dezav52yqgfj",
           "type": [
             "build",
             "link"
@@ -5502,7 +5925,7 @@
         },
         {
           "name": "spectrum-mpi",
-          "build_hash": "tvrmqg5d5hzwgk747qzj6xtzugzv3fyn",
+          "hash": "aowt4oks6ctgkgfklbpppp3glslziybk",
           "type": [
             "build",
             "link"
@@ -5510,16 +5933,16 @@
         },
         {
           "name": "zfp",
-          "build_hash": "7nlpcae7246f6wfbcbm346wsp6afvtaq",
+          "hash": "uy56ni3636shywiosu3c2vs4bm5ax3mb",
           "type": [
             "build",
             "link"
           ]
         }
       ],
-      "hash": "i2bosamhhad33mrqm2p3wkkrkzgobvj5"
+      "hash": "27o25vrjeuqapdq44dwmtrzfkuohisjb"
     },
-    "7nlpcae7246f6wfbcbm346wsp6afvtaq": {
+    "uy56ni3636shywiosu3c2vs4bm5ax3mb": {
       "name": "zfp",
       "version": "0.5.5",
       "arch": {
@@ -5537,18 +5960,16 @@
       },
       "compiler": {
         "name": "gcc",
-        "version": "7.3.1"
+        "version": "8.3.1"
       },
       "namespace": "builtin",
       "parameters": {
         "aligned": false,
         "bsws": "64",
+        "build_system": "cmake",
         "build_type": "RelWithDebInfo",
         "c": false,
         "cuda": false,
-        "cuda_arch": [
-          "none"
-        ],
         "fasthash": false,
         "fortran": false,
         "ipo": false,
@@ -5565,20 +5986,21 @@
         "ldflags": [],
         "ldlibs": []
       },
+      "package_hash": "b6vwqjqurt34xw2ngjeknta35b5qd77km735ay6y2qlz3eo2gtka====",
       "dependencies": [
         {
           "name": "cmake",
-          "build_hash": "psrodwzsowo4aqt7yp7uon5t3lav4767",
+          "hash": "mmeaau2dw4pch3tf44uvh3iiwcit7j5m",
           "type": [
             "build"
           ]
         }
       ],
-      "hash": "gie3svdtjsnqkaqdwrgow6wh4zanz2pn"
+      "hash": "uy56ni3636shywiosu3c2vs4bm5ax3mb"
     },
-    "pqazg7stclcfzq4ibujfubusm5ljduos": {
+    "63bm3kxbvkyqq6eu4iuvd6ardts3imje": {
       "name": "tasmanian",
-      "version": "7.7",
+      "version": "7.9",
       "arch": {
         "platform": "linux",
         "platform_os": "rhel7",
@@ -5594,14 +6016,12 @@
       },
       "compiler": {
         "name": "gcc",
-        "version": "7.3.1"
+        "version": "8.3.1"
       },
       "namespace": "builtin",
       "parameters": {
-        "amdgpu_target": [
-          "none"
-        ],
         "blas": true,
+        "build_system": "cmake",
         "build_type": "Release",
         "cuda": true,
         "cuda_arch": [
@@ -5622,10 +6042,11 @@
         "ldflags": [],
         "ldlibs": []
       },
+      "package_hash": "ahrrlepxyvkk7l75r6azonsfgzpaxjsvvbwzvffiwrp5ld6qhyxq====",
       "dependencies": [
         {
           "name": "cmake",
-          "build_hash": "psrodwzsowo4aqt7yp7uon5t3lav4767",
+          "hash": "mmeaau2dw4pch3tf44uvh3iiwcit7j5m",
           "type": [
             "build",
             "run"
@@ -5633,7 +6054,7 @@
         },
         {
           "name": "cuda",
-          "build_hash": "nsbamhir2znhugvmlx7xlmomvj2gqyj6",
+          "hash": "nnh3nukp2nbnvkazeg7tdecep3rctgdp",
           "type": [
             "build",
             "link",
@@ -5642,7 +6063,7 @@
         },
         {
           "name": "magma",
-          "build_hash": "wne6zkha5sjcvjgbsvob2wmd27ofa2zp",
+          "hash": "tmulfouhbkvquq2q6ev6mnd7eadzogx2",
           "type": [
             "build",
             "run"
@@ -5650,7 +6071,7 @@
         },
         {
           "name": "openblas",
-          "build_hash": "6uqvrcuz7l4g4egaiggyzk7t5hcsf74b",
+          "hash": "ibdwbptusvvs34czdxpxazptj6wosm3s",
           "type": [
             "build",
             "run"
@@ -5658,14 +6079,14 @@
         },
         {
           "name": "spectrum-mpi",
-          "build_hash": "tvrmqg5d5hzwgk747qzj6xtzugzv3fyn",
+          "hash": "aowt4oks6ctgkgfklbpppp3glslziybk",
           "type": [
             "build",
             "run"
           ]
         }
       ],
-      "hash": "cvzkzb6toiv4uzclt7armgzlglrehorw"
+      "hash": "63bm3kxbvkyqq6eu4iuvd6ardts3imje"
     }
   }
 }
