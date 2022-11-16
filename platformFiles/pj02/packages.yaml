@@ -1,0 +1,105 @@
+packages:
+  cmake:
+    buildable: False
+    externals:
+    - spec: cmake@3.23.3
+      prefix: /software/cmake-3.23.3
+  mpich:
+    buildable: false
+    externals:
+    - spec: mpich@4.0.1%gcc@9.4.0
+      prefix: /software/mpich-4.0.1
+  openmpi:
+    buildable: false
+    externals:
+    - spec: openmpi@4.1.4%gcc@9.4.0
+      prefix: /software/openmpi-4.1.4
+  intel-oneapi-mkl:
+    buildable: false
+    externals:
+    - spec: intel-oneapi-mkl@2022.2.0%oneapi@2022.2.0
+      prefix: /opt/intel/oneapi
+  intel-oneapi-mpi:
+    buildable: false
+    externals:
+    - spec: intel-oneapi-mpi@2021.7.0%oneapi@2022.2.0
+      prefix: /opt/intel/oneapi
+  python:
+    buildable: False
+    externals:
+    - spec: python@3.8.10%gcc@9.4.0
+      prefix: /usr
+    - spec: python@3.9.7%oneapi@2022.2.0
+      prefix: /opt/intel/oneapi/intelpython/python3.9
+#  py-numpy:
+#    buildable: False
+#    externals:
+#    - spec: py-numpy@1.17.4%gcc@9.4.0
+#      prefix: /usr
+#    - spec: py-numpy@1.21.2%oneapi@2022.2.0
+#      prefix: /opt/intel/oneapi/intelpython/python3.9
+  autoconf:
+    buildable: false
+    externals:
+    - spec: autoconf@2.69
+      prefix: /usr
+  automake:
+    buildable: false
+    externals:
+    - spec: automake@1.16.1
+      prefix: /usr
+  libtool:
+    buildable: false
+    externals:
+    - spec: libtool@2.4.6
+      prefix: /usr
+  m4:
+    buildable: false
+    externals:
+    - spec: m4@1.4.18
+      prefix: /usr
+  git:
+    buildable: false
+    externals:
+    - spec: git@2.25.1
+      prefix: /usr
+  perl:
+    buildable: false
+    externals:
+    - spec: perl@5.30.0
+      prefix: /usr
+  zlib:
+    buildable: false
+    externals:
+    - spec: zlib@1.2.11%gcc@9.4.0
+      prefix: /usr
+  pkg-config:
+    buildable: false
+    externals:
+    - spec: pkg-config@1.6.3
+      prefix: /usr
+  bzip2:
+    buildable: false
+    externals:
+    - spec: bzip2@1.0.8
+      prefix: /usr
+  xz:
+    buildable: false
+    externals:
+    - spec: xz@5.2.4
+      prefix: /usr
+  diffutils:
+    buildable: false
+    externals:
+    - spec: diffutils@3.7
+      prefix: /usr
+  ninja:
+    buildable: false
+    externals:
+    - spec: ninja@1.10.0
+      prefix: /usr
+  all:
+    providers:
+      mpi: [mpich]
+      blas: [netlib-lapack]
+      lapack: [netlib-lapack]
