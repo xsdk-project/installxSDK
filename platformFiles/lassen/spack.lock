@@ -6,12 +6,12 @@
   },
   "roots": [
     {
-      "hash": "hw5mbdafezj2ypchxkd2kkhp463nxa57",
-      "spec": "xsdk@0.8.0%gcc@8.3.1+cuda~dealii cuda_arch=70 ^cuda@11.7.0 ^python@3.9.10"
+      "hash": "burxrjzjjasfesl24mmz7yufrcw4ub7s",
+      "spec": "xsdk@0.8.0%gcc@8.3.1+cuda~dealii~raja cuda_arch=70 ^cuda@11.7.0 ^python@3.9.10"
     }
   ],
   "concrete_specs": {
-    "hw5mbdafezj2ypchxkd2kkhp463nxa57": {
+    "burxrjzjjasfesl24mmz7yufrcw4ub7s": {
       "name": "xsdk",
       "version": "0.8.0",
       "arch": {
@@ -43,7 +43,7 @@
         ],
         "datatransferkit": true,
         "dealii": false,
-        "exago": false,
+        "exago": true,
         "ginkgo": true,
         "heffte": true,
         "hiop": true,
@@ -51,6 +51,7 @@
         "omega-h": true,
         "phist": true,
         "precice": true,
+        "raja": false,
         "rocm": false,
         "slate": true,
         "strumpack": true,
@@ -62,7 +63,7 @@
         "ldflags": [],
         "ldlibs": []
       },
-      "package_hash": "5hqcd4to33pfxczh7mof5bogktvinvyjpo2vri6qjjoqlaazzp6a====",
+      "package_hash": "wag5vrr4mclhokhckiyy2z5t3k4joxworkyok6nnk7oeg55pdwza====",
       "dependencies": [
         {
           "name": "alquimia",
@@ -74,7 +75,7 @@
         },
         {
           "name": "amrex",
-          "hash": "4poiy3v5glgalg7lczkokkdhvtdahvcb",
+          "hash": "w4thlqdfvtekcfrwxke3nisl7hw2t434",
           "type": [
             "build",
             "link"
@@ -106,7 +107,15 @@
         },
         {
           "name": "datatransferkit",
-          "hash": "wo5blbpq2vjyonpblgmgfkp3ur4eqzyy",
+          "hash": "thve6w3lbdmx6lelypssimd7gqy5kj4x",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "exago",
+          "hash": "5g43gfpxummroxh43csljjw5l6vfknrz",
           "type": [
             "build",
             "link"
@@ -122,7 +131,7 @@
         },
         {
           "name": "heffte",
-          "hash": "t6qpj67iww46m3jdjwvkstgfxtpl3hpv",
+          "hash": "plrsoqgfyjg37um74nwkmpdt6octi5ge",
           "type": [
             "build",
             "link"
@@ -146,7 +155,7 @@
         },
         {
           "name": "magma",
-          "hash": "tmulfouhbkvquq2q6ev6mnd7eadzogx2",
+          "hash": "ziigb772r2izesae7544bd24zwt3bs5z",
           "type": [
             "build",
             "link"
@@ -154,7 +163,7 @@
         },
         {
           "name": "mfem",
-          "hash": "wxcjirwoibchwyaynvthpxojyvhmr6ut",
+          "hash": "6ud4pnxgoezxowe5pvtgcfudo43vcxu3",
           "type": [
             "build",
             "link"
@@ -162,7 +171,7 @@
         },
         {
           "name": "omega-h",
-          "hash": "2ibmg7nas4h347hbod73dcdewcsas3xp",
+          "hash": "i5xmzosbosczsi2nsqj7ae4mg47cjfnx",
           "type": [
             "build",
             "link"
@@ -186,7 +195,7 @@
         },
         {
           "name": "phist",
-          "hash": "b6ii2mp7x6yejhlfpuz23vjd75sv76bj",
+          "hash": "7f4qjtj2javzr7ulrgreoim2n7fofkpz",
           "type": [
             "build",
             "link"
@@ -258,7 +267,7 @@
         },
         {
           "name": "sundials",
-          "hash": "5fqgcmjcmlxlgloq37h546rmvraga4pr",
+          "hash": "7reapfhcvvffeka4p57c6emdksusq3hk",
           "type": [
             "build",
             "link"
@@ -274,7 +283,7 @@
         },
         {
           "name": "tasmanian",
-          "hash": "63bm3kxbvkyqq6eu4iuvd6ardts3imje",
+          "hash": "6yspn7wjvnanbjbibd6oats2jtqsmhkf",
           "type": [
             "build",
             "link"
@@ -282,14 +291,14 @@
         },
         {
           "name": "trilinos",
-          "hash": "hzkc3wuc2xsvh5vevgej2vxvjuukwhvz",
+          "hash": "zxuj22owlgwybkpcnsk5av4fsn4lfwj3",
           "type": [
             "build",
             "link"
           ]
         }
       ],
-      "hash": "hw5mbdafezj2ypchxkd2kkhp463nxa57"
+      "hash": "burxrjzjjasfesl24mmz7yufrcw4ub7s"
     },
     "drh3jv74zjipx2u24waejz2ol7tqd7e5": {
       "name": "alquimia",
@@ -2629,7 +2638,7 @@
       ],
       "hash": "yxoxth25yudy3xocvzmpgdv6czlonew5"
     },
-    "4poiy3v5glgalg7lczkokkdhvtdahvcb": {
+    "w4thlqdfvtekcfrwxke3nisl7hw2t434": {
       "name": "amrex",
       "version": "22.09",
       "arch": {
@@ -2711,16 +2720,16 @@
         },
         {
           "name": "sundials",
-          "hash": "5fqgcmjcmlxlgloq37h546rmvraga4pr",
+          "hash": "7reapfhcvvffeka4p57c6emdksusq3hk",
           "type": [
             "build",
             "link"
           ]
         }
       ],
-      "hash": "4poiy3v5glgalg7lczkokkdhvtdahvcb"
+      "hash": "w4thlqdfvtekcfrwxke3nisl7hw2t434"
     },
-    "5fqgcmjcmlxlgloq37h546rmvraga4pr": {
+    "7reapfhcvvffeka4p57c6emdksusq3hk": {
       "name": "sundials",
       "version": "6.4.1",
       "arch": {
@@ -2771,7 +2780,7 @@
         "lapack": false,
         "logging-level": "0",
         "logging-mpi": "OFF",
-        "magma": false,
+        "magma": true,
         "monitoring": false,
         "mpi": true,
         "openmp": false,
@@ -2794,7 +2803,7 @@
         "ldflags": [],
         "ldlibs": []
       },
-      "package_hash": "gyszshym2tcjqj7u6xfh3ffwywu5xvhbinyp3bxyzsq55r5x5fja====",
+      "package_hash": "kyslx3qp6ihm7qmhci3qofibww3jw4iqyje3zpgl4ol5l7pjquaa====",
       "dependencies": [
         {
           "name": "cmake",
@@ -2828,6 +2837,14 @@
           ]
         },
         {
+          "name": "magma",
+          "hash": "ziigb772r2izesae7544bd24zwt3bs5z",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
           "name": "petsc",
           "hash": "gr6uucu5vswdfxer27gvimztn24574gx",
           "type": [
@@ -2853,14 +2870,14 @@
         },
         {
           "name": "trilinos",
-          "hash": "hzkc3wuc2xsvh5vevgej2vxvjuukwhvz",
+          "hash": "zxuj22owlgwybkpcnsk5av4fsn4lfwj3",
           "type": [
             "build",
             "link"
           ]
         }
       ],
-      "hash": "5fqgcmjcmlxlgloq37h546rmvraga4pr"
+      "hash": "7reapfhcvvffeka4p57c6emdksusq3hk"
     },
     "khjj2h5tjgqa75uujv7v3po5pvu5cfs5": {
       "name": "ginkgo",
@@ -2934,9 +2951,76 @@
       ],
       "hash": "khjj2h5tjgqa75uujv7v3po5pvu5cfs5"
     },
-    "hzkc3wuc2xsvh5vevgej2vxvjuukwhvz": {
+    "ziigb772r2izesae7544bd24zwt3bs5z": {
+      "name": "magma",
+      "version": "2.7.0",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "rhel7",
+        "target": {
+          "name": "power9le",
+          "vendor": "IBM",
+          "features": [],
+          "generation": 9,
+          "parents": [
+            "power8le"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "8.3.1"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "cmake",
+        "build_type": "RelWithDebInfo",
+        "cuda": true,
+        "cuda_arch": [
+          "70"
+        ],
+        "fortran": true,
+        "ipo": false,
+        "rocm": false,
+        "shared": true,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "blzk7a65thzfihmp7bb4m5mcist5xtsrmlwgm7xs2qfrgcmjnmkq====",
+      "dependencies": [
+        {
+          "name": "cmake",
+          "hash": "mmeaau2dw4pch3tf44uvh3iiwcit7j5m",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "cuda",
+          "hash": "nnh3nukp2nbnvkazeg7tdecep3rctgdp",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "openblas",
+          "hash": "ibdwbptusvvs34czdxpxazptj6wosm3s",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "ziigb772r2izesae7544bd24zwt3bs5z"
+    },
+    "zxuj22owlgwybkpcnsk5av4fsn4lfwj3": {
       "name": "trilinos",
-      "version": "13.4.0",
+      "version": "13.4.1",
       "arch": {
         "platform": "linux",
         "platform_os": "rhel7",
@@ -3003,9 +3087,6 @@
         "nox": true,
         "openmp": false,
         "panzer": false,
-        "patches": [
-          "6d1bb2eb8963ef438ac4b548fb11b5dc1248cb99c3a6a59cd18a0fa966789ec2"
-        ],
         "phalanx": false,
         "piro": false,
         "python": false,
@@ -3041,10 +3122,7 @@
         "ldflags": [],
         "ldlibs": []
       },
-      "patches": [
-        "6d1bb2eb8963ef438ac4b548fb11b5dc1248cb99c3a6a59cd18a0fa966789ec2"
-      ],
-      "package_hash": "bp4wvxcloperlqvthmvoer4dtb42j7e3fx5op2ccswxh47u2l4zq====",
+      "package_hash": "kft4xrgnvt3r7zgowqxjgvmkbjwgptce2f6uasbxtjbyapnnmtzq====",
       "dependencies": [
         {
           "name": "boost",
@@ -3141,7 +3219,7 @@
           ]
         }
       ],
-      "hash": "hzkc3wuc2xsvh5vevgej2vxvjuukwhvz"
+      "hash": "zxuj22owlgwybkpcnsk5av4fsn4lfwj3"
     },
     "vig7rwbsa2w3ccuf6edpghdftggq3aqs": {
       "name": "boost",
@@ -3982,7 +4060,7 @@
       ],
       "hash": "wohmdbgikjhwsyxbexg7ol5xmhyqtl3w"
     },
-    "wo5blbpq2vjyonpblgmgfkp3ur4eqzyy": {
+    "thve6w3lbdmx6lelypssimd7gqy5kj4x": {
       "name": "datatransferkit",
       "version": "3.1-rc3",
       "arch": {
@@ -4037,16 +4115,98 @@
         },
         {
           "name": "trilinos",
-          "hash": "hzkc3wuc2xsvh5vevgej2vxvjuukwhvz",
+          "hash": "zxuj22owlgwybkpcnsk5av4fsn4lfwj3",
           "type": [
             "build",
             "link"
           ]
         }
       ],
-      "hash": "wo5blbpq2vjyonpblgmgfkp3ur4eqzyy"
+      "hash": "thve6w3lbdmx6lelypssimd7gqy5kj4x"
     },
-    "t6qpj67iww46m3jdjwvkstgfxtpl3hpv": {
+    "5g43gfpxummroxh43csljjw5l6vfknrz": {
+      "name": "exago",
+      "version": "1.5.0",
+      "arch": {
+        "platform": "linux",
+        "platform_os": "rhel7",
+        "target": {
+          "name": "power9le",
+          "vendor": "IBM",
+          "features": [],
+          "generation": 9,
+          "parents": [
+            "power8le"
+          ]
+        }
+      },
+      "compiler": {
+        "name": "gcc",
+        "version": "8.3.1"
+      },
+      "namespace": "builtin",
+      "parameters": {
+        "build_system": "cmake",
+        "build_type": "RelWithDebInfo",
+        "cuda": false,
+        "hiop": false,
+        "ipo": false,
+        "ipopt": false,
+        "mpi": true,
+        "python": false,
+        "raja": false,
+        "rocm": false,
+        "cflags": [],
+        "cppflags": [],
+        "cxxflags": [],
+        "fflags": [],
+        "ldflags": [],
+        "ldlibs": []
+      },
+      "package_hash": "44ugdszzr62yzoff742ioe55s35bkzkg5xux2k362ozpuiuq7n3q====",
+      "dependencies": [
+        {
+          "name": "cmake",
+          "hash": "mmeaau2dw4pch3tf44uvh3iiwcit7j5m",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "openblas",
+          "hash": "ibdwbptusvvs34czdxpxazptj6wosm3s",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "petsc",
+          "hash": "gr6uucu5vswdfxer27gvimztn24574gx",
+          "type": [
+            "build",
+            "link"
+          ]
+        },
+        {
+          "name": "pkgconf",
+          "hash": "vbajcm5norjv4wtxv7lzozsg62na54bp",
+          "type": [
+            "build"
+          ]
+        },
+        {
+          "name": "spectrum-mpi",
+          "hash": "aowt4oks6ctgkgfklbpppp3glslziybk",
+          "type": [
+            "build",
+            "link"
+          ]
+        }
+      ],
+      "hash": "5g43gfpxummroxh43csljjw5l6vfknrz"
+    },
+    "plrsoqgfyjg37um74nwkmpdt6octi5ge": {
       "name": "heffte",
       "version": "2.3.0",
       "arch": {
@@ -4089,7 +4249,7 @@
         "ldflags": [],
         "ldlibs": []
       },
-      "package_hash": "u6fhmklwb3g6n3grtga5t2es3w6k3xeuq2y4fwynxl5sfxaix33q====",
+      "package_hash": "cok4nuvd5jiap4p7k3ykmjzewr7ro4hwb4u5a3zaiurr3es7pdwa====",
       "dependencies": [
         {
           "name": "cmake",
@@ -4118,7 +4278,7 @@
         },
         {
           "name": "magma",
-          "hash": "tmulfouhbkvquq2q6ev6mnd7eadzogx2",
+          "hash": "ziigb772r2izesae7544bd24zwt3bs5z",
           "type": [
             "build",
             "run"
@@ -4133,7 +4293,7 @@
           ]
         }
       ],
-      "hash": "t6qpj67iww46m3jdjwvkstgfxtpl3hpv"
+      "hash": "plrsoqgfyjg37um74nwkmpdt6octi5ge"
     },
     "by3bclnvndukhz2q7ys25fbt7pt4xbz4": {
       "name": "fftw",
@@ -4191,73 +4351,6 @@
         }
       ],
       "hash": "by3bclnvndukhz2q7ys25fbt7pt4xbz4"
-    },
-    "tmulfouhbkvquq2q6ev6mnd7eadzogx2": {
-      "name": "magma",
-      "version": "2.6.2",
-      "arch": {
-        "platform": "linux",
-        "platform_os": "rhel7",
-        "target": {
-          "name": "power9le",
-          "vendor": "IBM",
-          "features": [],
-          "generation": 9,
-          "parents": [
-            "power8le"
-          ]
-        }
-      },
-      "compiler": {
-        "name": "gcc",
-        "version": "8.3.1"
-      },
-      "namespace": "builtin",
-      "parameters": {
-        "build_system": "cmake",
-        "build_type": "RelWithDebInfo",
-        "cuda": true,
-        "cuda_arch": [
-          "70"
-        ],
-        "fortran": true,
-        "ipo": false,
-        "rocm": false,
-        "shared": true,
-        "cflags": [],
-        "cppflags": [],
-        "cxxflags": [],
-        "fflags": [],
-        "ldflags": [],
-        "ldlibs": []
-      },
-      "package_hash": "didcxmubnmtftdqm3djwkyxjjillhhodti4eoxy6a3e6pjfydz3a====",
-      "dependencies": [
-        {
-          "name": "cmake",
-          "hash": "mmeaau2dw4pch3tf44uvh3iiwcit7j5m",
-          "type": [
-            "build"
-          ]
-        },
-        {
-          "name": "cuda",
-          "hash": "nnh3nukp2nbnvkazeg7tdecep3rctgdp",
-          "type": [
-            "build",
-            "link"
-          ]
-        },
-        {
-          "name": "openblas",
-          "hash": "ibdwbptusvvs34czdxpxazptj6wosm3s",
-          "type": [
-            "build",
-            "link"
-          ]
-        }
-      ],
-      "hash": "tmulfouhbkvquq2q6ev6mnd7eadzogx2"
     },
     "7o622e4yxtyxk23rzxlo45x2l3q6anvi": {
       "name": "hiop",
@@ -4330,7 +4423,7 @@
       ],
       "hash": "7o622e4yxtyxk23rzxlo45x2l3q6anvi"
     },
-    "wxcjirwoibchwyaynvthpxojyvhmr6ut": {
+    "6ud4pnxgoezxowe5pvtgcfudo43vcxu3": {
       "name": "mfem",
       "version": "4.5.0",
       "arch": {
@@ -4377,6 +4470,9 @@
         "netcdf": false,
         "occa": false,
         "openmp": false,
+        "patches": [
+          "962f62aa3fef056de22904cffd14f0ce875453b5ff9bcd10d581f01782143d63"
+        ],
         "petsc": true,
         "pumi": false,
         "raja": false,
@@ -4399,7 +4495,10 @@
         "ldflags": [],
         "ldlibs": []
       },
-      "package_hash": "lppbidgngrhdb6w5epuhj6rga5q7ilquacphm6i2ap342but6i7a====",
+      "patches": [
+        "962f62aa3fef056de22904cffd14f0ce875453b5ff9bcd10d581f01782143d63"
+      ],
+      "package_hash": "ej5x3usl4z4xxsxijrjzvvrrrtut7gdg5dmixtj4glbwtvqewgca====",
       "dependencies": [
         {
           "name": "cuda",
@@ -4443,7 +4542,7 @@
         },
         {
           "name": "sundials",
-          "hash": "5fqgcmjcmlxlgloq37h546rmvraga4pr",
+          "hash": "7reapfhcvvffeka4p57c6emdksusq3hk",
           "type": [
             "build",
             "link"
@@ -4466,9 +4565,9 @@
           ]
         }
       ],
-      "hash": "wxcjirwoibchwyaynvthpxojyvhmr6ut"
+      "hash": "6ud4pnxgoezxowe5pvtgcfudo43vcxu3"
     },
-    "2ibmg7nas4h347hbod73dcdewcsas3xp": {
+    "i5xmzosbosczsi2nsqj7ae4mg47cjfnx": {
       "name": "omega-h",
       "version": "9.34.13",
       "arch": {
@@ -4529,7 +4628,7 @@
         },
         {
           "name": "trilinos",
-          "hash": "hzkc3wuc2xsvh5vevgej2vxvjuukwhvz",
+          "hash": "zxuj22owlgwybkpcnsk5av4fsn4lfwj3",
           "type": [
             "build",
             "link"
@@ -4544,9 +4643,9 @@
           ]
         }
       ],
-      "hash": "2ibmg7nas4h347hbod73dcdewcsas3xp"
+      "hash": "i5xmzosbosczsi2nsqj7ae4mg47cjfnx"
     },
-    "b6ii2mp7x6yejhlfpuz23vjd75sv76bj": {
+    "7f4qjtj2javzr7ulrgreoim2n7fofkpz": {
       "name": "phist",
       "version": "1.11.2",
       "arch": {
@@ -4616,14 +4715,14 @@
         },
         {
           "name": "trilinos",
-          "hash": "hzkc3wuc2xsvh5vevgej2vxvjuukwhvz",
+          "hash": "zxuj22owlgwybkpcnsk5av4fsn4lfwj3",
           "type": [
             "build",
             "link"
           ]
         }
       ],
-      "hash": "b6ii2mp7x6yejhlfpuz23vjd75sv76bj"
+      "hash": "7f4qjtj2javzr7ulrgreoim2n7fofkpz"
     },
     "li2ltcqajq42gbjnrfliqkp6semoa4xw": {
       "name": "plasma",
@@ -5998,7 +6097,7 @@
       ],
       "hash": "uy56ni3636shywiosu3c2vs4bm5ax3mb"
     },
-    "63bm3kxbvkyqq6eu4iuvd6ardts3imje": {
+    "6yspn7wjvnanbjbibd6oats2jtqsmhkf": {
       "name": "tasmanian",
       "version": "7.9",
       "arch": {
@@ -6063,7 +6162,7 @@
         },
         {
           "name": "magma",
-          "hash": "tmulfouhbkvquq2q6ev6mnd7eadzogx2",
+          "hash": "ziigb772r2izesae7544bd24zwt3bs5z",
           "type": [
             "build",
             "run"
@@ -6086,7 +6185,7 @@
           ]
         }
       ],
-      "hash": "63bm3kxbvkyqq6eu4iuvd6ardts3imje"
+      "hash": "6yspn7wjvnanbjbibd6oats2jtqsmhkf"
     }
   }
 }
