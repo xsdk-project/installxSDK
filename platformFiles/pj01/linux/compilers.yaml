@@ -1,0 +1,66 @@
+compilers:
+- compiler:
+    spec: clang@15.0.0
+    paths:
+      cc: /usr/lib64/ccache/clang
+      cxx: /usr/lib64/ccache/clang++
+      f77: null
+      fc: null
+    flags: {}
+    operating_system: fedora37
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: dpcpp@2022.2.0
+    paths:
+      cc: /opt/intel/oneapi/compiler/2022.2.0/linux/bin/icx
+      cxx: /opt/intel/oneapi/compiler/2022.2.0/linux/bin/dpcpp
+      f77: /opt/intel/oneapi/compiler/2022.2.0/linux/bin/ifx
+      fc: /opt/intel/oneapi/compiler/2022.2.0/linux/bin/ifx
+    flags: {}
+    operating_system: fedora37
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: gcc@12.2.1
+    paths:
+      cc: /usr/lib64/ccache/gcc
+      cxx: /usr/lib64/ccache/g++
+      f77: /usr/bin/gfortran
+      fc: /usr/bin/gfortran
+    flags: {}
+    operating_system: fedora37
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: intel@2021.7.0
+    paths:
+      cc: /opt/intel/oneapi/compiler/2022.2.0/linux/bin/intel64/icc
+      cxx: /opt/intel/oneapi/compiler/2022.2.0/linux/bin/intel64/icpc
+      f77: /opt/intel/oneapi/compiler/2022.2.0/linux/bin/intel64/ifort
+      fc: /opt/intel/oneapi/compiler/2022.2.0/linux/bin/intel64/ifort
+    flags: {}
+    operating_system: fedora37
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: oneapi@2022.2.0
+    paths:
+      cc: /opt/intel/oneapi/compiler/2022.2.0/linux/bin/icx
+      cxx: /opt/intel/oneapi/compiler/2022.2.0/linux/bin/icpx
+      f77: /opt/intel/oneapi/compiler/2022.2.0/linux/bin/ifx
+      fc: /opt/intel/oneapi/compiler/2022.2.0/linux/bin/ifx
+    flags: {}
+    operating_system: fedora37
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []
