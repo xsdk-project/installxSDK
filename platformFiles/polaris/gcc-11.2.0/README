@@ -2,12 +2,6 @@
 
 # spack commit 40e4884e8b32a1fb949c1031e3f432aa68459e58
 
-# Set spack root eg.:
-export SPACK_ROOT=/tmp/shudson/xsdk/spack-xsdk
-
-export PATH=$SPACK_ROOT/bin:$PATH
-. $SPACK_ROOT/share/spack/setup-env.sh
-
 # Built in environment (e.g. env_xsdk_080_t1) using a spack.yaml
 spack env create env_xsdk_080_t1
 spack env activate -p env_xsdk_080_t1
@@ -24,124 +18,128 @@ spack install
 
 # Result
 
-[env_xsdk_080_t1] shudson@polaris-login-01:/tmp/shudson/xsdk/spack-xsdk$ spack find -vL
-==> Warning: concretization:separately is deprecated and will be removed in Spack 0.19 in favor of the new concretizer:unify:false config option.
+[env_xsdk_080_t1] shudson@polaris-login-01:/tmp/shudson/xsdk/spack-xsdk/var/spack/environments/env_xsdk_080_t1$ spack find -vL
 ==> In environment env_xsdk_080_t1
 ==> Root specs
 -------------------------------- xsdk@0.8.0 +cuda cuda_arch=80
 
 ==> Installed packages
--- cray-sles15-zen3 / gcc@11.2.0 --------------------------------
-k7hjdzvw2v4iijpzicej5il4xloveeg4 alquimia@1.0.10~ipo+shared build_type=RelWithDebInfo
-ylfzqyjeii5eg6eyainqjcm7mb4bwpb4 amrex@22.09~amrdata+cuda~eb~fortran~hdf5~hypre~ipo+linear_solvers+mpi~openmp~particles~petsc~pic~plotfile_tools~rocm~shared+sundials~sycl~tiny_profile build_type=RelWithDebInfo cuda_arch=80 dimensions=3 precision=double
-voetk35mlzngatf2tyxahz3q672ygjsf arborx@1.2~cuda~ipo+mpi~openmp~rocm+serial~sycl~trilinos build_type=RelWithDebInfo
-copwoho6hgr6jypjpuzdpgl2i3pf3r6j arpack-ng@3.8.0+mpi+shared
-3d5wlh3rqalnigmw6pppgc7534b56myj autoconf@2.69 patches=35c4492,7793209,a49dd5b
-4rln76zpai3xd5zwwrdplmmo3zqf2dxs autoconf-archive@2022.02.11 patches=139214f
-axhy44ktzsrcdckd6you5uddr4axlnm5 automake@1.16.5
-o7ojbizglt7qk472rutowkxrky4ia3cv berkeley-db@18.1.40+cxx~docs+stl patches=26090f4,b231fcc
-bypc7lpnlg45e23vjcgexfgcfzkefswy blaspp@2022.07.00+cuda~ipo+openmp~rocm+shared build_type=RelWithDebInfo cuda_arch=none
-77n4x765a7qjjygv7htw6ltb4622f7jb boost@1.79.0+atomic+chrono~clanglibcpp+container~context~contract~coroutine+date_time~debug+exception~fiber+filesystem+graph~graph_parallel~icu+iostreams~json+locale+log+math+mpi+multithreaded~nowide~numpy~pic+program_options~python+random+regex+serialization+shared+signals~singlethreaded+stacktrace+system~taggedlayout+test+thread+timer~type_erasure~versionedlayout+wave cxxstd=98 patches=57a8401,a440f96 visibility=hidden
-mhihpste6dhshkionvutmipepnizxg4b butterflypack@2.2.2~ipo+openmp+shared build_type=RelWithDebInfo
-rll2prrsftrmm2xaucu6kfxy6wuqetpv bzip2@1.0.8~debug~pic+shared
-r6ohnperj3a7engp4ppmp2fwcvitb3tm ca-certificates-mozilla@2022-07-19
-t5e7usl4gehdz2rcb77rhsbzukewvx6l cmake@3.24.2~doc+ncurses+ownlibs~qt build_type=Release
-7dkdlv5vh424jy5wzmzon3h5sxi4g22a cray-mpich@8.1.16+wrappers
-yboakojnexaztuxr2gz6kcq2f5kpu7kp cuda@11.8.0~allow-unsupported-compilers~dev
-chsmljhixvd2uwtfqxgwe5rfqcnls33p datatransferkit@3.1-rc3~external-arborx~ipo~openmp+serial+shared build_type=RelWithDebInfo
-qemf52vqjaf72ko6fogkze3wdkcq644w dealii@9.4.0~adol-c~arborx+arpack~assimp~cgal~cuda~doc+examples~ginkgo~gmsh+gsl+hdf5~int64~ipo+metis+mpi+muparser~nanoflann~netcdf+oce~optflags+p4est+petsc~python+scalapack~simplex+slepc+sundials~symengine+threads+trilinos build_type=DebugRelease cxxstd=default patches=7869dfa,8a1f7b9
-3s2io655efou2vapuwusinaqzszb3bxt diffutils@3.8
-vkwlw7u5pjldkw6jdngr377bemwsbmu7 eigen@3.4.0~ipo build_type=RelWithDebInfo
-7er6eyexmyecwsgxxtu6glvrn3xkf3en exago@1.5.0~cuda+hiop~ipo~ipopt+mpi+python~raja~rocm build_type=RelWithDebInfo
-kb64bk6o2cckjbrtljdify463b45bina expat@2.4.8+libbsd
-vr3nrk2zt2xcz5izpzppmsqudi5ryw34 fftw@3.3.10+mpi~openmp~pfft_patches precision=double,float
-yqxusqu2spwyqj72pq4dotqz2mmjbkgy gdbm@1.19
-wd6h5zy5phj5ewn5gyge27mmhq6bgwup gettext@0.21+bzip2+curses+git~libunistring+libxml2+tar+xz
-5cj4vghmltoxhxweh4hn5xs55onyzfkj ginkgo@1.5.0+cuda~develtools~full_optimizations~hwloc~ipo~oneapi~openmp~rocm+shared build_type=Release cuda_arch=80
-stksa6veunj6u6qoljx34hrfjknhdzlt gmp@6.2.1 libs=shared,static
-xdv2vu3oluli6bbo4ipvrvxqoblsciho gsl@2.7.1~external-cblas
-cvv4onauzgp47hd5z2l7inzit6gfpknc hdf5@1.10.7~cxx+fortran+hl~ipo~java+mpi+shared~szip~threadsafe+tools api=default build_type=RelWithDebInfo patches=2a1e311
-sh7ak7urpuovumqlso5xrcobbmcc2zaq heffte@2.3.0+cuda+fftw~fortran~ipo+magma~mkl~python~rocm+shared build_type=RelWithDebInfo cuda_arch=80
-4k2gofivvya653wu2glxwfsk4vke4leu hiop@0.7.1~cuda~cusolver~deepchecking~ginkgo~ipo~jsrun~kron+mpi~raja~rocm~shared~sparse build_type=RelWithDebInfo
-ejlqnseqjrgiq6x2xjrij5sr5vluhybe hwloc@2.8.0~cairo~cuda~gl~libudev+libxml2~netloc~nvml~oneapi-level-zero~opencl+pci~rocm libs=shared,static
-shhkl5k6yff6ldvtotopuep4dk2v46l7 hypre@2.26.0~complex+cuda~debug+fortran~gptune~int64~internal-superlu~mixedint+mpi~openmp~rocm+shared+superlu-dist~umpire~unified-memory cuda_arch=80
-tpdsaljnzmc4ytzseqsfts4gntmr7kxl intel-tbb@2020.3~ipo+shared+tm build_type=RelWithDebInfo cxxstd=default patches=62ba015,ce1fb16,d62cb66
-naeiyw6wefdvtoqi6hilxqvss3zi2lqb kokkos@3.7.00~aggressive_vectorization~compiler_warnings~cuda~cuda_constexpr~cuda_lambda~cuda_ldg_intrinsic~cuda_relocatable_device_code~cuda_uvm~debug~debug_bounds_check~debug_dualview_modify_check~deprecated_code~examples~explicit_instantiation~hpx~hpx_async_dispatch~hwloc~ipo~memkind~numactl~openmp~openmptarget~pic+profiling~profiling_load_print~pthread~qthread~rocm+serial+shared~sycl~tests~tuning~wrapper build_type=RelWithDebInfo intel_gpu_arch=none std=14
-7h6t3ujc3i7xdofmonqivyrfovjhbkha lapackpp@2022.07.00+cuda~ipo~rocm+shared build_type=RelWithDebInfo cuda_arch=none
-6ii42bxrvzzsveo3bqsaaoue3slfz5id libbsd@0.11.5
-46izinnfxyvbjwdmixcuki46n6denrhf libffi@3.4.2
-po4cjxv3tenhcne6m6jeibyn2gzp7iy3 libiconv@1.16 libs=shared,static
-nzueemplqjae4i3cxrlh3qtaxv7fxk22 libmd@1.0.4
-xwddfwnh56zabpqa5gnr3cvv7oxkej7w libpciaccess@0.16
-42yhbvchp2tkoagkkoqjxipc7guhxdjy libsigsegv@2.13
-kadzua5a6kwoo4fqyp62u7hvreywd73n libtool@2.4.7
-qn7rzbqdotf4rr6wnbrbj6tbvkeovj2o libxml2@2.10.1~python
-nlifhhvy3k77dpz4gxh4x7fgerile2rq m4@1.4.19+sigsegv patches=9dc5fbd,bfdffa7
-dfztvcmrd6t2fdgapjyosvcu5kqkn7gl magma@2.6.2+cuda+fortran~ipo~rocm+shared build_type=RelWithDebInfo cuda_arch=80
-it2kqx7m33ilenpe7vjuj7fcct2sazai metis@5.1.0~gdb~int64~real64+shared build_type=Release patches=4991da9,b1225da
-wt5yytt76hx76b43vdjqof6ny7u6g35o mfem@4.5.0~amgx~conduit+cuda~debug+examples~exceptions~fms~gnutls~gslib~lapack~libceed~libunwind+metis+miniapps~mpfr+mpi~netcdf~occa~openmp+petsc~pumi~raja~rocm~shared~slepc+static~strumpack~suite-sparse+sundials+superlu-dist~threadsafe~umpire+zlib cuda_arch=80 timer=auto
-azaiemrwnwxichc3oa3doxxa5lfrhou4 mpfr@4.1.0 libs=shared,static
-diwzkc4agrb2ssza5wmrqdqparcu6tw5 muparser@2.2.6.1
-33sp27w6csh4wtrzrcxhtoxscugrwgj3 ncurses@6.3~symlinks+termlib abi=none
-hidofavvspcxrybzqzx4walyppthf5z4 netlib-scalapack@2.2.0~ipo~pic+shared build_type=Release patches=072b006,1c9ce5f
-sriymbxnyyixowgippiuvg562ujlm4d4 ninja@1.11.1
-2stvevtsp43qpp744dcxjpxzqxq65v6h oce@0.18.3~X11+tbb
-kckupaxxdlwlmx3a64yk5tk2m2vpomeg omega-h@9.34.13~cuda~examples~ipo+mpi+optimize+shared+symbols~throw+trilinos~warnings+zlib build_type=RelWithDebInfo
-3ahdushfr655sjwgzwjfn6jrgzcm4n2f openblas@0.3.21~bignuma~consistent_fpcsr+fortran~ilp64+locking+pic+shared patches=e4230b7 symbol_suffix=none threads=openmp
-ruohfzecuoh5q3zyqybu2vnerozpdqxa openssl@1.1.1q~docs~shared certs=mozilla patches=3fdcf2d
-gyf3trmgamlc7b5pc6fmaqvl67rl7vf4 p4est@2.8+mpi~openmp
-aqsrd6yt4prn73hfeqcj36qp6njgdo3y parmetis@4.0.3~gdb~int64~ipo+shared build_type=RelWithDebInfo patches=4f89253,50ed208,704b84f
-74xxjm4fqntj442hab6l6iqjp5rnm5cu perl@5.34.1+cpanm+shared+threads
-n62y2pofioolxgu72sorpegws2mtkfde petsc@3.18.1~X+batch~cgns~complex+cuda~debug+double~exodusii~fftw+fortran~giflib+hdf5~hpddm~hwloc+hypre~int64~jpeg~knl~kokkos~libpng~libyaml~memkind+metis~mkl-pardiso~mmg~moab~mpfr+mpi~mumps~openmp~p4est~parmmg~ptscotch~random123~rocm~saws~scalapack+shared~strumpack~suite-sparse+superlu-dist~tetgen~trilinos~valgrind clanguage=C cuda_arch=80
-yy3blyc72tqaltfznz2hlagidh3ua6rg pflotran@4.0.1
-4ejakz7l4m4l36hfx6dtcwcjwsqbw32y phist@1.11.2~fortran~host~int64~ipo+mpi~openmp~parmetis~scamac+shared~trilinos build_type=RelWithDebInfo kernel_lib=tpetra outlev=2
-5yysicjw7n7rjloen7p62zghjtc2yafn pigz@2.7
-pysfq3qg5zsbzztoxmfn6nzqzu35ym2t pkgconf@1.8.0
-uzrd2w3imv3gd3xqcgj5etp7vw3wapye plasma@22.9.29~ipo~lua+shared build_type=RelWithDebInfo
-4kgif4iynamf3l36gmkjpf257qvf4lwg precice@2.5.0~ipo+mpi~petsc~python+shared build_type=RelWithDebInfo
-7vx5ifb7h5c2lc7maohwgfwqiq5bsyda pumi@2.2.7~fortran~int64~ipo~shared+simmodsuite_version_check~testing~zoltan build_type=RelWithDebInfo simmodsuite=none
-ezposepmv5vzzfgdcuzxr4bqjtpgkkbc py-attrs@22.1.0
-oydxwsminwgtebzz3fqvd2xu7hyjxdih py-cython@0.29.32
-ex6vruksedkl7lojqag3oetonzkmkzcx py-flit-core@3.7.1
-lb3zcxuq34q2jfltz6sn3q44sxb7u33l py-iniconfig@1.1.1
-w74xoft2ttw55p3jrxs5wmvvwmvqx6v2 py-libensemble@0.9.3~deap+mpi~mpmath~nlopt+petsc4py~pyyaml~scipy~tasmanian
-nrc6d466ibxpgvrtea53ky2od4r7t357 py-mpi4py@3.1.3
-yr6wj2gurtlca4otfox5nzghzkuyyan7 py-numpy@1.23.4+blas+lapack patches=873745d
-muqu7jhpf6sd7sgaks5nij6a7rlt5djd py-packaging@21.3
-56jal7saxi3k4qwx5cjt3jty5sdjtbtw py-petsc4py@3.18.0+mpi patches=d344e0e
-574oei4buih5aqzd7tdhacpj3lltxv62 py-pip@22.2.2
-2apygaqa6aczhafwfm42rlhvyrnukitp py-pluggy@1.0.0
-saxhhn4tyzykm2qctb5sle5iqsctoahi py-psutil@5.9.2
-hthhgq4jrs6hvdpkeuaujm47gvutzsou py-py@1.11.0
-b7rnuvbv7o5hrnri6kvkz5jkitshz6j4 py-pyparsing@3.0.9
-ysqhcaoss7vn5tulid6rla6crm33vyoh py-pytest@7.1.3
-23ayncwsf6jw4xwunf6eco7tgycnanjc py-setuptools@59.4.0
-h7apg6yd2r63jnuoj7y45yp7f35adsxf py-setuptools-scm@7.0.5+toml
-cazgmurcajhqounuiutmys3abtxmblry py-tomli@2.0.1
-ok4pqqfb26ha4bk456lzeeixguv4wgpp py-typing-extensions@4.3.0
-kxlvrbaxu73hrvmqxq26ctx6xaqiyjjd py-wheel@0.37.1
-zpftlfgy5d7eb76ghf2qwyjv66qti2z5 python@3.8.13+bz2+ctypes+dbm~debug+libxml2+lzma~nis~optimizations+pic+pyexpat+pythoncmd+readline+shared+sqlite3+ssl~tix~tkinter~ucs4+uuid+zlib patches=0d98e93,4c24573,ebdca64,f2fd060
-fdyfuatpfn4vspfqjhztmehz36ua3x2p readline@8.1.2
-2jv75ph3bawww7vri335gmqkosh2cne4 sed@4.8
-7ljqa7l6ni3srjab4ntd453dytaxkszh slate@2022.07.00+cuda~ipo+mpi+openmp~rocm+shared build_type=RelWithDebInfo cuda_arch=80
-ksp6avw7hslvuthnm6uueruxxpyl6ywr slepc@3.18.0+arpack~blopex+cuda~rocm cuda_arch=80
-yri2inzyfoctf6z4ae5fmbfwxcgcycqu sowing@1.1.26-p1
-4xmsjik6oeodrhxt7uo24cgetlttm6uf sqlite@3.39.2+column_metadata+dynamic_extensions+fts~functions+rtree
-zfn4h4ec3gmurmufa4lunzlvy2mt3skg strumpack@7.0.1+butterflypack+c_interface~count_flops+cuda~ipo+mpi+openmp+parmetis~rocm~scotch+shared+slate~task_timers+zfp build_type=RelWithDebInfo cuda_arch=80
-2prtpxdi6hyxlmgmm3knyc4rcqdzfwnr suite-sparse@5.10.1~cuda~graphblas~openmp+pic~tbb
-tnfddskhy7xqjlp5ruep7742lr54phq6 sundials@6.4.0+ARKODE+CVODE+CVODES+IDA+IDAS+KINSOL+cuda+examples+examples-install~f2003~fcmix+generic-math+ginkgo+hypre~int64~ipo~klu~lapack~magma~monitoring+mpi~openmp+petsc~profiling~pthread~raja~rocm+shared+static+superlu-dist~superlu-mt~sycl+trilinos build_type=RelWithDebInfo cstd=99 cuda_arch=80 cxxstd=14 logging-level=0 logging-mpi=OFF precision=double
-mzarqbwcock3mj25lfput74kv7xbpbnf superlu-dist@8.1.2~cuda~int64~ipo~openmp~rocm+shared build_type=RelWithDebInfo
-pa7goe7x7dd3uv5d3o62rodh6x2y6kaw tar@1.34 zip=pigz
-wvgecrm5f5mlkwnkdc5verullzkmfssd tasmanian@7.9+blas+cuda~fortran~ipo+magma+mpi+openmp~python~rocm+xsdkflags build_type=Release cuda_arch=80
-ew4pbwfkddv3qjzuwwt7mgm3en4jynib texinfo@6.5 patches=12f6edb,1732115
-p3g4yjdir5u27ixt4xgoqaaqog7gtfc3 trilinos@13.4.0~adelus~adios2+amesos+amesos2+anasazi+aztec~basker+belos+boost~chaco~complex~cuda~cuda_rdc~debug~dtk+epetra+epetraext~epetraextbtf~epetraextexperimental~epetraextgraphreorderings~exodus+explicit_template_instantiation~float+fortran~gtest+hdf5+hypre+ifpack+ifpack2~intrepid+intrepid2~ipo~isorropia+kokkos~mesquite~minitensor+ml+mpi+muelu~mumps+nox~openmp~panzer~phalanx~piro~python~rocm~rocm_rdc~rol~rythmos+sacado~scorec+shards+shared~shylu~stk~stokhos+stratimikos~strumpack~suite-sparse~superlu+superlu-dist~teko~tempus+thyra+tpetra~trilinoscouplings~wrapper~x11+zoltan+zoltan2 build_type=RelWithDebInfo cxxstd=14 gotype=int patches=86997c6
-pgmt2lrytxk6di5p3n4w4ars5ysz22zh util-linux-uuid@2.37.4
-n6ic3o6khpvuq5ewmwb4edstoorbgvbb util-macros@1.19.3
-nq6kclnzacmli4knm7qc7dom2mjgf6s5 xsdk@0.8.0+alquimia+arborx+butterflypack+cuda+datatransferkit+dealii+exago+ginkgo+heffte+hiop+libensemble+omega-h+phist+precice~rocm+slate+strumpack+trilinos cuda_arch=80
-7n4wqcjbn5c6ajodu4li52cu73crwpbj xz@5.2.5+pic libs=shared,static
-kcbzxnnpp6bnwy3epofqn4hfyxjlnwqi zfp@0.5.5~aligned~c~cuda~fasthash~fortran~ipo~openmp~profile~python+shared~strided~twoway bsws=64 build_type=RelWithDebInfo
-ymk6b64y6cp65why5fpmer6joa6enbzj zlib@1.2.12+optimize+pic+shared patches=0d38234
-4cs4kkyxdqyfhsxsgq6jgbwpqec6uyey zstd@1.5.2+programs compression=none libs=shared,static
-==> 110 installed packages
+-- linux-sles15-zen3 / gcc@11.2.0 -------------------------------
+xzhxuzv3h4xmbyibxyaggtyjyikruflh alquimia@1.0.10~ipo+shared build_system=cmake build_type=RelWithDebInfo
+4oebiz4u6b2a3n7mhlxt6msigj36gl2q amrex@22.09~amrdata+cuda~eb~fortran~hdf5~hypre~ipo+linear_solvers+mpi~openmp~particles~petsc~pic~plotfile_tools~rocm~shared+sundials~sycl~tiny_profile build_system=cmake build_type=RelWithDebInfo cuda_arch=80 dimensions=3 precision=double
+5mbl4etrv2btlbtn2apfw63ucn2d3hqx arborx@1.2~cuda~ipo+mpi~openmp~rocm+serial~sycl~trilinos build_system=cmake build_type=RelWithDebInfo cxxstd=17
+l74txzzc64pxkqnhagvqkfogub2vunws arpack-ng@3.8.0~ipo+mpi+shared build_system=cmake build_type=RelWithDebInfo
+e4ffgjry2rgnsmjttkfi2krczfx6wdul autoconf@2.69 build_system=autotools patches=35c4492,7793209,a49dd5b
+xnfzt2rnm5u7vcl5i674gh2fkn5e56is autoconf-archive@2022.02.11 build_system=autotools patches=139214f
+w2kbkbskbumo7lmiiiitexry4ijubqxc automake@1.16.5 build_system=autotools
+gqdvawbbn2xxvcegzt7wfzswd7xkpckt berkeley-db@18.1.40+cxx~docs+stl build_system=autotools patches=26090f4,b231fcc
+hdtv6dzensmmv2mxcuxazv6r2jeqngct blaspp@2022.07.00+cuda~ipo+openmp~rocm+shared build_system=cmake build_type=RelWithDebInfo cuda_arch=80
+gwpjgnje7aq2ddtdhmxnwjs62cym7qp7 blt@0.4.1 build_system=generic
+djx2oabvolhs3wruxvxyuskhnog3w346 boost@1.79.0+atomic+chrono~clanglibcpp~container~context~contract~coroutine+date_time~debug+exception~fiber+filesystem+graph~graph_parallel~icu+iostreams~json+locale+log+math+mpi+multithreaded~nowide~numpy~pic+program_options~python+random+regex+serialization+shared+signals~singlethreaded+stacktrace+system~taggedlayout+test+thread+timer~type_erasure~versionedlayout+wave build_system=generic cxxstd=98 patches=a440f96 visibility=hidden
+scffs6tavllfmhaqhzqzt4emjon7hve3 butterflypack@2.2.2~ipo+openmp+shared build_system=cmake build_type=RelWithDebInfo
+g2bpsozfwo4255z5nhndj654rsllxgan bzip2@1.0.8~debug~pic+shared build_system=generic
+6ki4n47ku6v43jze4wfb5c36lzxhcpfo ca-certificates-mozilla@2022-10-11 build_system=generic
+lpogh35zd2q23p4cm5svacm2sccijkre camp@0.2.3+cuda~ipo+openmp~rocm~tests build_system=cmake build_type=RelWithDebInfo cuda_arch=80
+i5slrxqljpnijfessjkfwlqckd7ct6g3 cmake@3.24.3~doc+ncurses+ownlibs~qt build_system=generic build_type=Release
+rixlsz5l2m7aribr2dljoygig4uzi5tf cray-mpich@8.1.16+wrappers build_system=generic
+a76tml3lhvgnyx2t37cilxyk7jmr56a7 cub@1.16.0 build_system=generic
+mlwhgm7zz3ish5oyvodnysgyczrgarpg cuda@11.8.0~allow-unsupported-compilers~dev build_system=generic
+xjvrmdtggvgxgjq33geedgcbtu2ztazt datatransferkit@3.1-rc3~external-arborx~ipo~openmp+serial+shared build_system=cmake build_type=RelWithDebInfo
+nltmfgazweqfz4d6eee6d3rrbkxtrppw dealii@9.4.0~adol-c~arborx+arpack~assimp~cgal~cuda~doc+examples~ginkgo~gmsh+gsl+hdf5~int64~ipo+metis+mpi+muparser~nanoflann~netcdf+oce~optflags+p4est+petsc~python+scalapack~simplex+slepc+sundials~symengine+threads+trilinos build_system=cmake build_type=DebugRelease cxxstd=default patches=7869dfa,8a1f7b9
+rnafwos5lqhieppj3mmsmi6thf3dofh5 diffutils@3.8 build_system=autotools
+hquoskaz3nqx6ukzz4wljxyq5g7sxo4a eigen@3.4.0~ipo build_system=cmake build_type=RelWithDebInfo
+nrehvjivk4lqaxznavvegdsmzsewter3 exago@1.5.0+cuda+hiop~ipo~ipopt+mpi+python+raja~rocm build_system=cmake build_type=RelWithDebInfo cuda_arch=80
+jfoyxbdxgqgqf2hofjqzt6bj4g42tpz6 expat@2.4.8+libbsd build_system=autotools
+dqcwrvoffrwl2okrwzdqgqqncg3ksnhl fftw@3.3.10+mpi~openmp~pfft_patches build_system=autotools precision=double,float
+otqsxvg4t267svzktkzxpt5gxti75kf7 gdbm@1.23 build_system=autotools
+s3iopweugb6tfhjtxc4ct24xuyuho2up gettext@0.21.1+bzip2+curses+git~libunistring+libxml2+tar+xz build_system=autotools
+c3v5a7fnwrfzyhgsm34t6hvxlmm3vmsp ginkgo@1.5.0+cuda~develtools~full_optimizations~hwloc~ipo+mpi~oneapi~openmp~rocm+shared build_system=cmake build_type=Release cuda_arch=80
+gkw5gfhucwd7hoasupxfcfa3omogdzgx gmp@6.2.1 build_system=autotools libs=shared,static
+usionubcmq56cvupqse43j4yv275l54d gsl@2.7.1~external-cblas build_system=autotools
+r4wnm4afsoxezs7vc7kdt57qw3j7vtx3 hdf5@1.12.2~cxx+fortran+hl~ipo~java+mpi+shared~szip~threadsafe+tools api=default build_system=cmake build_type=RelWithDebInfo
+quzuixldkraw36nw6d73yyupj5pm3b7r heffte@2.3.0+cuda+fftw~fortran~ipo+magma~mkl~python~rocm+shared build_system=cmake build_type=RelWithDebInfo cuda_arch=80
+l33i46k22nodgwsl3eh662oxpg6kb4qt hiop@0.7.1+cuda~cusolver+deepchecking~ginkgo~ipo~jsrun~kron+mpi+raja~rocm~shared~sparse build_system=cmake build_type=RelWithDebInfo cuda_arch=80
+5u6io4wu5skzw6rniik7z24zhlfvunfr hwloc@2.8.0~cairo~cuda~gl~libudev+libxml2~netloc~nvml~oneapi-level-zero~opencl+pci~rocm build_system=autotools libs=shared,static
+qdw724hiq77ntgzjmtpgsxxagmzu4dne hypre@2.26.0~complex+cuda~debug+fortran~gptune~int64~internal-superlu~mixedint+mpi~openmp~rocm+shared+superlu-dist~umpire~unified-memory build_system=autotools cuda_arch=80
+gefzz2ngeo6ykyeovl2n5qkpklfg76cb intel-tbb@2020.3+shared+tm build_system=makefile cxxstd=default patches=62ba015,ce1fb16,d62cb66
+n22ybgvviaq2powkh34tz5motzt3tpqo kokkos@3.7.00~aggressive_vectorization~compiler_warnings~cuda~cuda_constexpr~cuda_lambda~cuda_ldg_intrinsic~cuda_relocatable_device_code~cuda_uvm~debug~debug_bounds_check~debug_dualview_modify_check~deprecated_code~examples~explicit_instantiation~hpx~hpx_async_dispatch~hwloc~ipo~memkind~numactl~openmp~openmptarget~pic+profiling~profiling_load_print~pthread~qthread~rocm+serial+shared~sycl~tests~tuning~wrapper build_system=cmake build_type=RelWithDebInfo intel_gpu_arch=none std=14
+zuiqpvnhqnfqutey7c7jlk2vkl47owny lapackpp@2022.07.00+cuda~ipo~rocm+shared build_system=cmake build_type=RelWithDebInfo cuda_arch=80
+uo7vnpufhr74izc23afwtl6eojfk5f2z libbsd@0.11.5 build_system=autotools
+kd4a5vcw4eygy3rpilfmemtpdww7ia5d libffi@3.4.2 build_system=autotools
+xfogkcuoi7vak5eeoabxm3xblpsixigq libiconv@1.16 build_system=autotools libs=shared,static
+bcya2vpgmichy6vy3zsyo5jvigwmkojd libmd@1.0.4 build_system=autotools
+xs4xbn2l5fypgrnp7be6epfs73e63ocd libpciaccess@0.16 build_system=autotools
+ni76hajb6nkbp7cpecusre2j2g23itsz libsigsegv@2.13 build_system=autotools
+xyihrmcwfqkipxx3c55iqz7duszyvnyp libtool@2.4.7 build_system=autotools
+i6ukac4dgxadkc5ppio3jqd76i3kymlj libxcrypt@4.4.31~obsolete_api build_system=autotools
+jbbwlo5k6bzhok4vse56lf5dos3qingu libxml2@2.10.1~python build_system=autotools
+yasn2hyop6n4ly2mvv2t7xgew6ipspuv m4@1.4.19+sigsegv build_system=autotools patches=9dc5fbd,bfdffa7
+xiks7fr6aelcoexulgt3frdzaaekwimt magma@2.7.0+cuda+fortran~ipo~rocm+shared build_system=cmake build_type=RelWithDebInfo cuda_arch=80
+e3fxfzheawmclyiw3xuz3dvdpjnx2uah metis@5.1.0~gdb~int64~ipo~real64+shared build_system=cmake build_type=RelWithDebInfo patches=4991da9,93a7903,b1225da
+kgjze7dx2cnthfdm2f4mgmvihpkzqfzw mfem@4.5.0~amgx~conduit+cuda~debug+examples~exceptions~fms~ginkgo~gnutls~gslib~hiop~lapack~libceed~libunwind+metis+miniapps~mpfr+mpi~netcdf~occa~openmp+petsc~pumi~raja~rocm+shared~slepc+static~strumpack~suite-sparse+sundials+superlu-dist~threadsafe~umpire+zlib build_system=generic cuda_arch=80 patches=962f62a timer=auto
+e6kpgaz3rdovyhcavawttuyv4eucx4b4 mpfr@4.1.0 build_system=autotools libs=shared,static
+lf3u6ytwbqxxdm6fdn6frscvaow73lmr muparser@2.2.6.1 build_system=generic
+igbrz2c2nskapdgk6pobiszpdlymm4c6 ncurses@6.3~symlinks+termlib abi=none build_system=autotools
+hq4rjfumrcs5azgw5slsxqhfm7dhruyh netlib-scalapack@2.2.0~ipo~pic+shared build_system=cmake build_type=Release patches=072b006,1c9ce5f
+p6x3vnm2l4566efvcmdecagiqax4ryjb ninja@1.11.1 build_system=generic
+6uonwpeeiyqmwxjf373n2n5dppm55opf oce@0.18.3~X11+tbb build_system=generic
+lbnnbs2pque6r4pikwyihtbs7in5tuvo omega-h@9.34.13~cuda~examples~ipo+mpi+optimize+shared+symbols~throw+trilinos~warnings+zlib build_system=cmake build_type=RelWithDebInfo
+hltklrpjenu67relxac54z2p5tt3ul55 openblas@0.3.21~bignuma~consistent_fpcsr+fortran~ilp64+locking+pic+shared build_system=makefile patches=d3d9b15 symbol_suffix=none threads=openmp
+ontvu2ejslp6xtia6nyavwfjmwbymcay openssl@1.1.1s~docs~shared build_system=generic certs=mozilla
+6sivqy2u6ou24mywlgsyciktnead4gxr p4est@2.8+mpi~openmp build_system=autotools
+bs5xey6lispo7oiiyq2q5zjkihz4xmih parmetis@4.0.3~gdb~int64~ipo+shared build_system=cmake build_type=RelWithDebInfo patches=4f89253,50ed208,704b84f
+xbzmfznu4lt5tons5korn42l7zp42vuy perl@5.36.0+cpanm+shared+threads build_system=generic
+kkzkpl7ctt3iij6opmvsuammyf7jtec2 petsc@3.18.1~X+batch~cgns~complex+cuda~debug+double~exodusii~fftw+fortran~giflib+hdf5~hpddm~hwloc+hypre~int64~jpeg~knl~kokkos~libpng~libyaml~memkind+metis~mkl-pardiso~mmg~moab~mpfr+mpi~mumps~openmp~p4est~parmmg~ptscotch~random123~rocm~saws~scalapack+shared~strumpack~suite-sparse+superlu-dist~tetgen~trilinos~valgrind build_system=generic clanguage=C cuda_arch=80
+4mgxs2xshw25zzeckya5xbymp6ybnyku pflotran@4.0.1 build_system=autotools
+z3wueu7i3pxh7uzjm6x56serd7acnddw phist@1.11.2~fortran~host~int64~ipo+mpi~openmp~parmetis~scamac+shared~trilinos build_system=cmake build_type=RelWithDebInfo kernel_lib=tpetra outlev=2
+dmtmfzy3mguatdvfeflznowsz6weya4i pigz@2.7 build_system=makefile
+savxweut7pmtlrpleftaje2tqytoutov pkgconf@1.8.0 build_system=autotools
+7v3ny57pta2idnvgilxwznglkr7c3eqp plasma@22.9.29~ipo~lua+shared build_system=cmake build_type=RelWithDebInfo
+dqeedhkqqtj5rm57urfrnsls3knsxevw precice@2.5.0~ipo+mpi~petsc~python+shared build_system=cmake build_type=RelWithDebInfo
+fvf42g7bavxdqrvbiiwixcvgyono3v3x pumi@2.2.7~fortran~int64~ipo+shared+simmodsuite_version_check~testing~zoltan build_system=cmake build_type=RelWithDebInfo simmodsuite=none
+fkp7yu6ai2zvt5cojd7lkbz2q4h2ehop py-attrs@22.1.0 build_system=python_pip
+nmxk23eqsxn26ow5yiasxmdfk7bc3ji2 py-cython@0.29.32 build_system=python_pip
+5pgs6ivk6vwt7qfcgp55fflmz67tybq7 py-flit-core@3.7.1 build_system=python_pip
+2efksl7degwz4z2pwsmj4w5yrjt4stry py-iniconfig@1.1.1 build_system=python_pip
+eum66gxndlr25doszrudjlfdls7aucwi py-libensemble@0.9.3~deap+mpi~mpmath~nlopt+petsc4py~pyyaml~scipy~tasmanian build_system=python_pip
+n3w2eoypoad67qivypzkuedtesslwz6r py-mpi4py@3.1.4 build_system=python_pip
+2bdz4cei46idbganm756fgua7prj6aqg py-numpy@1.23.4+blas+lapack build_system=python_pip patches=873745d
+hlzd2yxjb7nwjp2mwiel42pemwvgs6bl py-packaging@21.3 build_system=python_pip
+oyrkjips72gd3sgvpzsxcdigq6bjyaw6 py-petsc4py@3.18.1+mpi build_system=python_pip patches=d344e0e
+wa4o5cgluzyjypthwwaqhdr5uz255kpi py-pip@22.2.2 build_system=generic
+vcwoppo6aorkyphrh3wdrv3yhlicu6wa py-pluggy@1.0.0 build_system=python_pip
+po3m3jbeydumvfprajbahxeag42f7p6h py-psutil@5.9.2 build_system=python_pip
+7tswmxmta5zsbfewwlhv2zue6mtpxh5v py-py@1.11.0 build_system=python_pip
+7oeesah6pl2mvyf7w6f7xakqmmw5enx3 py-pyparsing@3.0.9 build_system=python_pip
+fntmz676wsqxgzjgnkxxznn3yw4l4oaz py-pytest@7.1.3 build_system=python_pip
+gryvkaxtu57mq6gwqezs45ekzf5eh53c py-setuptools@59.4.0 build_system=generic
+ql27zikwo75ku6qbncdbuqief77424wn py-setuptools-scm@7.0.5+toml build_system=python_pip
+ekcsfk6ng5yf4akinzvacgeglrsob7vp py-tomli@2.0.1 build_system=python_pip
+owot6akf3yikze5u7ofcz4gva4qcmhgf py-typing-extensions@4.3.0 build_system=python_pip
+clwtyqqxpf4ejwkjek2vmwn4g7rxakoc py-wheel@0.37.1 build_system=generic
+3fea4efnroaz4zpu5ntjzkhlobrxycd2 python@3.8.13+bz2+crypt+ctypes+dbm~debug+libxml2+lzma~nis~optimizations+pic+pyexpat+pythoncmd+readline+shared+sqlite3+ssl~tix~tkinter~ucs4+uuid+zlib build_system=generic patches=0d98e93,4c24573,f2fd060
+7zigrm6wxmkteoper6eqskbnva3oedea raja@0.14.0+cuda+examples+exercises~ipo+openmp~rocm+shared~tests build_system=cmake build_type=RelWithDebInfo cuda_arch=80
+6mvf2emm3lyna3toniwgkihnco6fg5um readline@8.1.2 build_system=autotools
+ckvvvpu7mivhb27lgxu2zdnvax525nmp sed@4.8 build_system=autotools
+fsctmdaqw45wmewwbslvekqzl7qdaexa slate@2022.07.00+cuda~ipo+mpi+openmp~rocm+shared build_system=cmake build_type=RelWithDebInfo cuda_arch=80
+swqdxyxcmovbjzqp2ts7cl4z422xqbff slepc@3.18.1+arpack~blopex+cuda~rocm build_system=generic cuda_arch=80
+czakzn2jso3jmtdyqq65fst6tqsqcsjq sqlite@3.39.4+column_metadata+dynamic_extensions+fts~functions+rtree build_system=autotools
+juozslyaxh5ej3lcc4h5lf3bd5mjrmyw strumpack@7.0.1+butterflypack+c_interface~count_flops+cuda~ipo+mpi+openmp+parmetis~rocm~scotch+shared+slate~task_timers+zfp build_system=cmake build_type=RelWithDebInfo cuda_arch=80
+wau6cfj2dxhhr4copqxympyh64mdli7l suite-sparse@5.13.0~cuda~graphblas~openmp+pic build_system=generic
+gbwk7xpaadpxqnqgmeinif5qvt25ihcl sundials@6.4.1+ARKODE+CVODE+CVODES+IDA+IDAS+KINSOL+cuda+examples+examples-install~f2003~fcmix+generic-math+ginkgo+hypre~int64~ipo~klu~kokkos~kokkos-kernels~lapack+magma~monitoring+mpi~openmp+petsc~profiling~pthread~raja~rocm+shared+static+superlu-dist~superlu-mt~sycl+trilinos build_system=cmake build_type=RelWithDebInfo cstd=99 cuda_arch=80 cxxstd=14 logging-level=0 logging-mpi=OFF precision=double
+ydo2a5fwpdshhdkocyuwnsztoqjfegvz superlu-dist@8.1.2~cuda~int64~ipo~openmp~rocm+shared build_system=cmake build_type=RelWithDebInfo
+a35zenxlbtz4epdy2nnlruh47rps2sjb tar@1.34 build_system=autotools zip=pigz
+t4xdd7ng6ieuiwqdmr4kdgd4phgbfkma tasmanian@7.9+blas+cuda~fortran~ipo+magma+mpi+openmp~python~rocm+xsdkflags build_system=cmake build_type=Release cuda_arch=80
+ib2jqvwpveflw3fiol2lure565tkpoy2 texinfo@6.5 build_system=autotools patches=12f6edb,1732115
+xn5dzoijwalclgfmsv257osjpsyg2dg5 trilinos@13.4.1~adelus~adios2+amesos+amesos2+anasazi+aztec~basker+belos+boost~chaco~complex~cuda~cuda_rdc~debug~dtk+epetra+epetraext~epetraextbtf~epetraextexperimental~epetraextgraphreorderings~exodus+explicit_template_instantiation~float+fortran~gtest+hdf5+hypre+ifpack+ifpack2~intrepid+intrepid2~ipo~isorropia+kokkos~mesquite~minitensor+ml+mpi+muelu~mumps+nox~openmp~panzer~phalanx~piro~python~rocm~rocm_rdc~rol~rythmos+sacado~scorec+shards+shared~shylu~stk~stokhos+stratimikos~strumpack~suite-sparse~superlu+superlu-dist~teko~tempus+thyra+tpetra~trilinoscouplings~wrapper~x11+zoltan+zoltan2 build_system=cmake build_type=RelWithDebInfo cxxstd=14 gotype=int
+t4i3qbeozakzyxsbgiltjgskdmdx25aa umpire@6.0.0+c+cuda~device_alloc~deviceconst+examples~fortran~ipo~numa~openmp~rocm~shared build_system=cmake build_type=RelWithDebInfo cuda_arch=80 tests=none
+4qyr4mpnb56v43gbcwnys2i2lnxyhiak util-linux-uuid@2.38.1 build_system=autotools
+rskzbuyvzfoh6tuilrgwdgwp343djben util-macros@1.19.3 build_system=autotools
+ualmhtkt4zfoeph2lvjph4m2fhpq2dur xsdk@0.8.0+alquimia+arborx+butterflypack+cuda+datatransferkit+dealii+exago+ginkgo+heffte+hiop+libensemble+omega-h+phist+precice+raja~rocm+slate+strumpack+trilinos build_system=bundle cuda_arch=80
+yucs7bjrjf67cr4xxrhs4i5qalvk3vvw xz@5.2.7+pic build_system=autotools libs=shared,static
+aynmgnyvtlt3myf3tgpj22pytldyfxz3 zfp@0.5.5~aligned~c~cuda~fasthash~fortran~ipo~openmp~profile~python+shared~strided~twoway bsws=64 build_system=cmake build_type=RelWithDebInfo
+76b2zrq6t4nwxof3yob7t6nedojgx4k5 zlib@1.2.13+optimize+pic+shared build_system=makefile
+crilnoqqdvywfahgfmy3wbtrh5vjpcgg zstd@1.5.2+programs build_system=makefile compression=none libs=shared,static
+==> 115 installed packages
 
 
