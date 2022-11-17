@@ -1,6 +1,6 @@
 #!/bin/bash
 #BSUB -P csc314
-#BSUB -W 55
+#BSUB -W 2:00
 #BSUB -nnodes 1
 #BSUB -alloc_flags smt4
 #BSUB -J xsdk08
