@@ -1,4 +1,6 @@
-# Built using gcc 11.2.0 arch=cray-sles15-zen3
+# Built using arch=cray-sles15-zen3 / gcc 11.2.0
+
+# spack commit 40e4884e8b32a1fb949c1031e3f432aa68459e58
 
 # Set spack root eg.:
 export SPACK_ROOT=/tmp/shudson/xsdk/spack-xsdk

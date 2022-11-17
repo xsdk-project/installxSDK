@@ -1,3 +1,7 @@
+# Built using arch=linux-rhel8-power9le / gcc@8.3.1
+
+# spack commit 40e4884e8b32a1fb949c1031e3f432aa68459e58
+
 # To build in a Spack environment (e.g. env_xsdk_080_t1) using a spack.yaml
 spack env create env_xsdk_080_t1
 spack env activate -p env_xsdk_080_t1
