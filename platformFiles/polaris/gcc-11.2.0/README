@@ -1,14 +1,12 @@
 # Built using gcc 11.2.0 arch=cray-sles15-zen3
 
-# Getting spack form xsdk fork
-git clone https://gitlab.com/xsdk-project/spack-xsdk
-git checkout xsdk
+# Set spack root eg.:
 export SPACK_ROOT=/tmp/shudson/xsdk/spack-xsdk
 
 export PATH=$SPACK_ROOT/bin:$PATH
 . $SPACK_ROOT/share/spack/setup-env.sh
 
-# Built in environment env_xsdk_080_t1 using a spack.yaml
+# Built in environment (e.g. env_xsdk_080_t1) using a spack.yaml
 spack env create env_xsdk_080_t1
 spack env activate -p env_xsdk_080_t1
 
