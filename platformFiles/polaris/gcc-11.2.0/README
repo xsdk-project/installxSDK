@@ -2,15 +2,12 @@
 
 # spack commit 40e4884e8b32a1fb949c1031e3f432aa68459e58
 
-# Built in environment (e.g. env_xsdk_080_t1) using a spack.yaml
-spack env create env_xsdk_080_t1
-spack env activate -p env_xsdk_080_t1
+# To build in environment - use either spack.yaml (or spack.lock for identical build).
+spack env create xsdk_polaris spack.yaml
+spack env activate -p xsdk_polaris
 
 # For gcc build
 module load PrgEnv-gnu
-
-# Place spack.yaml file in $SPACK_ENV dir (in this case $SPACK_ROOT/var/spack/environments/env_xsdk_080_t1)
-# Spec (in spack.yaml) is: sdk@0.8.0 +cuda cuda_arch=80
 
 # Install
 spack install
