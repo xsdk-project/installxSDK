@@ -1,0 +1,217 @@
+compilers:
+- compiler:
+    spec: aocc@3.2.0
+    paths:
+      cc: cc
+      cxx: CC
+      f77: ftn
+      fc: ftn
+    flags:
+      cflags: null
+      cxxflags: null
+      fflags: null
+    operating_system: sles15
+    target: any
+    modules:
+    - PrgEnv-aocc
+    - aocc/3.2.0
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: aocc@8.3.3
+    paths:
+      cc: cc
+      cxx: CC
+      f77: ftn
+      fc: ftn
+    flags:
+      cflags: null
+      cxxflags: null
+      fflags: null
+    operating_system: sles15
+    target: any
+    modules:
+    - PrgEnv-aocc
+    - aocc/8.3.3
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: cce@13.0.2
+    paths:
+      cc: cc
+      cxx: CC
+      f77: ftn
+      fc: ftn
+    flags: {}
+    operating_system: sles15
+    target: any
+    modules:
+    - PrgEnv-cray
+    - cce/13.0.2
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: cce@14.0.1
+    paths:
+      cc: cc
+      cxx: CC
+      f77: ftn
+      fc: ftn
+    flags: {}
+    operating_system: sles15
+    target: any
+    modules:
+    - PrgEnv-cray
+    - cce/14.0.1
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: gcc@10.3.0
+    paths:
+      cc: cc
+      cxx: CC
+      f77: ftn
+      fc: ftn
+    flags: {}
+    operating_system: sles15
+    target: any
+    modules:
+    - PrgEnv-gnu
+    - gcc/10.3.0
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: gcc@11.2.0
+    paths:
+      cc: cc
+      cxx: CC
+      f77: ftn
+      fc: ftn
+    flags: {}
+    operating_system: sles15
+    target: any
+    modules:
+    - PrgEnv-gnu
+    - gcc/11.2.0
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: nvhpc@21.9
+    paths:
+      cc: cc
+      cxx: CC
+      f77: ftn
+      fc: ftn
+    flags: {}
+    operating_system: sles15
+    target: any
+    modules:
+    - PrgEnv-nvhpc
+    - nvhpc/21.9
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: nvhpc@21.11
+    paths:
+      cc: cc
+      cxx: CC
+      f77: ftn
+      fc: ftn
+    flags: {}
+    operating_system: sles15
+    target: any
+    modules:
+    - PrgEnv-nvhpc
+    - nvhpc/21.11
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: nvhpc@22.5
+    paths:
+      cc: cc
+      cxx: CC
+      f77: ftn
+      fc: ftn
+    flags: {}
+    operating_system: sles15
+    target: any
+    modules:
+    - PrgEnv-nvhpc
+    - nvhpc/22.5
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: nvhpc@22.7
+    paths:
+      cc: cc
+      cxx: CC
+      f77: ftn
+      fc: ftn
+    flags: {}
+    operating_system: sles15
+    target: any
+    modules:
+    - PrgEnv-nvhpc
+    - nvhpc/22.7
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: nvhpc@8.3.3
+    paths:
+      cc: cc
+      cxx: CC
+      f77: ftn
+      fc: ftn
+    flags: {}
+    operating_system: sles15
+    target: any
+    modules:
+    - PrgEnv-nvhpc
+    - nvhpc/8.3.3
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: rocmcc@2.15a2
+    paths:
+      cc: cc
+      cxx: CC
+      f77: ftn
+      fc: ftn
+    flags: {}
+    operating_system: sles15
+    target: any
+    modules:
+    - PrgEnv-amd
+    - rocmcc/2.15a2
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: rocmcc@2.15a2
+    paths:
+      cc: cc
+      cxx: CC
+      f77: ftn
+      fc: ftn
+    flags: {}
+    operating_system: sles15
+    target: any
+    modules:
+    - PrgEnv-amd
+    - rocmcc/2.15a2
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: rocmcc@2.15a2
+    paths:
+      cc: cc
+      cxx: CC
+      f77: ftn
+      fc: ftn
+    flags: {}
+    operating_system: sles15
+    target: any
+    modules:
+    - PrgEnv-amd
+    - rocmcc/2.15a2
+    environment: {}
+    extra_rpaths: []

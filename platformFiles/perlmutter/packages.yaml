@@ -3,11 +3,43 @@ packages:
   all:
     compiler: [gcc@11.2.0]
     providers:
-      blas: [cray-libsci]
-      lapack: [cray-libsci]
+      # blas: [cray-libsci]
+      # lapack: [cray-libsci]
+      # scalapack: [cray-libsci]
+      blas: [openblas]
+      lapack: [openblas]
       mpi: [cray-mpich]
     target: [zen3]
     # variants: +mpi
+
+  # cuda:
+  #   buildable: false
+  #   externals:
+  #   - spec: cuda@11.7
+  #     modules:
+  #     - cudatoolkit/11.7
+
+  openblas:
+    variants: threads=openmp
+
+  # scalapack:
+  #   buildable: false
+  #   externals: 
+  #   - spec: cray-libsci@21.08.1.2 +mpi 
+  #     modules:
+  #     - cray-libsci/21.08.1.2
+  # blas:
+  #   buildable: false
+  #   externals: 
+  #   - spec: cray-libsci@21.08.1.2~mpi 
+  #     modules:
+  #     - cray-libsci/21.08.1.2
+  # lapack:
+  #   buildable: false
+  #   externals: 
+  #   - spec: cray-libsci@21.08.1.2~mpi 
+  #     modules:
+  #     - cray-libsci/21.08.1.2
 
   libfabric:
     buildable: false
@@ -24,12 +56,12 @@ packages:
       - cray-mpich/8.1.17
       - libfabric
 
-  cray-libsci:
-    buildable: false
-    externals:
-    - spec: cray-libsci@21.08.1.2
-      modules:
-      - cray-libsci/21.08.1.2
+  # cray-libsci:
+  #   buildable: false
+  #   externals:
+  #   - spec: cray-libsci@21.08.1.2
+  #     modules:
+  #     - cray-libsci/21.08.1.2
 
   python:
     externals:
@@ -37,18 +69,18 @@ packages:
       modules:
       - cray-python/3.9.12.1
       buildable: False
-  py-numpy:
-    externals:
-    - spec: py-numpy@3.9.12.1
-      modules:
-      - cray-python/3.9.12.1
-      buildable: False
-  py-setuptools:
-    externals:
-    - spec: py-setuptools@3.9.12.1
-      modules:
-      - cray-python/3.9.12.1
-      buildable: False
+  # py-numpy:
+  #   externals:
+  #   - spec: py-numpy@3.9.12.1
+  #     modules:
+  #     - cray-python/3.9.12.1
+  #     buildable: False
+  # py-setuptools:
+  #   externals:
+  #   - spec: py-setuptools@3.9.12.1
+  #     modules:
+  #     - cray-python/3.9.12.1
+  #     buildable: False
 
   cmake:
     externals:
@@ -89,5 +121,10 @@ packages:
   xz:
     externals:
     - spec: xz@5.2.3
+      prefix: /usr
+      buildable: False
+  tar:
+    externals:
+    - spec: tar@1.34
       prefix: /usr
       buildable: False
