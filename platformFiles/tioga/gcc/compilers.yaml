@@ -1,0 +1,30 @@
+compilers:
+- compiler:
+    spec: gcc@12.1.0
+    paths:
+      cc: cc
+      cxx: CC
+      f77: ftn
+      fc: ftn
+    flags: {}
+    operating_system: rhel8
+    target: any
+    modules:
+    - StdEnv
+    # PrgEnv-gnu loads: gcc, craype, cray-mpich, cray-libsci (default versions)
+    # gcc loads: PrgEnv-gnu
+    # craype loads: (none)
+    # cray-mpich loads: (none)
+    # cray-libsci loads: (none)
+    - PrgEnv-gnu
+    # for consistency load specific versions in case the defaults change
+    - gcc/12.1.0
+    - craype/2.7.17
+    - cray-mpich/8.1.20
+    - cray-libsci/22.10.1.2
+    - craype-x86-trento
+    environment:
+      prepend_path:
+        # this version of gcc needs newer version of binutils
+        PATH: "/opt/cray/pe/cce/15.0.0/binutils/x86_64/bin"
+    extra_rpaths: []

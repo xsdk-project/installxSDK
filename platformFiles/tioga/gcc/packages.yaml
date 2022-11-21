@@ -1,0 +1,163 @@
+packages:
+  autoconf:
+    externals:
+    - spec: autoconf@2.69
+      prefix: /usr
+  automake:
+    externals:
+    - spec: automake@1.16.1
+      prefix: /usr
+  bison:
+    externals:
+    - spec: bison@3.0.4
+      prefix: /usr
+  bzip2:
+    externals:
+    - spec: bzip2@1.0.6
+      prefix: /usr
+  cmake:
+    externals:
+    - spec: cmake@3.22.4
+      modules:
+      - cmake/3.22.4
+    buildable: false
+  diffutils:
+    externals:
+    - spec: diffutils@3.6
+      prefix: /usr
+  gettext:
+    externals:
+    - spec: gettext@0.19.8.1
+      prefix: /usr
+  hwloc:
+    externals:
+    - spec: hwloc@2.8.0
+      prefix: /usr
+  libtool:
+    externals:
+    - spec: libtool@2.4.6
+      prefix: /usr
+  libxml2:
+    externals:
+    - spec: libxml2@2.9.7
+      prefix: /usr
+  m4:
+    externals:
+    - spec: m4@1.4.18
+      prefix: /usr
+  ncurses:
+    externals:
+    - spec: ncurses@6.1
+      prefix: /usr
+  openssl:
+    externals:
+    - spec: openssl@1.1.1k
+      prefix: /usr
+  sed:
+    externals:
+    - spec: sed@4.5
+      prefix: /usr
+  texinfo:
+    externals:
+    - spec: texinfo@6.5
+      prefix: /usr
+  xz:
+    externals:
+    - spec: xz@5.2.4
+      prefix: /usr
+  hip:
+    externals:
+    - spec: hip@5.2.3
+      prefix: /opt/rocm-5.2.3
+      extra_attributes:
+        compilers:
+          c: /opt/rocm-5.2.3/llvm/bin/clang
+          c++: /opt/rocm-5.2.3/llvm/bin/clang++
+          hip: /opt/rocm-5.2.3/hip/bin/hipcc
+    buildable: false
+  hsa-rocr-dev:
+    externals:
+    - spec: hsa-rocr-dev@5.2.3
+      prefix: /opt/rocm-5.2.3
+      extra_attributes:
+        compilers:
+          c: /opt/rocm-5.2.3/llvm/bin/clang
+          cxx: /opt/rocm-5.2.3/llvm/bin/clang++
+    buildable: false
+  llvm-amdgpu:
+    externals:
+    - spec: llvm-amdgpu@5.2.3
+      prefix: /opt/rocm-5.2.3/llvm
+      extra_attributes:
+        compilers:
+          c: /opt/rocm-5.2.3/llvm/bin/clang
+          cxx: /opt/rocm-5.2.3/llvm/bin/clang++
+    buildable: false
+  hipcub:
+    externals:
+    - spec: hipcub@5.2.3
+      prefix: /opt/rocm-5.2.3/hipcub
+  hipblas:
+    externals:
+    - spec: hipblas@5.2.3
+      prefix: /opt/rocm-5.2.3/hipblas
+  hipsolver:
+    externals:
+    - spec: hipsolver@5.2.3
+      prefix: /opt/rocm-5.2.3/hipsolver
+  rocblas:
+    externals:
+    - spec: rocblas@5.2.3
+      prefix: /opt/rocm-5.2.3/rocblas
+  rocsolver:
+    externals:
+    - spec: rocsolver@5.2.3
+      prefix: /opt/rocm-5.2.3/rocsolver
+  hipsparse:
+    externals:
+    - spec: hipsparse@5.2.3
+      prefix: /opt/rocm-5.2.3/hipsparse
+  rocsparse:
+    externals:
+    - spec: rocsparse@5.2.3
+      prefix: /opt/rocm-5.2.3/rocsparse
+  rocthrust:
+    externals:
+    - spec: rocthrust@5.2.3
+      prefix: /opt/rocm-5.2.3/rocthrust
+  rocrand:
+    externals:
+    - spec: rocrand@5.2.3
+      prefix: /opt/rocm-5.2.3/rocrand
+  rocprim:
+    externals:
+    - spec: rocprim@5.2.3
+      prefix: /opt/rocm-5.2.3/rocprim
+  rocfft:
+    externals:
+    - spec: rocfft@5.2.3
+      prefix: /opt/rocm-5.2.3/rocfft
+    variants: amdgpu_target=gfx90a amdgpu_target_sram_ecc=gfx90a
+  cray-mpich:
+    externals:
+    - spec: "cray-mpich@8.1.20"
+      modules:
+      - cray-mpich/8.1.20
+      - craype-network-ofi
+    buildable: false
+  cray-libsci:
+    buildable: false
+    externals:
+    - spec: "cray-libsci@22.10.1.2+mpi"
+      modules:
+      - cray-libsci/22.10.1.2
+      - cray-mpich/8.1.20
+      - craype-network-ofi
+
+  all:
+    providers:
+      mpi: [cray-mpich]
+      lapack: [cray-libsci]
+      blas: [cray-libsci]
+      scalapack: [cray-libsci+mpi]
+    compiler: [gcc]
