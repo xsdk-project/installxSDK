@@ -1,0 +1,117 @@
+packages:
+  git:
+    buildable: false
+    externals:
+    - spec: git@2.41.0
+      prefix: /usr
+  autoconf:
+    externals:
+    - spec: autoconf@2.71
+      prefix: /usr
+    buildable: False
+  automake:
+    externals:
+    - spec: automake@1.16.5
+      prefix: /usr
+    buildable: False
+  libtool:
+    externals:
+    - spec: libtool@2.4.7
+      prefix: /usr
+    buildable: False
+  m4:
+    externals:
+    - spec: m4@1.4.19
+      prefix: /usr
+    buildable: False
+  cmake:
+    externals:
+    - spec: cmake@3.27.6
+      prefix: /usr
+    buildable: False
+  gmake:
+    externals:
+    - spec: gmake@4.4.1
+      prefix: /usr
+    buildable: False
+  ninja:
+    externals:
+    - spec: ninja@1.11.1
+      prefix: /usr
+    buildable: False
+  diffutils:
+    externals:
+    - spec: diffutils@3.10
+      prefix: /usr
+    buildable: False
+  zlib:
+    externals:
+    - spec: zlib@1.2.13
+      prefix: /usr
+    buildable: False
+  pkg-config:
+    externals:
+    - spec: pkg-config@1.9.5
+      prefix: /usr
+    buildable: False
+  bzip2:
+    externals:
+    - spec: bzip2@1.0.8
+      prefix: /usr
+    buildable: False
+  numactl:
+    externals:
+    - spec: numactl@2.0.16
+      prefix: /usr
+    buildable: False
+  perl:
+    externals:
+    - spec: perl@5.38.0
+      prefix: /usr
+    buildable: False
+  readline:
+    externals:
+    - spec: readline@8.2
+      prefix: /usr
+    buildable: False
+  ncurses:
+    externals:
+    - spec: ncurses@6.4
+      prefix: /usr
+    buildable: False
+  bison:
+    externals:
+    - spec: bison@3.8.2
+      prefix: /usr
+    buildable: False
+  xz:
+    externals:
+    - spec: xz@5.4.4
+      prefix: /usr
+    buildable: False
+  tar:
+    externals:
+    - spec: tar@1.35
+      prefix: /usr
+    buildable: False
+  intel-oneapi-mkl:
+    buildable: false
+    externals:
+    - spec: intel-oneapi-mkl@2023.2.0%oneapi@2023.2.0
+      prefix: /software/intel/oneapi
+  intel-oneapi-mpi:
+    buildable: false
+    externals:
+    - spec: intel-oneapi-mpi@2021.10.0%oneapi@2023.2.0
+      prefix: /software/intel/oneapi
+  intel-oneapi-dpl:
+    buildable: false
+    externals:
+    - spec: intel-oneapi-dpl@2022.2.0%oneapi@2023.2.0
+      prefix: /software/intel/oneapi
+
+  all:
+    providers:
+      mpi: [mpich]
+      blas: [netlib-lapack]
+      lapack: [netlib-lapack]

@@ -1,0 +1,4 @@
+config:
+  build_stage:
+  - $spack/spack-stage
+
