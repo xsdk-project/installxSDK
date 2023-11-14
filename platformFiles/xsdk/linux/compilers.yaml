@@ -1,0 +1,86 @@
+compilers:
+- compiler:
+    spec: gcc@=11.3.1
+    paths:
+      cc: /usr/bin/gcc
+      cxx: /usr/bin/g++
+      f77: /usr/bin/gfortran
+      fc: /usr/bin/gfortran
+    flags: {}
+    operating_system: rocky9
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: gcc@=8.5.0
+    paths:
+      cc: /apps/spacks/2023-08-14/opt/spack/linux-rocky9-x86_64/gcc-11.3.1/gcc-8.5.0-vgts7xfflwwoulcnoo6dycqaurluixrf/bin/gcc
+      cxx: /apps/spacks/2023-08-14/opt/spack/linux-rocky9-x86_64/gcc-11.3.1/gcc-8.5.0-vgts7xfflwwoulcnoo6dycqaurluixrf/bin/g++
+      f77: /apps/spacks/2023-08-14/opt/spack/linux-rocky9-x86_64/gcc-11.3.1/gcc-8.5.0-vgts7xfflwwoulcnoo6dycqaurluixrf/bin/gfortran
+      fc: /apps/spacks/2023-08-14/opt/spack/linux-rocky9-x86_64/gcc-11.3.1/gcc-8.5.0-vgts7xfflwwoulcnoo6dycqaurluixrf/bin/gfortran
+    flags: {}
+    operating_system: rocky9
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: intel@=19.1.1.217
+    paths:
+      cc: /apps/spacks/2023-06-07/opt/spack/linux-rocky9-x86_64/gcc-11.3.1/intel-parallel-studio-cluster.2020.1-isma5w4vy7tksyf5w53dsx4vx4i6anfl/compilers_and_libraries_2020.1.217/linux/bin/intel64/icc
+      cxx: /apps/spacks/2023-06-07/opt/spack/linux-rocky9-x86_64/gcc-11.3.1/intel-parallel-studio-cluster.2020.1-isma5w4vy7tksyf5w53dsx4vx4i6anfl/compilers_and_libraries_2020.1.217/linux/bin/intel64/icpc
+      f77: /apps/spacks/2023-06-07/opt/spack/linux-rocky9-x86_64/gcc-11.3.1/intel-parallel-studio-cluster.2020.1-isma5w4vy7tksyf5w53dsx4vx4i6anfl/compilers_and_libraries_2020.1.217/linux/bin/intel64/ifort
+      fc: /apps/spacks/2023-06-07/opt/spack/linux-rocky9-x86_64/gcc-11.3.1/intel-parallel-studio-cluster.2020.1-isma5w4vy7tksyf5w53dsx4vx4i6anfl/compilers_and_libraries_2020.1.217/linux/bin/intel64/ifort
+    flags: {}
+    operating_system: rocky9
+    target: x86_64
+    modules:
+    - gcc/8.5.0/gcc-11.3.1-vgts7x
+#    - gcc/8.5.0/gcc-11.3.1-kravds
+#    - gcc/7.5.0/gcc-11.3.1-smek7j
+#    - gcc/9.5.0/gcc-11.3.1-jpjj2j
+#    - gcc/10.4.0/gcc-11.3.1-qlynzz
+#    - gcc/11.4.0/gcc-11.3.1-rony5z
+    - intel-parallel-studio/cluster.2020.1/gcc-11.3.1-isma5w
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: dpcpp@=2023.1.0
+    paths:
+      cc: /apps/spacks/2023-06-07/opt/spack/linux-rocky9-x86_64/gcc-11.3.1/intel-oneapi-compilers-2023.1.0-ia67f2is5762cyewilhv4ck24chia7a4/compiler/2023.1.0/linux/bin/icx
+      cxx: /apps/spacks/2023-06-07/opt/spack/linux-rocky9-x86_64/gcc-11.3.1/intel-oneapi-compilers-2023.1.0-ia67f2is5762cyewilhv4ck24chia7a4/compiler/2023.1.0/linux/bin/dpcpp
+      f77: /apps/spacks/2023-06-07/opt/spack/linux-rocky9-x86_64/gcc-11.3.1/intel-oneapi-compilers-2023.1.0-ia67f2is5762cyewilhv4ck24chia7a4/compiler/2023.1.0/linux/bin/ifx
+      fc: /apps/spacks/2023-06-07/opt/spack/linux-rocky9-x86_64/gcc-11.3.1/intel-oneapi-compilers-2023.1.0-ia67f2is5762cyewilhv4ck24chia7a4/compiler/2023.1.0/linux/bin/ifx
+    flags: {}
+    operating_system: rocky9
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: intel@=2021.9.0
+    paths:
+      cc: /apps/spacks/2023-06-07/opt/spack/linux-rocky9-x86_64/gcc-11.3.1/intel-oneapi-compilers-2023.1.0-ia67f2is5762cyewilhv4ck24chia7a4/compiler/2023.1.0/linux/bin/intel64/icc
+      cxx: /apps/spacks/2023-06-07/opt/spack/linux-rocky9-x86_64/gcc-11.3.1/intel-oneapi-compilers-2023.1.0-ia67f2is5762cyewilhv4ck24chia7a4/compiler/2023.1.0/linux/bin/intel64/icpc
+      f77: /apps/spacks/2023-06-07/opt/spack/linux-rocky9-x86_64/gcc-11.3.1/intel-oneapi-compilers-2023.1.0-ia67f2is5762cyewilhv4ck24chia7a4/compiler/2023.1.0/linux/bin/intel64/ifort
+      fc: /apps/spacks/2023-06-07/opt/spack/linux-rocky9-x86_64/gcc-11.3.1/intel-oneapi-compilers-2023.1.0-ia67f2is5762cyewilhv4ck24chia7a4/compiler/2023.1.0/linux/bin/intel64/ifort
+    flags: {}
+    operating_system: rocky9
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: oneapi@=2023.1.0
+    paths:
+      cc: /apps/spacks/2023-06-07/opt/spack/linux-rocky9-x86_64/gcc-11.3.1/intel-oneapi-compilers-2023.1.0-ia67f2is5762cyewilhv4ck24chia7a4/compiler/2023.1.0/linux/bin/icx
+      cxx: /apps/spacks/2023-06-07/opt/spack/linux-rocky9-x86_64/gcc-11.3.1/intel-oneapi-compilers-2023.1.0-ia67f2is5762cyewilhv4ck24chia7a4/compiler/2023.1.0/linux/bin/icpx
+      f77: /apps/spacks/2023-06-07/opt/spack/linux-rocky9-x86_64/gcc-11.3.1/intel-oneapi-compilers-2023.1.0-ia67f2is5762cyewilhv4ck24chia7a4/compiler/2023.1.0/linux/bin/ifx
+      fc: /apps/spacks/2023-06-07/opt/spack/linux-rocky9-x86_64/gcc-11.3.1/intel-oneapi-compilers-2023.1.0-ia67f2is5762cyewilhv4ck24chia7a4/compiler/2023.1.0/linux/bin/ifx
+    flags: {}
+    operating_system: rocky9
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []
