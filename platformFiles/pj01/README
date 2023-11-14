@@ -1,0 +1,484 @@
+
+# OneAPI + SYCL build
+# python3.9 ./bin/spack install xsdk@1.0.0%oneapi@2023.2.0 ^intel-oneapi-mkl ^intel-oneapi-mpi
+
+# OneAPI + SYCL build
+# ./bin/spack install -j12  xsdk@1.0.0+sycl~trilinos~dealii %oneapi@2023.2.0
+
+# Clang
+# python3.9 ./bin/spack install xsdk@1.0.0%clang@17.0.0 ^boost%gcc@13.2.1
+
+#  GCC build
+# python3.9 ./bin/spack install xsdk@1.0.0%gcc@13.2.1
+
+# spack commit 43a94e981ac223d235ae1afbf55de8f0aead4c66
+
+####### OneAPI ###############
+$ ./bin/spack find -v
+-- linux-fedora39-skylake / oneapi@2023.2.0 ---------------------
+alquimia@1.1.0~ipo+shared build_system=cmake build_type=Release generator=make
+arborx@1.4.1~cuda~ipo+mpi~openmp~rocm+serial~sycl~trilinos build_system=cmake build_type=Release cxxstd=17 generator=make
+arpack-ng@3.9.0~icb~ipo+mpi+shared build_system=cmake build_type=Release generator=make
+autoconf@2.71 build_system=autotools
+autoconf-archive@2023.02.20 build_system=autotools
+automake@1.16.5 build_system=autotools
+blaspp@2023.08.25~cuda~ipo+openmp~rocm+shared~sycl build_system=cmake build_type=Release generator=make
+blt@0.4.1 build_system=generic
+boost@1.79.0+atomic+chrono~clanglibcpp~container~context~contract~coroutine+date_time~debug+exception~fiber+filesystem+graph~graph_parallel~icu+iostreams~json+locale+log+math~mpi+multithreaded~nowide~numpy~pic+program_options~python+random+regex+serialization+shared+signals~singlethreaded+stacktrace+system~taggedlayout+test+thread+timer~type_erasure~versionedlayout+wave build_system=generic cxxstd=17 patches=8e3faa2,a440f96 visibility=hidden
+butterflypack@2.4.0~ipo+openmp+shared build_system=cmake build_type=Release generator=make
+bzip2@1.0.8~debug~pic+shared build_system=generic
+ca-certificates-mozilla@2023-05-30 build_system=generic
+camp@0.2.3~cuda~ipo+openmp~rocm~tests build_system=cmake build_type=Release generator=make
+cmake@3.27.6~doc+ncurses+ownlibs build_system=generic build_type=Release
+datatransferkit@3.1.1~external-arborx~ipo~openmp+serial+shared build_system=cmake build_type=Release generator=make
+dealii@9.5.1~adol-c~arborx+arpack~assimp~cgal~cuda~doc+examples~ginkgo~gmsh+gsl+hdf5~int64~ipo+kokkos+metis+mpi+muparser~nanoflann~netcdf~oce~optflags+p4est+petsc+platform-introspection~python+scalapack~simplex+slepc+sundials~symengine+threads+trilinos build_system=cmake build_type=DebugRelease cxxstd=17 generator=make
+diffutils@3.10 build_system=autotools
+eigen@3.4.0~ipo build_system=cmake build_type=RelWithDebInfo generator=make
+exago@1.6.0~cuda+hiop~ipo~ipopt+logging+mpi+python+raja~rocm build_system=cmake build_type=Release generator=make
+expat@2.5.0+libbsd build_system=autotools
+fftw@3.3.10+mpi~openmp~pfft_patches build_system=autotools precision=double,float
+gdbm@1.23 build_system=autotools
+gettext@0.22.3+bzip2+curses+git~libunistring+libxml2+pic+shared+tar+xz build_system=autotools
+ginkgo@1.7.0~cuda~develtools~full_optimizations~hwloc~ipo+mpi~openmp~rocm+shared~sycl build_system=cmake build_type=Release generator=make
+git@2.41.0+man+nls+perl+subtree~svn~tcltk build_system=autotools
+gmake@4.4.1~guile build_system=generic
+gmp@6.2.1+cxx build_system=autotools libs=shared,static patches=69ad2e2
+gsl@2.7.1~external-cblas+pic+shared build_system=autotools
+hdf5@1.14.3~cxx+fortran+hl~ipo~java~map+mpi+shared~subfiling~szip~threadsafe+tools api=default build_system=cmake build_type=Release generator=make
+heffte@2.4.0~cuda+fftw~fortran~ipo~magma~mkl~python~rocm+shared build_system=cmake build_type=Release generator=make
+hiop@1.0.0~cuda~deepchecking~ginkgo~ipo~jsrun~kron+mpi+raja~rocm~shared~sparse build_system=cmake build_type=Release generator=make
+hwloc@2.9.1~cairo~cuda~gl~libudev+libxml2~netloc~nvml~oneapi-level-zero~opencl+pci~rocm build_system=autotools libs=shared,static
+hypre@2.30.0~caliper~complex~cuda~debug+fortran~gptune~int64~internal-superlu~magma~mixedint+mpi~openmp~rocm+shared+superlu-dist~sycl~umpire~unified-memory build_system=autotools
+intel-oneapi-mkl@2023.2.0~cluster+envmods~ilp64+shared build_system=generic mpi_family=none threads=none
+intel-oneapi-mpi@2021.10.0+envmods~external-libfabric~generic-names~ilp64 build_system=generic
+intel-tbb@2021.9.0~ipo+shared+tm build_system=cmake build_type=Release cxxstd=default generator=make patches=91755c6
+kokkos@4.1.00~aggressive_vectorization~compiler_warnings~cuda~debug~debug_bounds_check~debug_dualview_modify_check~deprecated_code~examples~hpx~hpx_async_dispatch~hwloc~ipo~memkind~numactl~openmp~openmptarget~pic~rocm+serial+shared~sycl~tests~threads~tuning~wrapper build_system=cmake build_type=Release cxxstd=17 generator=make intel_gpu_arch=none
+lapackpp@2023.08.25~cuda~ipo~rocm+shared~sycl build_system=cmake build_type=Release generator=make
+libbsd@0.11.7 build_system=autotools
+libffi@3.4.4 build_system=autotools
+libiconv@1.17 build_system=autotools libs=shared,static
+libmd@1.0.4 build_system=autotools
+libpciaccess@0.17 build_system=autotools
+libtool@2.4.7 build_system=autotools
+libxcrypt@4.4.35~obsolete_api build_system=autotools patches=4885da3
+libxml2@2.10.3+pic~python+shared build_system=autotools
+libyaml@0.2.5 build_system=autotools
+m4@1.4.19+sigsegv build_system=autotools patches=9dc5fbd,bfdffa7
+metis@5.1.0~gdb~int64~ipo~real64+shared build_system=cmake build_type=Release generator=make patches=4991da9,93a7903
+mfem@4.6.0~amgx~conduit~cuda~debug+examples~exceptions~fms~ginkgo~gnutls~gslib~hiop~lapack~libceed~libunwind+metis+miniapps~mpfr+mpi~netcdf~occa~openmp+petsc~pumi~raja~rocm+shared~slepc+static~strumpack~suite-sparse+sundials+superlu-dist~threadsafe~umpire+zlib build_system=generic patches=718f073 timer=auto
+mpfr@4.2.0 build_system=autotools libs=shared,static
+muparser@2.3.4 build_system=generic
+ncurses@6.4~symlinks+termlib abi=none build_system=autotools
+netlib-scalapack@2.2.0~ipo~pic+shared build_system=cmake build_type=Release generator=make patches=072b006,1c9ce5f,244a9aa
+omega-h@scorec.10.6.0~cuda~examples~gmsh~ipo~kokkos+mpi+optimize+shared+symbols~throw+trilinos~warnings+zlib build_system=cmake build_type=Release generator=make
+openssl@3.1.3~docs+shared build_system=generic certs=mozilla
+p4est@2.8+mpi~openmp build_system=autotools
+parmetis@4.0.3~gdb~int64~ipo+shared build_system=cmake build_type=Release generator=make patches=4f89253,50ed208,704b84f
+perl@5.38.0+cpanm+opcode+open+shared+threads build_system=generic
+petsc@3.20.1~X~batch~cgns~complex~cuda~debug+double~exodusii~fftw+fortran~giflib+hdf5~hpddm~hwloc+hypre~int64~jpeg~knl~kokkos~libpng~libyaml~memkind+metis~mkl-pardiso~mmg~moab~mpfr+mpi~mumps~openmp~p4est~parmmg~ptscotch~random123~rocm~saws~scalapack+shared~strumpack~suite-sparse+superlu-dist~sycl~tetgen~trilinos~valgrind build_system=generic clanguage=C memalign=none
+pflotran@5.0.0~rxn build_system=autotools
+phist@1.12.0~fortran~host~int64~ipo+mpi~openmp~parmetis~scamac+shared~trilinos build_system=cmake build_type=Release generator=make kernel_lib=tpetra outlev=2
+pkgconf@1.9.5 build_system=autotools
+precice@2.5.0~checked~debug_log~ipo+mpi+petsc~python+shared build_system=cmake build_type=Release generator=make
+pumi@2.2.8~fortran~int64~ipo+shared+simmodsuite_version_check~testing~zoltan build_system=cmake build_type=Release generator=make simmodsuite=none
+py-calver@2022.6.26 build_system=python_pip
+py-cython@0.29.36 build_system=python_pip patches=c4369ad
+py-editables@0.3 build_system=python_pip
+py-exceptiongroup@1.1.1 build_system=python_pip
+py-flit-core@3.9.0 build_system=python_pip
+py-flit-scm@1.7.0 build_system=python_pip
+py-hatch-vcs@0.3.0 build_system=python_pip
+py-hatchling@1.18.0 build_system=python_pip
+py-iniconfig@2.0.0 build_system=python_pip
+py-libensemble@1.0.0~deap+mpi~mpmath~nlopt+petsc4py~scipy~tasmanian build_system=python_pip
+py-mpi4py@3.1.4 build_system=python_pip
+py-numpy@1.24.4 build_system=python_pip patches=873745d
+py-packaging@23.1 build_system=python_pip
+py-pathspec@0.11.1 build_system=python_pip
+py-petsc4py@3.20.1+mpi build_system=python_pip
+py-pip@23.1.2 build_system=generic
+py-pluggy@1.0.0 build_system=python_pip
+py-psutil@5.9.5 build_system=python_pip
+py-pydantic@1.10.9~dotenv build_system=python_pip
+py-pytest@7.3.2 build_system=python_pip
+py-pyyaml@6.0+libyaml build_system=python_pip
+py-setuptools@63.4.3 build_system=generic
+py-setuptools-scm@7.1.0+toml build_system=python_pip
+py-tomli@2.0.1 build_system=python_pip
+py-trove-classifiers@2023.8.7 build_system=python_pip
+py-typing-extensions@4.8.0 build_system=python_pip
+py-wheel@0.41.2 build_system=generic
+python@3.8.18+bz2+crypt+ctypes+dbm~debug+libxml2+lzma~nis~optimizations+pic+pyexpat+pythoncmd+readline+shared+sqlite3+ssl~tkinter+uuid+zlib build_system=generic patches=0d98e93,4c24573,ebdca64,f2fd060
+raja@0.14.0~cuda+examples+exercises~ipo+openmp~plugins~rocm+shared~tests build_system=cmake build_type=Release generator=make
+readline@8.2 build_system=autotools patches=bbf97f1
+sed@4.9 build_system=autotools
+slate@2023.08.25~cuda~ipo+mpi+openmp~rocm+shared~sycl build_system=cmake build_type=Release generator=make
+slepc@3.20.0+arpack~blopex~cuda~hpddm~rocm build_system=generic
+sqlite@3.43.2+column_metadata+dynamic_extensions+fts~functions+rtree build_system=autotools
+strumpack@7.2.0+butterflypack+c_interface~count_flops~cuda~ipo~magma+mpi+openmp+parmetis~rocm~scotch+shared+slate~task_timers+zfp build_system=cmake build_type=Release generator=make
+suite-sparse@5.13.0~cuda~graphblas~openmp+pic build_system=generic
+sundials@6.6.2+ARKODE+CVODE+CVODES+IDA+IDAS+KINSOL~cuda+examples+examples-install~f2003~fcmix+generic-math+ginkgo+hypre~int64~ipo~klu~kokkos~kokkos-kernels~lapack~magma~monitoring+mpi~openmp+petsc~profiling~pthread~raja~rocm+shared+static+superlu-dist~superlu-mt~sycl+trilinos build_system=cmake build_type=Release cstd=99 cxxstd=14 generator=make logging-level=0 logging-mpi=OFF precision=double
+superlu-dist@8.2.0~cuda~int64~ipo~openmp+parmetis~rocm+shared build_system=cmake build_type=Release generator=make
+tar@1.35 build_system=autotools zip=pigz
+tasmanian@8.0+blas~cuda~fortran~ipo~magma+mpi+openmp~python~rocm~xsdkflags build_system=cmake build_type=Release generator=make patches=8b8d74c
+texinfo@7.0.3 build_system=autotools
+trilinos@14.4.0~adelus~adios2+amesos+amesos2+anasazi+aztec~basker+belos+boost~chaco~complex~cuda~cuda_rdc~debug~dtk+epetra+epetraext~epetraextbtf~epetraextexperimental~epetraextgraphreorderings~exodus+explicit_template_instantiation~float+fortran~gtest+hdf5+hypre+ifpack+ifpack2~intrepid+intrepid2~ipo~isorropia+kokkos~mesquite~minitensor+ml+mpi+muelu~mumps+nox~openmp~panzer~phalanx~piro~python~rocm~rocm_rdc~rol~rythmos+sacado~scorec+shards+shared~shylu~stk~stokhos+stratimikos~strumpack~suite-sparse~superlu+superlu-dist~teko~tempus~test+thyra+tpetra~trilinoscouplings~wrapper~x11+zoltan+zoltan2 build_system=cmake build_type=Release cxxstd=17 generator=make gotype=int
+umpire@6.0.0+c~cuda~device_alloc~deviceconst+examples~fortran~ipo~numa~openmp~rocm+shared build_system=cmake build_type=Release generator=make tests=none
+util-linux-uuid@2.38.1 build_system=autotools
+util-macros@1.19.3 build_system=autotools
+xsdk@1.0.0+alquimia+arborx+butterflypack~cuda+datatransferkit+dealii+exago+ginkgo+heffte+hiop+libensemble+omega-h+pflotran+phist+precice+raja~rocm+slate+strumpack~sycl+trilinos build_system=bundle
+xz@5.4.4~pic build_system=autotools libs=shared,static
+zfp@1.0.0~aligned~c~cuda~daz~fasthash~fortran~ipo~openmp~profile~python+shared~strided~tight-error~twoway+utilities bsws=64 build_system=cmake build_type=Release generator=make round=never
+zlib-ng@2.1.4+compat+opt build_system=autotools
+zstd@1.5.5~programs build_system=makefile libs=shared,static
+
+####### OneAPI + SYCL ###############
+xsdk@pj01:~/spack$ ./bin/spack find -vL
+-- linux-fedora39-skylake / oneapi@2023.2.0 ---------------------
+ah5d47fvcthmorrdizufathnrez4uuzt alquimia@1.1.0~ipo+shared build_system=cmake build_type=Release generator=make
+rz3mdp7lzcg6crdpxyo3n5goxf25h7i2 amrex@23.11~amrdata~cuda~eb~fortran~hdf5~hypre~ipo+linear_solvers+mpi~openmp~particles~petsc~pic~plotfile_tools~rocm~shared~sundials+sycl~tiny_profile build_system=cmake build_type=Release dimensions=1,2,3 generator=make precision=double
+rx3bzw4mm5osxlas4qr3tevnj3kpjlff arborx@1.4.1~cuda~ipo+mpi~openmp~rocm+serial+sycl~trilinos build_system=cmake build_type=Release cxxstd=17 generator=make
+jta6mlofu5chxtvrsqlwtkvrp3htc2bt arpack-ng@3.9.0~icb~ipo+mpi+shared build_system=cmake build_type=Release generator=make
+ofiqibdurfnw77wgxy6kd3ndca6mkedr blaspp@2023.08.25~cuda~ipo+openmp~rocm+shared~sycl build_system=cmake build_type=Release generator=make
+4n3eswgvw4dqc5u35gppoznqkcegzsvo blt@0.4.1 build_system=generic
+ng3fkedgw3lujxe5skt2ys443vymrsuo boost@1.83.0~atomic~chrono~clanglibcpp~container~context~contract~coroutine~date_time~debug~exception~fiber+filesystem~graph~graph_parallel~icu~iostreams~json~locale+log~math~mpi+multithreaded~nowide~numpy~pic+program_options~python~random~regex~serialization+shared~signals~singlethreaded~stacktrace+system~taggedlayout+test+thread~timer~type_erasure~versionedlayout~wave build_system=generic cxxstd=98 patches=8e3faa2,a440f96 visibility=hidden
+agvfrmkrjibbvoudab2w4424ycctjmjc butterflypack@2.4.0~ipo+openmp+shared build_system=cmake build_type=Release generator=make
+kvspjszrrgfs6jmtviols6w5byckxte4 bzip2@1.0.8~debug~pic+shared build_system=generic
+xkdgrav4gmbsk3e6yzu7476k3ysz3jpn ca-certificates-mozilla@2023-05-30 build_system=generic
+fajl2dj7nelj4j6zfe6zzh4qcrmcugnd camp@0.2.3~cuda~ipo+openmp~rocm~tests build_system=cmake build_type=Release generator=make
+w3pum2qxmgc5vtlyxc3v2fnmhivj7eth cmake@3.27.6~doc+ncurses+ownlibs build_system=generic build_type=Release
+3wazn5pxtvyallyvpvs3nkjae7mm5pf2 diffutils@3.10 build_system=autotools
+25asvqmb7krilsupxmy6ufoy42dl3tmi eigen@3.4.0~ipo build_system=cmake build_type=RelWithDebInfo generator=make
+mrcmywvuxbvvynzjigab4pyebm6g7bzu exago@1.6.0~cuda+hiop~ipo~ipopt+logging+mpi+python+raja~rocm build_system=cmake build_type=Release generator=make
+3lkmuihdya6kukyw2pneuyurn3x2awco expat@2.5.0+libbsd build_system=autotools
+kyssallm5l2i2ptw2v7pjemlpbyp7rcn fftw@3.3.10+mpi~openmp~pfft_patches build_system=autotools precision=double,float
+qf4o3fspdehpytvlzlkxchvi6nacnggc gdbm@1.23 build_system=autotools
+nupc6ke23he6omwowjvghfqs32h37ufm gettext@0.22.3+bzip2+curses+git~libunistring+libxml2+pic+shared+tar+xz build_system=autotools
+y57vdzly5vndfnqegxiqxkauf7d2krl3 ginkgo@1.7.0~cuda~develtools~full_optimizations~hwloc~ipo+mpi~openmp~rocm+shared+sycl build_system=cmake build_type=Release generator=make
+w2xutjyyjze37gkf6dxmcbwdj4pwk6dq git@2.41.0+man+nls+perl+subtree~svn~tcltk build_system=autotools
+nvun4ngawnzwro3xvjycyepn3dg4agtr gmake@4.4.1~guile build_system=generic
+hg3jlbtz7kcoxg5hqxfs7m2wjkjz3mhr hdf5@1.14.3~cxx+fortran+hl~ipo~java~map+mpi+shared~subfiling~szip~threadsafe+tools api=default build_system=cmake build_type=Release generator=make
+jsetq2cjl4fkm4hoh3uq4ges6vfh2eql heffte@2.4.0~cuda+fftw~fortran~ipo~magma~mkl~python~rocm+shared build_system=cmake build_type=Release generator=make
+2uwmzaj5wtygzi3vmksyvwes4s3xrwec hiop@1.0.0~cuda~deepchecking~ginkgo~ipo~jsrun~kron+mpi+raja~rocm~shared~sparse build_system=cmake build_type=Release generator=make
+raum4h3vw67xc5wyklfhggebx7erddpo hypre@2.30.0~caliper~complex~cuda~debug+fortran~gptune~int64~internal-superlu~magma~mixedint+mpi~openmp~rocm+shared+superlu-dist~sycl~umpire~unified-memory build_system=autotools
+q7urohiv7cftthz4uvptlgo6d25ypnlf intel-oneapi-dpl@2022.2.0+envmods build_system=generic
+owuzthz3lhvmpemgq4obpph2lxtlvcqh intel-oneapi-mkl@2023.2.0~cluster+envmods~ilp64+shared build_system=generic mpi_family=none threads=none
+x5whudelrpvrmdnev36h6s6qapfkdn4e intel-oneapi-mpi@2021.10.0+envmods~external-libfabric~generic-names~ilp64 build_system=generic
+yht5mhzjxfa6oxkzqlc24w3hbwz5q7fl intel-oneapi-tbb@2021.10.0+envmods build_system=generic
+k2wb6l6fxkajfjgyzh3o24d77kltiv3r kokkos@4.0.00~aggressive_vectorization~compiler_warnings~cuda~debug~debug_bounds_check~debug_dualview_modify_check~deprecated_code~examples~hpx~hpx_async_dispatch~hwloc~ipo~memkind~numactl~openmp~openmptarget~pic~rocm+serial+shared+sycl~tests~threads~tuning~wrapper build_system=cmake build_type=Release cxxstd=17 generator=make intel_gpu_arch=none
+7t67wjl6byqtqkywdoxuteadzaejtw5i kokkos-kernels@4.0.00~blas~cblas~cublas~cuda~cusparse~ipo~lapack~lapacke~mkl~openmp~serial+shared~superlu~threads build_system=cmake build_type=Release execspace_cuda=auto execspace_openmp=auto execspace_serial=auto execspace_threads=auto generator=make layouts=left memspace_cudaspace=auto memspace_cudauvmspace=auto offsets=int,size_t ordinals=int scalars=double
+f7wtxs7zahngjz73hmveo2u66hauzkp5 lapackpp@2023.08.25~cuda~ipo~rocm+shared~sycl build_system=cmake build_type=Release generator=make
+yfftyexr7ocwcqvkbpht5lhvcxexybmp libbsd@0.11.7 build_system=autotools
+ludxdpevuja7ri57bcxjxrslyvwdge54 libffi@3.4.4 build_system=autotools
+oi7lkgvibxf2upx3apteahq4ycgq63rg libiconv@1.17 build_system=autotools libs=shared,static
+rh6b7fd4plq4dyal3pz4coktbalq6yil libmd@1.0.4 build_system=autotools
+pnas3yqf3hafpbphkic7gyltb2xgfpol libxcrypt@4.4.35~obsolete_api build_system=autotools patches=4885da3
+sg4yws4ayhxetagzbmqncfsb5qf3mwpk libxml2@2.10.3+pic~python+shared build_system=autotools
+bhx6ylro6uhg4qujat3zz4zxdro2umgv libyaml@0.2.5 build_system=autotools
+isjgkrx5jdssrfwgodqkfyzrap55fy6p metis@5.1.0~gdb~int64~ipo~real64+shared build_system=cmake build_type=Release generator=make patches=4991da9,93a7903
+cvyuq6gkze67fw565cp2gtruqgjsuw5s mfem@4.6.0~amgx~conduit~cuda~debug+examples~exceptions~fms~ginkgo~gnutls~gslib~hiop~lapack~libceed~libunwind+metis+miniapps~mpfr+mpi~netcdf~occa~openmp+petsc~pumi~raja~rocm+shared~slepc+static~strumpack~suite-sparse+sundials+superlu-dist~threadsafe~umpire+zlib build_system=generic patches=718f073 timer=auto
+igxiakw2oxq4tmyhh2tzbtdaek3ozhad ncurses@6.4~symlinks+termlib abi=none build_system=autotools
+z4ck3zmxqtnjb6g3pnikpx3mfxjjpn6p netlib-scalapack@2.2.0~ipo~pic+shared build_system=cmake build_type=Release generator=make patches=072b006,1c9ce5f,244a9aa
+6vwhzsph4ucvk4oor3la4tyfisus4k7i omega-h@scorec.10.6.0~cuda~examples~gmsh~ipo~kokkos+mpi+optimize+shared+symbols~throw~trilinos~warnings+zlib build_system=cmake build_type=Release generator=make
+5rxmsnnrn4s5d4big5fngxfkhc3di2nx openssl@3.1.3~docs+shared build_system=generic certs=mozilla
+5vwy677nxxudv2tvhffrdmxapoamm3en parmetis@4.0.3~gdb~int64~ipo+shared build_system=cmake build_type=Release generator=make patches=4f89253,50ed208,704b84f
+hhvoa4i4vzhmzhqrkh7mcdymj3ep4qpk perl@5.38.0+cpanm+opcode+open+shared+threads build_system=generic
+mw6gx3qbqgxs55vnbdi3tymmmblt6h33 petsc@3.20.1~X~batch~cgns~complex~cuda~debug+double~exodusii~fftw+fortran~giflib+hdf5~hpddm~hwloc+hypre~int64~jpeg~knl+kokkos~libpng~libyaml~memkind+metis~mkl-pardiso~mmg~moab~mpfr+mpi~mumps~openmp~p4est~parmmg~ptscotch~random123~rocm~saws~scalapack+shared~strumpack~suite-sparse+superlu-dist+sycl~tetgen~trilinos~valgrind build_system=generic clanguage=C memalign=none
+fh4qxgael5kotjadbswldo6wujr2qfrs pflotran@5.0.0~rxn build_system=autotools
+f6k7durtb2kjl6zfcrjmxxzcbdgkfi4o phist@1.12.0~fortran~host~int64~ipo+mpi~openmp~parmetis~scamac+shared~trilinos build_system=cmake build_type=Release generator=make kernel_lib=petsc outlev=2
+e4mlo5pdaetjhtcn7o77zxy2uizax7ot pkgconf@1.9.5 build_system=autotools
+hjns2kptjm5cx3utbefulccma53ragfz precice@2.5.0~checked~debug_log~ipo+mpi+petsc~python+shared build_system=cmake build_type=Release generator=make
+xyspvg35eqwymxcv3eg6s4hr2s5u5qug pumi@2.2.8~fortran~int64~ipo+shared+simmodsuite_version_check~testing~zoltan build_system=cmake build_type=Release generator=make simmodsuite=none
+ymctegvpy6vsgmulodys7jhhs5to7hx2 py-calver@2022.6.26 build_system=python_pip
+pd6x2hwdsng47u45ba4atqa5542mkkq6 py-cython@0.29.36 build_system=python_pip patches=c4369ad
+ax2wcrp4s3zsgxn2viblaul5gfq6uysi py-editables@0.3 build_system=python_pip
+eo3o6z5l6nicg53ucrg7w42xsg5gfslg py-exceptiongroup@1.1.1 build_system=python_pip
+zydwyrpcfxcnhyhhtyzksd4laxztv32i py-flit-core@3.9.0 build_system=python_pip
+m4h7ba7ausxw5sbgmtzdyxerhs75tm7n py-flit-scm@1.7.0 build_system=python_pip
+jdbt6n2a6wr73hgjqnxriblrzxxm3tuv py-hatch-vcs@0.3.0 build_system=python_pip
+3ssim3x3sm7ljhdini5hqrr7z3kwrgwx py-hatchling@1.18.0 build_system=python_pip
+ioyy2ob6zn7yedlbmyratocej4otn3ov py-iniconfig@2.0.0 build_system=python_pip
+n6fgy6ng26yeeu74j24n5napgiq7w2jd py-libensemble@1.0.0~deap+mpi~mpmath~nlopt+petsc4py~scipy~tasmanian build_system=python_pip
+g2zoxhx62veg22pxioexnudmupzl2q4k py-mpi4py@3.1.4 build_system=python_pip
+ecu6c4egcfzlnsly4cq2unrxtd7vz7hs py-numpy@1.24.4 build_system=python_pip patches=873745d
+4wkqlwyweu3idsjidq4nlao4ji74zjck py-packaging@23.1 build_system=python_pip
+3trbnuyirsvftp5v7rwmykvmgkxexfvb py-pathspec@0.11.1 build_system=python_pip
+7b7q5hpy72mv2ikresycylueembmg2xr py-petsc4py@3.20.1+mpi build_system=python_pip
+l6abbbuq5mcstwr5sdz3ajzwi4z737kk py-pip@23.1.2 build_system=generic
+7676vxv7ck5vfjk2sfn52n6p7ftk6kgz py-pluggy@1.0.0 build_system=python_pip
+4nfr4igqer4yzqlw26fzqee43o26ckft py-psutil@5.9.5 build_system=python_pip
+vf5u6wv2jjogwcmnaeqf3ymggddpug46 py-pydantic@1.10.9~dotenv build_system=python_pip
+ukva2y2rjcgrxuzm5j52om3pbvwfqyvr py-pytest@7.3.2 build_system=python_pip
+t7sqoq7csa7fs657xijphsvymp6uv5af py-pyyaml@6.0+libyaml build_system=python_pip
+66phyl4kaagwd7pyq523dv5aepcvxysz py-setuptools@63.4.3 build_system=generic
+swpfhlsczsly6se4ixz5hkltw7aiaeny py-setuptools-scm@7.1.0+toml build_system=python_pip
+n2fktfsurlx2lbre7ntseoyneuoorbaj py-tomli@2.0.1 build_system=python_pip
+qrrts6raeshksumkmxwb726xcivzoemx py-trove-classifiers@2023.8.7 build_system=python_pip
+fmfz74xpgivkvdw5l6jb2xtaaozqmgaz py-typing-extensions@4.8.0 build_system=python_pip
+nbh52gsntqbxv7itslenpo2tknx6xmm2 py-wheel@0.41.2 build_system=generic
+a6ygx36ij4ld77uophhzkhpgg3uylws2 python@3.8.18+bz2+crypt+ctypes+dbm~debug+libxml2+lzma~nis~optimizations+pic+pyexpat+pythoncmd+readline+shared+sqlite3+ssl~tkinter+uuid+zlib build_system=generic patches=0d98e93,4c24573,ebdca64,f2fd060
+toxpyvo4yqi2jrukqqh5w33m7y4jxzfn raja@0.14.0~cuda+examples+exercises~ipo+openmp~plugins~rocm+shared~tests build_system=cmake build_type=Release generator=make
+mq7allnggydcxcyacxdk4vdsamfg2245 readline@8.2 build_system=autotools patches=bbf97f1
+jic5lj2dsici64rwcun7h6yqxzxpcw7m sed@4.9 build_system=autotools
+vvi4pzjxdpmczlc5brqqlxrbj6tsa4ea slate@2023.08.25~cuda~ipo+mpi+openmp~rocm+shared~sycl build_system=cmake build_type=Release generator=make
+n46ifxyosih43vealmznmkyyocqucmbk slepc@3.20.0+arpack~blopex~cuda~hpddm~rocm build_system=generic
+43k4afydqcmlup7eikq5jubfazfiv43t sqlite@3.43.2+column_metadata+dynamic_extensions+fts~functions+rtree build_system=autotools
+zex7exasunbmp6zgpcdr32njh22bfod7 strumpack@7.2.0+butterflypack+c_interface~count_flops~cuda~ipo~magma+mpi+openmp+parmetis~rocm~scotch+shared+slate~task_timers+zfp build_system=cmake build_type=Release generator=make
+eddi5la2ntshdara6dgr5237uewuj7mi sundials@6.6.2+ARKODE+CVODE+CVODES+IDA+IDAS+KINSOL~cuda+examples+examples-install~f2003~fcmix+generic-math+ginkgo+hypre~int64~ipo~klu~kokkos~kokkos-kernels~lapack~magma~monitoring+mpi~openmp+petsc~profiling~pthread~raja~rocm+shared+static+superlu-dist~superlu-mt+sycl~trilinos build_system=cmake build_type=Release cstd=99 cxxstd=17 generator=make logging-level=0 logging-mpi=OFF precision=double
+2gmsufnqb2jjmhdvh6chy3s7q2y7o747 superlu-dist@8.2.0~cuda~int64~ipo~openmp+parmetis~rocm+shared build_system=cmake build_type=Release generator=make
+e2zilcndmfwdlzjomvghnrkez5h2tqnw tar@1.35 build_system=autotools zip=pigz
+352ohythfntbadgozl6iw3r2buxe7awz tasmanian@8.0+blas~cuda~fortran~ipo~magma+mpi+openmp~python~rocm~xsdkflags build_system=cmake build_type=Release generator=make patches=8b8d74c
+xvry54cgyretlkwjuutljixmq4isjhpb umpire@6.0.0+c~cuda~device_alloc~deviceconst+examples~fortran~ipo~numa~openmp~rocm+shared build_system=cmake build_type=Release generator=make tests=none
+a5rftf6gb2m4jdheaweu56bt5exdfysb util-linux-uuid@2.38.1 build_system=autotools
+3lqlcqh4cqnv6czhkrmrl6nnvdgyusaq xsdk@1.0.0+alquimia+arborx+butterflypack~cuda+datatransferkit~dealii+exago+ginkgo+heffte+hiop+libensemble+omega-h+pflotran+phist+precice+raja~rocm+slate+strumpack+sycl~trilinos build_system=bundle
+jph74ynq3toficp37oo2pwh54ge6tvz2 xz@5.4.4~pic build_system=autotools libs=shared,static
+3m3rmdjppzmji2653yrdtr2i622mjzl4 zfp@1.0.0~aligned~c~cuda~daz~fasthash~fortran~ipo~openmp~profile~python+shared~strided~tight-error~twoway+utilities bsws=64 build_system=cmake build_type=Release generator=make round=never
+dgwosr7mortbzzizeqxhdbjwmlqforo2 zlib-ng@2.1.4+compat+opt build_system=autotools
+
+####### Clang ###############
+$ ./bin/spack find -v
+-- linux-fedora39-skylake / clang@17.0.0 ------------------------
+alquimia@1.1.0~ipo+shared build_system=cmake build_type=Release generator=make
+arborx@1.4.1~cuda~ipo+mpi~openmp~rocm+serial~sycl~trilinos build_system=cmake build_type=Release cxxstd=17 generator=make
+arpack-ng@3.9.0~icb~ipo+mpi+shared build_system=cmake build_type=Release generator=make
+autoconf@2.71 build_system=autotools
+autoconf-archive@2023.02.20 build_system=autotools
+automake@1.16.5 build_system=autotools
+blaspp@2023.08.25~cuda~ipo+openmp~rocm+shared~sycl build_system=cmake build_type=Release generator=make
+blt@0.4.1 build_system=generic
+butterflypack@2.4.0~ipo+openmp+shared build_system=cmake build_type=Release generator=make
+bzip2@1.0.8~debug~pic+shared build_system=generic
+ca-certificates-mozilla@2023-05-30 build_system=generic
+camp@0.2.3~cuda~ipo+openmp~rocm~tests build_system=cmake build_type=Release generator=make
+cmake@3.27.6~doc+ncurses+ownlibs build_system=generic build_type=Release
+datatransferkit@3.1.1~external-arborx~ipo~openmp+serial+shared build_system=cmake build_type=Release generator=make
+dealii@9.5.1~adol-c~arborx+arpack~assimp~cgal~cuda~doc+examples~ginkgo~gmsh+gsl+hdf5~int64~ipo+kokkos+metis+mpi+muparser~nanoflann~netcdf~oce~optflags+p4est+petsc+platform-introspection~python+scalapack~simplex+slepc+sundials~symengine+threads+trilinos build_system=cmake build_type=DebugRelease cxxstd=17 generator=make
+diffutils@3.10 build_system=autotools
+eigen@3.4.0~ipo build_system=cmake build_type=RelWithDebInfo generator=make
+exago@1.6.0~cuda+hiop~ipo~ipopt+logging+mpi+python+raja~rocm build_system=cmake build_type=Release generator=make
+expat@2.5.0+libbsd build_system=autotools
+fftw@3.3.10+mpi~openmp~pfft_patches build_system=autotools precision=double,float
+findutils@4.9.0 build_system=autotools patches=440b954
+gdbm@1.23 build_system=autotools
+gettext@0.22.3+bzip2+curses+git~libunistring+libxml2+pic+shared+tar+xz build_system=autotools
+ginkgo@1.7.0~cuda~develtools~full_optimizations~hwloc~ipo+mpi~openmp~rocm+shared~sycl build_system=cmake build_type=Release generator=make
+git@2.41.0+man+nls+perl+subtree~svn~tcltk build_system=autotools
+gmake@4.4.1~guile build_system=generic
+gmp@6.2.1+cxx build_system=autotools libs=shared,static patches=69ad2e2
+gsl@2.7.1~external-cblas+pic+shared build_system=autotools
+hdf5@1.14.3~cxx+fortran+hl~ipo~java~map+mpi+shared~subfiling~szip~threadsafe+tools api=default build_system=cmake build_type=Release generator=make
+heffte@2.4.0~cuda+fftw~fortran~ipo~magma~mkl~python~rocm+shared build_system=cmake build_type=Release generator=make
+hiop@1.0.0~cuda~deepchecking~ginkgo~ipo~jsrun~kron+mpi+raja~rocm~shared~sparse build_system=cmake build_type=Release generator=make
+hwloc@2.9.1~cairo~cuda~gl~libudev+libxml2~netloc~nvml~oneapi-level-zero~opencl+pci~rocm build_system=autotools libs=shared,static
+hypre@2.30.0~caliper~complex~cuda~debug+fortran~gptune~int64~internal-superlu~magma~mixedint+mpi~openmp~rocm+shared+superlu-dist~sycl~umpire~unified-memory build_system=autotools
+intel-tbb@2021.9.0~ipo+shared+tm build_system=cmake build_type=Release cxxstd=default generator=make patches=91755c6
+kokkos@4.1.00~aggressive_vectorization~compiler_warnings~cuda~debug~debug_bounds_check~debug_dualview_modify_check~deprecated_code~examples~hpx~hpx_async_dispatch~hwloc~ipo~memkind~numactl~openmp~openmptarget~pic~rocm+serial+shared~sycl~tests~threads~tuning~wrapper build_system=cmake build_type=Release cxxstd=17 generator=make intel_gpu_arch=none
+lapackpp@2023.08.25~cuda~ipo~rocm+shared~sycl build_system=cmake build_type=Release generator=make
+libbsd@0.11.7 build_system=autotools
+libfabric@1.19.0~debug~kdreg build_system=autotools fabrics=sockets,tcp,udp
+libffi@3.4.4 build_system=autotools
+libiconv@1.17 build_system=autotools libs=shared,static
+libmd@1.0.4 build_system=autotools
+libpciaccess@0.17 build_system=autotools
+libtool@2.4.7 build_system=autotools
+libxcrypt@4.4.35~obsolete_api build_system=autotools patches=4885da3
+libxml2@2.10.3+pic~python+shared build_system=autotools
+libyaml@0.2.5 build_system=autotools
+m4@1.4.19+sigsegv build_system=autotools patches=9dc5fbd,bfdffa7
+metis@5.1.0~gdb~int64~ipo~real64+shared build_system=cmake build_type=Release generator=make patches=4991da9,93a7903
+mfem@4.6.0~amgx~conduit~cuda~debug+examples~exceptions~fms~ginkgo~gnutls~gslib~hiop~lapack~libceed~libunwind+metis+miniapps~mpfr+mpi~netcdf~occa~openmp+petsc~pumi~raja~rocm+shared~slepc+static~strumpack~suite-sparse+sundials+superlu-dist~threadsafe~umpire+zlib build_system=generic patches=718f073 timer=auto
+mpfr@4.2.0 build_system=autotools libs=shared,static
+mpich@4.1.2~argobots~cuda+fortran+hwloc+hydra+libxml2+pci~rocm+romio~slurm~vci~verbs+wrapperrpath build_system=autotools datatype-engine=auto device=ch4 netmod=ofi pmi=pmi
+muparser@2.3.4 build_system=generic
+ncurses@6.4~symlinks+termlib abi=none build_system=autotools
+netlib-lapack@3.11.0~external-blas~ipo+lapacke+shared~xblas build_system=cmake build_type=Release generator=make
+netlib-scalapack@2.2.0~ipo~pic+shared build_system=cmake build_type=Release generator=make patches=072b006,1c9ce5f,244a9aa
+ninja@1.11.1+re2c build_system=generic
+omega-h@scorec.10.6.0~cuda~examples~gmsh~ipo~kokkos+mpi+optimize+shared+symbols~throw+trilinos~warnings+zlib build_system=cmake build_type=Release generator=make
+openssl@3.1.3~docs+shared build_system=generic certs=mozilla
+p4est@2.8+mpi~openmp build_system=autotools
+parmetis@4.0.3~gdb~int64~ipo+shared build_system=cmake build_type=Release generator=make patches=4f89253,50ed208,704b84f
+perl@5.38.0+cpanm+opcode+open+shared+threads build_system=generic
+petsc@3.20.1~X~batch~cgns~complex~cuda~debug+double~exodusii~fftw+fortran~giflib+hdf5~hpddm~hwloc+hypre~int64~jpeg~knl~kokkos~libpng~libyaml~memkind+metis~mkl-pardiso~mmg~moab~mpfr+mpi~mumps~openmp~p4est~parmmg~ptscotch~random123~rocm~saws~scalapack+shared~strumpack~suite-sparse+superlu-dist~sycl~tetgen~trilinos~valgrind build_system=generic clanguage=C memalign=none
+pflotran@5.0.0~rxn build_system=autotools
+phist@1.12.0~fortran~host~int64~ipo+mpi~openmp~parmetis~scamac+shared~trilinos build_system=cmake build_type=Release generator=make kernel_lib=tpetra outlev=2
+pkgconf@1.9.5 build_system=autotools
+precice@2.5.0~checked~debug_log~ipo+mpi+petsc~python+shared build_system=cmake build_type=Release generator=make
+pumi@2.2.8~fortran~int64~ipo+shared+simmodsuite_version_check~testing~zoltan build_system=cmake build_type=Release generator=make simmodsuite=none
+py-calver@2022.6.26 build_system=python_pip
+py-cython@0.29.36 build_system=python_pip patches=c4369ad
+py-editables@0.3 build_system=python_pip
+py-flit-core@3.9.0 build_system=python_pip
+py-hatch-vcs@0.3.0 build_system=python_pip
+py-hatchling@1.18.0 build_system=python_pip
+py-iniconfig@2.0.0 build_system=python_pip
+py-libensemble@1.0.0~deap+mpi~mpmath~nlopt+petsc4py~scipy~tasmanian build_system=python_pip
+py-mpi4py@3.1.4 build_system=python_pip
+py-numpy@1.26.2 build_system=python_pip patches=873745d
+py-packaging@23.1 build_system=python_pip
+py-pathspec@0.11.1 build_system=python_pip
+py-petsc4py@3.20.1+mpi build_system=python_pip
+py-pip@23.1.2 build_system=generic
+py-pluggy@1.0.0 build_system=python_pip
+py-psutil@5.9.5 build_system=python_pip
+py-pydantic@1.10.9~dotenv build_system=python_pip
+py-pyproject-metadata@0.7.1 build_system=python_pip
+py-pytest@7.3.2 build_system=python_pip
+py-pyyaml@6.0+libyaml build_system=python_pip
+py-setuptools@68.0.0 build_system=generic
+py-setuptools-scm@7.1.0+toml build_system=python_pip
+py-tomli@2.0.1 build_system=python_pip
+py-trove-classifiers@2023.8.7 build_system=python_pip
+py-typing-extensions@4.8.0 build_system=python_pip
+py-wheel@0.41.2 build_system=generic
+python@3.11.6+bz2+crypt+ctypes+dbm~debug+libxml2+lzma~nis~optimizations+pic+pyexpat+pythoncmd+readline+shared+sqlite3+ssl~tkinter+uuid+zlib build_system=generic patches=13fa8bf,b0615b2,ebdca64,f2fd060
+raja@0.14.0~cuda+examples+exercises~ipo+openmp~plugins~rocm+shared~tests build_system=cmake build_type=Release generator=make
+readline@8.2 build_system=autotools patches=bbf97f1
+sed@4.9 build_system=autotools
+slate@2023.08.25~cuda~ipo+mpi+openmp~rocm+shared~sycl build_system=cmake build_type=Release generator=make
+slepc@3.20.0+arpack~blopex~cuda~hpddm~rocm build_system=generic
+sqlite@3.43.2+column_metadata+dynamic_extensions+fts~functions+rtree build_system=autotools
+strumpack@7.2.0+butterflypack+c_interface~count_flops~cuda~ipo~magma+mpi+openmp+parmetis~rocm~scotch+shared+slate~task_timers+zfp build_system=cmake build_type=Release generator=make
+suite-sparse@5.13.0~cuda~graphblas~openmp+pic build_system=generic
+sundials@6.6.2+ARKODE+CVODE+CVODES+IDA+IDAS+KINSOL~cuda+examples+examples-install~f2003~fcmix+generic-math+ginkgo+hypre~int64~ipo~klu~kokkos~kokkos-kernels~lapack~magma~monitoring+mpi~openmp+petsc~profiling~pthread~raja~rocm+shared+static+superlu-dist~superlu-mt~sycl+trilinos build_system=cmake build_type=Release cstd=99 cxxstd=14 generator=make logging-level=0 logging-mpi=OFF precision=double
+superlu-dist@8.2.0~cuda~int64~ipo~openmp+parmetis~rocm+shared build_system=cmake build_type=Release generator=make
+tar@1.35 build_system=autotools zip=pigz
+tasmanian@8.0+blas~cuda~fortran~ipo~magma+mpi+openmp~python~rocm~xsdkflags build_system=cmake build_type=Release generator=make patches=8b8d74c
+texinfo@7.0.3 build_system=autotools
+trilinos@14.4.0~adelus~adios2+amesos+amesos2+anasazi+aztec~basker+belos+boost~chaco~complex~cuda~cuda_rdc~debug~dtk+epetra+epetraext~epetraextbtf~epetraextexperimental~epetraextgraphreorderings~exodus+explicit_template_instantiation~float+fortran~gtest+hdf5+hypre+ifpack+ifpack2~intrepid+intrepid2~ipo~isorropia+kokkos~mesquite~minitensor+ml+mpi+muelu~mumps+nox~openmp~panzer~phalanx~piro~python~rocm~rocm_rdc~rol~rythmos+sacado~scorec+shards+shared~shylu~stk~stokhos+stratimikos~strumpack~suite-sparse~superlu+superlu-dist~teko~tempus~test+thyra+tpetra~trilinoscouplings~wrapper~x11+zoltan+zoltan2 build_system=cmake build_type=Release cxxstd=17 generator=make gotype=int
+umpire@6.0.0+c~cuda~device_alloc~deviceconst+examples~fortran~ipo~numa~openmp~rocm+shared build_system=cmake build_type=Release generator=make tests=none
+util-linux-uuid@2.38.1 build_system=autotools
+util-macros@1.19.3 build_system=autotools
+xsdk@1.0.0+alquimia+arborx+butterflypack~cuda+datatransferkit+dealii+exago+ginkgo+heffte+hiop+libensemble+omega-h+pflotran+phist+precice+raja~rocm+slate+strumpack~sycl+trilinos build_system=bundle
+xz@5.4.4~pic build_system=autotools libs=shared,static
+yaksa@0.3~cuda~rocm build_system=autotools
+zfp@1.0.0~aligned~c~cuda~daz~fasthash~fortran~ipo~openmp~profile~python+shared~strided~tight-error~twoway+utilities bsws=64 build_system=cmake build_type=Release generator=make round=never
+zlib-ng@2.1.4+compat+opt build_system=autotools
+-- linux-fedora39-skylake / gcc@13.2.1 --------------------------
+boost@1.79.0+atomic+chrono~clanglibcpp~container~context~contract~coroutine+date_time~debug+exception~fiber+filesystem+graph~graph_parallel~icu+iostreams~json+locale+log+math~mpi+multithreaded~nowide~numpy~pic+program_options~python+random+regex+serialization+shared+signals~singlethreaded+stacktrace+system~taggedlayout+test+thread+timer~type_erasure~versionedlayout+wave build_system=generic cxxstd=17 patches=a440f96 visibility=hidden
+gmake@4.4.1~guile build_system=generic
+zstd@1.5.5~programs build_system=makefile libs=shared,static
+
+####### GCC ###############
+$ ./bin/spack find -v
+-- linux-fedora39-skylake / gcc@13.2.1 --------------------------
+alquimia@1.1.0~ipo+shared build_system=cmake build_type=Release generator=make
+amrex@23.08~amrdata~cuda~eb~fortran~hdf5~hypre~ipo+linear_solvers+mpi~openmp~particles~petsc~pic~plotfile_tools~rocm~shared+sundials~sycl~tiny_profile build_system=cmake build_type=Release dimensions=1,2,3 generator=make precision=double
+arborx@1.4.1~cuda~ipo+mpi~openmp~rocm+serial~sycl~trilinos build_system=cmake build_type=Release cxxstd=17 generator=make
+arpack-ng@3.9.0~icb~ipo+mpi+shared build_system=cmake build_type=Release generator=make
+autoconf@2.71 build_system=autotools
+autoconf-archive@2023.02.20 build_system=autotools
+automake@1.16.5 build_system=autotools
+blaspp@2023.08.25~cuda~ipo+openmp~rocm+shared~sycl build_system=cmake build_type=Release generator=make
+blt@0.4.1 build_system=generic
+boost@1.79.0+atomic+chrono~clanglibcpp~container~context~contract~coroutine+date_time~debug+exception~fiber+filesystem+graph~graph_parallel~icu+iostreams~json+locale+log+math~mpi+multithreaded~nowide~numpy~pic+program_options~python+random+regex+serialization+shared+signals~singlethreaded+stacktrace+system~taggedlayout+test+thread+timer~type_erasure~versionedlayout+wave build_system=generic cxxstd=17 patches=a440f96 visibility=hidden
+butterflypack@2.4.0~ipo+openmp+shared build_system=cmake build_type=Release generator=make
+bzip2@1.0.8~debug~pic+shared build_system=generic
+ca-certificates-mozilla@2023-05-30 build_system=generic
+camp@0.2.3~cuda~ipo+openmp~rocm~tests build_system=cmake build_type=Release generator=make
+cmake@3.27.6~doc+ncurses+ownlibs build_system=generic build_type=Release
+datatransferkit@3.1.1~external-arborx~ipo~openmp+serial+shared build_system=cmake build_type=Release generator=make
+dealii@9.5.1~adol-c~arborx+arpack~assimp~cgal~cuda~doc+examples~ginkgo~gmsh+gsl+hdf5~int64~ipo+kokkos+metis+mpi+muparser~nanoflann~netcdf~oce~optflags+p4est+petsc+platform-introspection~python+scalapack~simplex+slepc+sundials~symengine+threads+trilinos build_system=cmake build_type=DebugRelease cxxstd=17 generator=make
+diffutils@3.10 build_system=autotools
+eigen@3.4.0~ipo build_system=cmake build_type=RelWithDebInfo generator=make
+exago@1.6.0~cuda+hiop~ipo~ipopt+logging+mpi+python+raja~rocm build_system=cmake build_type=Release generator=make
+expat@2.5.0+libbsd build_system=autotools
+fftw@3.3.10+mpi~openmp~pfft_patches build_system=autotools precision=double,float
+findutils@4.9.0 build_system=autotools patches=440b954
+gdbm@1.23 build_system=autotools
+gettext@0.22.3+bzip2+curses+git~libunistring+libxml2+pic+shared+tar+xz build_system=autotools
+ginkgo@1.7.0~cuda~develtools~full_optimizations~hwloc~ipo+mpi~openmp~rocm+shared~sycl build_system=cmake build_type=Release generator=make
+git@2.41.0+man+nls+perl+subtree~svn~tcltk build_system=autotools
+gmake@4.4.1~guile build_system=generic
+gmp@6.2.1+cxx build_system=autotools libs=shared,static patches=69ad2e2
+gsl@2.7.1~external-cblas+pic+shared build_system=autotools
+hdf5@1.14.3~cxx+fortran+hl~ipo~java~map+mpi+shared~subfiling~szip~threadsafe+tools api=default build_system=cmake build_type=Release generator=make
+heffte@2.4.0~cuda+fftw~fortran~ipo~magma~mkl~python~rocm+shared build_system=cmake build_type=Release generator=make
+hiop@1.0.0~cuda~deepchecking~ginkgo~ipo~jsrun~kron+mpi+raja~rocm~shared~sparse build_system=cmake build_type=Release generator=make
+hwloc@2.9.1~cairo~cuda~gl~libudev+libxml2~netloc~nvml~oneapi-level-zero~opencl+pci~rocm build_system=autotools libs=shared,static
+hypre@2.30.0~caliper~complex~cuda~debug+fortran~gptune~int64~internal-superlu~magma~mixedint+mpi~openmp~rocm+shared+superlu-dist~sycl~umpire~unified-memory build_system=autotools
+intel-tbb@2021.9.0~ipo+shared+tm build_system=cmake build_type=Release cxxstd=default generator=make patches=91755c6
+kokkos@4.1.00~aggressive_vectorization~compiler_warnings~cuda~debug~debug_bounds_check~debug_dualview_modify_check~deprecated_code~examples~hpx~hpx_async_dispatch~hwloc~ipo~memkind~numactl~openmp~openmptarget~pic~rocm+serial+shared~sycl~tests~threads~tuning~wrapper build_system=cmake build_type=Release cxxstd=17 generator=make intel_gpu_arch=none
+lapackpp@2023.08.25~cuda~ipo~rocm+shared~sycl build_system=cmake build_type=Release generator=make
+libbsd@0.11.7 build_system=autotools
+libfabric@1.19.0~debug~kdreg build_system=autotools fabrics=sockets,tcp,udp
+libffi@3.4.4 build_system=autotools
+libiconv@1.17 build_system=autotools libs=shared,static
+libmd@1.0.4 build_system=autotools
+libpciaccess@0.17 build_system=autotools
+libtool@2.4.7 build_system=autotools
+libxcrypt@4.4.35~obsolete_api build_system=autotools patches=4885da3
+libxml2@2.10.3+pic~python+shared build_system=autotools
+libyaml@0.2.5 build_system=autotools
+m4@1.4.19+sigsegv build_system=autotools patches=9dc5fbd,bfdffa7
+metis@5.1.0~gdb~int64~ipo~real64+shared build_system=cmake build_type=Release generator=make patches=4991da9,93a7903,b1225da
+mfem@4.6.0~amgx~conduit~cuda~debug+examples~exceptions~fms~ginkgo~gnutls~gslib~hiop~lapack~libceed~libunwind+metis+miniapps~mpfr+mpi~netcdf~occa~openmp+petsc~pumi~raja~rocm+shared~slepc+static~strumpack~suite-sparse+sundials+superlu-dist~threadsafe~umpire+zlib build_system=generic patches=718f073 timer=auto
+mpfr@4.2.0 build_system=autotools libs=shared,static
+mpich@4.1.2~argobots~cuda+fortran+hwloc+hydra+libxml2+pci~rocm+romio~slurm~vci~verbs+wrapperrpath build_system=autotools datatype-engine=auto device=ch4 netmod=ofi pmi=pmi
+muparser@2.3.4 build_system=generic
+ncurses@6.4~symlinks+termlib abi=none build_system=autotools
+netlib-lapack@3.11.0~external-blas~ipo+lapacke+shared~xblas build_system=cmake build_type=Release generator=make
+netlib-scalapack@2.2.0~ipo~pic+shared build_system=cmake build_type=Release generator=make patches=072b006,1c9ce5f,244a9aa
+ninja@1.11.1+re2c build_system=generic
+omega-h@scorec.10.6.0~cuda~examples~gmsh~ipo~kokkos+mpi+optimize+shared+symbols~throw+trilinos~warnings+zlib build_system=cmake build_type=Release generator=make
+openssl@3.1.3~docs+shared build_system=generic certs=mozilla
+p4est@2.8+mpi~openmp build_system=autotools
+parmetis@4.0.3~gdb~int64~ipo+shared build_system=cmake build_type=Release generator=make patches=4f89253,50ed208,704b84f
+perl@5.38.0+cpanm+opcode+open+shared+threads build_system=generic
+petsc@3.20.1~X~batch~cgns~complex~cuda~debug+double~exodusii~fftw+fortran~giflib+hdf5~hpddm~hwloc+hypre~int64~jpeg~knl~kokkos~libpng~libyaml~memkind+metis~mkl-pardiso~mmg~moab~mpfr+mpi~mumps~openmp~p4est~parmmg~ptscotch~random123~rocm~saws~scalapack+shared~strumpack~suite-sparse+superlu-dist~sycl~tetgen~trilinos~valgrind build_system=generic clanguage=C memalign=none
+pflotran@5.0.0~rxn build_system=autotools
+phist@1.12.0~fortran~host~int64~ipo+mpi~openmp~parmetis~scamac+shared~trilinos build_system=cmake build_type=Release generator=make kernel_lib=tpetra outlev=2
+pkgconf@1.9.5 build_system=autotools
+plasma@23.8.2~ipo~lua+shared build_system=cmake build_type=Release generator=make
+precice@2.5.0~checked~debug_log~ipo+mpi+petsc~python+shared build_system=cmake build_type=Release generator=make
+pumi@2.2.8~fortran~int64~ipo+shared+simmodsuite_version_check~testing~zoltan build_system=cmake build_type=Release generator=make simmodsuite=none
+py-calver@2022.6.26 build_system=python_pip
+py-cython@0.29.36 build_system=python_pip patches=c4369ad
+py-editables@0.3 build_system=python_pip
+py-flit-core@3.9.0 build_system=python_pip
+py-hatch-vcs@0.3.0 build_system=python_pip
+py-hatchling@1.18.0 build_system=python_pip
+py-iniconfig@2.0.0 build_system=python_pip
+py-libensemble@1.0.0~deap+mpi~mpmath~nlopt+petsc4py~scipy~tasmanian build_system=python_pip
+py-mpi4py@3.1.4 build_system=python_pip
+py-numpy@1.26.2 build_system=python_pip patches=873745d
+py-packaging@23.1 build_system=python_pip
+py-pathspec@0.11.1 build_system=python_pip
+py-petsc4py@3.20.1+mpi build_system=python_pip
+py-pip@23.1.2 build_system=generic
+py-pluggy@1.0.0 build_system=python_pip
+py-psutil@5.9.5 build_system=python_pip
+py-pydantic@1.10.9~dotenv build_system=python_pip
+py-pyproject-metadata@0.7.1 build_system=python_pip
+py-pytest@7.3.2 build_system=python_pip
+py-pyyaml@6.0+libyaml build_system=python_pip
+py-setuptools@68.0.0 build_system=generic
+py-setuptools-scm@7.1.0+toml build_system=python_pip
+py-tomli@2.0.1 build_system=python_pip
+py-trove-classifiers@2023.8.7 build_system=python_pip
+py-typing-extensions@4.8.0 build_system=python_pip
+py-wheel@0.41.2 build_system=generic
+python@3.11.6+bz2+crypt+ctypes+dbm~debug+libxml2+lzma~nis~optimizations+pic+pyexpat+pythoncmd+readline+shared+sqlite3+ssl~tkinter+uuid+zlib build_system=generic patches=13fa8bf,b0615b2,ebdca64,f2fd060
+raja@0.14.0~cuda+examples+exercises~ipo+openmp~plugins~rocm+shared~tests build_system=cmake build_type=Release generator=make
+readline@8.2 build_system=autotools patches=bbf97f1
+sed@4.9 build_system=autotools
+slate@2023.08.25~cuda~ipo+mpi+openmp~rocm+shared~sycl build_system=cmake build_type=Release generator=make
+slepc@3.20.0+arpack~blopex~cuda~hpddm~rocm build_system=generic
+sqlite@3.43.2+column_metadata+dynamic_extensions+fts~functions+rtree build_system=autotools
+strumpack@7.2.0+butterflypack+c_interface~count_flops~cuda~ipo~magma+mpi+openmp+parmetis~rocm~scotch+shared+slate~task_timers+zfp build_system=cmake build_type=Release generator=make
+suite-sparse@5.13.0~cuda~graphblas~openmp+pic build_system=generic
+sundials@6.6.2+ARKODE+CVODE+CVODES+IDA+IDAS+KINSOL~cuda+examples+examples-install~f2003~fcmix+generic-math+ginkgo+hypre~int64~ipo~klu~kokkos~kokkos-kernels~lapack~magma~monitoring+mpi~openmp+petsc~profiling~pthread~raja~rocm+shared+static+superlu-dist~superlu-mt~sycl+trilinos build_system=cmake build_type=Release cstd=99 cxxstd=14 generator=make logging-level=0 logging-mpi=OFF precision=double
+superlu-dist@8.2.0~cuda~int64~ipo~openmp+parmetis~rocm+shared build_system=cmake build_type=Release generator=make
+tar@1.35 build_system=autotools zip=pigz
+tasmanian@8.0+blas~cuda~fortran~ipo~magma+mpi+openmp~python~rocm~xsdkflags build_system=cmake build_type=Release generator=make patches=8b8d74c
+texinfo@7.0.3 build_system=autotools
+trilinos@14.4.0~adelus~adios2+amesos+amesos2+anasazi+aztec~basker+belos+boost~chaco~complex~cuda~cuda_rdc~debug~dtk+epetra+epetraext~epetraextbtf~epetraextexperimental~epetraextgraphreorderings~exodus+explicit_template_instantiation~float+fortran~gtest+hdf5+hypre+ifpack+ifpack2~intrepid+intrepid2~ipo~isorropia+kokkos~mesquite~minitensor+ml+mpi+muelu~mumps+nox~openmp~panzer~phalanx~piro~python~rocm~rocm_rdc~rol~rythmos+sacado~scorec+shards+shared~shylu~stk~stokhos+stratimikos~strumpack~suite-sparse~superlu+superlu-dist~teko~tempus~test+thyra+tpetra~trilinoscouplings~wrapper~x11+zoltan+zoltan2 build_system=cmake build_type=Release cxxstd=17 generator=make gotype=int
+umpire@6.0.0+c~cuda~device_alloc~deviceconst+examples~fortran~ipo~numa~openmp~rocm+shared build_system=cmake build_type=Release generator=make tests=none
+util-linux-uuid@2.38.1 build_system=autotools
+util-macros@1.19.3 build_system=autotools
+xsdk@1.0.0+alquimia+arborx+butterflypack~cuda+datatransferkit+dealii+exago+ginkgo+heffte+hiop+libensemble+omega-h+pflotran+phist+precice+raja~rocm+slate+strumpack~sycl+trilinos build_system=bundle
+xz@5.4.4~pic build_system=autotools libs=shared,static
+yaksa@0.3~cuda~rocm build_system=autotools
+zfp@1.0.0~aligned~c~cuda~daz~fasthash~fortran~ipo~openmp~profile~python+shared~strided~tight-error~twoway+utilities bsws=64 build_system=cmake build_type=Release generator=make round=never
+zlib-ng@2.1.4+compat+opt build_system=autotools
+zstd@1.5.5~programs build_system=makefile libs=shared,static
