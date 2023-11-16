@@ -1,0 +1,13 @@
+diff --git a/var/spack/repos/builtin/packages/exago/package.py b/var/spack/repos/builtin/packages/exago/package.py
+index fe7b67cc11..abe7f2605a 100644
+--- a/var/spack/repos/builtin/packages/exago/package.py
++++ b/var/spack/repos/builtin/packages/exago/package.py
+@@ -178,6 +178,8 @@ class Exago(CMakePackage, CudaPackage, ROCmPackage):
+         depends_on("umpire {0}".format(rocm_dep), when="+raja {0}".format(rocm_dep))
+         depends_on("camp {0}".format(rocm_dep), when="+raja {0}".format(rocm_dep))
+ 
++    patch("exago-1.6.0.patch", when="@1.6.0")
++
+     flag_handler = build_system_flags
+ 
+     def cmake_args(self):
