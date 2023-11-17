@@ -1,0 +1,188 @@
+packages:
+  autoconf:
+    externals:
+    - spec: autoconf@2.69
+      prefix: /usr
+  automake:
+    externals:
+    - spec: automake@1.16.1
+      prefix: /usr
+  bzip2:
+    externals:
+    - spec: bzip2@1.0.6
+      prefix: /usr
+  cmake:
+    externals:
+    - spec: cmake@3.24.2
+      modules:
+      - cmake/3.24.2
+    buildable: false
+  diffutils:
+    externals:
+    - spec: diffutils@3.6
+      prefix: /usr
+  gettext:
+    externals:
+    - spec: gettext@0.19.8.1
+      prefix: /usr
+  git:
+    externals:
+    - spec: git@2.31.1
+      prefix: /usr
+  gmake:
+    externals:
+    - spec: gmake@4.2.1
+      prefix: /usr
+  hwloc:
+    externals:
+    - spec: hwloc@2.8.0
+      prefix: /usr
+  libtool:
+    externals:
+    - spec: libtool@2.4.6
+      prefix: /usr
+  libxml2:
+    externals:
+    - spec: libxml2@2.9.7
+      prefix: /usr
+  m4:
+    externals:
+    - spec: m4@1.4.18
+      prefix: /usr
+  ncurses:
+    externals:
+    - spec: ncurses@6.1
+      prefix: /usr
+  openssl:
+    externals:
+    - spec: openssl@1.1.1k
+      prefix: /usr
+  perl:
+    externals:
+    - spec: perl@5.26.3
+      prefix: /usr
+  sed:
+    externals:
+    - spec: sed@4.5
+      prefix: /usr
+  texinfo:
+    externals:
+    - spec: texinfo@6.5
+      prefix: /usr
+  xz:
+    externals:
+    - spec: xz@5.2.4
+      prefix: /usr
+
+  # ROCm 5.5.1
+  hip:
+    externals:
+    - spec: hip@5.5.1
+      prefix: /opt/rocm-5.5.1
+      extra_attributes:
+        compilers:
+          c: /opt/rocm-5.5.1/llvm/bin/clang
+          c++: /opt/rocm-5.5.1/llvm/bin/clang++
+          hip: /opt/rocm-5.5.1/hip/bin/hipcc
+    buildable: false
+  hsa-rocr-dev:
+    externals:
+    - spec: hsa-rocr-dev@5.5.1
+      prefix: /opt/rocm-5.5.1
+      extra_attributes:
+        compilers:
+          c: /opt/rocm-5.5.1/llvm/bin/clang
+          cxx: /opt/rocm-5.5.1/llvm/bin/clang++
+    buildable: false
+  llvm-amdgpu:
+    externals:
+    - spec: llvm-amdgpu@5.5.1
+      prefix: /opt/rocm-5.5.1/llvm
+      extra_attributes:
+        compilers:
+          c: /opt/rocm-5.5.1/llvm/bin/clang
+          cxx: /opt/rocm-5.5.1/llvm/bin/clang++
+    buildable: false
+  hipcub:
+    externals:
+    - spec: hipcub@5.5.1
+      prefix: /opt/rocm-5.5.1
+  hipblas:
+    externals:
+    - spec: hipblas@5.5.1
+      prefix: /opt/rocm-5.5.1
+  hipsolver:
+    externals:
+    - spec: hipsolver@5.5.1
+      prefix: /opt/rocm-5.5.1
+  rocblas:
+    externals:
+    - spec: rocblas@5.5.1
+      prefix: /opt/rocm-5.5.1
+  rocsolver:
+    externals:
+    - spec: rocsolver@5.5.1
+      prefix: /opt/rocm-5.5.1
+  hipsparse:
+    externals:
+    - spec: hipsparse@5.5.1
+      prefix: /opt/rocm-5.5.1
+  rocsparse:
+    externals:
+    - spec: rocsparse@5.5.1
+      prefix: /opt/rocm-5.5.1
+  rocthrust:
+    externals:
+    - spec: rocthrust@5.5.1
+      prefix: /opt/rocm-5.5.1
+  hiprand:
+    externals:
+    - spec: hiprand@5.5.1
+      prefix: /opt/rocm-5.5.1
+  rocrand:
+    externals:
+    - spec: rocrand@5.5.1
+      prefix: /opt/rocm-5.5.1
+  rocprim:
+    externals:
+    - spec: rocprim@5.5.1
+      prefix: /opt/rocm-5.5.1
+  hipfft:
+    externals:
+    - spec: hipfft@5.5.1
+      prefix: /opt/rocm-5.5.1
+  rocfft:
+    externals:
+    - spec: rocfft@5.5.1
+      prefix: /opt/rocm-5.5.1
+  rocm-core:
+    externals:
+    - spec: rocm-core@5.5.1
+      prefix: /opt/rocm-5.5.1
+
+  cray-mpich:
+    externals:
+    - spec: "cray-mpich@8.1.25%gcc"
+      modules:
+      - cray-mpich/8.1.25
+      - craype-network-ofi
+    buildable: false
+  cray-libsci:
+    buildable: false
+    externals:
+    # - spec: cray-libsci@23.09.1.1
+    #   modules:
+    #   - cray-libsci/23.09.1.1
+    - spec: "cray-libsci@23.09.1.1+mpi"
+      modules:
+      - cray-libsci/23.09.1.1
+      - cray-mpich/8.1.25
+      - craype-network-ofi
+
+  all:
+    providers:
+      mpi: [cray-mpich]
+      lapack: [cray-libsci]
+      blas: [cray-libsci]
+      scalapack: [cray-libsci+mpi]
+    compiler: [gcc]
