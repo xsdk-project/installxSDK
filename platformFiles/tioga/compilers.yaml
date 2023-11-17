@@ -1,0 +1,26 @@
+compilers:
+- compiler:
+    spec: gcc@12.2.0
+    paths:
+      cc: cc
+      cxx: CC
+      f77: ftn
+      fc: ftn
+    flags: {}
+    operating_system: rhel8
+    target: any
+    modules:
+    - StdEnv
+    # PrgEnv-gnu loads: gcc, craype, cray-mpich, cray-libsci (default versions)
+    # gcc loads: PrgEnv-gnu
+    # craype loads: (none)
+    # cray-mpich loads: (none)
+    # cray-libsci loads: (none)
+    - PrgEnv-gnu
+    # for consistency load specific versions in case the defaults change
+    - gcc/12.2.0
+    - craype/2.7.23
+    - cray-mpich/8.1.25
+    - cray-libsci/23.09.1.1
+    - craype-x86-trento
+    extra_rpaths: []
