@@ -1,0 +1,55 @@
+compilers:
+- compiler:
+    spec: gcc@=8.3.1
+    paths:
+      cc: /usr/bin/gcc
+      cxx: /usr/bin/g++
+      f77: /usr/bin/gfortran
+      fc: /usr/bin/gfortran
+    flags: {}
+    operating_system: rhel8
+    target: ppc64le
+    modules: []
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: xl@=16.1
+    paths:
+      cc: /sw/summit/xl/16.1.1-10/xlC/16.1.1/bin/xlc
+      cxx: /sw/summit/xl/16.1.1-10/xlC/16.1.1/bin/xlC
+      f77: null
+      fc: null
+    flags:
+      fflags: -qzerosize
+    operating_system: rhel8
+    target: ppc64le
+    modules: []
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: xl_r@=16.1
+    paths:
+      cc: /sw/summit/xl/16.1.1-10/xlC/16.1.1/bin/xlc_r
+      cxx: /sw/summit/xl/16.1.1-10/xlC/16.1.1/bin/xlC_r
+      f77: null
+      fc: null
+    flags:
+      fflags: -qzerosize
+    operating_system: rhel8
+    target: ppc64le
+    modules: []
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: gcc@=11.2.0
+    paths:
+      cc: /sw/summit/gcc/11.2.0-0/bin/gcc
+      cxx: /sw/summit/gcc/11.2.0-0/bin/g++
+      f77: /sw/summit/gcc/11.2.0-0/bin/gfortran
+      fc: /sw/summit/gcc/11.2.0-0/bin/gfortran
+    flags: {}
+    operating_system: rhel8
+    target: ppc64le
+    modules: []
+    environment: {}
+    extra_rpaths: []
