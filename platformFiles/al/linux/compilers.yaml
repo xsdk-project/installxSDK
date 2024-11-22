@@ -1,0 +1,27 @@
+compilers:
+- compiler:
+    spec: gcc@=14.2.1
+    paths:
+      cc: /usr/lib64/ccache/gcc
+      cxx: /usr/lib64/ccache/g++
+      f77: /usr/bin/gfortran
+      fc: /usr/bin/gfortran
+    flags: {}
+    operating_system: fedora41
+    target: aarch64
+    modules: []
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: clang@=19.1.0
+    paths:
+      cc: /usr/lib64/ccache/clang
+      cxx: /usr/lib64/ccache/clang++
+      f77: /usr/bin/gfortran
+      fc: /usr/bin/gfortran
+    flags: {}
+    operating_system: fedora41
+    target: aarch64
+    modules: []
+    environment: {}
+    extra_rpaths: []

@@ -1,0 +1,71 @@
+packages:
+  diffutils:
+    externals:
+    - spec: diffutils@3.8
+      prefix: /usr
+  findutils:
+    externals:
+    - spec: findutils@4.8.0
+      prefix: /usr
+  gawk:
+    externals:
+    - spec: gawk@5.1.0
+      prefix: /usr
+  tar:
+    externals:
+    - spec: tar@1.34
+      prefix: /usr
+  autoconf:
+    externals:
+    - spec: autoconf@2.71
+      prefix: /usr
+  automake:
+    externals:
+    - spec: automake@1.16.5
+      prefix: /usr
+  bison:
+    externals:
+    - spec: bison@3.8.2
+      prefix: /usr
+  ccache:
+    externals:
+    - spec: ccache@4.5.1
+      prefix: /usr
+  cmake:
+    externals:
+    - spec: cmake@3.22.1
+      prefix: /usr
+  git:
+    externals:
+    - spec: git@2.34.1~tcltk
+      prefix: /usr
+  gmake:
+    externals:
+    - spec: gmake@4.3
+      prefix: /usr
+  groff:
+    externals:
+    - spec: groff@1.22.4
+      prefix: /usr
+  libtool:
+    externals:
+    - spec: libtool@2.4.6
+      prefix: /usr
+  m4:
+    externals:
+    - spec: m4@1.4.18
+      prefix: /usr
+  pkg-config:
+    externals:
+    - spec: pkg-config@0.29.2
+      prefix: /usr
+  subversion:
+    externals:
+    - spec: subversion@1.14.1
+      prefix: /usr
+#  perl:
+#    externals:
+#    - spec: perl@5.34.0
+#      prefix: /usr
+  all:
+    target: [x86_64]

@@ -1,0 +1,66 @@
+compilers:
+- compiler:
+    spec: gcc@=14.2.1
+    paths:
+      cc: /usr/lib64/ccache/gcc
+      cxx: /usr/lib64/ccache/g++
+      f77: /usr/bin/gfortran
+      fc: /usr/bin/gfortran
+    flags: {}
+    operating_system: fedora40
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: clang@=18.1.6
+    paths:
+      cc: /usr/lib64/ccache/clang
+      cxx: /usr/lib64/ccache/clang++
+      f77: /usr/bin/gfortran
+      fc: /usr/bin/gfortran
+    flags: {}
+    operating_system: fedora40
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: oneapi@=2024.2.1
+    paths:
+      cc: /software/intel/oneapi/compiler/2024.2/bin/icx
+      cxx: /software/intel/oneapi/compiler/2024.2/bin/icpx
+      f77: /software/intel/oneapi/compiler/2024.2/bin/ifx
+      fc: /software/intel/oneapi/compiler/2024.2/bin/ifx
+    flags: {}
+    operating_system: fedora40
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: oneapi@=2023.2.0
+    paths:
+      cc: /software/intel/oneapi-2023/compiler/2023.2.0/linux/bin/icx
+      cxx: /software/intel/oneapi-2023/compiler/2023.2.0/linux/bin/icpx
+      f77: /software/intel/oneapi-2023/compiler/2023.2.0/linux/bin/ifx
+      fc: /software/intel/oneapi-2023/compiler/2023.2.0/linux/bin/ifx
+    flags: {}
+    operating_system: fedora40
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: gcc@=9.5.0
+    paths:
+      cc: /software/spack/opt/spack/linux-fedora40-skylake/gcc-14.2.1/gcc-9.5.0-2y6pebwiwdp2nqx5d6ju5uufciknmczl/bin/gcc
+      cxx: /software/spack/opt/spack/linux-fedora40-skylake/gcc-14.2.1/gcc-9.5.0-2y6pebwiwdp2nqx5d6ju5uufciknmczl/bin/g++
+      f77: /software/spack/opt/spack/linux-fedora40-skylake/gcc-14.2.1/gcc-9.5.0-2y6pebwiwdp2nqx5d6ju5uufciknmczl/bin/gfortran
+      fc: /software/spack/opt/spack/linux-fedora40-skylake/gcc-14.2.1/gcc-9.5.0-2y6pebwiwdp2nqx5d6ju5uufciknmczl/bin/gfortran
+    flags: {}
+    operating_system: fedora40
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []
